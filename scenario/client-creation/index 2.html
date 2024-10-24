@@ -1,0 +1,1430 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Learn the basics about building a client" name="description"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>Client creation - TeamSystem Enterprise Cloud</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="/static/css/custom.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#step-zero-the-client-type">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="TeamSystem Enterprise Cloud" class="md-header__button md-logo" data-md-component="logo" href="../.." title="TeamSystem Enterprise Cloud">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            TeamSystem Enterprise Cloud
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Client creation
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="TeamSystem Enterprise Cloud" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="TeamSystem Enterprise Cloud">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    TeamSystem Enterprise Cloud
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../started/getting-started/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../started/authentication/">
+<span class="md-ellipsis">
+    Authentication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../started/howto/">
+<span class="md-ellipsis">
+    How to
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Step by step guide
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Step by step guide
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/common-terms/">
+<span class="md-ellipsis">
+    Common Terms
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/company-scoped-methods/">
+<span class="md-ellipsis">
+    Company methods
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/manual-authentication/">
+<span class="md-ellipsis">
+    Authentication mode
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Quickstarts
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Quickstarts
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/postman-collection/">
+<span class="md-ellipsis">
+    Postaman Collections
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/csharp-sdk-quickstart/">
+<span class="md-ellipsis">
+    C# SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/go-sdk-quickstart/">
+<span class="md-ellipsis">
+    GO SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/java-sdk-quickstart/">
+<span class="md-ellipsis">
+    Java SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/javascript-sdk-quickstart.md">
+<span class="md-ellipsis">
+    JavaScript SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/php-sdk-quickstart/">
+<span class="md-ellipsis">
+    PHP SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/python-sdk-quickstart/">
+<span class="md-ellipsis">
+    Python SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/ruby-sdk-quickstart/">
+<span class="md-ellipsis">
+    Ruby SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/typescript-sdk-quickstart.md">
+<span class="md-ellipsis">
+    TypeScript SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/vanilla-code/">
+<span class="md-ellipsis">
+    Vanilla Code Sample
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/windows-form-quickstart/">
+<span class="md-ellipsis">
+    Windows Form Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/powerquery-quickstart.md">
+<span class="md-ellipsis">
+    Excel Power Query Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/apps-script-quickstart.md">
+<span class="md-ellipsis">
+    Google Sheets Apps Script Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/zapier-quickstart/">
+<span class="md-ellipsis">
+    Zapier Quickstart
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Supported scenarios
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Supported scenarios
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../e-invoice-xml-customisation/">
+<span class="md-ellipsis">
+    E-Invoice XML Customisation
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Basics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/scopes/">
+<span class="md-ellipsis">
+    Scopes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/errors/">
+<span class="md-ellipsis">
+    Errors
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/limits-and-quotas/">
+<span class="md-ellipsis">
+    Limits adn Quotas
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Additional capabilities
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_4">
+<span class="md-nav__icon md-icon"></span>
+            Additional capabilities
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/additional-capabilities/sort-results/">
+<span class="md-ellipsis">
+    Sort Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/additional-capabilities/paginate-results/">
+<span class="md-ellipsis">
+    Paginate results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/additional-capabilities/customize-response/">
+<span class="md-ellipsis">
+    Customize response
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/additional-capabilities/filter-results/">
+<span class="md-ellipsis">
+    Filter results
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/debug-your-integration/">
+<span class="md-ellipsis">
+    Debug your integration
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Api Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Api Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/api-reference-co/">
+<span class="md-ellipsis">
+    Common api
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/api-reference-fi/">
+<span class="md-ellipsis">
+    Finance api
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/api-reference-mg/">
+<span class="md-ellipsis">
+    Warehouse api
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/api-reference/">
+<span class="md-ellipsis">
+    Use the API Reference
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    SDKs
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            SDKs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdks/typescript-sdk/index.md">
+<span class="md-ellipsis">
+    TypeScript SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdks/java-sdk/index.md">
+<span class="md-ellipsis">
+    Java SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdks/javascript-sdk/index.md">
+<span class="md-ellipsis">
+    JavaScript SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdks/net-sdk/index.md">
+<span class="md-ellipsis">
+    .NET SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdks/python-sdk/index.md">
+<span class="md-ellipsis">
+    Python SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdks/ruby-sdk/index.md">
+<span class="md-ellipsis">
+    Ruby SDK
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Support &amp; Feature Request
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Support &amp; Feature Request
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../support/faqs.md">
+<span class="md-ellipsis">
+    FAQs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../support/general-knowledge.md">
+<span class="md-ellipsis">
+    General Knowledge
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Legal
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Legal
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../legal/terms/">
+<span class="md-ellipsis">
+    Condizioni generali di utilizzo delle API MadBit
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../legal/policy-acceptable-use/">
+<span class="md-ellipsis">
+    Policy di Acceptable Use
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../legal/marketing-resources-and-identity-guidelines/">
+<span class="md-ellipsis">
+    Marketing Resources and Identity Guidelines
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-zero-the-client-type">
+<span class="md-ellipsis">
+        Step Zero: The Client Type
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-one-the-client-data">
+<span class="md-ellipsis">
+        Step One: The Client Data
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-two-advanced-options">
+<span class="md-ellipsis">
+        Step Two: Advanced Options
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#client-uniqueness">
+<span class="md-ellipsis">
+        Client uniqueness
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-client">
+<span class="md-ellipsis">
+        Create the client!
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Client creation</h1>
+<p>import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";</p>
+<p>In this guide, you will learn how to successfully <strong>create Clients and Suppliers from scratch</strong>. We'll build the request step by step, so wait until the end of the guide to send your first request!</p>
+<p>You can find the technical documentation of this API method in the <a href="/api-reference#post-/c/-company_id-/entities/clients">Create Client</a> section of the API Reference.</p>
+<p>:::note Client and Supplier
+The models for <em>Clients</em> and <em>Suppliers</em> differ only for a small subset of parameters; this guide will show in detail how to create a new Client, but it can be used in both cases.
+In the Suppliers case, you will need to use the <a href="/api-reference#post-/c/-company_id-/entities/suppliers">Create Supplier</a> method.
+:::</p>
+<p>:::tip Retrieve your Company ID!</p>
+<p>In this example, we'll suppose you have to manage just one Company, so we simply inserted its ID directly in the code. If instead, you need to be able to manage multiple companies, you'll need to retrieve the ID of the current company in some way.
+Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
+<p>:::</p>
+<p>:::warning Are you using Zapier?</p>
+<p><a href="/docs/quickstarts/zapier-quickstart.md">Zapier Actions</a> provide all the fields offered by the APIs, but it does not mean you need to compile all of them!
+For example, while creating a new Client the Document ID must be left blank!</p>
+<p>To follow this guide, you will be required to search the fields used in our example on the Zapier page and insert the related values.</p>
+<p>The code of the fields will follow the JSON structure: for example, the "type" field is included in the "data" object, so the Zapier code will be "data.type". You can use the <em>CRTL + F</em> command to search the field's code faster <img alt="😉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f609.png" title=":wink:"/></p>
+<p>In this example, we'll insert the values directly, but please remember that Zapier was built to let you select the workflow's previous steps' outputs as input in the Action, for example selecting the values returned by a trigger!</p>
+<p>:::</p>
+<h2 id="step-zero-the-client-type"><img alt="0️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0030-20e3.png" title=":zero:"/>  Step Zero: The Client Type</h2>
+<p>TSE in Cloud lets you to define four different types of clients.</p>
+<p>The available types are:</p>
+<ul>
+<li><strong>company</strong>: in an electronic document <em>Denominazione</em> will be automatically set</li>
+<li><strong>person</strong>: in an electronic document <em>Nome</em> and <em>Cognome</em> will be automatically set</li>
+<li><strong>pa</strong>: in an electronic document the flag <em>Pubblica Amministrazione</em> and <em>Split payment</em> will be automatically set</li>
+<li><strong>condo</strong></li>
+</ul>
+<p>In the next step we'll suppose to create a company, but the procedure is the same for the other clients types too.</p>
+<h2 id="step-one-the-client-data"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Step One: The Client Data</h2>
+<p>Every Client can be defined by a set of basic values, here you can find a list of the main ones:</p>
+<ul>
+<li>
+<p><strong>name</strong>: [required] the client denomination.</p>
+</li>
+<li>
+<p><strong>vat_number</strong>: the client <em>P.IVA</em>.</p>
+</li>
+<li>
+<p><strong>tax_code</strong>: the client <em>codice fiscale</em>.</p>
+</li>
+<li>
+<p><strong>code</strong>: your internal client code.</p>
+</li>
+<li>
+<p><strong>ei_code</strong>: client SDI code.</p>
+</li>
+<li>
+<p><strong>email</strong>: the client email.</p>
+</li>
+<li>
+<p><strong>certified_email</strong>: the client <em>PEC</em>.</p>
+</li>
+<li>
+<p><strong>phone</strong>: the client's phone number.</p>
+</li>
+<li>
+<p><strong>address_*</strong>: the client address fields.</p>
+</li>
+<li>
+<p><strong>notes</strong>: the client extra notes.</p>
+</li>
+<li>
+<p><strong>country</strong>: optional client country (eg. <em>Repubblica Ceca</em>).</p>
+</li>
+<li>
+<p><strong>country_iso</strong>: optional client country ISO-3166 (eg. <em>CZ</em>).</p>
+</li>
+</ul>
+<p>The partial request looks like this:</p>
+<pre><code class="language-json">// NOTE: this is a partial request, please wait before sending it
+{
+  "data": {
+    "type": "company",
+    "name": "Mario Rossi",
+    "vat_number": "47803200154",
+    "tax_code": "RSSMRA91M20B967Q",
+    "address_street": "Via Italia, 66",
+    "address_postal_code": "20900",
+    "address_city": "Milano",
+    "address_province": "MI"
+  }
+}
+</code></pre>
+<p>The corresponding code with our SDKs:</p>
+<pre><code class="language-cs">// NOTE: this is a partial request, please wait before sending it
+// in this example we are using our C# SDK
+// https://www.nuget.org/packages/It.FattureInCloud.Sdk/
+
+ModelClient entity = new ModelClient(
+    type: ClientType.Company,
+    name: "Mario Rossi",
+    vatNumber: "47803200154",
+    taxCode: "RSSMRA91M20B967Q",
+    addressStreet: "Via Italia, 66",
+    addressPostalCode: "20900",
+    addressCity: "Milano",
+    addressProvince: "MI"
+);
+</code></pre>
+<pre><code class="language-go">// NOTE: this is a partial request, please wait before sending it
+// in this example we are using our Go SDK
+// https://github.com/fattureincloud/fattureincloud-go-sdk
+
+entity := *fattureincloud.NewClient().
+    SetType(fattureincloud.ClientTypes.COMPANY).
+    SetName("Mario Rossi").
+    SetVatNumber("47803200154").
+    SetTaxCode("RSSMRA91M20B967Q").
+    SetAddressStreet("Via Italia, 66").
+    SetAddressPostalCode("20900").
+    SetAddressCity("Milano").
+    SetAddressProvince("MI")
+</code></pre>
+<pre><code class="language-java">// NOTE: this is a partial request, please wait before sending it
+// in this example we are using our Java SDK
+// https://search.maven.org/artifact/it.fattureincloud/fattureincloud-java-sdk
+
+Client entity = new Client()
+        .type(ClientType.COMPANY)
+        .name("Mario Rossi")
+        .vatNumber("47803200154")
+        .taxCode("RSSMRA91M20B967Q")
+        .addressStreet("Via Italia, 66")
+        .addressPostalCode("20900")
+        .addressCity("Milano")
+        .addressProvince("MI");
+</code></pre>
+<pre><code class="language-php">// NOTE: this is a partial request, please wait before sending it
+// in this example we are using our PHP SDK
+// https://packagist.org/packages/fattureincloud/fattureincloud-php-sdk
+
+$entity = new Client;
+$entity
+    -&gt;setType(ClientType::COMPANY)
+    -&gt;setName("Mario Rossi")
+    -&gt;setVatNumber("47803200154")
+    -&gt;setTaxCode("RSSMRA91M20B967Q")
+    -&gt;setAddressStreet("Via Italia, 66")
+    -&gt;setAddressPostalCode("20900")
+    -&gt;setAddressCity("Milano")
+    -&gt;setAddressProvince("MI");
+</code></pre>
+<pre><code class="language-js">// NOTE: this is a partial request, please wait before sending it
+// in this example we are using our JS SDK
+// https://www.npmjs.com/package/@fattureincloud/fattureincloud-js-sdk
+
+let entity = new fattureInCloudSdk.Client();
+entity.type = new fattureInCloudSdk.ClientType().company;
+entity.name = "Mario Rossi";
+entity.vat_number = "47803200154";
+entity.tax_code = "RSSMRA91M20B967Q";
+entity.address_street = "Via Italia, 66";
+entity.address_postal_code = "20900";
+entity.address_city = "Milano";
+entity.address_province = "MI";
+</code></pre>
+<pre><code class="language-py"># NOTE: this is a partial request, please wait before sending it
+# in this example we are using our Python SDK
+# https://pypi.org/project/fattureincloud-python-sdk/
+
+entity = Client(
+    type = ClientType("company"),
+    name="Mario Rossi",
+    vat_number="47803200154",
+    tax_code="RSSMRA91M20B967Q",
+    address_street="Via Italia, 66",
+    address_postal_code="20900",
+    address_city="Milano",
+    address_province="MI"
+)
+</code></pre>
+<pre><code class="language-rb"># NOTE: this is a partial request, please wait before sending it
+# in this example we are using our Ruby SDK
+# https://rubygems.org/gems/fattureincloud_ruby_sdk
+
+entity = FattureInCloud_Ruby_Sdk::Client.new(
+  type: FattureInCloud_Ruby_Sdk::ClientType::COMPANY,
+  name: "Mario Rossi",
+  vat_number: "47803200154",
+  tax_code: "RSSMRA91M20B967Q",
+  address_street: "Via Italia, 66",
+  address_postal_code: "20900",
+  address_city: "Milano",
+  address_province: "MI"
+)
+</code></pre>
+<pre><code class="language-ts">// NOTE: this is a partial request, please wait before sending it
+// in this example we are using our TS SDK
+// https://www.npmjs.com/package/@fattureincloud/fattureincloud-ts-sdk
+
+let entity: Client = {};
+entity.type = ClientType.Company;
+entity.name = "Mario Rossi";
+entity.vat_number = "47803200154";
+entity.tax_code = "RSSMRA91M20B967Q";
+entity.address_street = "Via Italia, 66";
+entity.address_postal_code = "20900";
+entity.address_city = "Milano";
+entity.address_province = "MI";
+</code></pre>
+<p>In Zapier, first, you need to select your Company ID. Luckily, our Actions let you select it from a simple dropdown menu.
+<img alt="Zapier - Company ID Selection" src="../assets/company-id-selection.png"/></p>
+<p>Next, you must set the Client Type we described in the previous step, you just need to select the correct value in the available list.</p>
+<p><img alt="Zapier - Client Type" src="../assets/client-creation-data-type.png"/></p>
+<p>Then you must set up the request as explained above. The fields' codes start with the "data" prefix.</p>
+<p>Remember: in this example, you must insert values only in the fields we are suggesting to you!
+In the image below we can't show all the fields you must fill, so you must search them all as shown before.
+<img alt="Zapier - Body" src="../assets/client-creation-body.png"/>
+Here you can find the list of all the fields and values you must fill for this example:</p>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Field Code</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The ID of the company</td>
+<td>-</td>
+<td>12345</td>
+<td>Select it from the dropdown menu</td>
+</tr>
+<tr>
+<td>Client type</td>
+<td>data.type</td>
+<td>company</td>
+<td></td>
+</tr>
+<tr>
+<td>Client Name</td>
+<td>data.name</td>
+<td>Mario Rossi</td>
+<td></td>
+</tr>
+<tr>
+<td>Client vat number</td>
+<td>data.vat_number</td>
+<td>47803200154</td>
+<td></td>
+</tr>
+<tr>
+<td>Client tax code</td>
+<td>data.tax_code</td>
+<td>RSSMRA91M20B967Q</td>
+<td></td>
+</tr>
+<tr>
+<td>Client address street</td>
+<td>data.address_street</td>
+<td>Via Italia, 66</td>
+<td></td>
+</tr>
+<tr>
+<td>Client address postal code</td>
+<td>data.address_postal_code</td>
+<td>20900</td>
+<td></td>
+</tr>
+<tr>
+<td>Client address city</td>
+<td>data.address_city</td>
+<td>Milano</td>
+<td></td>
+</tr>
+<tr>
+<td>Client address province</td>
+<td>data.address_province</td>
+<td>MI</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="step-two-advanced-options"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Step Two: Advanced Options</h2>
+<p>In addition to the basic data explained in the previous step, some advanced fields can be used:</p>
+<ul>
+<li>
+<p><strong>default_*</strong>: all the default fields will not be set automatically when creating a document, however, you can save the defaults, retrieve them before creating the document and insert them with the other fields when creating a document.</p>
+</li>
+<li>
+<p><strong>bank_*</strong>: client bank details.</p>
+</li>
+<li>
+<p><strong>has_intent_declaration</strong>: flag that adds <em>Lettera d'intento</em> fields to the electronic document, <strong>intent_declaration_protocol_number</strong> and <strong>intent_declaration_protocol_date</strong> also need to be set.</p>
+</li>
+</ul>
+<h2 id="client-uniqueness"><img alt="©️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/00a9.png" title=":copyright:"/>  Client uniqueness</h2>
+<p>We have strong checks to ensure clients' uniqueness. The applied rule differs based on the defined fields:</p>
+<ul>
+<li>if you are only setting the client's <strong>name</strong>, then you will receive an error if a client with the same name already exists.</li>
+<li>if you are setting <strong>code</strong>, <strong>vat_number</strong>, and <strong>tax_code</strong>, these values must be unique for all your clients.</li>
+</ul>
+<h2 id="create-the-client"><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:"/>  Create the client!</h2>
+<p>Now we are ready to create a client, so let's <a href="/api-reference#post-/c/-company_id-/entities/clients">create a client</a> using the request we just built:</p>
+<pre><code class="language-http">POST /c/1235/entities/clients HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Host: api-v2.fattureincloud.it
+Content-Length: 200
+
+{"data":{"name":"Mario Rossi","vat_number":"47803200154","tax_code":"RSSMRA91M20B967Q","address_street":"Via Italia, 66","address_postal_code":"20900","address_city":"Milano","address_province":"MI"}}
+</code></pre>
+<p>The corresponding code with our SDKs:</p>
+<pre><code class="language-cs">using System;
+using System.Collections.Generic;
+using It.FattureInCloud.Sdk.Api;
+using It.FattureInCloud.Sdk.Client;
+using It.FattureInCloud.Sdk.Model;
+
+namespace test {
+    class Program {
+        static void Main(string[] args) {
+            Configuration config = new Configuration();
+
+            //set your access token
+            config.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ClientsApi(config);
+            //set your company id
+            var companyId = 12345;
+
+            // NOTE: this is a complete request, but please customize it!!!
+            // In the next step we'll explain how to perform the request to the API.
+
+            // in this example we are using our C# SDK
+            // https://www.nuget.org/packages/It.FattureInCloud.Sdk/
+
+            ModelClient entity = new ModelClient(
+                type: ClientType.Company,
+                name: "Mario Rossi",
+                vatNumber: "47803200154",
+                taxCode: "RSSMRA91M20B967Q",
+                addressStreet: "Via Italia, 66",
+                addressPostalCode: "20900",
+                addressCity: "Milano",
+                addressProvince: "MI"
+            );
+
+            // Here we put our entity in the request object
+            CreateClientRequest createClientRequest = new CreateClientRequest(
+                data: entity
+            );
+
+            // Now we are all set for the final call
+            // Create the client: https://github.com/fattureincloud/fattureincloud-csharp-sdk/blob/master/docs/ClientsApi.md#createclient
+            try {
+                CreateClientResponse result = apiInstance.CreateClient(companyId, createClientRequest);
+                Console.WriteLine(result);
+            } catch (ApiException e) {
+                Console.WriteLine("Exception when calling ClientsApi.CreateClient: " + e.Message);
+                Console.WriteLine("Status Code: " + e.ErrorCode);
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+    }
+}
+</code></pre>
+<pre><code class="language-go">// NOTE: this is a complete request, but please customize it!!!
+// In the next step we'll explain how to perform the request to the API.
+
+// in this example we are using our Go SDK
+// https://github.com/fattureincloud/fattureincloud-go-sdk
+package main
+
+import (
+    "context"
+    "encoding/json"
+    "fmt"
+    "os"
+
+    fattureincloudapi "github.com/fattureincloud/fattureincloud-go-sdk/v2/api"
+    fattureincloud "github.com/fattureincloud/fattureincloud-go-sdk/v2/model"
+)
+
+func main() {
+    //set your access token
+    auth := context.WithValue(context.Background(), fattureincloudapi.ContextAccessToken, "YOUR_ACCESS_TOKEN")
+    configuration := fattureincloudapi.NewConfiguration()
+    apiClient := fattureincloudapi.NewAPIClient(configuration)
+
+    //set your company id
+    companyId := int32(12345)
+
+    entity := *fattureincloud.NewClient().
+        SetType(fattureincloud.ClientTypes.COMPANY).
+        SetName("Mario Rossi").
+        SetVatNumber("47803200154").
+        SetTaxCode("RSSMRA91M20B967Q").
+        SetAddressStreet("Via Italia, 66").
+        SetAddressPostalCode("20900").
+        SetAddressCity("Milano").
+        SetAddressProvince("MI")
+
+    // Here we put our entity in the request object
+    createClientRequest := *fattureincloud.NewCreateClientRequest().SetData(entity)
+
+    // Now we are all set for the final call
+    // Create the client: https://github.com/fattureincloud/fattureincloud-go-sdk/blob/master/docs/ClientsAPI.md#createclient
+    resp, r, err := apiClient.ClientsAPI.CreateClient(auth, companyId).CreateClientRequest(createClientRequest).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ClientsAPI.CreateClient``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    json.NewEncoder(os.Stdout).Encode(resp)
+}
+</code></pre>
+<pre><code class="language-java">import it.fattureincloud.sdk.ApiClient;
+import it.fattureincloud.sdk.ApiException;
+import it.fattureincloud.sdk.Configuration;
+import it.fattureincloud.sdk.auth.*;
+import it.fattureincloud.sdk.model.*;
+import it.fattureincloud.sdk.api.ClientsApi;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+        //set your access token
+        // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+        OAuth OAuth2AuthenticationCodeFlow = (OAuth) defaultClient.getAuthentication("OAuth2AuthenticationCodeFlow");
+        OAuth2AuthenticationCodeFlow.setAccessToken("YOUR ACCESS TOKEN");
+
+        ClientsApi apiInstance = new ClientsApi(defaultClient);
+        //set your company id
+        Integer companyId = 12345;
+
+        // NOTE: this is a complete request, but please customize it!!!
+        // In the next step we'll explain how to perform the request to the API.
+
+        // in this example we are using our Java SDK
+        // https://search.maven.org/artifact/it.fattureincloud/fattureincloud-java-sdk
+
+        Client entity = new Client()
+                .type(ClientType.COMPANY)
+                .name("Mario Rossi")
+                .vatNumber("47803200154")
+                .taxCode("RSSMRA91M20B967Q")
+                .addressStreet("Via Italia, 66")
+                .addressPostalCode("20900")
+                .addressCity("Milano")
+                .addressProvince("MI");
+
+        // Here we put our entity in the request object
+        CreateClientRequest createClientRequest = new CreateClientRequest()
+                .data(entity);
+
+        // Now we are all set for the final call
+        // Create the client: https://github.com/fattureincloud/fattureincloud-java-sdk/blob/master/docs/ClientsApi.md#createclient
+        try {
+            CreateClientResponse result = apiInstance.createClient(companyId, createClientRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ClientsApi#createClient");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+<pre><code class="language-php">// NOTE: this is a complete request, but please customize it before trying to send it!
+
+// In this example we are using our PHP SDK
+// https://packagist.org/packages/fattureincloud/fattureincloud-php-sdk
+
+&lt;?php
+
+require_once(__DIR__ . '/vendor/autoload.php');
+
+//set your access token
+$config = FattureInCloud\Configuration::getDefaultConfiguration()-&gt;setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new FattureInCloud\Api\ClientsApi(
+    new GuzzleHttp\Client(),
+    $config
+);
+
+//set your company id
+$company_id = 12345;
+
+$entity = new FattureInCloud\Model\Client;
+$entity
+    -&gt;setType(FattureInCloud\Model\Client::COMPANY)
+    -&gt;setName("Mario Rossi")
+    -&gt;setVatNumber("47803200154")
+    -&gt;setTaxCode("RSSMRA91M20B967Q")
+    -&gt;setAddressStreet("Via Italia, 66")
+    -&gt;setAddressPostalCode("20900")
+    -&gt;setAddressCity("Milano")
+    -&gt;setAddressProvince("MI");
+
+// Here we put our entity in the request object
+$create_client_request = new FattureInCloud\Model\CreateClientRequest;
+$create_client_request-&gt;setData($entity);
+
+// Now we are all set for the final call
+// Create the client: https://github.com/fattureincloud/fattureincloud-php-sdk/blob/master/docs/Api/ClientsApi.md#createclient
+try {
+    $result = $apiInstance-&gt;createClient($company_id, $create_client_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ClientsApi-&gt;createClient: ', $e-&gt;getMessage(), PHP_EOL;
+}
+</code></pre>
+<pre><code class="language-js">// NOTE: this is a complete request, but please customize it before trying to send it!
+
+// in this example we are using our JS SDK
+// https://www.npmjs.com/package/@fattureincloud/fattureincloud-js-sdk
+
+var fattureInCloudSdk = require("@fattureincloud/fattureincloud-js-sdk");
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+
+//set your access token
+let OAuth2AuthenticationCodeFlow =
+  defaultClient.authentications["OAuth2AuthenticationCodeFlow"];
+OAuth2AuthenticationCodeFlow.accessToken = "YOUR_ACCESS_TOKEN";
+
+let apiInstance = new fattureInCloudSdk.ClientsApi();
+//set your company id
+let companyId = 12345;
+
+let entity = new fattureInCloudSdk.Client();
+entity.type = new fattureInCloudSdk.ClientType().company;
+entity.name = "Mario Rossi";
+entity.vat_number = "47803200154";
+entity.tax_code = "RSSMRA91M20B967Q";
+entity.address_street = "Via Italia, 66";
+entity.address_postal_code = "20900";
+entity.address_city = "Milano";
+entity.address_province = "MI";
+
+// Here we put our entity in the request object
+let createClientRequest = new fattureInCloudSdk.CreateClientRequest();
+createClientRequest.data = entity;
+
+let opts = {
+  createClientRequest: createClientRequest,
+};
+
+// Now we are all set for the final call
+// Create the client: https://github.com/fattureincloud/fattureincloud-js-sdk/blob/master/docs/ClientsApi.md#createClient
+apiInstance.createClient(companyId, opts).then(
+  (result) =&gt; {
+    console.log(
+      "API called successfully. Returned result: " + JSON.stringify(result)
+    );
+  },
+  (error) =&gt; {
+    console.error(error);
+  }
+);
+</code></pre>
+<pre><code class="language-py">import datetime
+import fattureincloud_python_sdk
+from fattureincloud_python_sdk.api import clients_api
+from fattureincloud_python_sdk.models.client import Client
+from fattureincloud_python_sdk.models.client_type import ClientType
+from fattureincloud_python_sdk.models.create_client_request import CreateClientRequest
+from fattureincloud_python_sdk.models.create_client_response import CreateClientResponse
+
+from pprint import pprint
+
+# set your access token
+configuration = fattureincloud_python_sdk.Configuration()
+configuration.access_token = "YOUR_ACCESS_TOKEN"
+
+# set your company id
+company_id = 12345
+
+# NOTE: this is a complete request, but please customize it!!!
+# In the next step we'll explain how to perform the request to the API.
+
+# in this example we are using our Python SDK
+# https://pypi.org/project/fattureincloud-python-sdk/
+
+entity = Client(
+    type = ClientType("company"),
+    name="Mario Rossi",
+    vat_number="47803200154",
+    tax_code="RSSMRA91M20B967Q",
+    address_street="Via Italia, 66",
+    address_postal_code="20900",
+    address_city="Milano",
+    address_province="MI"
+)
+
+# Here we put our entity in the request object
+create_client_request = CreateClientRequest(
+    data = entity
+)
+
+# Now we are all set for the final call
+# Create the client: https://github.com/fattureincloud/fattureincloud-python-sdk/blob/master/docs/ClientsApi.md#create_client
+
+with fattureincloud_python_sdk.ApiClient(configuration) as api_client:
+
+    api_instance = clients_api.ClientsApi(api_client)
+    try:
+        api_response = api_instance.create_client(company_id, create_client_request=create_client_request)
+        pprint(api_response)
+    except fattureincloud_python_sdk.ApiException as e:
+        print("Exception when calling ClientsApi-&gt;create_client: %s\n" % e)
+</code></pre>
+<pre><code class="language-rb">require 'time'
+require 'fattureincloud_ruby_sdk'
+
+FattureInCloud_Ruby_Sdk.configure do |config|
+  # set your access token
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = FattureInCloud_Ruby_Sdk::ClientsApi.new
+# set your company id
+company_id = 12345
+
+# NOTE: this is a complete request, but please customize it!!!
+# In the next step we'll explain how to perform the request to the API.
+
+# in this example we are using our Ruby SDK
+# https://rubygems.org/gems/fattureincloud_ruby_sdk
+
+entity = FattureInCloud_Ruby_Sdk::Client.new(
+  type: FattureInCloud_Ruby_Sdk::ClientType::COMPANY,
+  name: "Mario Rossi",
+  vat_number: "47803200154",
+  tax_code: "RSSMRA91M20B967Q",
+  address_street: "Via Italia, 66",
+  address_postal_code: "20900",
+  address_city: "Milano",
+  address_province: "MI"
+)
+
+# Here we put our entity in the request object
+opts = {
+  create_client_request: FattureInCloud_Ruby_Sdk::CreateClientRequest.new(data: entity)
+}
+# Now we are all set for the final call
+# Create the client: https://github.com/fattureincloud/fattureincloud-ruby-sdk/blob/master/docs/ClientsApi.md#create_client
+begin
+  result = api_instance.create_client(company_id, opts)
+  p result
+rescue FattureInCloud_Ruby_Sdk::ApiError =&gt; e
+  puts "Error when calling ClientsApi-&gt;create_client: #{e}"
+end
+</code></pre>
+<pre><code class="language-ts">// NOTE: this is a complete request, but please customize it before trying to send it!
+
+// in this example we are using our TS SDK
+// https://www.npmjs.com/package/@fattureincloud/fattureincloud-ts-sdk
+
+import {
+  Configuration,
+  ClientsApi,
+  Client,
+  ClientType,
+  CreateClientRequest,
+} from "@fattureincloud/fattureincloud-ts-sdk";
+
+//set your access token
+const apiConfig = new Configuration({
+  accessToken: "YOUR ACCESS TOKEN",
+});
+
+let apiInstance = new ClientsApi(apiConfig);
+
+//set your company id
+let companyId = 12345;
+
+let entity: Client = {};
+entity.type = ClientType.Company;
+entity.name = "Mario Rossi";
+entity.vat_number = "47803200154";
+entity.tax_code = "RSSMRA91M20B967Q";
+entity.address_street = "Via Italia, 66";
+entity.address_postal_code = "20900";
+entity.address_city = "Milano";
+entity.address_province = "MI";
+
+// Here we put our entity in the request object
+let createClientRequest: CreateClientRequest = {
+  data: entity,
+};
+
+// Now we are all set for the final call
+// Create the client: https://github.com/fattureincloud/fattureincloud-ts-sdk/blob/master/docs/ClientsApi.md#createClient
+apiInstance.apiInstance.createClient(companyId, createClientRequest).then(
+  (data) =&gt; {
+    console.log(data);
+  },
+  (error) =&gt; {
+    console.error(error);
+  }
+);
+</code></pre>
+<p>Once you filled all the fields you need, you can click the "Continue" button and follow the wizard to create your Zap!</p>
+<p>You just created your first client. Congratulations!</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["icons", "navigation.collapsible"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>
