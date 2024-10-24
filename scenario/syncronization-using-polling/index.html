@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#lets-start">
+<a class="md-skip" href="#football-lets-start">
           Skip to content
         </a>
 </div>
@@ -537,7 +537,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../support/general-knowledge/">
+<a class="md-nav__link" href="../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -599,58 +599,58 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#lets-start">
+<a class="md-nav__link" href="#football-lets-start">
 <span class="md-ellipsis">
-        Let's start!
+      :football:  Let's start!
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#libraries">
+<a class="md-nav__link" href="#building_construction-libraries">
 <span class="md-ellipsis">
-        Libraries
+      :building_construction:  Libraries
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#initialize-our-sdk">
+<a class="md-nav__link" href="#one-initialize-our-sdk">
 <span class="md-ellipsis">
-        Initialize our SDK
+      :one:  Initialize our SDK
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#implement-the-exponential-backoff">
+<a class="md-nav__link" href="#two-implement-the-exponential-backoff">
 <span class="md-ellipsis">
-        Implement the Exponential Backoff
+      :two:  Implement the Exponential Backoff
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#the-api-method">
+<a class="md-nav__link" href="#three-the-api-method">
 <span class="md-ellipsis">
-        The API Method
+      :three:  The API Method
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#manage-the-response">
+<a class="md-nav__link" href="#four-manage-the-response">
 <span class="md-ellipsis">
-        Manage the response
+      :four:  Manage the response
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#code-examples">
+<a class="md-nav__link" href="#computer-code-examples">
 <span class="md-ellipsis">
-        Code Examples
+      :computer:  Code Examples
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#additional-resources">
+<a class="md-nav__link" href="#books-additional-resources">
 <span class="md-ellipsis">
-        Additional resources
+      :books:  Additional resources
     </span>
 </a>
 </li>
@@ -673,7 +673,7 @@ Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a
 <p>:::danger Are you sure?</p>
 <p>A better approach is to use our <a href="/webhooks/index.mdx">Webhooks</a> to keep your system updated. Check them out!</p>
 <p>:::</p>
-<h2 id="lets-start"><img alt="🏈" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f3c8.png" title=":football:"/>  Let's start!</h2>
+<h2 id="football-lets-start">:football:  Let's start!</h2>
 <p>To keep the code as simple as possible, we decided to write the data to a <a href="https://jsonlines.org/">JSON lines</a> file, that could be then sent as input for an external system; of course, it is possible to use the retrieved elements as needed: for example, to update a Database status or to perform API calls towards a third-party system.</p>
 <p>:::warning Schedule the execution!</p>
 <p>To keep two systems in sync using polling, it is necessary to reiterate the extraction of the data from our APIs, <a href="https://en.wikipedia.org/wiki/Cron">scheduling</a> the code execution.</p>
@@ -682,17 +682,17 @@ Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a
 <p>:::info Or execute it once...</p>
 <p>Even if we created this code to keep two systems synchronized periodically, it can also be used for a one-off extraction of the data from the TSE in Cloud API. Just execute it as it is...</p>
 <p>:::</p>
-<h2 id="libraries"><img alt="🏗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f3d7.png" title=":building_construction:"/>  Libraries</h2>
+<h2 id="building_construction-libraries">:building_construction:  Libraries</h2>
 <p>In our examples, we'll use the <strong>TSE in Cloud SDKs</strong>; of course, you can just replace our SDKs with a simple HTTP Client if you prefer: check the <a href="/sdks/index.mdx">dedicated page</a> for further info.
 Additionally, for some languages, we added some other libraries to perform common tasks such as writing to the file system or performing the exponential backoff.</p>
-<h2 id="initialize-our-sdk"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Initialize our SDK</h2>
+<h2 id="one-initialize-our-sdk">:one:  Initialize our SDK</h2>
 <p>In the first part of this example, we import our SDK and initialize it, using the Access Token requested to perform the API call. For simplicity, we didn't implement the code to retrieve the access token in these examples, but you can find more information in the <a href="/quickstarts/index.mdx">Quickstarts</a> or in the <a href="/authentication/index.mdx">Authentication Implementation</a> pages.</p>
 <p>Since we're trying to collect the list of products for a certain company, the <strong>products:r</strong> <a href="/basics/scopes.md">scope</a> will be required; if you need to use another API method please select the appropriate scopes.</p>
 <p>Once the token is provided to our SDK, it is possible to start using it to interrogate our APIs.</p>
-<h2 id="implement-the-exponential-backoff"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Implement the Exponential Backoff</h2>
+<h2 id="two-implement-the-exponential-backoff">:two:  Implement the Exponential Backoff</h2>
 <p>The <strong>polling strategy</strong> implies the exigency to perform a potentially huge amount of requests in a really short period. As explained <a href="/basics/limits-and-quotas.mdx">here</a>, our APIs are protected by a set of limits that could result in an error if too many requests are performed in a certain interval.</p>
 <p>This is why in our examples we wrapped the API call with an <a href="https://en.wikipedia.org/wiki/Exponential_backoff">Exponential Backoff</a> method: it manages retries and time distance between two consecutive attempts, to avoid your script failing for a temporary quota-related issue.</p>
-<h2 id="the-api-method"><img alt="3️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0033-20e3.png" title=":three:"/>  The API Method</h2>
+<h2 id="three-the-api-method">:three:  The API Method</h2>
 <p>The API method that we're using is the <a href="/api-reference#get-/c/-company_id-/products">List Products</a> method, which returns the list of all the possible products for a certain company.
 The <em>List</em> methods provide <a href="/basics/additional-capabilities/sort-results.mdx">Sorting</a> and <a href="/basics/additional-capabilities/customize-response.mdx">Customizing</a> functionalities, but in this example we'll not use them.</p>
 <p>Each response of the List methods will be <a href="/basics/additional-capabilities/paginate-results.mdx">Paginated</a>: to avoid returning enormous amounts of data with a single call, the list of products will be split into different pages, that can be retrieved consecutively. Each response contains a set of dedicated pagination parameters, that are meant to make the pages navigation task easier for you.</p>
@@ -700,780 +700,780 @@ The <em>List</em> methods provide <a href="/basics/additional-capabilities/sort-
 <p>:::danger Be aware of the index!</p>
 <p>Please, notice that the pages on our APIs use <em>one-based numbering</em>: the first page has index 1.</p>
 <p>:::</p>
-<h2 id="manage-the-response"><img alt="4️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0034-20e3.png" title=":four:"/>  Manage the response</h2>
+<h2 id="four-manage-the-response">:four:  Manage the response</h2>
 <p>Each response contains a <em>data</em> parameter, that is a JSON array representing one page (e.g. one subset of the list of products). Our SDKs parse the JSON array, so you can just use the elements contained in the array to perform the requested operations.</p>
 <p>In this example, we're just trying to populate a JSON Lines file, so for each product retrieved we obtain the related JSON representation and append it to the text file.</p>
-<h2 id="code-examples"><img alt="💻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4bb.png" title=":computer:"/>  Code Examples</h2>
+<h2 id="computer-code-examples">:computer:  Code Examples</h2>
 <p>Here you can find the code described above.</p>
-<pre><code class="language-cs">// The following dependencies are required
-// dotnet add package It.FattureInCloud.Sdk
-// dotnet add package Polly
-// dotnet add package Polly.Contrib.WaitAndRetry
-
-using System;
-using System.IO;
-using System.Linq;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using Polly;
-using It.FattureInCloud.Sdk.Api;
-using It.FattureInCloud.Sdk.Model;
-using It.FattureInCloud.Sdk.Client;
-using Polly.Contrib.WaitAndRetry;
-
-namespace poll
-{
-    class Program
-    {
-        public static ProductsApi apiInstance;
-
-        static void Main(string[] args)
-        {
-            // This code should be executed periodically using a cron library or job scheduler.
-            // For example: https://www.quartz-scheduler.net/
-            SyncProducts();
-        }
-
-        private static void SyncProducts()
-        {
-            // Here we init the TSE in Cloud SDK
-            // The Access Token is retrieved using the "GetToken" method
-            Configuration config = new Configuration();
-            config.AccessToken = GetToken();
-
-            // In this example we're using the Products API
-            apiInstance = new ProductsApi(config);
-
-            // The ID of the controlled company.
-            var companyId = 2;
-
-            // Here we setup the exponential backoff config
-            var maxRetryAttempts = 5;
-            var pauseBetweenFailures =
-                Backoff.ExponentialBackoff(TimeSpan.FromSeconds(2), retryCount: maxRetryAttempts);
-
-            var retryPolicy = Policy
-                .WaitAndRetry(pauseBetweenFailures);
-
-            try
-            {
-                // In this example we suppose to export the data to a JSON Lines file.
-                // First, we cancel the content of the destination file
-                File.WriteAllText("products.jsonl", String.Empty);
-
-                // List Products
-                var perPage = 5;
-
-                // We perform the first request
-                ListProductsResponse result =
-                    ListProductsWithBackoff(companyId, 1, perPage, retryPolicy, apiInstance);
-                // We use the first response to extract the last page index
-                var lastPage = result.LastPage;
-                // We append the products obtained with the first request top the output file
-                // Data contains an array of products
-                AppendProductsToFile(result.Data);
-
-                // For the missing pages (we already requested the first one)
-                for (var i = 2; i &lt;= lastPage; i++)
-                {
-                    // We require the page to the API
-                    result = ListProductsWithBackoff(companyId, i, perPage, retryPolicy, apiInstance);
-                    // And append all the retrieved products
-                    AppendProductsToFile(result.Data);
-                }
-            }
-            catch (ApiException ex)
-            {
-                Console.WriteLine("Exception when calling ProductsAPI.ListProducts: " + ex.Message);
-                Console.WriteLine("Status Code: " + ex.ErrorCode);
-                Console.WriteLine(ex.StackTrace);
-            }
-        }
-
-        // In this function we append the products in the JSON Lines file.
-        // You can replace this function to perform the operations you need.
-        // For example, you can build SQL queries or call a third-party API using the retrieved products.
-        {
-            StreamWriter sw = File.AppendText("products.jsonl");
-            // For each product in the list
-            foreach (Product p in products)
-            {
-                // We write the product to the file
-                sw.WriteLine(JsonConvert.SerializeObject(p, Formatting.None) + "\n");
-            }
-            sw.Close();
-        }
-
-        // Here we wrap the SDK method with an exponential backoff
-        // This is to manage the quota exceeded issue
-        private static ListProductsResponse ListProductsWithBackoff(int companyId, int currentPage, int perPage, Policy retryPolicy, ProductsApi apiInstance)
-        {
-            return retryPolicy.Execute(() =&gt;
-            {
-                // The actual SDK method is executed here
-                return apiInstance.ListProducts(companyId, null, "detailed", null, currentPage, 5);
-            });
-        }
-
-        // This is just a mock: this function should contain the code to retrieve the Access Token
-        private static string GetToken() {
-            return "YOUR_TOKEN";
-        }
-    }
-}
-</code></pre>
-<pre><code class="language-go">// The following dependencies is required
-// go get github.com/fattureincloud/fattureincloud-go-sdk/
-// go get github.com/cenkalti/backoff/v4
-
-package main
-
-import (
-    "context"
-    "encoding/json"
-    "fmt"
-    "os"
-
-    backoff "github.com/cenkalti/backoff/v4"
-    fattureincloudapi "github.com/fattureincloud/fattureincloud-go-sdk/v2/api"
-    fattureincloud "github.com/fattureincloud/fattureincloud-go-sdk/v2/model"
-)
-
-var (
-    f, _ = os.OpenFile("products.jsonl", os.O_APPEND|os.O_WRONLY, 0644)
-    // The Access Token is retrieved using the "getToken" method
-    auth          = context.WithValue(context.Background(), fattureincloudapi.ContextAccessToken, getToken())
-    configuration = fattureincloudapi.NewConfiguration()
-    apiClient     = fattureincloudapi.NewAPIClient(configuration)
-    companyId     = int32(16) // This is the ID of the company we're working on
-    // Here we define the parameters for the first request.
-    nextPage = 1
-    attempts = 0
-)
-
-func main() {
-    // This code should be executed periodically using a cron library or job scheduler.
-    syncProducts()
-}
-
-func syncProducts() {
-    // In this example we suppose to export the data to a JSON Lines file.
-    // First, we cancel the content of the destination file
-    f.Truncate(0)
-    // Here we define the operation that retrieves the products
-    operation := func() error {
-        attempts++
-        fmt.Printf("Attempt: %d\n", attempts)
-        // In this example we're using the Products API
-        // Here we execute the actual SDK method
-        resp, _, err := apiClient.ProductsAPI.ListProducts(auth, companyId).Page(int32(nextPage)).PerPage(5).Execute()
-        if resp != nil {
-            // We check if there are other pages to retrieve
-            if resp.NextPageUrl.Get() == nil {
-                nextPage = 0
-            } else {
-                nextPage++
-            }
-            // We write the products of this page to the file
-            // "data" contains an array of products
-            appendProductsToFile(resp.Data)
-        }
-        return err
-    }
-    // For all the pages
-    for nextPage != 0 {
-        attempts = 0
-        // We call the operation function using Exponential Backoff
-        err := backoff.Retry(operation, backoff.NewExponentialBackOff())
-        if err != nil {
-            fmt.Fprintf(os.Stderr, "Error %v\n", err)
-            return
-        }
-    }
-    f.Close()
-    fmt.Println("products succesfully retrieved and saved in ./products.jsonl")
-}
-
-// In this function we append the products in the JSON Lines file.
-// You can replace this function to perform the operations you need.
-// For example, you can build SQL queries or call a third-party API using the retrieved products.
-func appendProductsToFile(products []fattureincloud.Product) {
-    // For each product in the array
-    for _, element := range products {
-        // We obtain the related JSON and append it to the file as single line
-        jsonStr, _ := json.Marshal(element)
-        f.WriteString(string(jsonStr) + "\n")
-    }
-}
-
-// This is just a mock: this function should contain the code to retrieve the Access Token
-func getToken() string {
-    return "YOUR_TOKEN"
-}
-</code></pre>
-<pre><code class="language-java">import com.google.gson.Gson;
-import io.github.resilience4j.core.IntervalFunction;
-import io.github.resilience4j.retry.Retry;
-import io.github.resilience4j.retry.RetryConfig;
-import io.github.resilience4j.retry.RetryRegistry;
-import io.vavr.CheckedFunction0;
-import it.fattureincloud.sdk.ApiClient;
-import it.fattureincloud.sdk.ApiException;
-import it.fattureincloud.sdk.Configuration;
-import it.fattureincloud.sdk.api.ProductsApi;
-import it.fattureincloud.sdk.auth.OAuth;
-import it.fattureincloud.sdk.model.ListProductsResponse;
-import it.fattureincloud.sdk.model.Product;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.util.List;
-
-public class Application {
-    public static void main(String[] args) throws Throwable {
-        // This code should be executed periodically using a cron library or job scheduler.
-        // For example: http://www.quartz-scheduler.org/
-        syncProducts();
-    }
-
-    static void syncProducts() throws Throwable {
-
-        // Here we init the TSE in Cloud SDK
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-        // The Access Token is retrieved using the "getToken" method
-        OAuth OAuth2AuthenticationCodeFlow =
-            (OAuth) defaultClient.getAuthentication("OAuth2AuthenticationCodeFlow");
-        OAuth2AuthenticationCodeFlow.setAccessToken(getToken());
-
-        // In this example we're using the Products API
-        ProductsApi apiInstance = new ProductsApi(defaultClient);
-
-        // The ID of the controlled company.
-        int companyId = 2;
-
-        // Here we setup the exponential backoff config
-        RetryConfig config = RetryConfig.custom()
-                .maxAttempts(10)
-                .retryExceptions(ApiException.class)
-                .intervalFunction(IntervalFunction.ofExponentialBackoff(1000, 2))
-                .build();
-
-        RetryRegistry registry = RetryRegistry.of(config);
-        Retry retry = registry.retry("listProducts", config);
-
-        Retry.EventPublisher publisher = retry.getEventPublisher();
-        publisher.onRetry(event -&gt; System.out.println(event.toString()));
-
-        // In this example we suppose to export the data to a JSON Lines file.
-        // First, we cancel the content of the destination file
-        Files.write(Paths.get("products.jsonl"), ("").getBytes(),
-            StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
-
-        // List Products
-        int perPage = 5;
-
-        // We perform the first request
-        ListProductsResponse result = listProductsWithBackoff(companyId, 1, perPage, retry, apiInstance);
-
-        // We use the first response to extract the last page index
-        int lastPage = result.getLastPage();
-
-        // We append the products obtained with the first request top the output file
-        // Data contains an array of products
-        appendProductsToFile(result.getData());
-
-        // For the missing pages (we already requested the first one)
-        for (int i = 2; i &lt;= lastPage; i++)
-        {
-            // We require the page to the API
-            result = listProductsWithBackoff(companyId, i, perPage, retry, apiInstance);
-            // And append all the retrieved products
-            appendProductsToFile(result.getData());
-
-        }
-    }
-
-    // Here we wrap the SDK method with an exponential backoff
-    // This is to manage the quota exceeded issue
-    static ListProductsResponse listProductsWithBackoff(int companyId, int currentPage, int perPage,
-            Retry retry, ProductsApi apiInstance) throws Throwable {
-                Retry.decorateCheckedSupplier(retry,
-                        () -&gt; apiInstance.listProducts(companyId, null, "detailed", null, currentPage, 5));
-        return retryingListSuppliers.apply();
-    }
-
-        for (Product product : products) {
-            String p = new Gson().toJson(product);
-            Files.write(Paths.get("products.jsonl"), (p + System.lineSeparator()).getBytes(),
-                StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-        }
-    }
-
-        // This is just a mock: this function should contain the code to retrieve the Access Token
-    static String getToken() {
-        return "YOUR_TOKEN";
-    }
-}
-</code></pre>
-<pre><code class="language-js">// The following dependency is required
-// yarn add @fattureincloud/fattureincloud-js-sdk
-
-const fs = require("fs");
-const fattureInCloudSdk = require("@fattureincloud/fattureincloud-js-sdk");
-
-// Here we init the TSE in Cloud SDK
-// The Access Token is retrieved using the "getToken" method
-var defaultClient = fattureInCloudSdk.ApiClient.instance;
-var OAuth2AuthenticationCodeFlow =
-  defaultClient.authentications["OAuth2AuthenticationCodeFlow"];
-OAuth2AuthenticationCodeFlow.accessToken = getToken();
-
-// In this example we're using the Products API
-var productsApiInstance = new fattureInCloudSdk.ProductsApi();
-
-// This code should be executed periodically using a cron library or job scheduler.
-// For example: https://www.npmjs.com/package/node-cron
-main()
-  .then()
-  .catch((err) =&gt; console.error(err));
-
-async function main() {
-  // In this example we suppose to export the data to a JSON Lines file.
-  // First, we cancel the content of the destination file
-  fs.truncate("./products.jsonl", (err) =&gt; {
-    if (err) {
-      console.error(err);
-      return;
-    }
-  });
-
-  // Here we define the parameters for the first request.
-  let opts = {
-    fields: null,
-    fieldset: "detailed",
-    sort: null,
-    page: 1, // We're trying to obtain the first page
-    perPage: 5, // Every page will contain at most 5 products
-  };
-  let companyId = 2; // This is the ID of the company we're working on
-
-  try {
-    // We perform the first request
-    let result = await listProductsWithBackoff(companyId, opts);
-    // We recover the last page index
-    let lastPage = result["last_page"];
-    // We write the products of this page to the file
-    // "data" contains an array of products
-    await appendProductsToFile(result["data"]);
-
-    // For all the remaining pages (we already have the first one)
-    for (var i = 2; i &lt;= lastPage; i++) {
-      // We update the page index
-      opts["page"] = i;
-      // We require the page at the selected index
-      result = await listProductsWithBackoff(companyId, opts);
-      // And we write the products to the file
-      await appendProductsToFile(result["data"]);
-    }
-    console.log("products succesfully retrieved and saved in ./products.jsonl");
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-// In this function we append the products in the JSON Lines file.
-// You can replace this function to perform the operations you need.
-// For example, you can build SQL queries or call a third-party API using the retrieved products.
-async function appendProductsToFile(products) {
-  // For each product in the array
-  for (i in products) {
-    let product = products[i];
-    // We obtain the related JSON and append it to the file as single line
-    fs.appendFileSync(
-      "./products.jsonl",
-      JSON.stringify(product) + "\n",
-      (err) =&gt; {
-        if (err) {
-          console.error(err);
-          return;
-        }
-      }
-    );
-  }
-}
-
-// Here we wrap the SDK method with an exponential backoff
-// This is to manage the quota exceeded issue
-async function listProductsWithBackoff(companyId, opts) {
-  var count = 0;
-  const delay = (retryCount) =&gt;
-    new Promise((resolve) =&gt; setTimeout(resolve, 2 ** retryCount * 1000));
-  const getProd = async (retryCount = 0, lastError = null) =&gt; {
-    if (retryCount &gt; 20) throw new Error(lastError);
-    try {
-      console.log("attempt:", count++, "wait:", 2 ** retryCount * 1000);
-      // The actual SDK method is executed here
-      return await productsApiInstance.listProducts(companyId, opts);
-    } catch (e) {
-      await delay(retryCount);
-      return getProd(retryCount + 1, e);
-    }
-  };
-  try {
-    var res = await getProd();
-    return res;
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-// This is just a mock: this function should contain the code to retrieve the Access Token
-function getToken() {
-  return "YOUR_TOKEN";
-}
-</code></pre>
-<pre><code class="language-php">&lt;?php
-require("vendor/autoload.php");
-// The following dependencies are required
-// composer require stechstudio/backoff
-// composer require fattureincloud/fattureincloud-php-sdk
-
-use FattureInCloud\Api\ProductsApi;
-use FattureInCloud\Configuration;
-use GuzzleHttp\Client;
-use STS\Backoff\Backoff;
-
-// This code should be executed periodically using a cron library or job scheduler.
-// For example: https://github.com/Cron/Cron
-
-// Here we init the TSE in Cloud SDK
-// The Access Token is retrieved using the "getToken" method
-$config = Configuration::getDefaultConfiguration()-&gt;setAccessToken(getToken());
-// In this example we're using the Products API
-$productsApiInstance = new ProductsApi(
-    new Client(),
-    $config
-);
-
-// In this example we suppose to export the data to a JSON Lines file.
-// First, we cancel the content of the destination file
-file_put_contents("./products.jsonl", "");
-
-// This is the ID of the company we're currently managing
-$companyId = 2;
-// We require the first page using the ListProducts method
-$result = listProductsWithBackoff($productsApiInstance, $companyId, 1);
-// We extract the index of the last page from the first response
-$lastPage = $result["last_page"];
-// We append all the products to the destination file
-// "data" contains an array of products
-appendProductsToFile($result["data"]);
-
-// For all the missing pages (we already have the first one)
-for ($i = 2; $i &lt;= $lastPage; $i++) {
-    // We require the page at the selected index to the API
-    $result = listProductsWithBackoff($productsApiInstance, $companyId, $i);
-    // We append this page products to the file
-    appendProductsToFile($result["data"]);
-}
-
-// In this function we append the products in the JSON Lines file.
-// You can replace this function to perform the operations you need.
-// For example, you can build SQL queries or call a third-party API using the retrieved products.
-function appendProductsToFile($products)
-{
-    // For each product in the array
-    foreach ($products as $product) {
-        // We encode it to a JSON string and append it to the file as a single line
-        file_put_contents("products.jsonl", json_encode($product) . "\n", FILE_APPEND);
-    }
-}
-
-// Here we wrap the SDK method with an exponential backoff
-// This is to manage the quota exceeded issue
-function listProductsWithBackoff($productsApiInstance, $companyId, $currentPage): Object
-{
-    $backoff = new Backoff(100, 'exponential', 300000, true);
-    return $backoff-&gt;run(function () use ($productsApiInstance, $companyId, $currentPage) {
-        try {
-            // The actual SDK method is executed here
-            $result = $productsApiInstance-&gt;listProducts($companyId, null, "detailed", null, $currentPage, 5);
-        } catch (Exception $e) {
-            var_dump($e);
-        }
-        return $result;
-    });
-}
-
-// This is just a mock: this function should contain the code to retrieve the Access Token
-function getToken(): String {
-  return "YOUR_TOKEN"
-}
-</code></pre>
-<pre><code class="language-py"># The following dependencies are required
-# pip install backoff
-# pip install fattureincloud-python-sdk
-import fattureincloud_python_sdk
-from fattureincloud_python_sdk.api import products_api
-from fattureincloud_python_sdk.exceptions import ApiException
-import backoff
-# import collections #needed if you are using python &gt; 3.10
-# collections.Callable = collections.abc.Callable #needed if you are using python &gt; 3.10
-
-# Here we setup the exponential backoff config
-@backoff.on_exception(backoff.expo, ApiException, max_tries=10)
-def list_products_with_backoff(products_api_instance, company_id, current_page, per_page):
-    return products_api_instance.list_products(company_id, page=current_page, per_page=per_page)
-
-# In this function we append the products in the JSON Lines file.
-# You can replace this function to perform the operations you need.
-# For example, you can build SQL queries or call a third-party API using the retrieved products.
-def append_products_to_page(products):
-    # For each product in the list
-    for p in products:
-        f = open("products.jsonl", "a")
-        # We write the product to the file
-        f.write(str(p).replace("\n", ""))
-        f.write("\n")
-        f.close()
-
-def get_token():
-    return "YOUR_TOKEN"
-
-def sync_products():
-    # Here we init the TSE in Cloud SDK
-    # The Access Token is retrieved using the "GetToken" method
-    configuration = fattureincloud_python_sdk.Configuration()
-    configuration.access_token = get_token()
-    configuration.retries = 0 # Needed to implement custom backoff
-    # The ID of the controlled company.
-    company_id = 2
-    current_page = 1
-    per_page = 5
-
-    with fattureincloud_python_sdk.ApiClient(configuration) as api_client:
-        # In this example we're using the Products API
-        products_api_instance = products_api.ProductsApi(api_client)
-
-        # We perform the first request
-        result = list_products_with_backoff(products_api_instance, company_id, current_page, per_page)
-        last_page = result.last_page
-
-        # We append the products obtained with the first request to the output file
-        # Data contains an array of products
-        append_products_to_page(result.data)
-
-        # In this example we suppose to export the data to a JSON Lines file.
-        # First, we cancel the content of the destination file
-        file = open("products.jsonl","r+")
-        file.truncate(0)
-        file.close()
-
-        # For the missing pages (we already requested the first one)
-        for x in range(2, last_page):
-            # We require the page to the API
-            result = list_products_with_backoff(products_api_instance, company_id, x, per_page)
-            # And append all the retrieved products
-            append_products_to_page(result.data)
-
-# This code should be executed periodically using a cron library or job scheduler.
-sync_products()
-</code></pre>
-<pre><code class="language-rb"># The following dependency is required
-# gem install fattureincloud_ruby_sdk
-
-require 'fattureincloud_ruby_sdk'
-require 'json'
-
-def main()
-    FattureInCloud_Ruby_Sdk.configure do |config|
-    # Here we init the TSE in Cloud SDK
-    # The Access Token is retrieved using the "get_token" method
-    config.access_token = get_token()
-    end
-
-    # In this example we're using the Products API
-    products_api_instance = FattureInCloud_Ruby_Sdk::ProductsAPI.new
-    retries = 0
-    max_retries = 20
-
-    # This is the ID of the company we're working on
-    company_id = 2
-    # Here we define the parameters for the first request.
-    opts = {
-        fields: nil,
-        fieldset: "detailed",
-        sort: nil,
-        page: 1, # We're trying to obtain the first page
-        per_page: 5 # Every page will contain at most 5 products
-    }
-    actual_page = 2
-
-    result = list_products_with_backoff(company_id, opts, products_api_instance)
-    last_page = result.last_page
-
-    # In this example we suppose to export the data to a JSON Lines file.
-    # First, we cancel the content of the destination file
-    File.delete('./products.jsonl') if File.exist?('./products.jsonl')
-    append_products_to_file(result.data)
-
-    while actual_page &lt;= last_page do
-        opts[:page] = actual_page
-        res = list_products_with_backoff(company_id, opts, products_api_instance)
-        append_products_to_file(res.data)
-        actual_page += 1
-    end
-end
-
-def list_products_with_backoff(company_id, opts, products_api_instance)
-    retries = 0
-    begin
-        puts "attempt: #{retries}\n"
-        products = products_api_instance.list_products(company_id, opts)
-        return products
-    rescue FattureInCloud_Ruby_Sdk::ApiError =&gt; e
-        if retries &lt;= max_retries
-            retries += 1
-            sleep 2 ** retries
-            retry
-        else
-            raise "Giving up on the server after #{retries} retries. Got error: #{e.message}"
-        end
-    end
-end
-
-
-def append_products_to_file(products)
-    for product in products
-        File.write('./products.jsonl', product.to_hash.to_json + "\n", mode: 'a')
-    end
-end
-
-def get_token()
-  return "YOUR_TOKEN"
-end
-
-# This code should be executed periodically using a cron library or job scheduler.
-main()
-</code></pre>
-<pre><code class="language-ts">// The following dependency is required
-// yarn add @fattureincloud/fattureincloud-ts-sdk
-
-import fs from "fs";
-import { Product } from "@fattureincloud/fattureincloud-ts-sdk";
-
-// Here we init the TSE in Cloud SDK
-// The Access Token is retrieved using the "getToken" method
-import {
-  Configuration,
-  ProductsApi,
-} from "@fattureincloud/fattureincloud-ts-sdk";
-
-const apiConfig = new Configuration({
-  accessToken: getToken(),
-});
-
-// In this example we're using the Products API
-var productsApiInstance = new ProductsApi(apiConfig);
-
-// This code should be executed periodically using a cron library or job scheduler.
-// For example: https://www.npmjs.com/package/node-cron
-main()
-  .then()
-  .catch((err) =&gt; console.error(err));
-
-async function main() {
-  // In this example we suppose to export the data to a JSON Lines file.
-  // First, we cancel the content of the destination file
-  fs.truncate("./products.jsonl", (err) =&gt; {
-    if (err) {
-      console.error(err);
-      return;
-    }
-  });
-
-  // Here we define the parameters for the first request.
-  let page = 1;
-
-  let companyId = 16; // This is the ID of the company we're working on
-
-  try {
-    // We perform the first request
-    let result = await listProductsWithBackoff(companyId, page);
-    // We recover the last page index
-    let lastPage = result["last_page"];
-    // We write the products of this page to the file
-    // "data" contains an array of products
-    await appendProductsToFile(result.data);
-
-    // For all the remaining pages (we already have the first one)
-    for (var i = 2; i &lt;= lastPage; i++) {
-      // We update the page index
-      page = i;
-      // We require the page at the selected index
-      result = await listProductsWithBackoff(companyId, page);
-      // And we write the products to the file
-      await appendProductsToFile(result.data);
-    }
-    console.log("products succesfully retrieved and saved in ./products.jsonl");
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-// In this function we append the products in the JSON Lines file.
-// You can replace this function to perform the operations you need.
-// For example, you can build SQL queries or call a third-party API using the retrieved products.
-  // For each product in the array
-  for (var i in products) {
-    let product = products[i];
-    // We obtain the related JSON and append it to the file as single line
-    fs.appendFileSync("./products.jsonl", JSON.stringify(product) + "\n");
-  }
-}
-
-// Here we wrap the SDK method with an exponential backoff
-// This is to manage the quota exceeded issue
-async function listProductsWithBackoff(companyId: number, page: number) {
-  var count = 0;
-  const delay = (retryCount: number) =&gt;
-    new Promise((resolve) =&gt; setTimeout(resolve, 2 ** retryCount * 1000));
-  const getProd: any = async (retryCount = 0, lastError?: string) =&gt; {
-    if (retryCount &gt; 20) throw new Error(lastError);
-    try {
-      console.log("attempt:", count++, "wait:", 2 ** retryCount * 1000);
-      // The actual SDK method is executed here
-      return await (
-        await productsApiInstance.listProducts(
-          companyId,
-          undefined,
-          "detailed",
-          undefined,
-          page
-        )
-      ).data;
-    } catch (e: any) {
-      await delay(retryCount);
-      return getProd(++retryCount, e.message);
-    }
-  };
-  try {
-    var res = await getProd();
-    return res;
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-// This is just a mock: this function should contain the code to retrieve the Access Token
-function getToken() {
-  return "YOUR_TOKEN";
-}
-</code></pre>
-<h2 id="additional-resources"><img alt="📚" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4da.png" title=":books:"/>  Additional resources</h2>
+<div class="highlight"><pre><span></span><code><span class="c1">// The following dependencies are required</span>
+<span class="c1">// dotnet add package It.FattureInCloud.Sdk</span>
+<span class="c1">// dotnet add package Polly</span>
+<span class="c1">// dotnet add package Polly.Contrib.WaitAndRetry</span>
+
+<span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Newtonsoft.Json</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Polly</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Api</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Model</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Client</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Polly.Contrib.WaitAndRetry</span><span class="p">;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">poll</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">ProductsApi</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// This code should be executed periodically using a cron library or job scheduler.</span>
+<span class="w">            </span><span class="c1">// For example: https://www.quartz-scheduler.net/</span>
+<span class="w">            </span><span class="n">SyncProducts</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SyncProducts</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Here we init the TSE in Cloud SDK</span>
+<span class="w">            </span><span class="c1">// The Access Token is retrieved using the "GetToken" method</span>
+<span class="w">            </span><span class="n">Configuration</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Configuration</span><span class="p">();</span>
+<span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">AccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetToken</span><span class="p">();</span>
+
+<span class="w">            </span><span class="c1">// In this example we're using the Products API</span>
+<span class="w">            </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProductsApi</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// The ID of the controlled company.</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// Here we setup the exponential backoff config</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">maxRetryAttempts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">pauseBetweenFailures</span><span class="w"> </span><span class="o">=</span>
+<span class="w">                </span><span class="n">Backoff</span><span class="p">.</span><span class="n">ExponentialBackoff</span><span class="p">(</span><span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromSeconds</span><span class="p">(</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">retryCount</span><span class="p">:</span><span class="w"> </span><span class="n">maxRetryAttempts</span><span class="p">);</span>
+
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">retryPolicy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Policy</span>
+<span class="w">                </span><span class="p">.</span><span class="n">WaitAndRetry</span><span class="p">(</span><span class="n">pauseBetweenFailures</span><span class="p">);</span>
+
+<span class="w">            </span><span class="k">try</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// In this example we suppose to export the data to a JSON Lines file.</span>
+<span class="w">                </span><span class="c1">// First, we cancel the content of the destination file</span>
+<span class="w">                </span><span class="n">File</span><span class="p">.</span><span class="n">WriteAllText</span><span class="p">(</span><span class="s">"products.jsonl"</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="n">Empty</span><span class="p">);</span>
+
+<span class="w">                </span><span class="c1">// List Products</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">perPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">;</span>
+
+<span class="w">                </span><span class="c1">// We perform the first request</span>
+<span class="w">                </span><span class="n">ListProductsResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span>
+<span class="w">                    </span><span class="n">ListProductsWithBackoff</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">perPage</span><span class="p">,</span><span class="w"> </span><span class="n">retryPolicy</span><span class="p">,</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">);</span>
+<span class="w">                </span><span class="c1">// We use the first response to extract the last page index</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">lastPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">LastPage</span><span class="p">;</span>
+<span class="w">                </span><span class="c1">// We append the products obtained with the first request top the output file</span>
+<span class="w">                </span><span class="c1">// Data contains an array of products</span>
+<span class="w">                </span><span class="n">AppendProductsToFile</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">Data</span><span class="p">);</span>
+
+<span class="w">                </span><span class="c1">// For the missing pages (we already requested the first one)</span>
+<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">lastPage</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="c1">// We require the page to the API</span>
+<span class="w">                    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ListProductsWithBackoff</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">perPage</span><span class="p">,</span><span class="w"> </span><span class="n">retryPolicy</span><span class="p">,</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">);</span>
+<span class="w">                    </span><span class="c1">// And append all the retrieved products</span>
+<span class="w">                    </span><span class="n">AppendProductsToFile</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">Data</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ApiException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Exception when calling ProductsAPI.ListProducts: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Status Code: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="n">ErrorCode</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="n">StackTrace</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// In this function we append the products in the JSON Lines file.</span>
+<span class="w">        </span><span class="c1">// You can replace this function to perform the operations you need.</span>
+<span class="w">        </span><span class="c1">// For example, you can build SQL queries or call a third-party API using the retrieved products.</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">StreamWriter</span><span class="w"> </span><span class="n">sw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">AppendText</span><span class="p">(</span><span class="s">"products.jsonl"</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// For each product in the list</span>
+<span class="w">            </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Product</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">products</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// We write the product to the file</span>
+<span class="w">                </span><span class="n">sw</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">Formatting</span><span class="p">.</span><span class="n">None</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"\n"</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">sw</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Here we wrap the SDK method with an exponential backoff</span>
+<span class="w">        </span><span class="c1">// This is to manage the quota exceeded issue</span>
+<span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">ListProductsResponse</span><span class="w"> </span><span class="nf">ListProductsWithBackoff</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">currentPage</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">perPage</span><span class="p">,</span><span class="w"> </span><span class="n">Policy</span><span class="w"> </span><span class="n">retryPolicy</span><span class="p">,</span><span class="w"> </span><span class="n">ProductsApi</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">retryPolicy</span><span class="p">.</span><span class="n">Execute</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// The actual SDK method is executed here</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="n">ListProducts</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="s">"detailed"</span><span class="p">,</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="n">currentPage</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">);</span>
+<span class="w">            </span><span class="p">});</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// This is just a mock: this function should contain the code to retrieve the Access Token</span>
+<span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetToken</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="s">"YOUR_TOKEN"</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// The following dependencies is required</span>
+<span class="c1">// go get github.com/fattureincloud/fattureincloud-go-sdk/</span>
+<span class="c1">// go get github.com/cenkalti/backoff/v4</span>
+
+<span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">"context"</span>
+<span class="w">    </span><span class="s">"encoding/json"</span>
+<span class="w">    </span><span class="s">"fmt"</span>
+<span class="w">    </span><span class="s">"os"</span>
+
+<span class="w">    </span><span class="nx">backoff</span><span class="w"> </span><span class="s">"github.com/cenkalti/backoff/v4"</span>
+<span class="w">    </span><span class="nx">fattureincloudapi</span><span class="w"> </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/api"</span>
+<span class="w">    </span><span class="nx">fattureincloud</span><span class="w"> </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/model"</span>
+<span class="p">)</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">OpenFile</span><span class="p">(</span><span class="s">"products.jsonl"</span><span class="p">,</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">O_APPEND</span><span class="o">|</span><span class="nx">os</span><span class="p">.</span><span class="nx">O_WRONLY</span><span class="p">,</span><span class="w"> </span><span class="mo">0644</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// The Access Token is retrieved using the "getToken" method</span>
+<span class="w">    </span><span class="nx">auth</span><span class="w">          </span><span class="p">=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">WithValue</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">Background</span><span class="p">(),</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">ContextAccessToken</span><span class="p">,</span><span class="w"> </span><span class="nx">getToken</span><span class="p">())</span>
+<span class="w">    </span><span class="nx">configuration</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewConfiguration</span><span class="p">()</span>
+<span class="w">    </span><span class="nx">apiClient</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewAPIClient</span><span class="p">(</span><span class="nx">configuration</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">companyId</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="nb">int32</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="c1">// This is the ID of the company we're working on</span>
+<span class="w">    </span><span class="c1">// Here we define the parameters for the first request.</span>
+<span class="w">    </span><span class="nx">nextPage</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nx">attempts</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="p">)</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// This code should be executed periodically using a cron library or job scheduler.</span>
+<span class="w">    </span><span class="nx">syncProducts</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">syncProducts</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// In this example we suppose to export the data to a JSON Lines file.</span>
+<span class="w">    </span><span class="c1">// First, we cancel the content of the destination file</span>
+<span class="w">    </span><span class="nx">f</span><span class="p">.</span><span class="nx">Truncate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// Here we define the operation that retrieves the products</span>
+<span class="w">    </span><span class="nx">operation</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">attempts</span><span class="o">++</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">"Attempt: %d\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">attempts</span><span class="p">)</span>
+<span class="w">        </span><span class="c1">// In this example we're using the Products API</span>
+<span class="w">        </span><span class="c1">// Here we execute the actual SDK method</span>
+<span class="w">        </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">apiClient</span><span class="p">.</span><span class="nx">ProductsAPI</span><span class="p">.</span><span class="nx">ListProducts</span><span class="p">(</span><span class="nx">auth</span><span class="p">,</span><span class="w"> </span><span class="nx">companyId</span><span class="p">).</span><span class="nx">Page</span><span class="p">(</span><span class="nb">int32</span><span class="p">(</span><span class="nx">nextPage</span><span class="p">)).</span><span class="nx">PerPage</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">Execute</span><span class="p">()</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">resp</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// We check if there are other pages to retrieve</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">resp</span><span class="p">.</span><span class="nx">NextPageUrl</span><span class="p">.</span><span class="nx">Get</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">nextPage</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">nextPage</span><span class="o">++</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="c1">// We write the products of this page to the file</span>
+<span class="w">            </span><span class="c1">// "data" contains an array of products</span>
+<span class="w">            </span><span class="nx">appendProductsToFile</span><span class="p">(</span><span class="nx">resp</span><span class="p">.</span><span class="nx">Data</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">err</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// For all the pages</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">nextPage</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">attempts</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="c1">// We call the operation function using Exponential Backoff</span>
+<span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">backoff</span><span class="p">.</span><span class="nx">Retry</span><span class="p">(</span><span class="nx">operation</span><span class="p">,</span><span class="w"> </span><span class="nx">backoff</span><span class="p">.</span><span class="nx">NewExponentialBackOff</span><span class="p">())</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Error %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">f</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">"products succesfully retrieved and saved in ./products.jsonl"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// In this function we append the products in the JSON Lines file.</span>
+<span class="c1">// You can replace this function to perform the operations you need.</span>
+<span class="c1">// For example, you can build SQL queries or call a third-party API using the retrieved products.</span>
+<span class="kd">func</span><span class="w"> </span><span class="nx">appendProductsToFile</span><span class="p">(</span><span class="nx">products</span><span class="w"> </span><span class="p">[]</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">Product</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// For each product in the array</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">products</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// We obtain the related JSON and append it to the file as single line</span>
+<span class="w">        </span><span class="nx">jsonStr</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">Marshal</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">f</span><span class="p">.</span><span class="nx">WriteString</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">jsonStr</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"\n"</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// This is just a mock: this function should contain the code to retrieve the Access Token</span>
+<span class="kd">func</span><span class="w"> </span><span class="nx">getToken</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">"YOUR_TOKEN"</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">com.google.gson.Gson</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.github.resilience4j.core.IntervalFunction</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.github.resilience4j.retry.Retry</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.github.resilience4j.retry.RetryConfig</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.github.resilience4j.retry.RetryRegistry</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.vavr.CheckedFunction0</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiClient</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.Configuration</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.api.ProductsApi</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.auth.OAuth</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.model.ListProductsResponse</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.model.Product</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.nio.file.Files</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.nio.file.Paths</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.nio.file.StandardOpenOption</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Application</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Throwable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// This code should be executed periodically using a cron library or job scheduler.</span>
+<span class="w">        </span><span class="c1">// For example: http://www.quartz-scheduler.org/</span>
+<span class="w">        </span><span class="n">syncProducts</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">syncProducts</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Throwable</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">// Here we init the TSE in Cloud SDK</span>
+<span class="w">        </span><span class="n">ApiClient</span><span class="w"> </span><span class="n">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Configuration</span><span class="p">.</span><span class="na">getDefaultApiClient</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// The Access Token is retrieved using the "getToken" method</span>
+<span class="w">        </span><span class="n">OAuth</span><span class="w"> </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="p">(</span><span class="n">OAuth</span><span class="p">)</span><span class="w"> </span><span class="n">defaultClient</span><span class="p">.</span><span class="na">getAuthentication</span><span class="p">(</span><span class="s">"OAuth2AuthenticationCodeFlow"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="na">setAccessToken</span><span class="p">(</span><span class="n">getToken</span><span class="p">());</span>
+
+<span class="w">        </span><span class="c1">// In this example we're using the Products API</span>
+<span class="w">        </span><span class="n">ProductsApi</span><span class="w"> </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProductsApi</span><span class="p">(</span><span class="n">defaultClient</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// The ID of the controlled company.</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Here we setup the exponential backoff config</span>
+<span class="w">        </span><span class="n">RetryConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RetryConfig</span><span class="p">.</span><span class="na">custom</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">maxAttempts</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">retryExceptions</span><span class="p">(</span><span class="n">ApiException</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">intervalFunction</span><span class="p">(</span><span class="n">IntervalFunction</span><span class="p">.</span><span class="na">ofExponentialBackoff</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">RetryRegistry</span><span class="w"> </span><span class="n">registry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RetryRegistry</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Retry</span><span class="w"> </span><span class="n">retry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="na">retry</span><span class="p">(</span><span class="s">"listProducts"</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">Retry</span><span class="p">.</span><span class="na">EventPublisher</span><span class="w"> </span><span class="n">publisher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">retry</span><span class="p">.</span><span class="na">getEventPublisher</span><span class="p">();</span>
+<span class="w">        </span><span class="n">publisher</span><span class="p">.</span><span class="na">onRetry</span><span class="p">(</span><span class="n">event</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="na">toString</span><span class="p">()));</span>
+
+<span class="w">        </span><span class="c1">// In this example we suppose to export the data to a JSON Lines file.</span>
+<span class="w">        </span><span class="c1">// First, we cancel the content of the destination file</span>
+<span class="w">        </span><span class="n">Files</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">Paths</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">"products.jsonl"</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="s">""</span><span class="p">).</span><span class="na">getBytes</span><span class="p">(),</span>
+<span class="w">            </span><span class="n">StandardOpenOption</span><span class="p">.</span><span class="na">CREATE</span><span class="p">,</span><span class="w"> </span><span class="n">StandardOpenOption</span><span class="p">.</span><span class="na">TRUNCATE_EXISTING</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// List Products</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">perPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// We perform the first request</span>
+<span class="w">        </span><span class="n">ListProductsResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listProductsWithBackoff</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">perPage</span><span class="p">,</span><span class="w"> </span><span class="n">retry</span><span class="p">,</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// We use the first response to extract the last page index</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">lastPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getLastPage</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// We append the products obtained with the first request top the output file</span>
+<span class="w">        </span><span class="c1">// Data contains an array of products</span>
+<span class="w">        </span><span class="n">appendProductsToFile</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">getData</span><span class="p">());</span>
+
+<span class="w">        </span><span class="c1">// For the missing pages (we already requested the first one)</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">lastPage</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// We require the page to the API</span>
+<span class="w">            </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listProductsWithBackoff</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">perPage</span><span class="p">,</span><span class="w"> </span><span class="n">retry</span><span class="p">,</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// And append all the retrieved products</span>
+<span class="w">            </span><span class="n">appendProductsToFile</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">getData</span><span class="p">());</span>
+
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Here we wrap the SDK method with an exponential backoff</span>
+<span class="w">    </span><span class="c1">// This is to manage the quota exceeded issue</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="n">ListProductsResponse</span><span class="w"> </span><span class="nf">listProductsWithBackoff</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">currentPage</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">perPage</span><span class="p">,</span>
+<span class="w">            </span><span class="n">Retry</span><span class="w"> </span><span class="n">retry</span><span class="p">,</span><span class="w"> </span><span class="n">ProductsApi</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Throwable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Retry</span><span class="p">.</span><span class="na">decorateCheckedSupplier</span><span class="p">(</span><span class="n">retry</span><span class="p">,</span>
+<span class="w">                        </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="na">listProducts</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s">"detailed"</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">currentPage</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">retryingListSuppliers</span><span class="p">.</span><span class="na">apply</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Product</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">products</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gson</span><span class="p">().</span><span class="na">toJson</span><span class="p">(</span><span class="n">product</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Files</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">Paths</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">"products.jsonl"</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">lineSeparator</span><span class="p">()).</span><span class="na">getBytes</span><span class="p">(),</span>
+<span class="w">                </span><span class="n">StandardOpenOption</span><span class="p">.</span><span class="na">CREATE</span><span class="p">,</span><span class="w"> </span><span class="n">StandardOpenOption</span><span class="p">.</span><span class="na">APPEND</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// This is just a mock: this function should contain the code to retrieve the Access Token</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getToken</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">"YOUR_TOKEN"</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// The following dependency is required</span>
+<span class="c1">// yarn add @fattureincloud/fattureincloud-js-sdk</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"fs"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"@fattureincloud/fattureincloud-js-sdk"</span><span class="p">);</span>
+
+<span class="c1">// Here we init the TSE in Cloud SDK</span>
+<span class="c1">// The Access Token is retrieved using the "getToken" method</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ApiClient</span><span class="p">.</span><span class="nx">instance</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="nx">defaultClient</span><span class="p">.</span><span class="nx">authentications</span><span class="p">[</span><span class="s2">"OAuth2AuthenticationCodeFlow"</span><span class="p">];</span>
+<span class="nx">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getToken</span><span class="p">();</span>
+
+<span class="c1">// In this example we're using the Products API</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">productsApiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ProductsApi</span><span class="p">();</span>
+
+<span class="c1">// This code should be executed periodically using a cron library or job scheduler.</span>
+<span class="c1">// For example: https://www.npmjs.com/package/node-cron</span>
+<span class="nx">main</span><span class="p">()</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">()</span>
+<span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
+
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// In this example we suppose to export the data to a JSON Lines file.</span>
+<span class="w">  </span><span class="c1">// First, we cancel the content of the destination file</span>
+<span class="w">  </span><span class="nx">fs</span><span class="p">.</span><span class="nx">truncate</span><span class="p">(</span><span class="s2">"./products.jsonl"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">// Here we define the parameters for the first request.</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">fields</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">fieldset</span><span class="o">:</span><span class="w"> </span><span class="s2">"detailed"</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">sort</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">page</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="c1">// We're trying to obtain the first page</span>
+<span class="w">    </span><span class="nx">perPage</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="c1">// Every page will contain at most 5 products</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// This is the ID of the company we're working on</span>
+
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// We perform the first request</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">listProductsWithBackoff</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// We recover the last page index</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">lastPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">result</span><span class="p">[</span><span class="s2">"last_page"</span><span class="p">];</span>
+<span class="w">    </span><span class="c1">// We write the products of this page to the file</span>
+<span class="w">    </span><span class="c1">// "data" contains an array of products</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">appendProductsToFile</span><span class="p">(</span><span class="nx">result</span><span class="p">[</span><span class="s2">"data"</span><span class="p">]);</span>
+
+<span class="w">    </span><span class="c1">// For all the remaining pages (we already have the first one)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">lastPage</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// We update the page index</span>
+<span class="w">      </span><span class="nx">opts</span><span class="p">[</span><span class="s2">"page"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">i</span><span class="p">;</span>
+<span class="w">      </span><span class="c1">// We require the page at the selected index</span>
+<span class="w">      </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">listProductsWithBackoff</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// And we write the products to the file</span>
+<span class="w">      </span><span class="k">await</span><span class="w"> </span><span class="nx">appendProductsToFile</span><span class="p">(</span><span class="nx">result</span><span class="p">[</span><span class="s2">"data"</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"products succesfully retrieved and saved in ./products.jsonl"</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// In this function we append the products in the JSON Lines file.</span>
+<span class="c1">// You can replace this function to perform the operations you need.</span>
+<span class="c1">// For example, you can build SQL queries or call a third-party API using the retrieved products.</span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">appendProductsToFile</span><span class="p">(</span><span class="nx">products</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// For each product in the array</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">products</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">products</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="w">    </span><span class="c1">// We obtain the related JSON and append it to the file as single line</span>
+<span class="w">    </span><span class="nx">fs</span><span class="p">.</span><span class="nx">appendFileSync</span><span class="p">(</span>
+<span class="w">      </span><span class="s2">"./products.jsonl"</span><span class="p">,</span>
+<span class="w">      </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">product</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"\n"</span><span class="p">,</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">          </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Here we wrap the SDK method with an exponential backoff</span>
+<span class="c1">// This is to manage the quota exceeded issue</span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">listProductsWithBackoff</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">delay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">retryCount</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="nx">retryCount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">));</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">getProd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">retryCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">lastError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">retryCount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="nx">lastError</span><span class="p">);</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"attempt:"</span><span class="p">,</span><span class="w"> </span><span class="nx">count</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="s2">"wait:"</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="nx">retryCount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// The actual SDK method is executed here</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">productsApiInstance</span><span class="p">.</span><span class="nx">listProducts</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">await</span><span class="w"> </span><span class="nx">delay</span><span class="p">(</span><span class="nx">retryCount</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">getProd</span><span class="p">(</span><span class="nx">retryCount</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">getProd</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">res</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// This is just a mock: this function should contain the code to retrieve the Access Token</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">getToken</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s2">"YOUR_TOKEN"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">require</span><span class="p">(</span><span class="s2">"vendor/autoload.php"</span><span class="p">);</span>
+<span class="c1">// The following dependencies are required</span>
+<span class="c1">// composer require stechstudio/backoff</span>
+<span class="c1">// composer require fattureincloud/fattureincloud-php-sdk</span>
+
+<span class="k">use</span> <span class="nx">FattureInCloud\Api\ProductsApi</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">FattureInCloud\Configuration</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">GuzzleHttp\Client</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">STS\Backoff\Backoff</span><span class="p">;</span>
+
+<span class="c1">// This code should be executed periodically using a cron library or job scheduler.</span>
+<span class="c1">// For example: https://github.com/Cron/Cron</span>
+
+<span class="c1">// Here we init the TSE in Cloud SDK</span>
+<span class="c1">// The Access Token is retrieved using the "getToken" method</span>
+<span class="nv">$config</span> <span class="o">=</span> <span class="nx">Configuration</span><span class="o">::</span><span class="na">getDefaultConfiguration</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">setAccessToken</span><span class="p">(</span><span class="nx">getToken</span><span class="p">());</span>
+<span class="c1">// In this example we're using the Products API</span>
+<span class="nv">$productsApiInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ProductsApi</span><span class="p">(</span>
+    <span class="k">new</span> <span class="nx">Client</span><span class="p">(),</span>
+    <span class="nv">$config</span>
+<span class="p">);</span>
+
+<span class="c1">// In this example we suppose to export the data to a JSON Lines file.</span>
+<span class="c1">// First, we cancel the content of the destination file</span>
+<span class="nb">file_put_contents</span><span class="p">(</span><span class="s2">"./products.jsonl"</span><span class="p">,</span> <span class="s2">""</span><span class="p">);</span>
+
+<span class="c1">// This is the ID of the company we're currently managing</span>
+<span class="nv">$companyId</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="c1">// We require the first page using the ListProducts method</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nx">listProductsWithBackoff</span><span class="p">(</span><span class="nv">$productsApiInstance</span><span class="p">,</span> <span class="nv">$companyId</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="c1">// We extract the index of the last page from the first response</span>
+<span class="nv">$lastPage</span> <span class="o">=</span> <span class="nv">$result</span><span class="p">[</span><span class="s2">"last_page"</span><span class="p">];</span>
+<span class="c1">// We append all the products to the destination file</span>
+<span class="c1">// "data" contains an array of products</span>
+<span class="nx">appendProductsToFile</span><span class="p">(</span><span class="nv">$result</span><span class="p">[</span><span class="s2">"data"</span><span class="p">]);</span>
+
+<span class="c1">// For all the missing pages (we already have the first one)</span>
+<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;=</span> <span class="nv">$lastPage</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// We require the page at the selected index to the API</span>
+    <span class="nv">$result</span> <span class="o">=</span> <span class="nx">listProductsWithBackoff</span><span class="p">(</span><span class="nv">$productsApiInstance</span><span class="p">,</span> <span class="nv">$companyId</span><span class="p">,</span> <span class="nv">$i</span><span class="p">);</span>
+    <span class="c1">// We append this page products to the file</span>
+    <span class="nx">appendProductsToFile</span><span class="p">(</span><span class="nv">$result</span><span class="p">[</span><span class="s2">"data"</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="c1">// In this function we append the products in the JSON Lines file.</span>
+<span class="c1">// You can replace this function to perform the operations you need.</span>
+<span class="c1">// For example, you can build SQL queries or call a third-party API using the retrieved products.</span>
+<span class="k">function</span> <span class="nf">appendProductsToFile</span><span class="p">(</span><span class="nv">$products</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// For each product in the array</span>
+    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$products</span> <span class="k">as</span> <span class="nv">$product</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// We encode it to a JSON string and append it to the file as a single line</span>
+        <span class="nb">file_put_contents</span><span class="p">(</span><span class="s2">"products.jsonl"</span><span class="p">,</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$product</span><span class="p">)</span> <span class="o">.</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="nx">FILE_APPEND</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Here we wrap the SDK method with an exponential backoff</span>
+<span class="c1">// This is to manage the quota exceeded issue</span>
+<span class="k">function</span> <span class="nf">listProductsWithBackoff</span><span class="p">(</span><span class="nv">$productsApiInstance</span><span class="p">,</span> <span class="nv">$companyId</span><span class="p">,</span> <span class="nv">$currentPage</span><span class="p">)</span><span class="o">:</span> <span class="nx">Object</span>
+<span class="p">{</span>
+    <span class="nv">$backoff</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Backoff</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="s1">'exponential'</span><span class="p">,</span> <span class="mi">300000</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nv">$backoff</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">(</span><span class="k">function</span> <span class="p">()</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$productsApiInstance</span><span class="p">,</span> <span class="nv">$companyId</span><span class="p">,</span> <span class="nv">$currentPage</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="c1">// The actual SDK method is executed here</span>
+            <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$productsApiInstance</span><span class="o">-&gt;</span><span class="na">listProducts</span><span class="p">(</span><span class="nv">$companyId</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="s2">"detailed"</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="nv">$currentPage</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$e</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nv">$result</span><span class="p">;</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="c1">// This is just a mock: this function should contain the code to retrieve the Access Token</span>
+<span class="k">function</span> <span class="nf">getToken</span><span class="p">()</span><span class="o">:</span> <span class="nx">String</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s2">"YOUR_TOKEN"</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># The following dependencies are required</span>
+<span class="c1"># pip install backoff</span>
+<span class="c1"># pip install fattureincloud-python-sdk</span>
+<span class="kn">import</span> <span class="nn">fattureincloud_python_sdk</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.api</span> <span class="kn">import</span> <span class="n">products_api</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.exceptions</span> <span class="kn">import</span> <span class="n">ApiException</span>
+<span class="kn">import</span> <span class="nn">backoff</span>
+<span class="c1"># import collections #needed if you are using python &gt; 3.10</span>
+<span class="c1"># collections.Callable = collections.abc.Callable #needed if you are using python &gt; 3.10</span>
+
+<span class="c1"># Here we setup the exponential backoff config</span>
+<span class="nd">@backoff</span><span class="o">.</span><span class="n">on_exception</span><span class="p">(</span><span class="n">backoff</span><span class="o">.</span><span class="n">expo</span><span class="p">,</span> <span class="n">ApiException</span><span class="p">,</span> <span class="n">max_tries</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">list_products_with_backoff</span><span class="p">(</span><span class="n">products_api_instance</span><span class="p">,</span> <span class="n">company_id</span><span class="p">,</span> <span class="n">current_page</span><span class="p">,</span> <span class="n">per_page</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">products_api_instance</span><span class="o">.</span><span class="n">list_products</span><span class="p">(</span><span class="n">company_id</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">current_page</span><span class="p">,</span> <span class="n">per_page</span><span class="o">=</span><span class="n">per_page</span><span class="p">)</span>
+
+<span class="c1"># In this function we append the products in the JSON Lines file.</span>
+<span class="c1"># You can replace this function to perform the operations you need.</span>
+<span class="c1"># For example, you can build SQL queries or call a third-party API using the retrieved products.</span>
+<span class="k">def</span> <span class="nf">append_products_to_page</span><span class="p">(</span><span class="n">products</span><span class="p">):</span>
+    <span class="c1"># For each product in the list</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">products</span><span class="p">:</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"products.jsonl"</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">)</span>
+        <span class="c1"># We write the product to the file</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">""</span><span class="p">))</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">get_token</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">"YOUR_TOKEN"</span>
+
+<span class="k">def</span> <span class="nf">sync_products</span><span class="p">():</span>
+    <span class="c1"># Here we init the TSE in Cloud SDK</span>
+    <span class="c1"># The Access Token is retrieved using the "GetToken" method</span>
+    <span class="n">configuration</span> <span class="o">=</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">Configuration</span><span class="p">()</span>
+    <span class="n">configuration</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="n">get_token</span><span class="p">()</span>
+    <span class="n">configuration</span><span class="o">.</span><span class="n">retries</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Needed to implement custom backoff</span>
+    <span class="c1"># The ID of the controlled company.</span>
+    <span class="n">company_id</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">current_page</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">per_page</span> <span class="o">=</span> <span class="mi">5</span>
+
+    <span class="k">with</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">ApiClient</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span> <span class="k">as</span> <span class="n">api_client</span><span class="p">:</span>
+        <span class="c1"># In this example we're using the Products API</span>
+        <span class="n">products_api_instance</span> <span class="o">=</span> <span class="n">products_api</span><span class="o">.</span><span class="n">ProductsApi</span><span class="p">(</span><span class="n">api_client</span><span class="p">)</span>
+
+        <span class="c1"># We perform the first request</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">list_products_with_backoff</span><span class="p">(</span><span class="n">products_api_instance</span><span class="p">,</span> <span class="n">company_id</span><span class="p">,</span> <span class="n">current_page</span><span class="p">,</span> <span class="n">per_page</span><span class="p">)</span>
+        <span class="n">last_page</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">last_page</span>
+
+        <span class="c1"># We append the products obtained with the first request to the output file</span>
+        <span class="c1"># Data contains an array of products</span>
+        <span class="n">append_products_to_page</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="c1"># In this example we suppose to export the data to a JSON Lines file.</span>
+        <span class="c1"># First, we cancel the content of the destination file</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"products.jsonl"</span><span class="p">,</span><span class="s2">"r+"</span><span class="p">)</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">truncate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="c1"># For the missing pages (we already requested the first one)</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">last_page</span><span class="p">):</span>
+            <span class="c1"># We require the page to the API</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">list_products_with_backoff</span><span class="p">(</span><span class="n">products_api_instance</span><span class="p">,</span> <span class="n">company_id</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">per_page</span><span class="p">)</span>
+            <span class="c1"># And append all the retrieved products</span>
+            <span class="n">append_products_to_page</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># This code should be executed periodically using a cron library or job scheduler.</span>
+<span class="n">sync_products</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># The following dependency is required</span>
+<span class="c1"># gem install fattureincloud_ruby_sdk</span>
+
+<span class="nb">require</span><span class="w"> </span><span class="s1">'fattureincloud_ruby_sdk'</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">'json'</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="w">    </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">.</span><span class="n">configure</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">config</span><span class="o">|</span>
+<span class="w">    </span><span class="c1"># Here we init the TSE in Cloud SDK</span>
+<span class="w">    </span><span class="c1"># The Access Token is retrieved using the "get_token" method</span>
+<span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">access_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_token</span><span class="p">()</span>
+<span class="w">    </span><span class="k">end</span>
+
+<span class="w">    </span><span class="c1"># In this example we're using the Products API</span>
+<span class="w">    </span><span class="n">products_api_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">ProductsAPI</span><span class="o">.</span><span class="n">new</span>
+<span class="w">    </span><span class="n">retries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="n">max_retries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span>
+
+<span class="w">    </span><span class="c1"># This is the ID of the company we're working on</span>
+<span class="w">    </span><span class="n">company_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="c1"># Here we define the parameters for the first request.</span>
+<span class="w">    </span><span class="n">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="ss">fields</span><span class="p">:</span><span class="w"> </span><span class="kp">nil</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">fieldset</span><span class="p">:</span><span class="w"> </span><span class="s2">"detailed"</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">sort</span><span class="p">:</span><span class="w"> </span><span class="kp">nil</span><span class="p">,</span>
+<span class="w">        </span><span class="ss">page</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="c1"># We're trying to obtain the first page</span>
+<span class="w">        </span><span class="ss">per_page</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="c1"># Every page will contain at most 5 products</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">actual_page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list_products_with_backoff</span><span class="p">(</span><span class="n">company_id</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="p">,</span><span class="w"> </span><span class="n">products_api_instance</span><span class="p">)</span>
+<span class="w">    </span><span class="n">last_page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="o">.</span><span class="n">last_page</span>
+
+<span class="w">    </span><span class="c1"># In this example we suppose to export the data to a JSON Lines file.</span>
+<span class="w">    </span><span class="c1"># First, we cancel the content of the destination file</span>
+<span class="w">    </span><span class="no">File</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">'./products.jsonl'</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="no">File</span><span class="o">.</span><span class="n">exist?</span><span class="p">(</span><span class="s1">'./products.jsonl'</span><span class="p">)</span>
+<span class="w">    </span><span class="n">append_products_to_file</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="n">actual_page</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">last_page</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="n">opts</span><span class="o">[</span><span class="ss">:page</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">actual_page</span>
+<span class="w">        </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list_products_with_backoff</span><span class="p">(</span><span class="n">company_id</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="p">,</span><span class="w"> </span><span class="n">products_api_instance</span><span class="p">)</span>
+<span class="w">        </span><span class="n">append_products_to_file</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="w">        </span><span class="n">actual_page</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">list_products_with_backoff</span><span class="p">(</span><span class="n">company_id</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="p">,</span><span class="w"> </span><span class="n">products_api_instance</span><span class="p">)</span>
+<span class="w">    </span><span class="n">retries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="k">begin</span>
+<span class="w">        </span><span class="nb">puts</span><span class="w"> </span><span class="s2">"attempt: </span><span class="si">#{</span><span class="n">retries</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span>
+<span class="w">        </span><span class="n">products</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">products_api_instance</span><span class="o">.</span><span class="n">list_products</span><span class="p">(</span><span class="n">company_id</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">products</span>
+<span class="w">    </span><span class="k">rescue</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">ApiError</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">e</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">retries</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">max_retries</span>
+<span class="w">            </span><span class="n">retries</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">            </span><span class="nb">sleep</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">retries</span>
+<span class="w">            </span><span class="k">retry</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="k">raise</span><span class="w"> </span><span class="s2">"Giving up on the server after </span><span class="si">#{</span><span class="n">retries</span><span class="si">}</span><span class="s2"> retries. Got error: </span><span class="si">#{</span><span class="n">e</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">append_products_to_file</span><span class="p">(</span><span class="n">products</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">products</span>
+<span class="w">        </span><span class="no">File</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'./products.jsonl'</span><span class="p">,</span><span class="w"> </span><span class="n">product</span><span class="o">.</span><span class="n">to_hash</span><span class="o">.</span><span class="n">to_json</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="w"> </span><span class="ss">mode</span><span class="p">:</span><span class="w"> </span><span class="s1">'a'</span><span class="p">)</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_token</span><span class="p">()</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s2">"YOUR_TOKEN"</span>
+<span class="k">end</span>
+
+<span class="c1"># This code should be executed periodically using a cron library or job scheduler.</span>
+<span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// The following dependency is required</span>
+<span class="c1">// yarn add @fattureincloud/fattureincloud-ts-sdk</span>
+
+<span class="k">import</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"fs"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Product</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@fattureincloud/fattureincloud-ts-sdk"</span><span class="p">;</span>
+
+<span class="c1">// Here we init the TSE in Cloud SDK</span>
+<span class="c1">// The Access Token is retrieved using the "getToken" method</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">Configuration</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">ProductsApi</span><span class="p">,</span>
+<span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@fattureincloud/fattureincloud-ts-sdk"</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">apiConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Configuration</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">accessToken</span><span class="o">:</span><span class="w"> </span><span class="kt">getToken</span><span class="p">(),</span>
+<span class="p">});</span>
+
+<span class="c1">// In this example we're using the Products API</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">productsApiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ProductsApi</span><span class="p">(</span><span class="nx">apiConfig</span><span class="p">);</span>
+
+<span class="c1">// This code should be executed periodically using a cron library or job scheduler.</span>
+<span class="c1">// For example: https://www.npmjs.com/package/node-cron</span>
+<span class="nx">main</span><span class="p">()</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">()</span>
+<span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
+
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// In this example we suppose to export the data to a JSON Lines file.</span>
+<span class="w">  </span><span class="c1">// First, we cancel the content of the destination file</span>
+<span class="w">  </span><span class="nx">fs</span><span class="p">.</span><span class="nx">truncate</span><span class="p">(</span><span class="s2">"./products.jsonl"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">// Here we define the parameters for the first request.</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">;</span><span class="w"> </span><span class="c1">// This is the ID of the company we're working on</span>
+
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// We perform the first request</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">listProductsWithBackoff</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="nx">page</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// We recover the last page index</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">lastPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">result</span><span class="p">[</span><span class="s2">"last_page"</span><span class="p">];</span>
+<span class="w">    </span><span class="c1">// We write the products of this page to the file</span>
+<span class="w">    </span><span class="c1">// "data" contains an array of products</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">appendProductsToFile</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// For all the remaining pages (we already have the first one)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">lastPage</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// We update the page index</span>
+<span class="w">      </span><span class="nx">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">i</span><span class="p">;</span>
+<span class="w">      </span><span class="c1">// We require the page at the selected index</span>
+<span class="w">      </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">listProductsWithBackoff</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="nx">page</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// And we write the products to the file</span>
+<span class="w">      </span><span class="k">await</span><span class="w"> </span><span class="nx">appendProductsToFile</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"products succesfully retrieved and saved in ./products.jsonl"</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// In this function we append the products in the JSON Lines file.</span>
+<span class="c1">// You can replace this function to perform the operations you need.</span>
+<span class="c1">// For example, you can build SQL queries or call a third-party API using the retrieved products.</span>
+<span class="w">  </span><span class="c1">// For each product in the array</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">products</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">products</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="w">    </span><span class="c1">// We obtain the related JSON and append it to the file as single line</span>
+<span class="w">    </span><span class="nx">fs</span><span class="p">.</span><span class="nx">appendFileSync</span><span class="p">(</span><span class="s2">"./products.jsonl"</span><span class="p">,</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">product</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"\n"</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Here we wrap the SDK method with an exponential backoff</span>
+<span class="c1">// This is to manage the quota exceeded issue</span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">listProductsWithBackoff</span><span class="p">(</span><span class="nx">companyId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">page</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">delay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">retryCount</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="nx">retryCount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">));</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">getProd</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">retryCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">lastError?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">retryCount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="nx">lastError</span><span class="p">);</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"attempt:"</span><span class="p">,</span><span class="w"> </span><span class="nx">count</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="s2">"wait:"</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="nx">retryCount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// The actual SDK method is executed here</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">productsApiInstance</span><span class="p">.</span><span class="nx">listProducts</span><span class="p">(</span>
+<span class="w">          </span><span class="nx">companyId</span><span class="p">,</span>
+<span class="w">          </span><span class="kc">undefined</span><span class="p">,</span>
+<span class="w">          </span><span class="s2">"detailed"</span><span class="p">,</span>
+<span class="w">          </span><span class="kc">undefined</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">page</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">      </span><span class="p">).</span><span class="nx">data</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">await</span><span class="w"> </span><span class="nx">delay</span><span class="p">(</span><span class="nx">retryCount</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">getProd</span><span class="p">(</span><span class="o">++</span><span class="nx">retryCount</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">getProd</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">res</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// This is just a mock: this function should contain the code to retrieve the Access Token</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">getToken</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s2">"YOUR_TOKEN"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="books-additional-resources">:books:  Additional resources</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Exponential_backoff">Exponential Backoff</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Zero-based_numbering">Zero-based numbering</a></li>

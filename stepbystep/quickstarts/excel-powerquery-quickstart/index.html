@@ -537,7 +537,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../support/general-knowledge/">
+<a class="md-nav__link" href="../../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -607,30 +607,30 @@
 <nav aria-label=":open_book:  List Example" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-setup-the-data-source">
+<a class="md-nav__link" href="#one-step-one-setup-the-data-source">
 <span class="md-ellipsis">
-        Step one: Setup the Data Source
+      :one:  Step one: Setup the Data Source
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-extract-the-data">
+<a class="md-nav__link" href="#two-step-two-extract-the-data">
 <span class="md-ellipsis">
-        Step Two: Extract the data
+      :two:  Step Two: Extract the data
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-three-enable-auto-update">
+<a class="md-nav__link" href="#three-step-three-enable-auto-update">
 <span class="md-ellipsis">
-        Step Three: Enable auto update
+      :three:  Step Three: Enable auto update
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-four-what-about-pagination">
+<a class="md-nav__link" href="#four-step-four-what-about-pagination">
 <span class="md-ellipsis">
-        Step Four: What about pagination?
+      :four:  Step Four: What about pagination?
     </span>
 </a>
 </li>
@@ -648,7 +648,7 @@
 <p>In this guide, we'll explain how to use <em>Power Query</em> to load contents from our APIs into <em>Microsoft Excel</em>.</p>
 <h2 id="open_book-list-example">:open_book:  List Example</h2>
 <p>In this example, we will load our invoices list using the <a href="/api-reference#get-/c/-company_id-/issued_documents">List Issued Documents</a> method, but you can adapt this guide to using it with the API method you need.</p>
-<h3 id="step-one-setup-the-data-source"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Step one: Setup the Data Source</h3>
+<h3 id="one-step-one-setup-the-data-source">:one:  Step one: Setup the Data Source</h3>
 <p>:::tip Retrieve your Company ID!</p>
 <p>In this example, we'll suppose you have to manage just one Company, so we simply inserted its ID directly in the code. If instead, you need to be able to manage multiple companies, you'll need to retrieve the ID of the current company in some way.
 Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
@@ -656,12 +656,12 @@ Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a
 <p>First, we must select the <a href="https://support.microsoft.com/en-us/office/import-data-from-the-web-b13eed81-33fe-410d-9247-1747269c28e4#:~:text=Select%20Data%20%3E%20Get%20%26%20Transform%20%3E,View%20pane%20on%20the%20right.">Import from Web</a> functionality as shown below:</p>
 <p><img alt="Get Data From Web" src="../assets/excel/get_data_from_web.png"/></p>
 <p>Then we need to define the URL that will be contacted by Power Query. The <a href="/api-reference#get-/c/-company_id-/issued_documents">List Issued Documents</a> method is accessible to the following URL:</p>
-<pre><code class="language-text">https://api-v2.fattureincloud.it/c/\{company_id\}/issued_documents
-</code></pre>
+<div class="highlight"><pre><span></span><code>https://api-v2.fattureincloud.it/c/\{company_id\}/issued_documents
+</code></pre></div>
 <p>additionally, it requires to define some parameters as <em>Query String</em> (e.g. the "?type=invoice" part), but you can substitute it with the endpoint of the method you want. Please, make sure to replace the {company_id} placeholder with your company ID.</p>
 <p>Our APIs require authentication, so we also need to set the <em>Authorization header</em> as shown below. Remember to replace the "YOUR<em>ACCESS_TOKEN" placeholder with your actual _Access Token</em>; you can obtain a valid one following <a href="/authentication/manual-authentication.mdx">this procedure</a>.</p>
 <p><img alt="Set the source" src="../assets/excel/set_source_url.png"/></p>
-<h3 id="step-two-extract-the-data"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Step Two: Extract the data</h3>
+<h3 id="two-step-two-extract-the-data">:two:  Step Two: Extract the data</h3>
 <p>If you inserted the connection parameters correctly, Excel should already have retrieved the method response from our APIs.</p>
 <p>Now, we have to extract the list of invoices from the API response:</p>
 <p><img alt="Extract invoices list" src="../assets/excel/extract_invoices_list.png"/></p>
@@ -674,91 +674,91 @@ Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a
 <p><img alt="Field selection" src="../assets/excel/select_fields.png"/></p>
 <p>And finally we can export the records to your sheet:</p>
 <p><img alt="Export" src="../assets/excel/export.png"/></p>
-<h3 id="step-three-enable-auto-update"><img alt="3️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0033-20e3.png" title=":three:"/>  Step Three: Enable auto update</h3>
+<h3 id="three-step-three-enable-auto-update">:three:  Step Three: Enable auto update</h3>
 <p>Using Power Query it is possible to activate periodic updates of the data, selecting the <strong>query -&gt; properties -&gt; check the 'update every x minutes'</strong> functionality as shown below.</p>
 <p><img alt="Auto update" src="../assets/excel/automatic_update.png"/></p>
-<h3 id="step-four-what-about-pagination"><img alt="4️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0034-20e3.png" title=":four:"/>  Step Four: What about pagination?</h3>
+<h3 id="four-step-four-what-about-pagination">:four:  Step Four: What about pagination?</h3>
 <p>The <a href="/api-reference#get-/c/-company_id-/issued_documents">List Issued Documents</a> response is <a href="/basics/additional-capabilities/paginate-results.mdx">paginated</a>, this means that the results will be split into different sets; each set will contain a certain number of records up to the maximum value as explained on the dedicated page. Until now we just fetched the first page from the API, and this means that to retrieve the whole result we need to <em>manage pagination</em>.</p>
 <p>Unluckily it is not trivial, so you have to open advanced the Power Query editor and paste in the following code</p>
-<pre><code class="language-js">let
-    Source = Json.Document(
-        Web.Contents(
-            url,
-            [
-                Timeout = #duration(0, 0, 1, 0),
-                Headers = [Authorization = "Bearer YOUR_ACCESS_TOKEN"]
-            ]
-        )
-    ),
-    iterations = Source[last_page],
-    url = "https://api-v2.fattureincloud.it/c/\{company_id\}/issued_documents" &amp; "?" &amp; "type=invoice",
+<div class="highlight"><pre><span></span><code><span class="kd">let</span>
+<span class="w">    </span><span class="nx">Source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Json</span><span class="p">.</span><span class="nx">Document</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">Web</span><span class="p">.</span><span class="nx">Contents</span><span class="p">(</span>
+<span class="w">            </span><span class="nx">url</span><span class="p">,</span>
+<span class="w">            </span><span class="p">[</span>
+<span class="w">                </span><span class="nx">Timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">#</span><span class="nx">duration</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">),</span>
+<span class="w">                </span><span class="nx">Headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">Authorization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Bearer YOUR_ACCESS_TOKEN"</span><span class="p">]</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">    </span><span class="nx">iterations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Source</span><span class="p">[</span><span class="nx">last_page</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"https://api-v2.fattureincloud.it/c/\{company_id\}/issued_documents"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="s2">"?"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="s2">"type=invoice"</span><span class="p">,</span>
 
-    FnGetOnePage =
-    (url) as record =&gt;
-    let
-        Source = Json.Document(
-            Web.Contents(
-                url,
-                [
-                    Timeout = #duration(0, 0, 1, 0),
-                    Headers = [Authorization = "Bearer YOUR_ACCESS_TOKEN"]
-                ]
-            )
-        ),
-        data = try Source[data] otherwise null,
-        next = try Source[next_page_url] otherwise null,
-        res = [Data = data, Next = next]
-in
-res,
-GeneratedList =
-    List.Generate(
-        () =&gt; [i = 0, res = FnGetOnePage(url)],
-        each[i] &lt; iterations and[res][Data] &lt;&gt; null,
-        each[i = [i] + 1, res = FnGetOnePage([res][Next])],
-        each[res][Data]),
-    #"Table conversion" = Table.FromList(GeneratedList, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
-    #"Expanded list" = Table.ExpandListColumn(#"Table conversion", "Column1"),
-    #"Expanded Records" = Table.ExpandRecordColumn(#"Expanded list", "Column1", {
-        "id",
-        "type",
-        "numeration",
-        "subject",
-        "visible_subject",
-        "amount_net",
-        "amount_vat",
-        "amount_gross",
-        "date",
-        "number",
-        "next_due_date",
-        "url",
-        "entity"
-    }, {
-        "id",
-        "type",
-        "numeration",
-        "subject",
-        "visible_subject",
-        "amount_net",
-        "amount_vat",
-        "amount_gross",
-        "date",
-        "number",
-        "next_due_date",
-        "url",
-        "entity"
-    }),
-    #"Expanded Entity" = Table.ExpandRecordColumn(#"Expanded Records", "entity", {
-        "name",
-        "tax_code",
-        "vat_number"
-    }, {
-        "client.name",
-        "client.tax_code",
-        "client.vat_number"
-    })
-in
-#"Expanded Entity"
-</code></pre>
+<span class="w">    </span><span class="nx">FnGetOnePage</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">record</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">    </span><span class="kd">let</span>
+<span class="w">        </span><span class="nx">Source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Json</span><span class="p">.</span><span class="nx">Document</span><span class="p">(</span>
+<span class="w">            </span><span class="nx">Web</span><span class="p">.</span><span class="nx">Contents</span><span class="p">(</span>
+<span class="w">                </span><span class="nx">url</span><span class="p">,</span>
+<span class="w">                </span><span class="p">[</span>
+<span class="w">                    </span><span class="nx">Timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">#</span><span class="nx">duration</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">),</span>
+<span class="w">                    </span><span class="nx">Headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">Authorization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Bearer YOUR_ACCESS_TOKEN"</span><span class="p">]</span>
+<span class="w">                </span><span class="p">]</span>
+<span class="w">            </span><span class="p">)</span>
+<span class="w">        </span><span class="p">),</span>
+<span class="w">        </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="nx">Source</span><span class="p">[</span><span class="nx">data</span><span class="p">]</span><span class="w"> </span><span class="nx">otherwise</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="nx">Source</span><span class="p">[</span><span class="nx">next_page_url</span><span class="p">]</span><span class="w"> </span><span class="nx">otherwise</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">Next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">next</span><span class="p">]</span>
+<span class="ow">in</span>
+<span class="nx">res</span><span class="p">,</span>
+<span class="nx">GeneratedList</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="nx">List</span><span class="p">.</span><span class="nx">Generate</span><span class="p">(</span>
+<span class="w">        </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FnGetOnePage</span><span class="p">(</span><span class="nx">url</span><span class="p">)],</span>
+<span class="w">        </span><span class="nx">each</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">iterations</span><span class="w"> </span><span class="nx">and</span><span class="p">[</span><span class="nx">res</span><span class="p">][</span><span class="nx">Data</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">each</span><span class="p">[</span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FnGetOnePage</span><span class="p">([</span><span class="nx">res</span><span class="p">][</span><span class="nx">Next</span><span class="p">])],</span>
+<span class="w">        </span><span class="nx">each</span><span class="p">[</span><span class="nx">res</span><span class="p">][</span><span class="nx">Data</span><span class="p">]),</span>
+<span class="w">    </span><span class="err">#</span><span class="s2">"Table conversion"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Table</span><span class="p">.</span><span class="nx">FromList</span><span class="p">(</span><span class="nx">GeneratedList</span><span class="p">,</span><span class="w"> </span><span class="nx">Splitter</span><span class="p">.</span><span class="nx">SplitByNothing</span><span class="p">(),</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">ExtraValues</span><span class="p">.</span><span class="ne">Error</span><span class="p">),</span>
+<span class="w">    </span><span class="err">#</span><span class="s2">"Expanded list"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Table</span><span class="p">.</span><span class="nx">ExpandListColumn</span><span class="p">(</span><span class="err">#</span><span class="s2">"Table conversion"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Column1"</span><span class="p">),</span>
+<span class="w">    </span><span class="err">#</span><span class="s2">"Expanded Records"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Table</span><span class="p">.</span><span class="nx">ExpandRecordColumn</span><span class="p">(</span><span class="err">#</span><span class="s2">"Expanded list"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Column1"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"id"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"type"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"numeration"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"subject"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"visible_subject"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"amount_net"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"amount_vat"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"amount_gross"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"date"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"number"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"next_due_date"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"url"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"entity"</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"id"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"type"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"numeration"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"subject"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"visible_subject"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"amount_net"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"amount_vat"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"amount_gross"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"date"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"number"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"next_due_date"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"url"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"entity"</span>
+<span class="w">    </span><span class="p">}),</span>
+<span class="w">    </span><span class="err">#</span><span class="s2">"Expanded Entity"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Table</span><span class="p">.</span><span class="nx">ExpandRecordColumn</span><span class="p">(</span><span class="err">#</span><span class="s2">"Expanded Records"</span><span class="p">,</span><span class="w"> </span><span class="s2">"entity"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"name"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"tax_code"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"vat_number"</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"client.name"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"client.tax_code"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"client.vat_number"</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="ow">in</span>
+<span class="err">#</span><span class="s2">"Expanded Entity"</span>
+</code></pre></div>
 <p><img alt="Advanced query" src="../assets/excel/advanced_query.png"/></p>
 <p>The code above loops all the pages of the response and aggregates the results; additionally, it extracts the entity field to show the client name, tax_code and vat_number.
 To use this code you mustreplace the placeholders 'YOUR_ACCESS_TOKEN' and {company_id} as explained previously.</p>

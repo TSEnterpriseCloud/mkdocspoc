@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#prerequisites">
+<a class="md-skip" href="#zero-prerequisites">
           Skip to content
         </a>
 </div>
@@ -218,37 +218,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites
+      :zero:  Prerequisites
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-create-an-aspnet-web-app">
+<a class="md-nav__link" href="#one-step-one-create-an-aspnet-web-app">
 <span class="md-ellipsis">
-        Step One: Create an Asp.Net web app
+      :one:  Step One: Create an Asp.Net web app
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval
+      :two:  Step Two: Set up the OAuth access token retrieval
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-four-setup-the-sample">
+<a class="md-nav__link" href="#four-step-four-setup-the-sample">
 <span class="md-ellipsis">
-        Step Four: Setup the sample
+      :four:  Step Four: Setup the sample
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#five-step-five-test-the-sample">
 <span class="md-ellipsis">
-        What now?
+      :five:  Step Five: Test the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now?
     </span>
 </a>
 </li>
@@ -589,7 +596,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../support/general-knowledge/">
+<a class="md-nav__link" href="../../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -651,37 +658,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites
+      :zero:  Prerequisites
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-create-an-aspnet-web-app">
+<a class="md-nav__link" href="#one-step-one-create-an-aspnet-web-app">
 <span class="md-ellipsis">
-        Step One: Create an Asp.Net web app
+      :one:  Step One: Create an Asp.Net web app
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval
+      :two:  Step Two: Set up the OAuth access token retrieval
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-four-setup-the-sample">
+<a class="md-nav__link" href="#four-step-four-setup-the-sample">
 <span class="md-ellipsis">
-        Step Four: Setup the sample
+      :four:  Step Four: Setup the sample
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#five-step-five-test-the-sample">
 <span class="md-ellipsis">
-        What now?
+      :five:  Step Five: Test the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now?
     </span>
 </a>
 </li>
@@ -697,74 +711,72 @@
 import TabItem from "@theme/TabItem";</p>
 <p>Following the steps described on this page you'll create a simple Asp.Net project</p>
 <p>If you want to download the complete working example you can find it <a href="https://github.com/fattureincloud/fattureincloud-quickstarts/tree/master/sdk/csharp">here</a>.</p>
-<h2 id="prerequisites"><img alt="0️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0030-20e3.png" title=":zero:"/>  Prerequisites</h2>
+<h2 id="zero-prerequisites">:zero:  Prerequisites</h2>
 <p>In this guide, we assume that these prerequisites are met:</p>
 <ul>
 <li>.NET SDK installed</li>
 <li>A <a href="/basics/create-an-app.mdx">private app</a> using the <a href="/authentication/code-flow/index.mdx">OAuth 2.0 Authorization Code Flow</a></li>
 <li>A TSE in Cloud account.</li>
 </ul>
-<h2 id="step-one-create-an-aspnet-web-app"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Step One: Create an Asp.Net web app</h2>
+<h2 id="one-step-one-create-an-aspnet-web-app">:one:  Step One: Create an Asp.Net web app</h2>
 <p>The first step is to create an Asp.Net web application:</p>
-<pre><code class="language-console">dotnet new webapp -o Quickstart --no-https
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="go">dotnet new webapp -o Quickstart --no-https</span>
+</code></pre></div>
 <p>Now open the directory created by the above command, in this case, **Quickstart/ ** and proceed to install the <a href="https://github.com/fattureincloud/fattureincloud-csharp-sdk">TSE in Cloud SDK</a>, published to <a href="https://www.nuget.org/packages/It.FattureInCloud.Sdk/">Nuget</a>.</p>
 <p>To install it using the .NET CLI:</p>
-<pre><code class="language-console">dotnet add package It.FattureInCloud.Sdk
-</code></pre>
-<h2 id="step-two-set-up-the-oauth-access-token-retrieval"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Step Two: Set up the OAuth access token retrieval</h2>
+<div class="highlight"><pre><span></span><code><span class="go">dotnet add package It.FattureInCloud.Sdk</span>
+</code></pre></div>
+<h2 id="two-step-two-set-up-the-oauth-access-token-retrieval">:two:  Step Two: Set up the OAuth access token retrieval</h2>
 <p>Edit the files <strong>Pages/Index.cshtml.cs</strong> and <strong>Pages/Index.cs.cshtml</strong>, delete the existing content and paste into them the following snippets:</p>
-<p>```cs title="Index.cshtml.cs"
-using System;
-using System.IO;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
-using It.FattureInCloud.Sdk.OauthHelper;
-using System.Collections.Generic;
-using Newtonsoft.Json;</p>
-<p>namespace Quickstart.Pages
-{
-    public class IndexModel : PageModel
-    {</p>
-<pre><code>    {
-        _logger = logger;
-    }
+<div class="highlight"><span class="filename">Index.cshtml.cs</span><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.AspNetCore.Mvc.RazorPages</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.Extensions.Logging</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.OauthHelper</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Newtonsoft.Json</span><span class="p">;</span>
 
-    public void OnGet()
-    {
-        string code = HttpContext.Request.Query["code"];
-        var oauth = new OAuth2AuthorizationCodeManager("CLIENT_ID", "CLIENT_SECRET", "http://localhost:5000/oauth");
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Quickstart.Pages</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">IndexModel</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">PageModel</span>
+<span class="w">    </span><span class="p">{</span>
 
-        if (code is null)
-        {
-            var url = oauth.GetAuthorizationUrl(scopes, "EXAMPLE_STATE");
-            Response.Redirect(url);
-        }
-        else
-        {
-            var token = oauth.FetchToken(code);
-            using StreamWriter file = new("token.json");
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">_logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">logger</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
 
-            file.Write(JsonConvert.SerializeObject(token)); //saving the oAuth access token in the file token.json in the bin folder
-            file.Close();
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnGet</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HttpContext</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">Query</span><span class="p">[</span><span class="s">"code"</span><span class="p">];</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">oauth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OAuth2AuthorizationCodeManager</span><span class="p">(</span><span class="s">"CLIENT_ID"</span><span class="p">,</span><span class="w"> </span><span class="s">"CLIENT_SECRET"</span><span class="p">,</span><span class="w"> </span><span class="s">"http://localhost:5000/oauth"</span><span class="p">);</span>
 
-            ViewData["Content"] = "Token saved succesfully in token.json in your bin folder";
-        }
-    }
-}
-</code></pre>
-<p>}</p>
-<pre><code>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">code</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">oauth</span><span class="p">.</span><span class="n">GetAuthorizationUrl</span><span class="p">(</span><span class="n">scopes</span><span class="p">,</span><span class="w"> </span><span class="s">"EXAMPLE_STATE"</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Response</span><span class="p">.</span><span class="n">Redirect</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">oauth</span><span class="p">.</span><span class="n">FetchToken</span><span class="p">(</span><span class="n">code</span><span class="p">);</span>
+<span class="w">                </span><span class="k">using</span><span class="w"> </span><span class="nn">StreamWriter</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">(</span><span class="s">"token.json"</span><span class="p">);</span>
 
-```aspnet title="Index.cshtml"
-@page
+<span class="w">                </span><span class="n">file</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">token</span><span class="p">));</span><span class="w"> </span><span class="c1">//saving the oAuth access token in the file token.json in the bin folder</span>
+<span class="w">                </span><span class="n">file</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+
+<span class="w">                </span><span class="n">ViewData</span><span class="p">[</span><span class="s">"Content"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Token saved succesfully in token.json in your bin folder"</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Index.cshtml</span><pre><span></span><code>@page
 @model IndexModel
 @{
     ViewData["Title"] = "OAuth QuickStart";
 }
 
     @ViewData["Content"]
-</code></pre>
+</code></pre></div>
 <p>To make this code work properly the only thing you need to set your client id, client secret and eventually the redirect uri in the <strong>Index.cshtml.cs</strong> file at line 23.</p>
 <p>:::warning Check the Redirect URL</p>
 <p>Make sure your FattureInCloud app redirect URL points at the just edited file (e.g. http://localhost:5000/Index).</p>
@@ -773,108 +785,104 @@ using Newtonsoft.Json;</p>
 <p>In this QuickStart the access token and refresh token are stored in a file. This is only for educational purposes, the OAuth access token and refresh token are sensitive data and should be saved securely on your database.
 Also, never share your Client Secret with third-party actors, or publish it to your frontend!</p>
 <p>:::</p>
-<h2 id="step-four-setup-the-sample"><img alt="4️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0034-20e3.png" title=":four:"/>  Step Four: Setup the sample</h2>
+<h2 id="four-step-four-setup-the-sample">:four:  Step Four: Setup the sample</h2>
 <p>:::tip Retrieve your Company ID!</p>
 <p>In this example, we'll show how to retrieve your Company ID using the C# SDK. If you plan to manage only one company, you can insert it directly into your code as a variable.
 Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
 <p>:::</p>
 <p>Create the files <strong>Pages/Quickstart.cs.cshtml</strong> and <strong>Pages/Quickstart.cshtml</strong> and copy the following code:</p>
-<p>```cs title="Quickstart.cshtml.cs"
-using System;
-using System.IO;</p>
-<p>using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
-using It.FattureInCloud.Sdk.Api;
-using It.FattureInCloud.Sdk.Model;
-using It.FattureInCloud.Sdk.Client;
-using Newtonsoft.Json;</p>
-<p>namespace OauthQuickstart.Pages
-{
-    public class QuickstartModel : PageModel
-    {</p>
-<pre><code>    {
-        _logger = logger;
-    }
+<div class="highlight"><span class="filename">Quickstart.cshtml.cs</span><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 
-    public void OnGet()
-    {
-        using StreamReader file = new("token.json");
+<span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.AspNetCore.Mvc.RazorPages</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.Extensions.Logging</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Api</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Model</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Client</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Newtonsoft.Json</span><span class="p">;</span>
 
-        //retrieve the oAuth access token in the file token.json in the bin folder
-        var line = file.ReadLine();
-        file.Close();
-        string accessToken = json.access_token;
+<span class="k">namespace</span><span class="w"> </span><span class="nn">OauthQuickstart.Pages</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">QuickstartModel</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">PageModel</span>
+<span class="w">    </span><span class="p">{</span>
 
-        Configuration config = new Configuration();
-        config.AccessToken = accessToken.Replace(@"\", "" );
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">_logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">logger</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
 
-        // Modify the selected supplier
-        ModifySupplierRequest modifySupplierRequest = new ModifySupplierRequest();
-        modifySupplierRequest.Data = new Supplier();
-        modifySupplierRequest.Data.Name = "nuovo nome";
-        modifySupplierRequest.Data.Phone = "03561234312";
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnGet</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">using</span><span class="w"> </span><span class="nn">StreamReader</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">(</span><span class="s">"token.json"</span><span class="p">);</span>
 
-        var result = modifyFirstSupplier(config, modifySupplierRequest);
+<span class="w">            </span><span class="c1">//retrieve the oAuth access token in the file token.json in the bin folder</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+<span class="w">            </span><span class="n">file</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json</span><span class="p">.</span><span class="n">access_token</span><span class="p">;</span>
 
-        ViewData["Content"] = result;
-    }
+<span class="w">            </span><span class="n">Configuration</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Configuration</span><span class="p">();</span>
+<span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">AccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accessToken</span><span class="p">.</span><span class="n">Replace</span><span class="p">(</span><span class="s">@"\"</span><span class="p">,</span><span class="w"> </span><span class="s">""</span><span class="w"> </span><span class="p">);</span>
 
-    public static string modifyFirstSupplier(Configuration config, ModifySupplierRequest modifySupplierRequest)
-    {
-        try
-        {
-            var userApiInstance = new UserApi(config);
-            var suppliersApiInstance = new SuppliersApi(config);
+<span class="w">            </span><span class="c1">// Modify the selected supplier</span>
+<span class="w">            </span><span class="n">ModifySupplierRequest</span><span class="w"> </span><span class="n">modifySupplierRequest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ModifySupplierRequest</span><span class="p">();</span>
+<span class="w">            </span><span class="n">modifySupplierRequest</span><span class="p">.</span><span class="n">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Supplier</span><span class="p">();</span>
+<span class="w">            </span><span class="n">modifySupplierRequest</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"nuovo nome"</span><span class="p">;</span>
+<span class="w">            </span><span class="n">modifySupplierRequest</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Phone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"03561234312"</span><span class="p">;</span>
 
-            // Retrieve User Companies
-            var userCompaniesResponse = userApiInstance.ListUserCompanies();
-            var firstCompanyId = userCompaniesResponse.Data.Companies[0].Id;
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">modifyFirstSupplier</span><span class="p">(</span><span class="n">config</span><span class="p">,</span><span class="w"> </span><span class="n">modifySupplierRequest</span><span class="p">);</span>
 
-            // Retrieve the list of the Suppliers for the selected company
-            var fields = "";  // string | List of comma-separated fields. (optional)
-            var fieldset = "detailed";  // string | Name of the fieldset. (optional)
-            var sort = "-id";  // string | List of comma-separated fields for result sorting (minus for desc sorting). (optional)
-            var page = 2;  // int? | The page to retrieve. (optional)  (default to 1)
-            var perPage = 8;  // int? | The size of the page. (optional)  (default to 5)
-            var companySuppliers = suppliersApiInstance.ListSuppliers(firstCompanyId, null, fieldset, sort, page, perPage);
-            var firstSupplierId = companySuppliers.Data[0].Id;
+<span class="w">            </span><span class="n">ViewData</span><span class="p">[</span><span class="s">"Content"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
 
-            ModifySupplierResponse modifySupplierResponse = suppliersApiInstance.ModifySupplier(firstCompanyId, firstSupplierId, modifySupplierRequest);
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">modifyFirstSupplier</span><span class="p">(</span><span class="n">Configuration</span><span class="w"> </span><span class="n">config</span><span class="p">,</span><span class="w"> </span><span class="n">ModifySupplierRequest</span><span class="w"> </span><span class="n">modifySupplierRequest</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">try</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">userApiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">UserApi</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">suppliersApiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SuppliersApi</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
 
-            return("Supplier modificato correttamente\n" + modifySupplierResponse.Data.ToJson());
-        }
-        catch (Exception e)
-        {
-            Console.Write(e);
-            return e.ToString();
-        }
-    }
-}
-</code></pre>
-<p>}</p>
-<pre><code>
+<span class="w">                </span><span class="c1">// Retrieve User Companies</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">userCompaniesResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userApiInstance</span><span class="p">.</span><span class="n">ListUserCompanies</span><span class="p">();</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">firstCompanyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userCompaniesResponse</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Companies</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Id</span><span class="p">;</span>
 
-```aspnet title="Quickstart.cshtml"
-@page
+<span class="w">                </span><span class="c1">// Retrieve the list of the Suppliers for the selected company</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">fields</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w">  </span><span class="c1">// string | List of comma-separated fields. (optional)</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">fieldset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"detailed"</span><span class="p">;</span><span class="w">  </span><span class="c1">// string | Name of the fieldset. (optional)</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">sort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"-id"</span><span class="p">;</span><span class="w">  </span><span class="c1">// string | List of comma-separated fields for result sorting (minus for desc sorting). (optional)</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// int? | The page to retrieve. (optional)  (default to 1)</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">perPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">;</span><span class="w">  </span><span class="c1">// int? | The size of the page. (optional)  (default to 5)</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">companySuppliers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">suppliersApiInstance</span><span class="p">.</span><span class="n">ListSuppliers</span><span class="p">(</span><span class="n">firstCompanyId</span><span class="p">,</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="n">fieldset</span><span class="p">,</span><span class="w"> </span><span class="n">sort</span><span class="p">,</span><span class="w"> </span><span class="n">page</span><span class="p">,</span><span class="w"> </span><span class="n">perPage</span><span class="p">);</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">firstSupplierId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">companySuppliers</span><span class="p">.</span><span class="n">Data</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Id</span><span class="p">;</span>
+
+<span class="w">                </span><span class="n">ModifySupplierResponse</span><span class="w"> </span><span class="n">modifySupplierResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">suppliersApiInstance</span><span class="p">.</span><span class="n">ModifySupplier</span><span class="p">(</span><span class="n">firstCompanyId</span><span class="p">,</span><span class="w"> </span><span class="n">firstSupplierId</span><span class="p">,</span><span class="w"> </span><span class="n">modifySupplierRequest</span><span class="p">);</span>
+
+<span class="w">                </span><span class="k">return</span><span class="p">(</span><span class="s">"Supplier modificato correttamente\n"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">modifySupplierResponse</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">ToJson</span><span class="p">());</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Quickstart.cshtml</span><pre><span></span><code>@page
 @model QuickstartModel
 @{ ViewData["Title"] = "OAuth QuickStart"; }
 
     @ViewData["Content"]
-</code></pre>
+</code></pre></div>
 <p>It's also needed to edit the <strong>Pages/Shared/_Layout.cshtml</strong>, delete the already existing content and paste the following code:</p>
-<p>```html title="_Layout.cshtml"</p>
-<pre><code>
-## :five:&amp;nbsp; Step Five: Test the sample
-
-Now you can start a web server running the following command in your shell:
-
-```console
-dotnet watch run
-</code></pre>
+<div class="highlight"><span class="filename">_Layout.cshtml</span><pre><span></span><code>
+</code></pre></div>
+<h2 id="five-step-five-test-the-sample">:five:  Step Five: Test the sample</h2>
+<p>Now you can start a web server running the following command in your shell:</p>
+<div class="highlight"><pre><span></span><code><span class="go">dotnet watch run</span>
+</code></pre></div>
 <p>Now visit <em>http://localhost:5000/</em> (or whatever your URL is), you will be redirected to the TSE in Cloud login page where you will be asked to grant some permissions, according to what scopes you specified previously.
 Finally, you will see the success message and the access token will be stored in the token.json file.</p>
 <p>You can now visit <em>http://localhost:5000/Quickstart</em> (or whatever your URL is) to test the application.</p>
-<h2 id="what-now"><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:"/>  What now?</h2>
+<h2 id="question-what-now">:question:  What now?</h2>
 <p>In this example, we used a limited set of the available API methods to show how to use our SDK.</p>
 <p>If you want to access the full documentation of the available methods and models, you can check the following resources:</p>
 <ul>

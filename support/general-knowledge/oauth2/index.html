@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#whos-joining-the-party">
+<a class="md-skip" href="#tada-whos-joining-the-party">
           Skip to content
         </a>
 </div>
@@ -537,7 +537,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../">
+<a class="md-nav__link" href="index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -599,44 +599,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#whos-joining-the-party">
+<a class="md-nav__link" href="#tada-whos-joining-the-party">
 <span class="md-ellipsis">
-        Who’s joining the party?
+      :tada:  Who’s joining the party?
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#wait-a-minute-what-are-tokens">
+<a class="md-nav__link" href="#key-wait-a-minute-what-are-tokens">
 <span class="md-ellipsis">
-        Wait a minute, what are tokens?
+      :key:  Wait a minute, what are tokens?
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#oauth-20-flows-overview">
+<a class="md-nav__link" href="#twisted_rightwards_arrows-oauth-20-flows-overview">
 <span class="md-ellipsis">
-        OAuth 2.0 flows overview
+      :twisted_rightwards_arrows:  OAuth 2.0 flows overview
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#authorization-code-flow">
+<a class="md-nav__link" href="#closed_lock_with_key-authorization-code-flow">
 <span class="md-ellipsis">
-        Authorization Code Flow
+      :closed_lock_with_key:  Authorization Code Flow
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#device-code-flow">
+<a class="md-nav__link" href="#iphone-device-code-flow">
 <span class="md-ellipsis">
-        Device Code Flow
+      :iphone:  Device Code Flow
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#additional-resources">
+<a class="md-nav__link" href="#books-additional-resources">
 <span class="md-ellipsis">
-        Additional Resources
+      :books:  Additional Resources
     </span>
 </a>
 </li>
@@ -660,31 +660,31 @@
 <p>:::</p>
 <p>In the following sections, you can find a concise description of the fundamentals of the OAuth 2.0 protocol that will help you to understand some concepts widely used in our documentation.
 If you want to further investigate the OAuth 2.0 standard, feel free to check out the <strong>Additional Resources</strong> section, where we collected a lot of useful resources that should help you to fulfill your thirst for learning! 😌</p>
-<h2 id="whos-joining-the-party"><img alt="🎉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f389.png" title=":tada:"/>  Who’s joining the party?</h2>
+<h2 id="tada-whos-joining-the-party">:tada:  Who’s joining the party?</h2>
 <p>Let’s start by introducing the subjects that take part in the authentication process:</p>
 <p>First of all, we have the app that you developed, which we’re going to name <strong>Client Application</strong>. It’s the applicant who wants to access the user’s data.</p>
 <p>This allows us to introduce the second subject, the <strong>End-User</strong>. He’s the owner of the data you want to access, and we need his authorization to do so.</p>
 <p>The user’s data in this case are stored in TSE in Cloud’s server, which we’re going to name <strong>Resource Server</strong>. To access this data we need a <em>token</em>, a string that acts as permission to ask the Resource Server to provide us the information we need.</p>
 <p>The <em>token</em> will be provided to us by the last subject, the <strong>Authorization Server</strong>. This can be a separate entity from the Resource Server, but in our implementation, they are technically the same. For the purpose of this guide though, we will assume that they are two separate entities.</p>
-<h2 id="wait-a-minute-what-are-tokens"><img alt="🔑" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f511.png" title=":key:"/>  Wait a minute, what are tokens?</h2>
+<h2 id="key-wait-a-minute-what-are-tokens">:key:  Wait a minute, what are tokens?</h2>
 <p>Tokens are like keys, they allow the possessor to perform certain operations. There are two main types of tokens:</p>
 <ol>
 <li>The <strong>Access Token</strong> is the final token the Client Application will use to request data to the Resource Server. It expires, so it is required to request a new access token to continue using the APIs.</li>
 <li>When an Access Token expires, you don’t need to redo the whole process again. The <strong>Refresh Token</strong> allows the Client Application to request a new Access Token directly to the Authorization Server. It can also expire, but its expiration time is usually much larger with respect to the Access Token.</li>
 </ol>
 <p>When also the Refresh Token expires, you need to re-execute the Authorization flow to obtain new tokens.</p>
-<h2 id="oauth-20-flows-overview"><img alt="🔀" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f500.png" title=":twisted_rightwards_arrows:"/>  OAuth 2.0 flows overview</h2>
+<h2 id="twisted_rightwards_arrows-oauth-20-flows-overview">:twisted_rightwards_arrows:  OAuth 2.0 flows overview</h2>
 <p>OAuth 2.0 specifies several <a href="https://developer.okta.com/blog/2017/06/21/what-the-heck-is-oauth#oauth-flows">Flows</a> that can be used to retrieve those tokens. Each one of them is specialized for a different use case:</p>
 <ul>
 <li>Implicit Flow</li>
-<li><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:"/>  Authorization Code Flow</li>
+<li>:white_check_mark:  Authorization Code Flow</li>
 <li>Client Credential Flow</li>
 <li>Resource Owner Password Flow</li>
 <li>Assertion Flow</li>
-<li><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:"/>  Device Authorization Flow</li>
+<li>:white_check_mark:  Device Authorization Flow</li>
 </ul>
 <p>Currently, the TSE in Cloud API supports the <strong>Authorization Code Flow</strong> and <strong>Device Authorization Flow</strong>.</p>
-<h2 id="authorization-code-flow"><img alt="🔐" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f510.png" title=":closed_lock_with_key:"/>  Authorization Code Flow</h2>
+<h2 id="closed_lock_with_key-authorization-code-flow">:closed_lock_with_key:  Authorization Code Flow</h2>
 <p>The <a href="https://www.oauth.com/oauth2-servers/server-side-apps/authorization-code/">Authorization Code Flow</a> is the most common of the OAuth 2.0 grant types. Like the other flows, it describes how the application can retrieve the token required to interact with the APIs.</p>
 <p>:::info Wanna get technical?</p>
 <p>Our implementation of this flow can be found <a href="/authentication/code-flow/index.mdx">here</a>.</p>
@@ -702,7 +702,7 @@ If you want to further investigate the OAuth 2.0 standard, feel free to check ou
 <p>Since the Authorization Code Grant requires the exchange of the Authorization Code for the Access Token, it provides an additional layer of security not present in other grant types.
 The code exchange step ensures that an attacker isn’t able to intercept the Access Token, given that the Access Token is always sent via a secure backchannel between the Client Application and the Authorization Server.</p>
 <p>The authorization step is performed directly by the End-User on a page provided by the Authorization Server, so the application needs to expose a Redirect Endpoint that will be used by the Authorization Server to send the Authorization code.</p>
-<h2 id="device-code-flow"><img alt="📱" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4f1.png" title=":iphone:"/>  Device Code Flow</h2>
+<h2 id="iphone-device-code-flow">:iphone:  Device Code Flow</h2>
 <p>The <a href="https://www.oauth.com/oauth2-servers/device-flow/">Device Code Flow</a> is an authorization process designed explicitly for browserless and input-constrained devices such as smart TVs, media consoles, picture frames, printers, or hardware video encoders.
 It can be also used for use cases where the Client cannot safely store a secret (making it impossible to use the Authorization Code Flow), such as CRM plugins or pure frontend applications.</p>
 <p>:::warning Wait a minute!</p>
@@ -725,7 +725,7 @@ It can be also used for use cases where the Client cannot safely store a secret 
 <li>The End User will open the verification page, writing the verification URL on a secondary device of his choice.</li>
 <li>The page will require the End User to insert the code and to give permissions to the Client Application to perform the operations on the API</li>
 </ol>
-<h2 id="additional-resources"><img alt="📚" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4da.png" title=":books:"/>  Additional Resources</h2>
+<h2 id="books-additional-resources">:books:  Additional Resources</h2>
 <ul>
 <li><a href="https://developer.okta.com/blog/2017/06/21/what-the-heck-is-oauth">What the Heck is OAuth?</a></li>
 <li><a href="https://auth0.com/docs/authorization/which-oauth-2-0-flow-should-i-use">Which OAuth 2.0 Flow should I use</a></li>

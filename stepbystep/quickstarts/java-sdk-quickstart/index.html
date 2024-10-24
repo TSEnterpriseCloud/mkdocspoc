@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#prerequisites">
+<a class="md-skip" href="#zero-prerequisites">
           Skip to content
         </a>
 </div>
@@ -232,37 +232,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites ##
+      :zero:  Prerequisites ##
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-add-the-dependencies">
+<a class="md-nav__link" href="#one-step-one-add-the-dependencies">
 <span class="md-ellipsis">
-        Step One: Add the dependencies ##
+      :one:  Step One: Add the dependencies ##
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval ##
+      :two:  Step Two: Set up the OAuth access token retrieval ##
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-four-run-the-sample">
+<a class="md-nav__link" href="#three-step-three-set-up-the-sample">
 <span class="md-ellipsis">
-        Step Four: Run the sample ##
+      :three:  Step Three: Set up the sample ##
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#four-step-four-run-the-sample">
 <span class="md-ellipsis">
-        What now? ##
+      :four:  Step Four: Run the sample ##
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now? ##
     </span>
 </a>
 </li>
@@ -589,7 +596,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../support/general-knowledge/">
+<a class="md-nav__link" href="../../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -651,37 +658,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites ##
+      :zero:  Prerequisites ##
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-add-the-dependencies">
+<a class="md-nav__link" href="#one-step-one-add-the-dependencies">
 <span class="md-ellipsis">
-        Step One: Add the dependencies ##
+      :one:  Step One: Add the dependencies ##
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval ##
+      :two:  Step Two: Set up the OAuth access token retrieval ##
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-four-run-the-sample">
+<a class="md-nav__link" href="#three-step-three-set-up-the-sample">
 <span class="md-ellipsis">
-        Step Four: Run the sample ##
+      :three:  Step Three: Set up the sample ##
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#four-step-four-run-the-sample">
 <span class="md-ellipsis">
-        What now? ##
+      :four:  Step Four: Run the sample ##
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now? ##
     </span>
 </a>
 </li>
@@ -697,169 +711,159 @@
 import TabItem from '@theme/TabItem';</p>
 <p>Following the steps described on this page, you'll create a simple Java application that interacts with the TSE in Cloud API.</p>
 <p>If you want to download the complete working example you can find it <a href="https://github.com/fattureincloud/fattureincloud-quickstarts/tree/master/sdk/java">here</a>.</p>
-<h2 id="prerequisites"><img alt="0️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0030-20e3.png" title=":zero:"/>   Prerequisites ##</h2>
+<h2 id="zero-prerequisites">:zero:   Prerequisites ##</h2>
 <p>In this guide, we assume that these prerequisites are met:
 - Your JDK is configured correctly
 - A <a href="/basics/create-an-app.mdx">private app</a> using the <a href="/authentication/code-flow/index.mdx">OAuth 2.0 Authorization Code Flow</a> 
 - A TSE in Cloud account.</p>
-<h2 id="step-one-add-the-dependencies"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Step One: Add the dependencies ##</h2>
+<h2 id="one-step-one-add-the-dependencies">:one:  Step One: Add the dependencies ##</h2>
 <p>In this Quickstart we are going to need some dependencies, OkHttpClient to make the API calls for the OAuth access token retrieval, JSON-java to parse the JSON, and our Java SDK, you can simply add them to your <em>pom.xml</em> or <em>build.gradle</em> file, as shown below:</p>
-<p>```xml title="pom.xml"</p>
-<pre><code>
-
-```groovy title="build.gradle"
-implementation 'it.fattureincloud:fattureincloud-java-sdk:VERSION'
-implementation 'com.squareup.okhttp3:okhttp:4.9.3'
-implementation 'com.google.code.gson:gson:2.9.0'
-implementation "io.vavr:vavr:0.10.4"
-</code></pre>
+<div class="highlight"><span class="filename">pom.xml</span><pre><span></span><code>
+</code></pre></div>
+<div class="highlight"><span class="filename">build.gradle</span><pre><span></span><code><span class="n">implementation</span><span class="w"> </span><span class="s1">'it.fattureincloud:fattureincloud-java-sdk:VERSION'</span>
+<span class="n">implementation</span><span class="w"> </span><span class="s1">'com.squareup.okhttp3:okhttp:4.9.3'</span>
+<span class="n">implementation</span><span class="w"> </span><span class="s1">'com.google.code.gson:gson:2.9.0'</span>
+<span class="n">implementation</span><span class="w"> </span><span class="s2">"io.vavr:vavr:0.10.4"</span>
+</code></pre></div>
 <p>You can check the last version of our SDK on <a href="https://search.maven.org/artifact/it.fattureincloud/fattureincloud-java-sdk">Maven Central</a>.</p>
-<h2 id="step-two-set-up-the-oauth-access-token-retrieval"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Step Two: Set up the OAuth access token retrieval ##</h2>
+<h2 id="two-step-two-set-up-the-oauth-access-token-retrieval">:two:  Step Two: Set up the OAuth access token retrieval ##</h2>
 <p>First of all create a java project, create the file <strong>Application.java</strong> in your <strong>src/main/java/</strong> directory, and copy in the following code:</p>
-<p>```java title="Application.java"
-import com.google.gson.Gson;
-import com.sun.net.httpserver.HttpServer;
-import it.fattureincloud.sdk.auth.OAuth2AuthorizationCodeManager;
-import it.fattureincloud.sdk.auth.OAuth2AuthorizationCodeResponse;
-import it.fattureincloud.sdk.auth.Scope;</p>
-<p>import java.io.*;
-import java.net.InetSocketAddress;
-import java.util.Arrays;
-import java.util.List;</p>
-<p>class Application {</p>
-<pre><code>public static void main(String[] args) throws IOException {
-    int serverPort = 8000;
-    HttpServer server = HttpServer.create(new InetSocketAddress(serverPort), 0);
-    server.createContext("/oauth", (exchange -&gt; {
-        OAuth2AuthorizationCodeManager oauth = new OAuth2AuthorizationCodeManager("CLIENT_ID", "CLIENT_SECRET", "http://localhost:8000/oauth");
-        String redirectUrl = oauth.getAuthorizationUrl(scopes, "EXAMPLE_STATE");
-        String query = exchange.getRequestURI().getQuery();
-        if(query == null) query = "";
-        if(query.contains("code")){
-            int start = query.indexOf("code=") + 5;
-            int finish = query.indexOf("&amp;");
-            String code = query.substring(start, finish);
-            Gson gson = new Gson();
-            OAuth2AuthorizationCodeResponse tokenObj = oauth.fetchToken(code).get();
-            String token = gson.toJson(tokenObj);
+<div class="highlight"><span class="filename">Application.java</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">com.google.gson.Gson</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.sun.net.httpserver.HttpServer</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.auth.OAuth2AuthorizationCodeManager</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.auth.OAuth2AuthorizationCodeResponse</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.auth.Scope</span><span class="p">;</span>
 
-            saveToken(token);
-            String respText = "token salvato correttamente";
-            exchange.sendResponseHeaders(200, respText.getBytes().length);
-            OutputStream output = exchange.getResponseBody();
-            output.write(respText.getBytes());
-            output.flush();
-            exchange.close();
-        }else{
-            exchange.getResponseHeaders().set("Location", redirectUrl);
-            exchange.sendResponseHeaders(302, 0);
-            exchange.close();
-        }
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.net.InetSocketAddress</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
 
-    }));
-    server.createContext("/quickstart", (exchange -&gt; {
-        String token = retrieveToken();
+<span class="kd">class</span> <span class="nc">Application</span><span class="w"> </span><span class="p">{</span>
 
-        //the following method is defined in the next step
-        String respText = Quickstart.getFirstCompanySuppliers(token);
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">serverPort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8000</span><span class="p">;</span>
+<span class="w">        </span><span class="n">HttpServer</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HttpServer</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">InetSocketAddress</span><span class="p">(</span><span class="n">serverPort</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">server</span><span class="p">.</span><span class="na">createContext</span><span class="p">(</span><span class="s">"/oauth"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">exchange</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">OAuth2AuthorizationCodeManager</span><span class="w"> </span><span class="n">oauth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OAuth2AuthorizationCodeManager</span><span class="p">(</span><span class="s">"CLIENT_ID"</span><span class="p">,</span><span class="w"> </span><span class="s">"CLIENT_SECRET"</span><span class="p">,</span><span class="w"> </span><span class="s">"http://localhost:8000/oauth"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">redirectUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">oauth</span><span class="p">.</span><span class="na">getAuthorizationUrl</span><span class="p">(</span><span class="n">scopes</span><span class="p">,</span><span class="w"> </span><span class="s">"EXAMPLE_STATE"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">exchange</span><span class="p">.</span><span class="na">getRequestURI</span><span class="p">().</span><span class="na">getQuery</span><span class="p">();</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">query</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">query</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">"code"</span><span class="p">)){</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">"code="</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">finish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">"&amp;"</span><span class="p">);</span>
+<span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">finish</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Gson</span><span class="w"> </span><span class="n">gson</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gson</span><span class="p">();</span>
+<span class="w">                </span><span class="n">OAuth2AuthorizationCodeResponse</span><span class="w"> </span><span class="n">tokenObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">oauth</span><span class="p">.</span><span class="na">fetchToken</span><span class="p">(</span><span class="n">code</span><span class="p">).</span><span class="na">get</span><span class="p">();</span>
+<span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gson</span><span class="p">.</span><span class="na">toJson</span><span class="p">(</span><span class="n">tokenObj</span><span class="p">);</span>
 
-        exchange.sendResponseHeaders(200, respText.getBytes().length);
-        OutputStream output = exchange.getResponseBody();
-        output.write(respText.getBytes());
-        output.flush();
-        exchange.close();
-    }));
-    server.setExecutor(null);
-    server.start();
-}
+<span class="w">                </span><span class="n">saveToken</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
+<span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">respText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"token salvato correttamente"</span><span class="p">;</span>
+<span class="w">                </span><span class="n">exchange</span><span class="p">.</span><span class="na">sendResponseHeaders</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">respText</span><span class="p">.</span><span class="na">getBytes</span><span class="p">().</span><span class="na">length</span><span class="p">);</span>
+<span class="w">                </span><span class="n">OutputStream</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">exchange</span><span class="p">.</span><span class="na">getResponseBody</span><span class="p">();</span>
+<span class="w">                </span><span class="n">output</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">respText</span><span class="p">.</span><span class="na">getBytes</span><span class="p">());</span>
+<span class="w">                </span><span class="n">output</span><span class="p">.</span><span class="na">flush</span><span class="p">();</span>
+<span class="w">                </span><span class="n">exchange</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="w">                </span><span class="n">exchange</span><span class="p">.</span><span class="na">getResponseHeaders</span><span class="p">().</span><span class="na">set</span><span class="p">(</span><span class="s">"Location"</span><span class="p">,</span><span class="w"> </span><span class="n">redirectUrl</span><span class="p">);</span>
+<span class="w">                </span><span class="n">exchange</span><span class="p">.</span><span class="na">sendResponseHeaders</span><span class="p">(</span><span class="mi">302</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">                </span><span class="n">exchange</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
 
-public static void saveToken(String token) throws IOException {
-    BufferedWriter writer = new BufferedWriter(new FileWriter("token.json"));
-    writer.write(token); //saving the oAuth access token in the token.json file
+<span class="w">        </span><span class="p">}));</span>
+<span class="w">        </span><span class="n">server</span><span class="p">.</span><span class="na">createContext</span><span class="p">(</span><span class="s">"/quickstart"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">exchange</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">retrieveToken</span><span class="p">();</span>
 
-    writer.close();
-}
+<span class="w">            </span><span class="c1">//the following method is defined in the next step</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">respText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Quickstart</span><span class="p">.</span><span class="na">getFirstCompanySuppliers</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
 
-public static String retrieveToken() throws IOException {
-    BufferedReader reader = new BufferedReader(new FileReader("token.json"));
-    String json = reader.readLine();
-    Gson gson = new Gson();
-    OAuth2AuthorizationCodeResponse obj = gson.fromJson(json, OAuth2AuthorizationCodeResponse.class);
-    String token = obj.getAccessToken();
-    return token;
-}
-</code></pre>
-<p>}</p>
-<pre><code>
-To make this code work properly the only thing you need to set your client id, client secret and eventually the redirect uri at line 18.
+<span class="w">            </span><span class="n">exchange</span><span class="p">.</span><span class="na">sendResponseHeaders</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">respText</span><span class="p">.</span><span class="na">getBytes</span><span class="p">().</span><span class="na">length</span><span class="p">);</span>
+<span class="w">            </span><span class="n">OutputStream</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">exchange</span><span class="p">.</span><span class="na">getResponseBody</span><span class="p">();</span>
+<span class="w">            </span><span class="n">output</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">respText</span><span class="p">.</span><span class="na">getBytes</span><span class="p">());</span>
+<span class="w">            </span><span class="n">output</span><span class="p">.</span><span class="na">flush</span><span class="p">();</span>
+<span class="w">            </span><span class="n">exchange</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}));</span>
+<span class="w">        </span><span class="n">server</span><span class="p">.</span><span class="na">setExecutor</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="w">        </span><span class="n">server</span><span class="p">.</span><span class="na">start</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
 
-:::danger Store the Token safely!
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saveToken</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">BufferedWriter</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedWriter</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="s">"token.json"</span><span class="p">));</span>
+<span class="w">        </span><span class="n">writer</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">token</span><span class="p">);</span><span class="w"> </span><span class="c1">//saving the oAuth access token in the token.json file</span>
 
-In this QuickStart the access token and refresh token are stored in a file. This is only for educational purposes, the OAuth access token and refresh token are sensitive data and should be saved securely on your database.
-Also, never share your Client Secret with third-party actors, or publish it to your frontend!
+<span class="w">        </span><span class="n">writer</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
 
-:::
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">retrieveToken</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">"token.json"</span><span class="p">));</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Gson</span><span class="w"> </span><span class="n">gson</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gson</span><span class="p">();</span>
+<span class="w">        </span><span class="n">OAuth2AuthorizationCodeResponse</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gson</span><span class="p">.</span><span class="na">fromJson</span><span class="p">(</span><span class="n">json</span><span class="p">,</span><span class="w"> </span><span class="n">OAuth2AuthorizationCodeResponse</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">getAccessToken</span><span class="p">();</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">token</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>To make this code work properly the only thing you need to set your client id, client secret and eventually the redirect uri at line 18.</p>
+<p>:::danger Store the Token safely!</p>
+<p>In this QuickStart the access token and refresh token are stored in a file. This is only for educational purposes, the OAuth access token and refresh token are sensitive data and should be saved securely on your database.
+Also, never share your Client Secret with third-party actors, or publish it to your frontend!</p>
+<p>:::</p>
+<h2 id="three-step-three-set-up-the-sample">:three:  Step Three: Set up the sample ##</h2>
+<p>:::tip Retrieve your Company ID!</p>
+<p>In this example, we'll show how to retrieve your Company ID using the Java SDK. If you plan to manage only one company, you can insert it directly into your code as a variable.
+Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
+<p>:::</p>
+<p>Create a file called <strong>Quickstart.java</strong> in your working directory and copy in the following code:
+<div class="highlight"><span class="filename">Quickstart.java</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiClient</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.Configuration</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.api.SuppliersApi</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.api.UserApi</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.auth.OAuth</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.model.ListSuppliersResponse</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.model.ListUserCompaniesResponse</span><span class="p">;</span>
 
-## :three:&amp;nbsp; Step Three: Set up the sample ## 
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Quickstart</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getFirstCompanySuppliers</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ApiClient</span><span class="w"> </span><span class="n">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Configuration</span><span class="p">.</span><span class="na">getDefaultApiClient</span><span class="p">();</span>
+<span class="w">        </span><span class="n">defaultClient</span><span class="p">.</span><span class="na">setBasePath</span><span class="p">(</span><span class="s">"https://api-v2.fattureincloud.it"</span><span class="p">);</span>
 
-:::tip Retrieve your Company ID!
+<span class="w">        </span><span class="c1">// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow</span>
+<span class="w">        </span><span class="n">OAuth</span><span class="w"> </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">OAuth</span><span class="p">)</span><span class="w"> </span><span class="n">defaultClient</span><span class="p">.</span><span class="na">getAuthentication</span><span class="p">(</span><span class="s">"OAuth2AuthenticationCodeFlow"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="na">setAccessToken</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
 
-In this example, we'll show how to retrieve your Company ID using the Java SDK. If you plan to manage only one company, you can insert it directly into your code as a variable.
-Check the [Company-scoped Methods](/basics/company-scoped-methods.mdx) page for more info.
+<span class="w">        </span><span class="n">UserApi</span><span class="w"> </span><span class="n">userApiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">UserApi</span><span class="p">(</span><span class="n">defaultClient</span><span class="p">);</span>
+<span class="w">        </span><span class="n">SuppliersApi</span><span class="w"> </span><span class="n">suppliersApiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SuppliersApi</span><span class="p">(</span><span class="n">defaultClient</span><span class="p">);</span>
 
-:::
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Retrieve the first company id</span>
+<span class="w">            </span><span class="n">ListUserCompaniesResponse</span><span class="w"> </span><span class="n">userCompanies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userApiInstance</span><span class="p">.</span><span class="na">listUserCompanies</span><span class="p">();</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">firstCompanyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userCompanies</span><span class="p">.</span><span class="na">getData</span><span class="p">().</span><span class="na">getCompanies</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="na">getId</span><span class="p">();</span>
 
-Create a file called **Quickstart.java** in your working directory and copy in the following code:
-```java title="Quickstart.java"
-import it.fattureincloud.sdk.ApiClient;
-import it.fattureincloud.sdk.ApiException;
-import it.fattureincloud.sdk.Configuration;
-import it.fattureincloud.sdk.api.SuppliersApi;
-import it.fattureincloud.sdk.api.UserApi;
-import it.fattureincloud.sdk.auth.OAuth;
-import it.fattureincloud.sdk.model.ListSuppliersResponse;
-import it.fattureincloud.sdk.model.ListUserCompaniesResponse;
+<span class="w">            </span><span class="c1">// Retrieve the list of first 10 Suppliers for the selected company</span>
+<span class="w">            </span><span class="n">Integer</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span><span class="p">;</span><span class="w"> </span><span class="c1">// Integer | The ID of the company.</span>
+<span class="w">            </span><span class="n">Integer</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Integer | The page to retrieve.</span>
+<span class="w">            </span><span class="n">Integer</span><span class="w"> </span><span class="n">perPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Integer | The size of the page.</span>
 
-public class Quickstart {
-    public static String getFirstCompanySuppliers(String token) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api-v2.fattureincloud.it");
+<span class="w">            </span><span class="n">ListSuppliersResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">suppliersApiInstance</span><span class="p">.</span><span class="na">listSuppliers</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">page</span><span class="p">,</span><span class="w"> </span><span class="n">perPage</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getData</span><span class="p">().</span><span class="na">toString</span><span class="p">();</span>
 
-        // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
-        OAuth OAuth2AuthenticationCodeFlow = (OAuth) defaultClient.getAuthentication("OAuth2AuthenticationCodeFlow");
-        OAuth2AuthenticationCodeFlow.setAccessToken(token);
-
-        UserApi userApiInstance = new UserApi(defaultClient);
-        SuppliersApi suppliersApiInstance = new SuppliersApi(defaultClient);
-
-        try {
-            // Retrieve the first company id
-            ListUserCompaniesResponse userCompanies = userApiInstance.listUserCompanies();
-            int firstCompanyId = userCompanies.getData().getCompanies().get(0).getId();
-
-            // Retrieve the list of first 10 Suppliers for the selected company
-            Integer companyId = 12345; // Integer | The ID of the company.
-            Integer page = 1; // Integer | The page to retrieve.
-            Integer perPage = 10; // Integer | The size of the page.
-
-            ListSuppliersResponse result = suppliersApiInstance.listSuppliers(companyId, null, null, null, page, perPage, null);
-            return result.getData().toString();
-
-        } catch (ApiException e) {
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-            return e.getResponseBody();
-        }
-    }
-}
-</code></pre>
-<h2 id="step-four-run-the-sample"><img alt="4️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0034-20e3.png" title=":four:"/>  Step Four: Run the sample ##</h2>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ApiException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Status code: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getCode</span><span class="p">());</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Reason: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getResponseBody</span><span class="p">());</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Response headers: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getResponseHeaders</span><span class="p">());</span>
+<span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getResponseBody</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="four-step-four-run-the-sample">:four:  Step Four: Run the sample ##</h2>
 <p>Now run your project and visit <em>http://localhost:8000/oauth</em> (or whatever your URL is), you will be redirected to the TSE in Cloud login page where you will be asked to grant some permissions, according to what scopes you specified previously. 
 Finally, you will see the success message, the access token will be stored in the token.json file ready to be used.</p>
 <p>You can now visit <em>http://localhost:8000/quickstart</em> (or whatever your URL is) to test the application.</p>
-<h2 id="what-now"><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:"/>  What now? ##</h2>
+<h2 id="question-what-now">:question:  What now? ##</h2>
 <p>In this example, we used a limited set of the available API methods to show how to use our SDK.</p>
 <p>If you want to access the full documentation of the available methods and models, you can check the following resources:
 * <a href="https://github.com/fattureincloud/fattureincloud-java-sdk">Java SDK GitHub Repository</a>: the Readme file contains the full list of the available methods and models

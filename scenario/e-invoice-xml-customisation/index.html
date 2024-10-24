@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#the-official-xml-structure">
+<a class="md-skip" href="#scroll-the-official-xml-structure">
           Skip to content
         </a>
 </div>
@@ -333,37 +333,37 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#the-official-xml-structure">
+<a class="md-nav__link" href="#scroll-the-official-xml-structure">
 <span class="md-ellipsis">
-        The Official XML Structure
+      :scroll:  The Official XML Structure
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#the-ei_raw-flavours">
+<a class="md-nav__link" href="#dango-the-ei_raw-flavours">
 <span class="md-ellipsis">
-        The ei_raw flavours
+      :dango:  The ei_raw flavours
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#e-invoice-body">
+<a class="md-nav__link" href="#page_with_curl-e-invoice-body">
 <span class="md-ellipsis">
-        E-invoice body
+      :page_with_curl:  E-invoice body
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#items-list">
+<a class="md-nav__link" href="#ramen-items-list">
 <span class="md-ellipsis">
-        Items list
+      :ramen:  Items list
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#payments-list">
+<a class="md-nav__link" href="#money_with_wings-payments-list">
 <span class="md-ellipsis">
-        Payments list
+      :money_with_wings:  Payments list
     </span>
 </a>
 </li>
@@ -589,7 +589,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../support/general-knowledge/">
+<a class="md-nav__link" href="../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -651,37 +651,37 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#the-official-xml-structure">
+<a class="md-nav__link" href="#scroll-the-official-xml-structure">
 <span class="md-ellipsis">
-        The Official XML Structure
+      :scroll:  The Official XML Structure
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#the-ei_raw-flavours">
+<a class="md-nav__link" href="#dango-the-ei_raw-flavours">
 <span class="md-ellipsis">
-        The ei_raw flavours
+      :dango:  The ei_raw flavours
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#e-invoice-body">
+<a class="md-nav__link" href="#page_with_curl-e-invoice-body">
 <span class="md-ellipsis">
-        E-invoice body
+      :page_with_curl:  E-invoice body
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#items-list">
+<a class="md-nav__link" href="#ramen-items-list">
 <span class="md-ellipsis">
-        Items list
+      :ramen:  Items list
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#payments-list">
+<a class="md-nav__link" href="#money_with_wings-payments-list">
 <span class="md-ellipsis">
-        Payments list
+      :money_with_wings:  Payments list
     </span>
 </a>
 </li>
@@ -696,10 +696,10 @@
 <p>import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";</p>
 <p>While <a href="/guides/invoice-creation.mdx">creating an e-invoice</a> you could need to have more control over the XML that is generated through our APIs. On this page, we'll explain how to set up the <strong>e-invoice advanced attributes</strong>.</p>
-<h2 id="the-official-xml-structure"><img alt="📜" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4dc.png" title=":scroll:"/>  The Official XML Structure</h2>
+<h2 id="scroll-the-official-xml-structure">:scroll:  The Official XML Structure</h2>
 <p>The <strong>Official e-invoice XML structure</strong> is directly defined by the Italian Public Administration, and can be found <a href="https://www.fatturapa.gov.it/export/documenti/fatturapa/v1.3/Rappresentazione-tabellare-fattura-ordinaria.pdf">here</a>. This structure is subject to changes over time, and that's why we decided to manage some of these fields in a different way.</p>
 <p>If you want to know which additional attributes we support you can also read this <a href="https://help.fattureincloud.it/help/articolo/181">page</a>. The <em>TSE in Cloud Web App</em> lets you define these fields through dedicated components, so you can also check it to discover which attributes we support; we'll show you how to do it in the following sections.</p>
-<h2 id="the-ei_raw-flavours"><img alt="🍡" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f361.png" title=":dango:"/>  The ei_raw flavours</h2>
+<h2 id="dango-the-ei_raw-flavours">:dango:  The ei_raw flavours</h2>
 <p>If you already are familiar with creating e-invoices from our Web App, you already know that you can set advanced attributes in three different entities:</p>
 <ul>
 <li>E-invoice body</li>
@@ -710,7 +710,7 @@ import TabItem from "@theme/TabItem";</p>
 <p>:::warning Strings everywhere!</p>
 <p>Keep in mind that every field in ei_raw is always managed as a <strong>String</strong>! This means, for example, that even numbers must be inserted in String format (eg. "NumItem": "5")</p>
 <p>:::</p>
-<h2 id="e-invoice-body"><img alt="📃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4c3.png" title=":page_with_curl:"/>  E-invoice body</h2>
+<h2 id="page_with_curl-e-invoice-body">:page_with_curl:  E-invoice body</h2>
 <p>In our Web Interface, you can add your custom XML fields here:</p>
 <p><img alt="Main body - Add Additional Attributes" src="../assets/einvoice-body-ei-raw.png"/></p>
 <p>In our API, that section corresponds to the <strong>data.ei_raw</strong> field. Let's try to set up one of these attributes.</p>
@@ -748,7 +748,8 @@ import TabItem from "@theme/TabItem";</p>
 </tbody>
 </table>
 <p>This is the final XML that we want to obtain:</p>
-<pre><code class="language-xml"></code></pre>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
 <p>The <strong>ei_raw</strong> field uses JSON instead of XML but uses a similar structure.</p>
 <p>While mapping the XML structure to our JSON, you have to keep in mind a few things:</p>
 <ul>
@@ -756,190 +757,190 @@ import TabItem from "@theme/TabItem";</p>
 <li>For the root subfields, you need to check if the field is mandatory and its occurrences (check the <strong>Obbligatorietà e occorrenze</strong> field in the official structure); if the field can have more than one occurrence then it must be represented as a <em>JSON list</em>. For example, DatiRicezione is &lt;0, N&gt;: it means that it isn't mandatory and that it must be represented as a JSON list.</li>
 </ul>
 <p>Mapping the XML shown above to our ei_raw JSON format we will obtain the following result:</p>
-<pre><code class="language-json">"ei_raw": {
-  "FatturaElettronicaBody": {
-    "DatiGenerali": {
-      "DatiRicezione": [
-        {
-          "NumItem": "5"
-        }
-      ]
-    }
-  }
-}
-</code></pre>
-<pre><code class="language-json">{
-  "data": {
-    "type": "invoice",
-    "entity": {
-      "name": "Mario Rossi"
-    },
-    "date": "2022-01-20",
-    "e_invoice": true,
-    "items_list": [
-      {
-        "product_id": 4,
-        "code": "TV3",
-        "name": "Tavolo in legno",
-        "net_price": 100,
-        "category": "cucina",
-        "discount": 0,
-        "qty": 1,
-        "vat": {
-          "id": 0
-        }
-      }
-    ],
-    "payment_method": {
-      "id": 386683
-    },
-    "payments_list": [
-      {
-        "amount": 122,
-        "due_date": "2022-01-23",
-        "paid_date": "2022-01-22",
-        "status": "paid",
-        "payment_account": {
-          "id": 110
-        }
-      }
-    ],
-    "ei_raw": {
-      "FatturaElettronicaBody": {
-        "DatiGenerali": {
-          "DatiRicezione": [
-            {
-              "NumItem": "5"
-            }
-          ]
-        }
-      }
-    }
-  }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"FatturaElettronicaBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"DatiGenerali"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"DatiRicezione"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"NumItem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"invoice"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mario Rossi"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-20"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"e_invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"items_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TV3"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tavolo in legno"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"net_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cucina"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"vat"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">386683</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"payments_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">122</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-23"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"paid_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-22"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"payment_account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"FatturaElettronicaBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"DatiGenerali"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"DatiRicezione"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">"NumItem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">          </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>And here you can see how to set the ei_raw field with our SDKs:</p>
-<pre><code class="language-cs">IssuedDocument invoice = new IssuedDocument(
-    type: IssuedDocumentType.Invoice,
-    eiRaw: new {
-        FatturaElettronicaBody = new {
-            DatiGenerali = new {
-                DatiRicezione = new [] {
-                    new {
-                        NumItem = "5"
-                    }
-                }
-            }
-        }
-    }
-);
-</code></pre>
-<pre><code class="language-go">invoice := *fattureincloud.NewIssuedDocument().
-    SetType(fattureincloud.IssuedDocumentTypes.INVOICE).
-    SetEiRaw(map[string]interface{}{
-        "FatturaElettronicaBody": map[string]interface{}{
-            "DatiGenerali": map[string]interface{}{
-                "DatiRicezione": []interface{}{
-                    map[string]interface{}{
-                        "NumItem": "5",
-                    },
-                },
-            },
-        },
-    },
-)
-</code></pre>
-<pre><code class="language-java">    "FatturaElettronicaBody", Map.of(
-        "DatiGenerali", Map.of(
-            "DatiRicezione",
-            Arrays.asList(
-                Map.of(
-                    "NumItem", "5"
-                )
-            )
-        )
-    )
-);
+<div class="highlight"><pre><span></span><code><span class="n">IssuedDocument</span><span class="w"> </span><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocument</span><span class="p">(</span>
+<span class="w">    </span><span class="n">type</span><span class="p">:</span><span class="w"> </span><span class="n">IssuedDocumentType</span><span class="p">.</span><span class="n">Invoice</span><span class="p">,</span>
+<span class="w">    </span><span class="n">eiRaw</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">FatturaElettronicaBody</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DatiGenerali</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">DatiRicezione</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">NumItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"5"</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">invoice</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">*</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">NewIssuedDocument</span><span class="p">().</span>
+<span class="w">    </span><span class="nx">SetType</span><span class="p">(</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">IssuedDocumentTypes</span><span class="p">.</span><span class="nx">INVOICE</span><span class="p">).</span>
+<span class="w">    </span><span class="nx">SetEiRaw</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">        </span><span class="s">"FatturaElettronicaBody"</span><span class="p">:</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">            </span><span class="s">"DatiGenerali"</span><span class="p">:</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">                </span><span class="s">"DatiRicezione"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">                    </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">                        </span><span class="s">"NumItem"</span><span class="p">:</span><span class="w"> </span><span class="s">"5"</span><span class="p">,</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s">"FatturaElettronicaBody"</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">        </span><span class="s">"DatiGenerali"</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">            </span><span class="s">"DatiRicezione"</span><span class="p">,</span>
+<span class="w">            </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span>
+<span class="w">                </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">                    </span><span class="s">"NumItem"</span><span class="p">,</span><span class="w"> </span><span class="s">"5"</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">            </span><span class="p">)</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="p">);</span>
 
-IssuedDocument invoice = new IssuedDocument()
-        .type(IssuedDocumentType.INVOICE)
-        .eiRaw(eiRaw);
-</code></pre>
-<pre><code class="language-js">let invoice = new fattureInCloudSdk.IssuedDocument();
-invoice.type = new fattureInCloudSdk.IssuedDocumentType().invoice;
-invoice.ei_raw = {
-  FatturaElettronicaBody: {
-    DatiGenerali: {
-      DatiRicezione: [
-        {
-          NumItem: "5",
-        },
-      ],
-    },
-  },
-};
-</code></pre>
-<pre><code class="language-php">$invoice = new IssuedDocument();
-$invoice
-  -&gt;setType(IssuedDocumentType::INVOICE);
-  -&gt;setEiRaw(
-    [
-        "FatturaElettronicaBody" =&gt; [
-            "DatiGenerali" =&gt; [
-                "DatiRicezione" =&gt; [
-                    ["NumItem" =&gt; "5"]
-                ]
-            ]
-        ]
-    ]
-);
-</code></pre>
-<pre><code class="language-py">invoice = IssuedDocument(
-    type = IssuedDocumentType("invoice"),
-    ei_raw ={
-        "FatturaElettronicaBody": {
-            "DatiGenerali": {
-                "DatiRicezione": [
-                    {
-                        "NumItem": "5"
-                    }
-                ]
-            }
-        }
-    }
-)
-</code></pre>
-<pre><code class="language-rb">invoice = FattureInCloud_Ruby_Sdk::IssuedDocument.new(
-    type: FattureInCloud_Ruby_Sdk::IssuedDocumentType::INVOICE,
-    ei_raw: {
-        FatturaElettronicaBody: {
-            DatiGenerali: {
-                DatiRicezione: [
-                    {
-                        NumItem: "5"
-                    }
-                ]
-            }
-        }
-    }
-)
-</code></pre>
-<pre><code class="language-ts">let invoice: IssuedDocument = {
-  type: IssuedDocumentType.Invoice,
-  ei_raw: {
-    FatturaElettronicaBody: {
-      DatiGenerali: {
-        DatiRicezione: [
-          {
-            NumItem: "5",
-          },
-        ],
-      },
-    },
-  },
-};
-</code></pre>
-<h2 id="items-list"><img alt="🍜" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f35c.png" title=":ramen:"/>  Items list</h2>
+<span class="n">IssuedDocument</span><span class="w"> </span><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocument</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">type</span><span class="p">(</span><span class="n">IssuedDocumentType</span><span class="p">.</span><span class="na">INVOICE</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">eiRaw</span><span class="p">(</span><span class="n">eiRaw</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">IssuedDocument</span><span class="p">();</span>
+<span class="nx">invoice</span><span class="p">.</span><span class="nx">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">IssuedDocumentType</span><span class="p">().</span><span class="nx">invoice</span><span class="p">;</span>
+<span class="nx">invoice</span><span class="p">.</span><span class="nx">ei_raw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">FatturaElettronicaBody</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">DatiGenerali</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">DatiRicezione</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">NumItem</span><span class="o">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">$invoice = new IssuedDocument();</span>
+<span class="x">$invoice</span>
+<span class="x">  -&gt;setType(IssuedDocumentType::INVOICE);</span>
+<span class="x">  -&gt;setEiRaw(</span>
+<span class="x">    [</span>
+<span class="x">        "FatturaElettronicaBody" =&gt; [</span>
+<span class="x">            "DatiGenerali" =&gt; [</span>
+<span class="x">                "DatiRicezione" =&gt; [</span>
+<span class="x">                    ["NumItem" =&gt; "5"]</span>
+<span class="x">                ]</span>
+<span class="x">            ]</span>
+<span class="x">        ]</span>
+<span class="x">    ]</span>
+<span class="x">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">invoice</span> <span class="o">=</span> <span class="n">IssuedDocument</span><span class="p">(</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="n">IssuedDocumentType</span><span class="p">(</span><span class="s2">"invoice"</span><span class="p">),</span>
+    <span class="n">ei_raw</span> <span class="o">=</span><span class="p">{</span>
+        <span class="s2">"FatturaElettronicaBody"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"DatiGenerali"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"DatiRicezione"</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">"NumItem"</span><span class="p">:</span> <span class="s2">"5"</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocument</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="w">    </span><span class="ss">type</span><span class="p">:</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocumentType</span><span class="o">::</span><span class="no">INVOICE</span><span class="p">,</span>
+<span class="w">    </span><span class="ss">ei_raw</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="ss">FatturaElettronicaBody</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="ss">DatiGenerali</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="ss">DatiRicezione</span><span class="p">:</span><span class="w"> </span><span class="o">[</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="ss">NumItem</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="o">]</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">invoice</span><span class="o">:</span><span class="w"> </span><span class="kt">IssuedDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="nx">IssuedDocumentType</span><span class="p">.</span><span class="nx">Invoice</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">ei_raw</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">FatturaElettronicaBody</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">DatiGenerali</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">DatiRicezione</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">NumItem</span><span class="o">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span>
+<span class="w">          </span><span class="p">},</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div>
+<h2 id="ramen-items-list">:ramen:  Items list</h2>
 <p>In our web interface, you can define advanced attributes for each of the inserted items:</p>
 <p><img alt="Items list - Add advanced attributes" src="../assets/einvoice-items-list-ei-raw.png"/></p>
 <p>This section is mapped in our API methods in the <strong>data.items_list.ei_raw</strong> field. This field's behavior is similar to what was explained in the previous section, but in this case, the root tag is <strong>DettaglioLinee (2.2.1)</strong>; this means that this is the first tag that we must represent in the item (you must ignore the parent nodes) and that there can be only one root tag per item.</p>
@@ -981,219 +982,220 @@ $invoice
 </tbody>
 </table>
 <p>This is the final XML that we want to obtain:</p>
-<pre><code class="language-xml"></code></pre>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
 <p>While mapping this XML to our JSON, we have to keep in mind two things:</p>
 <ul>
 <li>The root is the DettaglioLinee tag, so its parents must be omitted;</li>
 <li>As explained before, AltriDatiGestionali can appear more than once, so it must be represented as a JSON list.</li>
 </ul>
 <p>The resulting JSON will be the following one:</p>
-<pre><code class="language-json">"ei_raw": {
-  "DettaglioLinee": {
-    "AltriDatiGestionali": [
-      {
-        "TipoDato": "TIPO_DATO"
-      }
-    ]
-  }
-}
-</code></pre>
-<pre><code class="language-json">{
-  "data": {
-    "type": "invoice",
-    "entity": {
-      "name": "Mario Rossi"
-    },
-    "date": "2022-01-20",
-    "e_invoice": true,
-    "items_list": [
-      {
-        "product_id": 4,
-        "code": "TV3",
-        "name": "Tavolo in legno",
-        "net_price": 100,
-        "category": "cucina",
-        "discount": 0,
-        "qty": 1,
-        "vat": {
-          "id": 0
-        },
-        "ei_raw": {
-          "DettaglioLinee": {
-            "AltriDatiGestionali": [
-              {
-                "TipoDato": "TIPO_DATO"
-              }
-            ]
-          }
-        }
-      }
-    ],
-    "payment_method": {
-      "id": 386683
-    },
-    "payments_list": [
-      {
-        "amount": 122,
-        "due_date": "2022-01-23",
-        "paid_date": "2022-01-22",
-        "status": "paid",
-        "payment_account": {
-          "id": 110
-        }
-      }
-    ],
-    "ei_raw": {
-      "FatturaElettronicaBody": {
-        "DatiGenerali": {
-          "DatiRicezione": [
-            {
-              "NumItem": "5"
-            }
-          ]
-        }
-      }
-    }
-  }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"DettaglioLinee"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"AltriDatiGestionali"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"TipoDato"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TIPO_DATO"</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"invoice"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mario Rossi"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-20"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"e_invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"items_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TV3"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tavolo in legno"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"net_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cucina"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"vat"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"DettaglioLinee"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"AltriDatiGestionali"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"TipoDato"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TIPO_DATO"</span>
+<span class="w">              </span><span class="p">}</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">386683</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"payments_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">122</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-23"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"paid_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-22"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"payment_account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"FatturaElettronicaBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"DatiGenerali"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"DatiRicezione"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">"NumItem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">          </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>And here you can see how to set the ei_raw field with our SDKs:</p>
-<pre><code class="language-cs">IssuedDocument invoice = new IssuedDocument(
-        new IssuedDocumentItemsListItem(
-            productId: 4,
-            eiRaw: new {
-                DettaglioLinee = new {
-                    AltriDatiGestionali = new [] {
-                        new {
-                            TipoDato = "TIPO DATO"
-                        }
-                    }
-                }
-            }
-        )
-    }
-);
-</code></pre>
-<pre><code class="language-go">invoice := *fattureincloud.NewIssuedDocument().
-    SetType(fattureincloud.IssuedDocumentTypes.INVOICE).
-    SetEiRaw(map[string]interface{}{
-        "ei_raw": map[string]interface{}{
-            "DettaglioLinee": map[string]interface{}{
-                "AltriDatiGestionali": []interface{}{
-                    map[string]interface{}{
-                        "TipoDato": "TIPO_DATO",
-                    },
-                },
-            },
-        },
-    },
-)
-</code></pre>
-<pre><code class="language-java">    "DettaglioLinee", Map.of(
-        "AltriDatiGestionali",
-        Arrays.asList(
-            Map.of(
-                "TipoDato", "TIPO DATO"
-            )
-        )
-    )
-);
+<div class="highlight"><pre><span></span><code><span class="n">IssuedDocument</span><span class="w"> </span><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocument</span><span class="p">(</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="nf">IssuedDocumentItemsListItem</span><span class="p">(</span>
+<span class="w">            </span><span class="n">productId</span><span class="p">:</span><span class="w"> </span><span class="m">4</span><span class="p">,</span>
+<span class="w">            </span><span class="n">eiRaw</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">DettaglioLinee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">AltriDatiGestionali</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">TipoDato</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"TIPO DATO"</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">invoice</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">*</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">NewIssuedDocument</span><span class="p">().</span>
+<span class="w">    </span><span class="nx">SetType</span><span class="p">(</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">IssuedDocumentTypes</span><span class="p">.</span><span class="nx">INVOICE</span><span class="p">).</span>
+<span class="w">    </span><span class="nx">SetEiRaw</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">        </span><span class="s">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">            </span><span class="s">"DettaglioLinee"</span><span class="p">:</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">                </span><span class="s">"AltriDatiGestionali"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">                    </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">                        </span><span class="s">"TipoDato"</span><span class="p">:</span><span class="w"> </span><span class="s">"TIPO_DATO"</span><span class="p">,</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s">"DettaglioLinee"</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">        </span><span class="s">"AltriDatiGestionali"</span><span class="p">,</span>
+<span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span>
+<span class="w">            </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">                </span><span class="s">"TipoDato"</span><span class="p">,</span><span class="w"> </span><span class="s">"TIPO DATO"</span>
+<span class="w">            </span><span class="p">)</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="p">);</span>
 
-IssuedDocument invoice = new IssuedDocument()
-    .addItemsListItem(
-        new IssuedDocumentItemsListItem()
-            .productId(4)
-            .eiRaw(eiRaw)
-    );
-</code></pre>
-<pre><code class="language-js">let invoice = new fattureInCloudSdk.IssuedDocument();
-invoice.items_list = [
-  {
-    product_id: 4,
-    ei_raw: {
-      DettaglioLinee: {
-        AltriDatiGestionali: [
-          {
-            TipoDato: "TIPO_DATO",
-          },
-        ],
-      },
-    },
-  },
-];
-</code></pre>
-<pre><code class="language-php">$invoice = new IssuedDocument();
-$invoice-&gt;setItemsList(
-    [
-        new IssuedDocumentItemsListItem(
-            [
-                "product_id" =&gt; 4,
-                "ei_raw" =&gt; [
-                    "DettaglioLinee" =&gt; [
-                        "AltriDatiGestionali" =&gt; [
-                          [
-                            "TipoDato" =&gt; "TIPO_DATO"
-                          ]
-                        ]
-                    ]
-                ]
-            ]
-        )
-    ]
-);
-</code></pre>
-<pre><code class="language-py">invoice = IssuedDocument(
-    items_list = [
-        IssuedDocumentItemsListItem(
-            product_id=4,
-            ei_raw={
-                "DettaglioLinee": {
-                    "AltriDatiGestionali": [
-                        {
-                            "TipoDato": "TIPO_DATO"
-                        }
-                    ]
-                }
-            }
-        )
-    ]
-)
-</code></pre>
-<pre><code class="language-rb">invoice = FattureInCloud_Ruby_Sdk::IssuedDocument.new(
-    items_list: Array(
-      FattureInCloud_Ruby_Sdk::IssuedDocumentItemsListItem.new(
-            product_id: 4,
-            ei_raw: {
-                DettaglioLinee: {
-                    AltriDatiGestionali: [
-                        {
-                            NumItem: "5"
-                        }
-                    ]
-                }
-            }
-        )
-    )
-)
-</code></pre>
-<pre><code class="language-ts">let invoice: IssuedDocument = {
-  items_list: [
-    {
-      product_id: 4,
-      ei_raw: {
-        DettaglioLinee: {
-          AltriDatiGestionali: [
-            {
-              TipoDato: "TIPO_DATO",
-            },
-          ],
-        },
-      },
-    },
-  ],
-};
-</code></pre>
-<h2 id="payments-list"><img alt="💸" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4b8.png" title=":money_with_wings:"/>  Payments list</h2>
+<span class="n">IssuedDocument</span><span class="w"> </span><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocument</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">addItemsListItem</span><span class="p">(</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocumentItemsListItem</span><span class="p">()</span>
+<span class="w">            </span><span class="p">.</span><span class="na">productId</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="na">eiRaw</span><span class="p">(</span><span class="n">eiRaw</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">IssuedDocument</span><span class="p">();</span>
+<span class="nx">invoice</span><span class="p">.</span><span class="nx">items_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">product_id</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ei_raw</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">DettaglioLinee</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">AltriDatiGestionali</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">TipoDato</span><span class="o">:</span><span class="w"> </span><span class="s2">"TIPO_DATO"</span><span class="p">,</span>
+<span class="w">          </span><span class="p">},</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">];</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">$invoice = new IssuedDocument();</span>
+<span class="x">$invoice-&gt;setItemsList(</span>
+<span class="x">    [</span>
+<span class="x">        new IssuedDocumentItemsListItem(</span>
+<span class="x">            [</span>
+<span class="x">                "product_id" =&gt; 4,</span>
+<span class="x">                "ei_raw" =&gt; [</span>
+<span class="x">                    "DettaglioLinee" =&gt; [</span>
+<span class="x">                        "AltriDatiGestionali" =&gt; [</span>
+<span class="x">                          [</span>
+<span class="x">                            "TipoDato" =&gt; "TIPO_DATO"</span>
+<span class="x">                          ]</span>
+<span class="x">                        ]</span>
+<span class="x">                    ]</span>
+<span class="x">                ]</span>
+<span class="x">            ]</span>
+<span class="x">        )</span>
+<span class="x">    ]</span>
+<span class="x">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">invoice</span> <span class="o">=</span> <span class="n">IssuedDocument</span><span class="p">(</span>
+    <span class="n">items_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">IssuedDocumentItemsListItem</span><span class="p">(</span>
+            <span class="n">product_id</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+            <span class="n">ei_raw</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">"DettaglioLinee"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"AltriDatiGestionali"</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">"TipoDato"</span><span class="p">:</span> <span class="s2">"TIPO_DATO"</span>
+                        <span class="p">}</span>
+                    <span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocument</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="w">    </span><span class="ss">items_list</span><span class="p">:</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span>
+<span class="w">      </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocumentItemsListItem</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="w">            </span><span class="ss">product_id</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">            </span><span class="ss">ei_raw</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="ss">DettaglioLinee</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="ss">AltriDatiGestionali</span><span class="p">:</span><span class="w"> </span><span class="o">[</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="ss">NumItem</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="o">]</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">invoice</span><span class="o">:</span><span class="w"> </span><span class="kt">IssuedDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">items_list</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">product_id</span><span class="o">:</span><span class="w"> </span><span class="kt">4</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">ei_raw</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">DettaglioLinee</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">AltriDatiGestionali</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">              </span><span class="nx">TipoDato</span><span class="o">:</span><span class="w"> </span><span class="s2">"TIPO_DATO"</span><span class="p">,</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">          </span><span class="p">],</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="p">};</span>
+</code></pre></div>
+<h2 id="money_with_wings-payments-list">:money_with_wings:  Payments list</h2>
 <p>In our web interface, you can define advanced attributes for each of the inserted payments:</p>
 <p><img alt="Payments list - Add advanced attributes" src="../assets/einvoice-payments-list-ei-raw.png"/></p>
 <p>This section is mapped in our API methods in the <strong>data.payments_list.ei_raw</strong> field. This field's behavior is similar to what was explained in the previous section, but in this case, the root tag is <strong>DettaglioPagamento (2.4.2)</strong>; this means that this is the first tag that we must represent in the item (you must ignore the parent nodes) and that there can be only one root tag per item.</p>
@@ -1230,180 +1232,181 @@ $invoice-&gt;setItemsList(
 </tbody>
 </table>
 <p>This is the final XML that we want to obtain:</p>
-<pre><code class="language-xml"></code></pre>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
 <p>While mapping this XML to our JSON, we have to omit the root's parent tags, as already explained above.</p>
 <p>The resulting JSON will be the following one:</p>
-<pre><code class="language-json">"ei_raw": {
-  "DettaglioPagamento": {
-    "CAB": "CAB"
-  }
-}
-</code></pre>
-<pre><code class="language-json">{
-  "data": {
-    "type": "invoice",
-    "entity": {
-      "name": "Mario Rossi"
-    },
-    "date": "2022-01-20",
-    "e_invoice": true,
-    "items_list": [
-      {
-        "product_id": 4,
-        "code": "TV3",
-        "name": "Tavolo in legno",
-        "net_price": 100,
-        "category": "cucina",
-        "discount": 0,
-        "qty": 1,
-        "vat": {
-          "id": 0
-        },
-        "ei_raw": {
-          "DettaglioLinee": {
-            "AltriDatiGestionali": [
-              {
-                "TipoDato": "TIPO_DATO"
-              }
-            ]
-          }
-        }
-      }
-    ],
-    "payment_method": {
-      "id": 386683
-    },
-    "payments_list": [
-      {
-        "amount": 122,
-        "due_date": "2022-01-23",
-        "paid_date": "2022-01-22",
-        "status": "paid",
-        "payment_account": {
-          "id": 110
-        },
-        "ei_raw": {
-          "DettaglioPagamento": {
-            "CAB": "CAB"
-          }
-        }
-      }
-    ],
-    "ei_raw": {
-      "FatturaElettronicaBody": {
-        "DatiGenerali": {
-          "DatiRicezione": [
-            {
-              "NumItem": "5"
-            }
-          ]
-        }
-      }
-    }
-  }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"DettaglioPagamento"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"CAB"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CAB"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"invoice"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mario Rossi"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-20"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"e_invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"items_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TV3"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tavolo in legno"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"net_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cucina"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"vat"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"DettaglioLinee"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"AltriDatiGestionali"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"TipoDato"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TIPO_DATO"</span>
+<span class="w">              </span><span class="p">}</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">386683</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"payments_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">122</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-23"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"paid_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-22"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"payment_account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"DettaglioPagamento"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"CAB"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CAB"</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"FatturaElettronicaBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"DatiGenerali"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"DatiRicezione"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">"NumItem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">          </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>And here you can see how to set the ei_raw field with our SDKs:</p>
-<pre><code class="language-cs">IssuedDocument invoice = new IssuedDocument(
-        new IssuedDocumentPaymentsListItem(
-            amount: 122,
-            eiRaw: new {
-                DettaglioPagamento = new {
-                    CAB = "CAB"
-                }
-            }
-        )
-    }
-);
-</code></pre>
-<pre><code class="language-go">invoice := *fattureincloud.NewIssuedDocument().
-    SetType(fattureincloud.IssuedDocumentTypes.INVOICE).
-    SetEiRaw(map[string]interface{}{
-        "DettaglioPagamento": map[string]interface{}{
-            "CAB": "CAB",
-        },
-    },
-)
-</code></pre>
-<pre><code class="language-java">    "DettaglioPagamento", Map.of(
-        "CAB", "CAB"
-    )
-);
+<div class="highlight"><pre><span></span><code><span class="n">IssuedDocument</span><span class="w"> </span><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocument</span><span class="p">(</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="nf">IssuedDocumentPaymentsListItem</span><span class="p">(</span>
+<span class="w">            </span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="m">122</span><span class="p">,</span>
+<span class="w">            </span><span class="n">eiRaw</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">DettaglioPagamento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">CAB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"CAB"</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">invoice</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">*</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">NewIssuedDocument</span><span class="p">().</span>
+<span class="w">    </span><span class="nx">SetType</span><span class="p">(</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">IssuedDocumentTypes</span><span class="p">.</span><span class="nx">INVOICE</span><span class="p">).</span>
+<span class="w">    </span><span class="nx">SetEiRaw</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">        </span><span class="s">"DettaglioPagamento"</span><span class="p">:</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">            </span><span class="s">"CAB"</span><span class="p">:</span><span class="w"> </span><span class="s">"CAB"</span><span class="p">,</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s">"DettaglioPagamento"</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">        </span><span class="s">"CAB"</span><span class="p">,</span><span class="w"> </span><span class="s">"CAB"</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="p">);</span>
 
-IssuedDocument invoice = new IssuedDocument()
-    .addPaymentsListItem(
-        new IssuedDocumentPaymentsListItem()
-            .amount(BigDecimal.valueOf(122))
-            .eiRaw(eiRaw)
-    );
-</code></pre>
-<pre><code class="language-js">let invoice = new fattureInCloudSdk.IssuedDocument();
-invoice.payments_list = [
-  {
-    amount: 122,
-    ei_raw: {
-      DettaglioPagamento: {
-        CAB: "CAB",
-      },
-    },
-  },
-];
-</code></pre>
-<pre><code class="language-php">$invoice = new IssuedDocument();
-$invoice-&gt;setPaymentsList(
-    [
-        new IssuedDocumentPaymentsListItem(
-            [
-                "amount" =&gt; 122,
-                "ei_raw" =&gt; [
-                    "DettaglioPagamento" =&gt; [
-                        "CAB" =&gt; "CAB"
-                    ]
-                ]
-            ]
-        )
-    ]
-);
-</code></pre>
-<pre><code class="language-py">invoice = IssuedDocument(
-    payments_list = [
-        IssuedDocumentPaymentsListItem(
-            amount=122,
-            ei_raw={
-                "DettaglioPagamento": {
-                    "CAB": "CAB"
-                }
-            }
-        )
-    ]
-)
-</code></pre>
-<pre><code class="language-rb">invoice = FattureInCloud_Ruby_Sdk::IssuedDocument.new(
-    payments_list: Array(
-      FattureInCloud_Ruby_Sdk::IssuedDocumentPaymentsListItem.new(
-            amount: 122,
-            ei_raw: {
-                DettaglioPagamento: {
-                    CAB: "CAB"
-                }
-            }
-        )
-    )
-)
-</code></pre>
-<pre><code class="language-ts">let invoice: IssuedDocument = {
-  payments_list: [
-    {
-      amount: 122,
-      ei_raw: {
-        DettaglioPagamento: {
-          CAB: "CAB",
-        },
-      },
-    },
-  ],
-};
-</code></pre>
+<span class="n">IssuedDocument</span><span class="w"> </span><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocument</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">addPaymentsListItem</span><span class="p">(</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocumentPaymentsListItem</span><span class="p">()</span>
+<span class="w">            </span><span class="p">.</span><span class="na">amount</span><span class="p">(</span><span class="n">BigDecimal</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">122</span><span class="p">))</span>
+<span class="w">            </span><span class="p">.</span><span class="na">eiRaw</span><span class="p">(</span><span class="n">eiRaw</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">IssuedDocument</span><span class="p">();</span>
+<span class="nx">invoice</span><span class="p">.</span><span class="nx">payments_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="mf">122</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ei_raw</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">DettaglioPagamento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">CAB</span><span class="o">:</span><span class="w"> </span><span class="s2">"CAB"</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">];</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">$invoice = new IssuedDocument();</span>
+<span class="x">$invoice-&gt;setPaymentsList(</span>
+<span class="x">    [</span>
+<span class="x">        new IssuedDocumentPaymentsListItem(</span>
+<span class="x">            [</span>
+<span class="x">                "amount" =&gt; 122,</span>
+<span class="x">                "ei_raw" =&gt; [</span>
+<span class="x">                    "DettaglioPagamento" =&gt; [</span>
+<span class="x">                        "CAB" =&gt; "CAB"</span>
+<span class="x">                    ]</span>
+<span class="x">                ]</span>
+<span class="x">            ]</span>
+<span class="x">        )</span>
+<span class="x">    ]</span>
+<span class="x">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">invoice</span> <span class="o">=</span> <span class="n">IssuedDocument</span><span class="p">(</span>
+    <span class="n">payments_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">IssuedDocumentPaymentsListItem</span><span class="p">(</span>
+            <span class="n">amount</span><span class="o">=</span><span class="mi">122</span><span class="p">,</span>
+            <span class="n">ei_raw</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">"DettaglioPagamento"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"CAB"</span><span class="p">:</span> <span class="s2">"CAB"</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocument</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="w">    </span><span class="ss">payments_list</span><span class="p">:</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span>
+<span class="w">      </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocumentPaymentsListItem</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="w">            </span><span class="ss">amount</span><span class="p">:</span><span class="w"> </span><span class="mi">122</span><span class="p">,</span>
+<span class="w">            </span><span class="ss">ei_raw</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="ss">DettaglioPagamento</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="ss">CAB</span><span class="p">:</span><span class="w"> </span><span class="s2">"CAB"</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">invoice</span><span class="o">:</span><span class="w"> </span><span class="kt">IssuedDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">payments_list</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="kt">122</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">ei_raw</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">DettaglioPagamento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">CAB</span><span class="o">:</span><span class="w"> </span><span class="s2">"CAB"</span><span class="p">,</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="p">};</span>
+</code></pre></div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

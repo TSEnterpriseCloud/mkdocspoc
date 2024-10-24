@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#building-the-filter-manually">
+<a class="md-skip" href="#wrench-building-the-filter-manually">
           Skip to content
         </a>
 </div>
@@ -537,7 +537,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../support/general-knowledge/">
+<a class="md-nav__link" href="../../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -599,19 +599,19 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#building-the-filter-manually">
+<a class="md-nav__link" href="#wrench-building-the-filter-manually">
 <span class="md-ellipsis">
-        Building the filter manually
+      :wrench:  Building the filter manually
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#using-the-filter-helper">
+<a class="md-nav__link" href="#sos-using-the-filter-helper">
 <span class="md-ellipsis">
-        Using the Filter Helper
+      :sos:  Using the Filter Helper
     </span>
 </a>
-<nav aria-label="  Using the Filter Helper" class="md-nav">
+<nav aria-label=":sos:  Using the Filter Helper" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#condition">
@@ -720,238 +720,238 @@ import TabItem from "@theme/TabItem";</p>
 <p>In this example, we'll suppose you have to manage just one Company, so we simply inserted its ID directly in the code. If instead, you need to be able to manage multiple companies, you'll need to retrieve the ID of the current company in some way.
 Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
 <p>:::</p>
-<h2 id="building-the-filter-manually"><img alt="🔧" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f527.png" title=":wrench:"/>  Building the filter manually</h2>
+<h2 id="wrench-building-the-filter-manually">:wrench:  Building the filter manually</h2>
 <p>If you have to filter an Api response and your query is not very complicated, the most straightforward approach you can use is the manual one, you simply have to set the request's <strong>q</strong> parameter to the desired filter query and you are ready to go.</p>
-<pre><code class="language-cs">using System;
-using System.Diagnostics;
-using It.FattureInCloud.Sdk.Api;
-using It.FattureInCloud.Sdk.Client;
-using It.FattureInCloud.Sdk.Model;
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Diagnostics</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Api</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Client</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Model</span><span class="p">;</span>
 
-namespace Example
-{
-    public class ListClientsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.AccessToken = "YOUR_ACCESS_TOKEN";
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Example</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ListClientsExample</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Configuration</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Configuration</span><span class="p">();</span>
+<span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">AccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
 
-            var apiInstance = new ClientsApi(config);
-            var companyId = 12345;
-            var fieldset = "detailed";
-            var q = "vat_number = '03812340161'";
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ClientsApi</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12345</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">fieldset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"detailed"</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"vat_number = '03812340161'"</span><span class="p">;</span>
 
-            try
-            {
-                ListClientsResponse result = apiInstance.ListClients(companyId, null, fieldset, null, null, null, q);
-                Console.Write(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling ClientsApi.ListClients: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-</code></pre>
-<pre><code class="language-go">package main
+<span class="w">            </span><span class="k">try</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">ListClientsResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="n">ListClients</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="n">fieldset</span><span class="p">,</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ApiException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Debug</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="s">"Exception when calling ClientsApi.ListClients: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Debug</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="s">"Status Code: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">ErrorCode</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Debug</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">StackTrace</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-import (
-    "context"
-    "encoding/json"
-    "fmt"
-    "os"
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">"context"</span>
+<span class="w">    </span><span class="s">"encoding/json"</span>
+<span class="w">    </span><span class="s">"fmt"</span>
+<span class="w">    </span><span class="s">"os"</span>
 
-    fattureincloudapi "github.com/fattureincloud/fattureincloud-go-sdk/v2/api"
-    "github.com/fattureincloud/fattureincloud-go-sdk/v2/filter"
-)
+<span class="w">    </span><span class="nx">fattureincloudapi</span><span class="w"> </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/api"</span>
+<span class="w">    </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/filter"</span>
+<span class="p">)</span>
 
-func main() {
-    companyId := int32(2)
-    q := "vat_number = '03812340161'"
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">companyId</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">int32</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">q</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">"vat_number = '03812340161'"</span>
 
-    auth := context.WithValue(context.Background(), fattureincloudapi.ContextAccessToken, "YOUR_ACCESS_TOKEN")
-    configuration := fattureincloudapi.NewConfiguration()
-    apiClient := fattureincloudapi.NewAPIClient(configuration)
-    resp, r, err := apiClient.ClientsAPI.ListClients(auth, companyId).Q(q).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ClientsAPI.ListClients``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListClients`: ListClientsResponse
-    json.NewEncoder(os.Stdout).Encode(resp)
+<span class="w">    </span><span class="nx">auth</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">WithValue</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">Background</span><span class="p">(),</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">ContextAccessToken</span><span class="p">,</span><span class="w"> </span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">configuration</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewConfiguration</span><span class="p">()</span>
+<span class="w">    </span><span class="nx">apiClient</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewAPIClient</span><span class="p">(</span><span class="nx">configuration</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">apiClient</span><span class="p">.</span><span class="nx">ClientsAPI</span><span class="p">.</span><span class="nx">ListClients</span><span class="p">(</span><span class="nx">auth</span><span class="p">,</span><span class="w"> </span><span class="nx">companyId</span><span class="p">).</span><span class="nx">Q</span><span class="p">(</span><span class="nx">q</span><span class="p">).</span><span class="nx">Execute</span><span class="p">()</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Error when calling `ClientsAPI.ListClients``: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Full HTTP response: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// response from `ListClients`: ListClientsResponse</span>
+<span class="w">    </span><span class="nx">json</span><span class="p">.</span><span class="nx">NewEncoder</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">).</span><span class="nx">Encode</span><span class="p">(</span><span class="nx">resp</span><span class="p">)</span>
 
-condition := filter.NewCondition
-}
-</code></pre>
-<pre><code class="language-java">import it.fattureincloud.sdk.ApiClient;
-import it.fattureincloud.sdk.ApiException;
-import it.fattureincloud.sdk.Configuration;
-import it.fattureincloud.sdk.auth.*;
-import it.fattureincloud.sdk.model.*;
-import it.fattureincloud.sdk.api.ClientsApi;
+<span class="nx">condition</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewCondition</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiClient</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.Configuration</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.auth.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.model.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.api.ClientsApi</span><span class="p">;</span>
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Example</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ApiClient</span><span class="w"> </span><span class="n">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Configuration</span><span class="p">.</span><span class="na">getDefaultApiClient</span><span class="p">();</span>
 
-        OAuth OAuth2AuthenticationCodeFlow = (OAuth) defaultClient.getAuthentication("OAuth2AuthenticationCodeFlow");
-        OAuth2AuthenticationCodeFlow.setAccessToken("YOUR_ACCESS_TOKEN");
+<span class="w">        </span><span class="n">OAuth</span><span class="w"> </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">OAuth</span><span class="p">)</span><span class="w"> </span><span class="n">defaultClient</span><span class="p">.</span><span class="na">getAuthentication</span><span class="p">(</span><span class="s">"OAuth2AuthenticationCodeFlow"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="na">setAccessToken</span><span class="p">(</span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">);</span>
 
-        ClientsApi apiInstance = new ClientsApi(defaultClient);
-        Integer companyId = 2;
-        String fieldset = "detailed";
-        String q = "vat_number = '03812340161'";
-        try {
-            ListClientsResponse result = apiInstance.listClients(companyId, null, fieldset, null, null, null, q);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ClientsApi#listClients");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
-</code></pre>
-<pre><code class="language-js">const fattureInCloudSdk = require("@fattureincloud/fattureincloud-js-sdk");
-let defaultClient = fattureInCloudSdk.ApiClient.instance;
-let OAuth2AuthenticationCodeFlow =
-  defaultClient.authentications["OAuth2AuthenticationCodeFlow"];
-OAuth2AuthenticationCodeFlow.accessToken = "YOUR_ACCESS_TOKEN";
+<span class="w">        </span><span class="n">ClientsApi</span><span class="w"> </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ClientsApi</span><span class="p">(</span><span class="n">defaultClient</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Integer</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">fieldset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"detailed"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"vat_number = '03812340161'"</span><span class="p">;</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">ListClientsResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="na">listClients</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">fieldset</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ApiException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Exception when calling ClientsApi#listClients"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Status code: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getCode</span><span class="p">());</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Reason: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getResponseBody</span><span class="p">());</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Response headers: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getResponseHeaders</span><span class="p">());</span>
+<span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"@fattureincloud/fattureincloud-js-sdk"</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ApiClient</span><span class="p">.</span><span class="nx">instance</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="nx">defaultClient</span><span class="p">.</span><span class="nx">authentications</span><span class="p">[</span><span class="s2">"OAuth2AuthenticationCodeFlow"</span><span class="p">];</span>
+<span class="nx">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
 
-let apiInstance = new fattureInCloudSdk.ClientsApi();
-let companyId = 12345;
-let opts = {
-  fieldset: "detailed",
-  q: "vat_number = '03812340161'",
-};
-apiInstance.listClients(companyId, opts).then(
-  (result) =&gt; {
-    console.log(result);
-  },
-  (error) =&gt; {
-    console.error(error);
-  }
-);
-</code></pre>
-<pre><code class="language-php">&lt;?php
-require_once(__DIR__ . '/vendor/autoload.php');
+<span class="kd">let</span><span class="w"> </span><span class="nx">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ClientsApi</span><span class="p">();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12345</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">fieldset</span><span class="o">:</span><span class="w"> </span><span class="s2">"detailed"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">q</span><span class="o">:</span><span class="w"> </span><span class="s2">"vat_number = '03812340161'"</span><span class="p">,</span>
+<span class="p">};</span>
+<span class="nx">apiInstance</span><span class="p">.</span><span class="nx">listClients</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span><span class="p">(</span><span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">);</span>
 
-$config = FattureInCloud\Configuration::getDefaultConfiguration()-&gt;setAccessToken('YOUR_ACCESS_TOKEN');
+<span class="nv">$config</span> <span class="o">=</span> <span class="nx">FattureInCloud\Configuration</span><span class="o">::</span><span class="na">getDefaultConfiguration</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">setAccessToken</span><span class="p">(</span><span class="s1">'YOUR_ACCESS_TOKEN'</span><span class="p">);</span>
 
-$apiInstance = new FattureInCloud\Api\ClientsApi(
-    new GuzzleHttp\Client(),
-    $config
-);
-$company_id = 12345;
-$fieldset = 'detailed';
-$q = "vat_number = '03812340161'";
+<span class="nv">$apiInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FattureInCloud\Api\ClientsApi</span><span class="p">(</span>
+    <span class="k">new</span> <span class="nx">GuzzleHttp\Client</span><span class="p">(),</span>
+    <span class="nv">$config</span>
+<span class="p">);</span>
+<span class="nv">$company_id</span> <span class="o">=</span> <span class="mi">12345</span><span class="p">;</span>
+<span class="nv">$fieldset</span> <span class="o">=</span> <span class="s1">'detailed'</span><span class="p">;</span>
+<span class="nv">$q</span> <span class="o">=</span> <span class="s2">"vat_number = '03812340161'"</span><span class="p">;</span>
 
-try {
-    $result = $apiInstance-&gt;listClients($company_id, null, $fieldset, null, null, null, $q);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ClientsApi-&gt;listClients: ', $e-&gt;getMessage(), PHP_EOL;
-}
-</code></pre>
-<pre><code class="language-py">import fattureincloud_python_sdk
-from fattureincloud_python_sdk.api import clients_api
-from pprint import pprint
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$apiInstance</span><span class="o">-&gt;</span><span class="na">listClients</span><span class="p">(</span><span class="nv">$company_id</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="nv">$fieldset</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="nv">$q</span><span class="p">);</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">'Exception when calling ClientsApi-&gt;listClients: '</span><span class="p">,</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">fattureincloud_python_sdk</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.api</span> <span class="kn">import</span> <span class="n">clients_api</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
 
-configuration = fattureincloud_python_sdk.Configuration()
-configuration.access_token = "YOUR_ACCESS_TOKEN"
+<span class="n">configuration</span> <span class="o">=</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">Configuration</span><span class="p">()</span>
+<span class="n">configuration</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="s2">"YOUR_ACCESS_TOKEN"</span>
 
-with fattureincloud_python_sdk.ApiClient(configuration) as api_client:
-    api_instance = clients_api.ClientsApi(api_client)
-    company_id = 12345
-    fieldset = "detailed"
-    q = "vat_number = '03812340161'"
+<span class="k">with</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">ApiClient</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span> <span class="k">as</span> <span class="n">api_client</span><span class="p">:</span>
+    <span class="n">api_instance</span> <span class="o">=</span> <span class="n">clients_api</span><span class="o">.</span><span class="n">ClientsApi</span><span class="p">(</span><span class="n">api_client</span><span class="p">)</span>
+    <span class="n">company_id</span> <span class="o">=</span> <span class="mi">12345</span>
+    <span class="n">fieldset</span> <span class="o">=</span> <span class="s2">"detailed"</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="s2">"vat_number = '03812340161'"</span>
 
-    try:
-        api_response = api_instance.list_clients(company_id, fieldset=fieldset, q=q)
-        pprint(api_response)
-    except fattureincloud_python_sdk.ApiException as e:
-        print("Exception when calling ClientsApi-&gt;list_clients: %s\n" % e)
-</code></pre>
-<pre><code class="language-rb">require 'time'
-require 'fattureincloud_ruby_sdk'
-FattureInCloud_Ruby_Sdk.configure do |config|
-  config.access_token = 'YOUR_ACCESS_TOKEN'
-end
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">api_response</span> <span class="o">=</span> <span class="n">api_instance</span><span class="o">.</span><span class="n">list_clients</span><span class="p">(</span><span class="n">company_id</span><span class="p">,</span> <span class="n">fieldset</span><span class="o">=</span><span class="n">fieldset</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="n">q</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="p">(</span><span class="n">api_response</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">ApiException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Exception when calling ClientsApi-&gt;list_clients: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">require</span><span class="w"> </span><span class="s1">'time'</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">'fattureincloud_ruby_sdk'</span>
+<span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">.</span><span class="n">configure</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">config</span><span class="o">|</span>
+<span class="w">  </span><span class="n">config</span><span class="o">.</span><span class="n">access_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'YOUR_ACCESS_TOKEN'</span>
+<span class="k">end</span>
 
-api_instance = FattureInCloud_Ruby_Sdk::ClientsApi.new
-company_id = 12345
-opts = {
-  fieldset: 'detailed',
-  q: "vat_number = '03812340161'"
-}
+<span class="n">api_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">ClientsApi</span><span class="o">.</span><span class="n">new</span>
+<span class="n">company_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span>
+<span class="n">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="ss">fieldset</span><span class="p">:</span><span class="w"> </span><span class="s1">'detailed'</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">q</span><span class="p">:</span><span class="w"> </span><span class="s2">"vat_number = '03812340161'"</span>
+<span class="p">}</span>
 
-begin
-  result = api_instance.list_clients(company_id, opts)
-  p result
-rescue FattureInCloud_Ruby_Sdk::ApiError =&gt; e
-  puts "Error when calling ClientsApi-&gt;list_clients: #{e}"
-end
-</code></pre>
-<pre><code class="language-ts">const apiConfig = new Configuration({
-  accessToken: "YOUR_ACCESS_TOKEN",
-});
+<span class="k">begin</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">api_instance</span><span class="o">.</span><span class="n">list_clients</span><span class="p">(</span><span class="n">company_id</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="p">)</span>
+<span class="w">  </span><span class="nb">p</span><span class="w"> </span><span class="n">result</span>
+<span class="k">rescue</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">ApiError</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">e</span>
+<span class="w">  </span><span class="nb">puts</span><span class="w"> </span><span class="s2">"Error when calling ClientsApi-&gt;list_clients: </span><span class="si">#{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">apiConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Configuration</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">accessToken</span><span class="o">:</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span><span class="p">,</span>
+<span class="p">});</span>
 
-let apiInstance = new ClientsApi(apiConfig);
-let companyId = 2;
+<span class="kd">let</span><span class="w"> </span><span class="nx">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ClientsApi</span><span class="p">(</span><span class="nx">apiConfig</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
 
-let q = "vat_number = '03812340161'";
+<span class="kd">let</span><span class="w"> </span><span class="nx">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"vat_number = '03812340161'"</span><span class="p">;</span>
 
-apiInstance
-  .listClients(
-    companyId,
-    undefined,
-    "detailed",
-    undefined,
-    undefined,
-    undefined,
-    q
-  )
-  .then(
-    (data) =&gt; {
-      console.log(data);
-    },
-    (error) =&gt; {
-      console.error(error);
-    }
-  );
-</code></pre>
-<h2 id="using-the-filter-helper"><img alt="🆘" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f198.png" title=":sos:"/>  Using the Filter Helper</h2>
+<span class="nx">apiInstance</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">listClients</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">companyId</span><span class="p">,</span>
+<span class="w">    </span><span class="kc">undefined</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"detailed"</span><span class="p">,</span>
+<span class="w">    </span><span class="kc">undefined</span><span class="p">,</span>
+<span class="w">    </span><span class="kc">undefined</span><span class="p">,</span>
+<span class="w">    </span><span class="kc">undefined</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">q</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span>
+<span class="w">    </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">);</span>
+</code></pre></div>
+<h2 id="sos-using-the-filter-helper">:sos:  Using the Filter Helper</h2>
 <p>If you have a long and articulated query or you are building your filter programmatically then your best option is to use our <strong>Filter Helper</strong> that you can find in each one of our official SDKs.</p>
 <h3 id="condition">Condition</h3>
 <p>The <strong>Condition</strong> class is the underlying principle of our Helper, it's made up of 3 properties, the <strong>Field</strong>, the <strong>Operator</strong> and the <strong>Value</strong></p>
-<pre><code class="language-cs">var query = condition.BuildQuery(); // "vat_number = '03812340161'"
-</code></pre>
-<pre><code class="language-go">condition := filter.NewCondition("vat_number", filter.Operators.EQ, "03812340161")
-query := condition.BuildQuery() // "vat_number = '03812340161'"
-</code></pre>
-<pre><code class="language-java">String query = condition.buildQuery(); // "vat_number = '03812340161'"
-</code></pre>
-<pre><code class="language-js">var condition = new Condition("vat_number", Operator.EQ, "03812340161");
-var query = condition.buildQuery(); // "vat_number = '03812340161'"
-</code></pre>
-<pre><code class="language-php">$condition = new Condition('vat_number', Operator::EQ, '03812340161');
-$query = $condition-&gt;buildQuery(); // "vat_number = '03812340161'"
-</code></pre>
-<pre><code class="language-py">condition = Condition(field="vat_number", op=Operator.EQ, value="03812340161")
-query = condition.build_query() # "vat_number = '03812340161'"
-</code></pre>
-<pre><code class="language-rb">condition = FattureInCloud_Ruby_Sdk::Condition.new('vat_number', FattureInCloud_Ruby_Sdk::Operator::EQ, '03812340161')
-query = condition.build_query # "vat_number = '03812340161'"
-</code></pre>
-<pre><code class="language-ts">var condition = new Condition("vat_number", Operator.EQ, "03812340161");
-var query = condition.buildQuery(); // "vat_number = '03812340161'"
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">condition</span><span class="p">.</span><span class="n">BuildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// "vat_number = '03812340161'"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">condition</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewCondition</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">)</span>
+<span class="nx">query</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">condition</span><span class="p">.</span><span class="nx">BuildQuery</span><span class="p">()</span><span class="w"> </span><span class="c1">// "vat_number = '03812340161'"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">condition</span><span class="p">.</span><span class="na">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// "vat_number = '03812340161'"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">condition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">condition</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// "vat_number = '03812340161'"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">$condition = new Condition('vat_number', Operator::EQ, '03812340161');</span>
+<span class="x">$query = $condition-&gt;buildQuery(); // "vat_number = '03812340161'"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">condition</span> <span class="o">=</span> <span class="n">Condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"vat_number"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">EQ</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"03812340161"</span><span class="p">)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">condition</span><span class="o">.</span><span class="n">build_query</span><span class="p">()</span> <span class="c1"># "vat_number = '03812340161'"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">condition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Condition</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">'vat_number'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">EQ</span><span class="p">,</span><span class="w"> </span><span class="s1">'03812340161'</span><span class="p">)</span>
+<span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">condition</span><span class="o">.</span><span class="n">build_query</span><span class="w"> </span><span class="c1"># "vat_number = '03812340161'"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">condition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">condition</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// "vat_number = '03812340161'"</span>
+</code></pre></div>
 <h3 id="operator">Operator</h3>
 <p>There are many operators you can utilize in a Condition:</p>
 <table>
@@ -1022,378 +1022,376 @@ var query = condition.buildQuery(); // "vat_number = '03812340161'"
 </table>
 <h3 id="conjunction-disjunction">Conjunction &amp; Disjunction</h3>
 <p>The Conjunction and Disjunction classes work like logical operators between two Conditions, the Conjunction works like the AND operator while the Disjunction works like the OR operator.</p>
-<pre><code class="language-cs">var disjunction = new Disjunction(condition1, condition2);
-var query = disjunction.BuildQuery(); // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-go">condition1 := filter.NewCondition("vat_number", filter.Operators.EQ, "03812340161")
-condition2 := filter.NewCondition("tax_code", filter.Operators.EQ, "RSSMRG99A23206D")
-disjunction := filter.NewDisjunction(condition1, condition2)
-query := disjunction.BuildQuery() // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-java">Disjunction disjunction = new Disjunction(condition1, condition2);
-String query = condition.buildQuery(); // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-js">var condition1 = new Condition("vat_number", Operator.EQ, "03812340161");
-var condition2 = new Condition("tax_code", Operator.EQ, "RSSMRG99A23206D");
-var disjunction = new Disjunction(condition1, condition2);
-var query = disjunction.buildQuery(); // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-php">$condition1 = new Condition('vat_number', Operator::EQ, '03812340161');
-$condition2 = new Condition('tax_code', Operator::EQ, 'RSSMRG99A23206D');
-$disjunction = new Disjunction($condition1, $condition2);
-$query = $disjunction-&gt;buildQuery(); // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-py">condition1 = Condition(field="vat_number", op=Operator.EQ, value="03812340161")
-condition2 = Condition(field="tax_code", op=Operator.EQ, value="RSSMRG99A23206D")
-disjunction = Disjunction(left=condition1, right=condition2)
-query = disjunction.build_query() # (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-rb">condition1 = FattureInCloud_Ruby_Sdk::Condition.new('vat_number', FattureInCloud_Ruby_Sdk::Operator::EQ, '03812340161')
-condition2 = FattureInCloud_Ruby_Sdk::Condition.new('tax_code', FattureInCloud_Ruby_Sdk::Operator::EQ, 'RSSMRG99A23206D')
-disjunction = FattureInCloud_Ruby_Sdk::Disjunction.new(condition1, condition2)
-query = disjunction.build_query # (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-ts">var condition1 = new Condition("vat_number", Operator.EQ, "03812340161");
-var condition2 = new Condition("tax_code", Operator.EQ, "RSSMRG99A23206D");
-var disjunction = new Disjunction(condition1, condition2);
-var query = disjunction.buildQuery(); // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">disjunction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Disjunction</span><span class="p">(</span><span class="n">condition1</span><span class="p">,</span><span class="w"> </span><span class="n">condition2</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">disjunction</span><span class="p">.</span><span class="n">BuildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">condition1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewCondition</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">)</span>
+<span class="nx">condition2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewCondition</span><span class="p">(</span><span class="s">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"RSSMRG99A23206D"</span><span class="p">)</span>
+<span class="nx">disjunction</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewDisjunction</span><span class="p">(</span><span class="nx">condition1</span><span class="p">,</span><span class="w"> </span><span class="nx">condition2</span><span class="p">)</span>
+<span class="nx">query</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">disjunction</span><span class="p">.</span><span class="nx">BuildQuery</span><span class="p">()</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">Disjunction</span><span class="w"> </span><span class="n">disjunction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Disjunction</span><span class="p">(</span><span class="n">condition1</span><span class="p">,</span><span class="w"> </span><span class="n">condition2</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">condition</span><span class="p">.</span><span class="na">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">condition1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">condition2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"RSSMRG99A23206D"</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">disjunction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Disjunction</span><span class="p">(</span><span class="nx">condition1</span><span class="p">,</span><span class="w"> </span><span class="nx">condition2</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">disjunction</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">$condition1 = new Condition('vat_number', Operator::EQ, '03812340161');</span>
+<span class="x">$condition2 = new Condition('tax_code', Operator::EQ, 'RSSMRG99A23206D');</span>
+<span class="x">$disjunction = new Disjunction($condition1, $condition2);</span>
+<span class="x">$query = $disjunction-&gt;buildQuery(); // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">condition1</span> <span class="o">=</span> <span class="n">Condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"vat_number"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">EQ</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"03812340161"</span><span class="p">)</span>
+<span class="n">condition2</span> <span class="o">=</span> <span class="n">Condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"tax_code"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">EQ</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"RSSMRG99A23206D"</span><span class="p">)</span>
+<span class="n">disjunction</span> <span class="o">=</span> <span class="n">Disjunction</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">condition1</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">condition2</span><span class="p">)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">disjunction</span><span class="o">.</span><span class="n">build_query</span><span class="p">()</span> <span class="c1"># (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">condition1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Condition</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">'vat_number'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">EQ</span><span class="p">,</span><span class="w"> </span><span class="s1">'03812340161'</span><span class="p">)</span>
+<span class="n">condition2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Condition</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">'tax_code'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">EQ</span><span class="p">,</span><span class="w"> </span><span class="s1">'RSSMRG99A23206D'</span><span class="p">)</span>
+<span class="n">disjunction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Disjunction</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">condition1</span><span class="p">,</span><span class="w"> </span><span class="n">condition2</span><span class="p">)</span>
+<span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">disjunction</span><span class="o">.</span><span class="n">build_query</span><span class="w"> </span><span class="c1"># (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">condition1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">condition2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"RSSMRG99A23206D"</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">disjunction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Disjunction</span><span class="p">(</span><span class="nx">condition1</span><span class="p">,</span><span class="w"> </span><span class="nx">condition2</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">disjunction</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
 <h3 id="dsl">DSL</h3>
 <p>There is another way to use our Filter Helper, you can indeed use out Domain-Specific language as shown in the next steps.</p>
 <h4 id="where">Where</h4>
 <p>To initialize a Filter you must set a Where condition, you have 2 options:</p>
 <h5 id="wherefield-operator-value">Where(field, operator, value)</h5>
 <p>In this method you have to pass the <strong>field</strong>, <strong>operator</strong> and <strong>value</strong> as shown in the following examples:</p>
-<pre><code class="language-cs">var filter = new Filter();
-filter.Where("vat_number", Operator.EQ, "03812340161");
+<div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Filter</span><span class="p">();</span>
+<span class="n">filter</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="n">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">);</span>
 
-var query = filter.BuildQuery(); // vat_number = '03812340161'
-</code></pre>
-<pre><code class="language-go">filterObj := filter.NewEmptyFilter()
-filterObj.Where("vat_number", filter.Operators.EQ, "03812340161")
+<span class="kt">var</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="p">.</span><span class="n">BuildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// vat_number = '03812340161'</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">filterObj</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewEmptyFilter</span><span class="p">()</span>
+<span class="nx">filterObj</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">)</span>
 
-query := filterObj.BuildQuery() // vat_number = '03812340161'
-</code></pre>
-<pre><code class="language-java">Filter filter = new Filter();
-filter.where("vat_number", Operator.EQ, "03812340161");
+<span class="nx">query</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filterObj</span><span class="p">.</span><span class="nx">BuildQuery</span><span class="p">()</span><span class="w"> </span><span class="c1">// vat_number = '03812340161'</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">Filter</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Filter</span><span class="p">();</span>
+<span class="n">filter</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="na">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">);</span>
 
-String query = filter.buildQuery(); // vat_number = '03812340161'
-</code></pre>
-<pre><code class="language-js">var filter = new Filter();
-filter.where("vat_number", Operator.EQ, "03812340161");
+<span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="p">.</span><span class="na">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// vat_number = '03812340161'</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Filter</span><span class="p">();</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
 
-var query = filter.buildQuery(); // vat_number = '03812340161'
-</code></pre>
-<pre><code class="language-php">$filter = new Filter();
-$filter-&gt;where('vat_number', Operator::EQ, '03812340161');
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// vat_number = '03812340161'</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">$filter = new Filter();</span>
+<span class="x">$filter-&gt;where('vat_number', Operator::EQ, '03812340161');</span>
 
-$query = $filter-&gt;buildQuery(); // "vat_number = '03812340161'"
-</code></pre>
-<pre><code class="language-py">filter = Filter()
-filter.where_condition(field="vat_number", op=Operator.EQ, value="03812340161")
+<span class="x">$query = $filter-&gt;buildQuery(); // "vat_number = '03812340161'"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">filter</span> <span class="o">=</span> <span class="n">Filter</span><span class="p">()</span>
+<span class="nb">filter</span><span class="o">.</span><span class="n">where_condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"vat_number"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">EQ</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"03812340161"</span><span class="p">)</span>
 
-query = filter.build_query() # vat_number = '03812340161'
-</code></pre>
-<pre><code class="language-rb">filter = FattureInCloud_Ruby_Sdk::Filter.new()
-filter.where('vat_number', FattureInCloud_Ruby_Sdk::Operator::EQ, '03812340161')
+<span class="n">query</span> <span class="o">=</span> <span class="nb">filter</span><span class="o">.</span><span class="n">build_query</span><span class="p">()</span> <span class="c1"># vat_number = '03812340161'</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Filter</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">filter</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">'vat_number'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">EQ</span><span class="p">,</span><span class="w"> </span><span class="s1">'03812340161'</span><span class="p">)</span>
 
-query = filter.build_query # vat_number = '03812340161'
-</code></pre>
-<pre><code class="language-ts">var filter = new Filter();
-filter.where("vat_number", Operator.EQ, "03812340161");
+<span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="o">.</span><span class="n">build_query</span><span class="w"> </span><span class="c1"># vat_number = '03812340161'</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Filter</span><span class="p">();</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
 
-var query = filter.buildQuery(); // vat_number = '03812340161'
-</code></pre>
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// vat_number = '03812340161'</span>
+</code></pre></div>
 <h5 id="whereexpressionconditionconjunctiondisjunction">WhereExpression(condition|conjunction|disjunction)</h5>
 <p>In this method you can either pass a simple condition or a more complex conjunction or disjunction as shown below:</p>
-<pre><code class="language-cs">var disjunction = new Disjunction(condition1, condition2);
+<div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">disjunction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Disjunction</span><span class="p">(</span><span class="n">condition1</span><span class="p">,</span><span class="w"> </span><span class="n">condition2</span><span class="p">);</span>
 
-var filter = new Filter();
-filter.WhereExpression(disjunction);
+<span class="kt">var</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Filter</span><span class="p">();</span>
+<span class="n">filter</span><span class="p">.</span><span class="n">WhereExpression</span><span class="p">(</span><span class="n">disjunction</span><span class="p">);</span>
 
-var query = filter.BuildQuery(); // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-go">condition1 := filter.NewCondition("vat_number", filter.Operators.EQ, "03812340161")
-condition2 := filter.NewCondition("tax_code", filter.Operators.EQ, "RSSMRG99A23206D")
-disjunction := filter.NewDisjunction(condition1, condition2)
+<span class="kt">var</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="p">.</span><span class="n">BuildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">condition1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewCondition</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">)</span>
+<span class="nx">condition2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewCondition</span><span class="p">(</span><span class="s">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"RSSMRG99A23206D"</span><span class="p">)</span>
+<span class="nx">disjunction</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewDisjunction</span><span class="p">(</span><span class="nx">condition1</span><span class="p">,</span><span class="w"> </span><span class="nx">condition2</span><span class="p">)</span>
 
-filterObj := filter.NewEmptyFilter()
-filterObj.WhereExpression(disjunction)
+<span class="nx">filterObj</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewEmptyFilter</span><span class="p">()</span>
+<span class="nx">filterObj</span><span class="p">.</span><span class="nx">WhereExpression</span><span class="p">(</span><span class="nx">disjunction</span><span class="p">)</span>
 
-query := disjunction.BuildQuery() // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-java">Disjunction disjunction = new Disjunction(condition1, condition2);
+<span class="nx">query</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">disjunction</span><span class="p">.</span><span class="nx">BuildQuery</span><span class="p">()</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">Disjunction</span><span class="w"> </span><span class="n">disjunction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Disjunction</span><span class="p">(</span><span class="n">condition1</span><span class="p">,</span><span class="w"> </span><span class="n">condition2</span><span class="p">);</span>
 
-Filter filter = new Filter();
-filter.whereExpression(disjunction);
+<span class="n">Filter</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Filter</span><span class="p">();</span>
+<span class="n">filter</span><span class="p">.</span><span class="na">whereExpression</span><span class="p">(</span><span class="n">disjunction</span><span class="p">);</span>
 
-String query = filter.buildQuery(); // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-js">var condition1 = new Condition("vat_number", Operator.EQ, "03812340161");
-var condition2 = new Condition("tax_code", Operator.EQ, "RSSMRG99A23206D");
-var disjunction = new Disjunction(condition1, condition2);
+<span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="p">.</span><span class="na">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">condition1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">condition2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"RSSMRG99A23206D"</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">disjunction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Disjunction</span><span class="p">(</span><span class="nx">condition1</span><span class="p">,</span><span class="w"> </span><span class="nx">condition2</span><span class="p">);</span>
 
-var filter = new Filter();
-filter.whereExpression(disjunction);
+<span class="kd">var</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Filter</span><span class="p">();</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">whereExpression</span><span class="p">(</span><span class="nx">disjunction</span><span class="p">);</span>
 
-var query = filter.buildQuery(); // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-php">$condition1 = new Condition('vat_number', Operator::EQ, '03812340161');
-$condition2 = new Condition('tax_code', Operator::EQ, 'RSSMRG99A23206D');
-$disjunction = new Disjunction($condition1, $condition2);
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">$condition1 = new Condition('vat_number', Operator::EQ, '03812340161');</span>
+<span class="x">$condition2 = new Condition('tax_code', Operator::EQ, 'RSSMRG99A23206D');</span>
+<span class="x">$disjunction = new Disjunction($condition1, $condition2);</span>
 
-$filter = new Filter();
-$filter-&gt;whereExpression($disjunction);
+<span class="x">$filter = new Filter();</span>
+<span class="x">$filter-&gt;whereExpression($disjunction);</span>
 
-$query = $filter-&gt;buildQuery(); // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-py">condition1 = Condition(field="vat_number", op=Operator.EQ, value="03812340161")
-condition2 = Condition(field="tax_code", op=Operator.EQ, value="RSSMRG99A23206D")
-disjunction = Disjunction(left=condition1, right=condition2)
+<span class="x">$query = $filter-&gt;buildQuery(); // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">condition1</span> <span class="o">=</span> <span class="n">Condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"vat_number"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">EQ</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"03812340161"</span><span class="p">)</span>
+<span class="n">condition2</span> <span class="o">=</span> <span class="n">Condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"tax_code"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">EQ</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"RSSMRG99A23206D"</span><span class="p">)</span>
+<span class="n">disjunction</span> <span class="o">=</span> <span class="n">Disjunction</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">condition1</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">condition2</span><span class="p">)</span>
 
-filter = Filter()
-filter.where_expression(disjunction)
+<span class="nb">filter</span> <span class="o">=</span> <span class="n">Filter</span><span class="p">()</span>
+<span class="nb">filter</span><span class="o">.</span><span class="n">where_expression</span><span class="p">(</span><span class="n">disjunction</span><span class="p">)</span>
 
-query = filter.build_query() # (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-rb">condition1 = FattureInCloud_Ruby_Sdk::Condition.new('vat_number', FattureInCloud_Ruby_Sdk::Operator::EQ, '03812340161')
-condition2 = FattureInCloud_Ruby_Sdk::Condition.new('tax_code', FattureInCloud_Ruby_Sdk::Operator::EQ, 'RSSMRG99A23206D')
-disjunction = FattureInCloud_Ruby_Sdk::Disjunction.new(condition1, condition2)
+<span class="n">query</span> <span class="o">=</span> <span class="nb">filter</span><span class="o">.</span><span class="n">build_query</span><span class="p">()</span> <span class="c1"># (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">condition1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Condition</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">'vat_number'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">EQ</span><span class="p">,</span><span class="w"> </span><span class="s1">'03812340161'</span><span class="p">)</span>
+<span class="n">condition2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Condition</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">'tax_code'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">EQ</span><span class="p">,</span><span class="w"> </span><span class="s1">'RSSMRG99A23206D'</span><span class="p">)</span>
+<span class="n">disjunction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Disjunction</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">condition1</span><span class="p">,</span><span class="w"> </span><span class="n">condition2</span><span class="p">)</span>
 
-filter = FattureInCloud_Ruby_Sdk::Filter.new()
-filter.where_expression(disjunction)
+<span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Filter</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">filter</span><span class="o">.</span><span class="n">where_expression</span><span class="p">(</span><span class="n">disjunction</span><span class="p">)</span>
 
-query = filter.build_query # (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-ts">var condition1 = new Condition("vat_number", Operator.EQ, "03812340161");
-var condition2 = new Condition("tax_code", Operator.EQ, "RSSMRG99A23206D");
-var disjunction = new Disjunction(condition1, condition2);
+<span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="o">.</span><span class="n">build_query</span><span class="w"> </span><span class="c1"># (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">condition1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">condition2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"RSSMRG99A23206D"</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">disjunction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Disjunction</span><span class="p">(</span><span class="nx">condition1</span><span class="p">,</span><span class="w"> </span><span class="nx">condition2</span><span class="p">);</span>
 
-var filter = new Filter();
-filter.whereExpression(disjunction);
+<span class="kd">var</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Filter</span><span class="p">();</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">whereExpression</span><span class="p">(</span><span class="nx">disjunction</span><span class="p">);</span>
 
-var query = filter.buildQuery(); // (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')
-</code></pre>
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
 <h4 id="and-or">And &amp; Or</h4>
 <p>If you need a more complex filter you can add an <strong>and</strong> or <strong>or</strong> condition to your Filter you have 3 options:</p>
 <h5 id="andfield-operator-value-orfield-operator-value">And(field, operator, value) &amp; Or(field, operator, value)</h5>
 <p>In this method you have to pass the <strong>field</strong>, <strong>operator</strong> and <strong>value</strong> as shown in the following examples:</p>
-<pre><code class="language-cs">var filter = new Filter();
-filter.Where("vat_number", Operator.EQ, "03812340161");
-filter.Or("tax_code", Operator.EQ, "RSSMRG99A23206D");
-filter.Or("code", Operator.CONTAINS, "2022/");
+<div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Filter</span><span class="p">();</span>
+<span class="n">filter</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="n">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">);</span>
+<span class="n">filter</span><span class="p">.</span><span class="n">Or</span><span class="p">(</span><span class="s">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="n">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"RSSMRG99A23206D"</span><span class="p">);</span>
+<span class="n">filter</span><span class="p">.</span><span class="n">Or</span><span class="p">(</span><span class="s">"code"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="n">CONTAINS</span><span class="p">,</span><span class="w"> </span><span class="s">"2022/"</span><span class="p">);</span>
 
-var query = filter.BuildQuery(); // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains '2022/')
-</code></pre>
-<pre><code class="language-go">filterObj := filter.NewEmptyFilter()
-filterObj.Where("vat_number", filter.Operators.EQ, "03812340161")
-filterObj.Or("tax_code", filter.Operators.EQ, "RSSMRG99A23206D")
-filterObj.Or("code", filter.Operators.CONTAINS, "2022/")
+<span class="kt">var</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="p">.</span><span class="n">BuildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains '2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">filterObj</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewEmptyFilter</span><span class="p">()</span>
+<span class="nx">filterObj</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">)</span>
+<span class="nx">filterObj</span><span class="p">.</span><span class="nx">Or</span><span class="p">(</span><span class="s">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"RSSMRG99A23206D"</span><span class="p">)</span>
+<span class="nx">filterObj</span><span class="p">.</span><span class="nx">Or</span><span class="p">(</span><span class="s">"code"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">CONTAINS</span><span class="p">,</span><span class="w"> </span><span class="s">"2022/"</span><span class="p">)</span>
 
-query := filterObj.BuildQuery() // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains '2022/')
-</code></pre>
-<pre><code class="language-java">Filter filter = new Filter();
-filter.where("vat_number", Operator.EQ, "03812340161");
-filter.or("tax_code", Operator.EQ, "RSSMRG99A23206D");
-filter.or("code", Operator.CONTAINS, "2022/");
+<span class="nx">query</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filterObj</span><span class="p">.</span><span class="nx">BuildQuery</span><span class="p">()</span><span class="w"> </span><span class="c1">// ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains '2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">Filter</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Filter</span><span class="p">();</span>
+<span class="n">filter</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="na">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">);</span>
+<span class="n">filter</span><span class="p">.</span><span class="na">or</span><span class="p">(</span><span class="s">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="na">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"RSSMRG99A23206D"</span><span class="p">);</span>
+<span class="n">filter</span><span class="p">.</span><span class="na">or</span><span class="p">(</span><span class="s">"code"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="na">CONTAINS</span><span class="p">,</span><span class="w"> </span><span class="s">"2022/"</span><span class="p">);</span>
 
-String query = filter.buildQuery(); // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')
-</code></pre>
-<pre><code class="language-js">var filter = new Filter();
-filter.where("vat_number", Operator.EQ, "03812340161");
-filter.or("tax_code", Operator.EQ, "RSSMRG99A23206D");
-filter.or("code", Operator.CONTAINS, "2022/");
+<span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="p">.</span><span class="na">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Filter</span><span class="p">();</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">or</span><span class="p">(</span><span class="s2">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"RSSMRG99A23206D"</span><span class="p">);</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">or</span><span class="p">(</span><span class="s2">"code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">CONTAINS</span><span class="p">,</span><span class="w"> </span><span class="s2">"2022/"</span><span class="p">);</span>
 
-var query = filter.buildQuery(); // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')
-</code></pre>
-<pre><code class="language-php">$filter = new Filter();
-$filter-&gt;where('vat_number', Operator::EQ, '03812340161');
-$filter-&gt;or('tax_code', Operator::EQ, 'RSSMRG99A23206D');
-$filter-&gt;or('code', Operator::CONTAINS, '2022/');
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">$filter = new Filter();</span>
+<span class="x">$filter-&gt;where('vat_number', Operator::EQ, '03812340161');</span>
+<span class="x">$filter-&gt;or('tax_code', Operator::EQ, 'RSSMRG99A23206D');</span>
+<span class="x">$filter-&gt;or('code', Operator::CONTAINS, '2022/');</span>
 
-$query = $filter-&gt;buildQuery(); // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')
-</code></pre>
-<pre><code class="language-py">filter = Filter()
-filter.where_condition(field="vat_number", op=Operator.EQ, value="03812340161")
-filter.or_condition(field="tax_code", op=Operator.EQ, value="RSSMRG99A23206D")
-filter.or_condition(field="code", op=Operator.CONTAINS, value="2022/")
+<span class="x">$query = $filter-&gt;buildQuery(); // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">filter</span> <span class="o">=</span> <span class="n">Filter</span><span class="p">()</span>
+<span class="nb">filter</span><span class="o">.</span><span class="n">where_condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"vat_number"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">EQ</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"03812340161"</span><span class="p">)</span>
+<span class="nb">filter</span><span class="o">.</span><span class="n">or_condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"tax_code"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">EQ</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"RSSMRG99A23206D"</span><span class="p">)</span>
+<span class="nb">filter</span><span class="o">.</span><span class="n">or_condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"code"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">CONTAINS</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"2022/"</span><span class="p">)</span>
 
-query = filter.build_query() # ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')
-</code></pre>
-<pre><code class="language-rb">filter = FattureInCloud_Ruby_Sdk::Filter.new()
-filter.where('vat_number', FattureInCloud_Ruby_Sdk::Operator::EQ, '03812340161')
-filter.or('tax_code', FattureInCloud_Ruby_Sdk::Operator::EQ, 'RSSMRG99A23206D')
-filter.or('code', FattureInCloud_Ruby_Sdk::Operator::CONTAINS, '2022/')
+<span class="n">query</span> <span class="o">=</span> <span class="nb">filter</span><span class="o">.</span><span class="n">build_query</span><span class="p">()</span> <span class="c1"># ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Filter</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">filter</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">'vat_number'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">EQ</span><span class="p">,</span><span class="w"> </span><span class="s1">'03812340161'</span><span class="p">)</span>
+<span class="n">filter</span><span class="o">.</span><span class="n">or</span><span class="p">(</span><span class="s1">'tax_code'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">EQ</span><span class="p">,</span><span class="w"> </span><span class="s1">'RSSMRG99A23206D'</span><span class="p">)</span>
+<span class="n">filter</span><span class="o">.</span><span class="n">or</span><span class="p">(</span><span class="s1">'code'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">CONTAINS</span><span class="p">,</span><span class="w"> </span><span class="s1">'2022/'</span><span class="p">)</span>
 
-query = filter.build_query # ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')
-</code></pre>
-<pre><code class="language-ts">var filter = new Filter();
-filter.where("vat_number", Operator.EQ, "03812340161");
-filter.or("tax_code", Operator.EQ, "RSSMRG99A23206D");
-filter.or("code", Operator.CONTAINS, "2022/");
+<span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="o">.</span><span class="n">build_query</span><span class="w"> </span><span class="c1"># ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Filter</span><span class="p">();</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">or</span><span class="p">(</span><span class="s2">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"RSSMRG99A23206D"</span><span class="p">);</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">or</span><span class="p">(</span><span class="s2">"code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">CONTAINS</span><span class="p">,</span><span class="w"> </span><span class="s2">"2022/"</span><span class="p">);</span>
 
-var query = filter.buildQuery(); // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')
-</code></pre>
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')</span>
+</code></pre></div>
 <h5 id="andexpressionconditionconjunctiondisjunction-orexpressionconditionconjunctiondisjunction">AndExpression(condition|conjunction|disjunction) &amp; OrExpression(condition|conjunction|disjunction)</h5>
 <p>In this method you can either pass a simple condition or a more complex conjunction or disjunction as shown below:</p>
-<pre><code class="language-cs">
-var filter = new Filter();
-filter.Where("vat_number", Operator.EQ, "03812340161");
-filter.OrExpression(condition1);
-filter.OrExpressiom(condition2);
+<div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Filter</span><span class="p">();</span>
+<span class="n">filter</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="n">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">);</span>
+<span class="n">filter</span><span class="p">.</span><span class="n">OrExpression</span><span class="p">(</span><span class="n">condition1</span><span class="p">);</span>
+<span class="n">filter</span><span class="p">.</span><span class="n">OrExpressiom</span><span class="p">(</span><span class="n">condition2</span><span class="p">);</span>
 
-var query = filter.BuildQuery(); // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains '2022/')
-</code></pre>
-<pre><code class="language-go">condition1 := filter.NewCondition("vat_number", filter.Operators.EQ, "03812340161")
-condition2 := filter.NewCondition("code", filter.Operators.CONTAINS, "2022/")
+<span class="kt">var</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="p">.</span><span class="n">BuildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains '2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">condition1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewCondition</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">)</span>
+<span class="nx">condition2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewCondition</span><span class="p">(</span><span class="s">"code"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">CONTAINS</span><span class="p">,</span><span class="w"> </span><span class="s">"2022/"</span><span class="p">)</span>
 
-filterObj := filter.NewEmptyFilter()
-filterObj.Where("vat_number", filter.Operators.EQ, "03812340161")
-filterObj.AndExpression(condition1)
-filterObj.AndExpression(condition2)
+<span class="nx">filterObj</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewEmptyFilter</span><span class="p">()</span>
+<span class="nx">filterObj</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">)</span>
+<span class="nx">filterObj</span><span class="p">.</span><span class="nx">AndExpression</span><span class="p">(</span><span class="nx">condition1</span><span class="p">)</span>
+<span class="nx">filterObj</span><span class="p">.</span><span class="nx">AndExpression</span><span class="p">(</span><span class="nx">condition2</span><span class="p">)</span>
 
-query := filterObj.BuildQuery() // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')
-</code></pre>
-<pre><code class="language-java">
-Filter filter = new Filter();
-filter.where("vat_number", Operator.EQ, "03812340161");
-filter.orExpression(condition1);
-filter.orExpression(condition2);
+<span class="nx">query</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filterObj</span><span class="p">.</span><span class="nx">BuildQuery</span><span class="p">()</span><span class="w"> </span><span class="c1">// ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">Filter</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Filter</span><span class="p">();</span>
+<span class="n">filter</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="na">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">);</span>
+<span class="n">filter</span><span class="p">.</span><span class="na">orExpression</span><span class="p">(</span><span class="n">condition1</span><span class="p">);</span>
+<span class="n">filter</span><span class="p">.</span><span class="na">orExpression</span><span class="p">(</span><span class="n">condition2</span><span class="p">);</span>
 
-String query = filter.buildQuery(); // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')
-</code></pre>
-<pre><code class="language-js">var condition1 = new Condition("tax_code", Operator.EQ, "RSSMRG99A23206D");
-var condition2 = new Condition("code", Operator.CONTAINS, "2022/");
+<span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="p">.</span><span class="na">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">condition1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"RSSMRG99A23206D"</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">condition2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">CONTAINS</span><span class="p">,</span><span class="w"> </span><span class="s2">"2022/"</span><span class="p">);</span>
 
-var filter = new Filter();
-filter.where("vat_number", Operator.EQ, "03812340161");
-filter.orExpression(condition1);
-filter.orExpression(condition2);
+<span class="kd">var</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Filter</span><span class="p">();</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">orExpression</span><span class="p">(</span><span class="nx">condition1</span><span class="p">);</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">orExpression</span><span class="p">(</span><span class="nx">condition2</span><span class="p">);</span>
 
-var query = filter.buildQuery(); // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')
-</code></pre>
-<pre><code class="language-php">$condition1 = new Condition('tax_code', Operator::EQ, 'RSSMRG99A23206D');
-$condition2 = new Condition('code', Operator::CONTAINS, '2022/');
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">$condition1 = new Condition('tax_code', Operator::EQ, 'RSSMRG99A23206D');</span>
+<span class="x">$condition2 = new Condition('code', Operator::CONTAINS, '2022/');</span>
 
-$filter = new Filter();
-$filter-&gt;where('vat_number', Operator::EQ, '03812340161');
-$filter-&gt;orExpression($condition1);
-$filter-&gt;orExpression($condition2);
+<span class="x">$filter = new Filter();</span>
+<span class="x">$filter-&gt;where('vat_number', Operator::EQ, '03812340161');</span>
+<span class="x">$filter-&gt;orExpression($condition1);</span>
+<span class="x">$filter-&gt;orExpression($condition2);</span>
 
-$query = $filter-&gt;buildQuery(); // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')
-</code></pre>
-<pre><code class="language-py">condition1 = Condition(field="tax_code", op=Operator.EQ, value="RSSMRG99A23206D")
-condition2 = Condition(field="code", op=Operator.CONTAINS, value="2022/")
+<span class="x">$query = $filter-&gt;buildQuery(); // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">condition1</span> <span class="o">=</span> <span class="n">Condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"tax_code"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">EQ</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"RSSMRG99A23206D"</span><span class="p">)</span>
+<span class="n">condition2</span> <span class="o">=</span> <span class="n">Condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"code"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">CONTAINS</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"2022/"</span><span class="p">)</span>
 
-filter = Filter()
-filter.where_condition(field="vat_number", op=Operator.EQ, value="03812340161")
-filter.or_expression(condition1)
-filter.or_expression(condition2)
+<span class="nb">filter</span> <span class="o">=</span> <span class="n">Filter</span><span class="p">()</span>
+<span class="nb">filter</span><span class="o">.</span><span class="n">where_condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"vat_number"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">EQ</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"03812340161"</span><span class="p">)</span>
+<span class="nb">filter</span><span class="o">.</span><span class="n">or_expression</span><span class="p">(</span><span class="n">condition1</span><span class="p">)</span>
+<span class="nb">filter</span><span class="o">.</span><span class="n">or_expression</span><span class="p">(</span><span class="n">condition2</span><span class="p">)</span>
 
-query = filter.build_query() # ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')
-</code></pre>
-<pre><code class="language-rb">condition1 = FattureInCloud_Ruby_Sdk::Condition.new('tax_code', FattureInCloud_Ruby_Sdk::Operator::EQ, 'RSSMRG99A23206D')
-condition2 = FattureInCloud_Ruby_Sdk::Condition.new('code', FattureInCloud_Ruby_Sdk::Operator::CONTAINS, '2022/')
+<span class="n">query</span> <span class="o">=</span> <span class="nb">filter</span><span class="o">.</span><span class="n">build_query</span><span class="p">()</span> <span class="c1"># ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">condition1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Condition</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">'tax_code'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">EQ</span><span class="p">,</span><span class="w"> </span><span class="s1">'RSSMRG99A23206D'</span><span class="p">)</span>
+<span class="n">condition2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Condition</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">'code'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">CONTAINS</span><span class="p">,</span><span class="w"> </span><span class="s1">'2022/'</span><span class="p">)</span>
 
-filter = FattureInCloud_Ruby_Sdk::Filter.new()
-filter.where('vat_number', FattureInCloud_Ruby_Sdk::Operator::EQ, '03812340161')
-filter.or_expression(condition1)
-filter.or_expression(condition2)
+<span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Filter</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">filter</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">'vat_number'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">EQ</span><span class="p">,</span><span class="w"> </span><span class="s1">'03812340161'</span><span class="p">)</span>
+<span class="n">filter</span><span class="o">.</span><span class="n">or_expression</span><span class="p">(</span><span class="n">condition1</span><span class="p">)</span>
+<span class="n">filter</span><span class="o">.</span><span class="n">or_expression</span><span class="p">(</span><span class="n">condition2</span><span class="p">)</span>
 
-query = filter.build_query # ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')
-</code></pre>
-<pre><code class="language-ts">var condition1 = new Condition("tax_code", Operator.EQ, "RSSMRG99A23206D");
-var condition2 = new Condition("code", Operator.CONTAINS, "2022/");
+<span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="o">.</span><span class="n">build_query</span><span class="w"> </span><span class="c1"># ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">condition1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"RSSMRG99A23206D"</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">condition2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Condition</span><span class="p">(</span><span class="s2">"code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">CONTAINS</span><span class="p">,</span><span class="w"> </span><span class="s2">"2022/"</span><span class="p">);</span>
 
-var filter = new Filter();
-filter.where("vat_number", Operator.EQ, "03812340161");
-filter.orExpression(condition1);
-filter.orExpression(condition2);
+<span class="kd">var</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Filter</span><span class="p">();</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">orExpression</span><span class="p">(</span><span class="nx">condition1</span><span class="p">);</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">orExpression</span><span class="p">(</span><span class="nx">condition2</span><span class="p">);</span>
 
-var query = filter.buildQuery(); // ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')
-</code></pre>
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// ((vat_number = '03812340161' or tax_code = 'RSSMRG99A23206D') or code contains'2022/')</span>
+</code></pre></div>
 <h5 id="andfilterfilter-orfilterfilter">AndFilter(filter) &amp; OrFilter(filter)</h5>
 <p>In this method you have to pass a <strong>Filter</strong> object as shown here:</p>
-<pre><code class="language-cs">  var filter = new Filter();
-  filter.Where("vat_number", Operator.EQ, "03812340161");
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kt">var</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Filter</span><span class="p">();</span>
+<span class="w">  </span><span class="n">filter</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="n">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">);</span>
 
-  var filter1 = new Filter();
-  filter1.Where("tax_code", Operator.EQ, "RSSMRG99A23206D");
+<span class="w">  </span><span class="kt">var</span><span class="w"> </span><span class="n">filter1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Filter</span><span class="p">();</span>
+<span class="w">  </span><span class="n">filter1</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="s">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="n">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"RSSMRG99A23206D"</span><span class="p">);</span>
 
-  filter.AndFilter(filter1);
+<span class="w">  </span><span class="n">filter</span><span class="p">.</span><span class="n">AndFilter</span><span class="p">(</span><span class="n">filter1</span><span class="p">);</span>
 
-  var query = filter.BuildQuery(); // (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-go">filterObj := filter.NewEmptyFilter()
-filterObj.Where("vat_number", filter.Operators.EQ, "03812340161")
+<span class="w">  </span><span class="kt">var</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="p">.</span><span class="n">BuildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">filterObj</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewEmptyFilter</span><span class="p">()</span>
+<span class="nx">filterObj</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">)</span>
 
-filterObj1 := filter.NewEmptyFilter()
-filterObj1.Where("tax_code", filter.Operators.EQ, "RSSMRG99A23206D")
+<span class="nx">filterObj1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">NewEmptyFilter</span><span class="p">()</span>
+<span class="nx">filterObj1</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="s">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">Operators</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"RSSMRG99A23206D"</span><span class="p">)</span>
 
-filterObj.AndFilter(*filterObj1)
+<span class="nx">filterObj</span><span class="p">.</span><span class="nx">AndFilter</span><span class="p">(</span><span class="o">*</span><span class="nx">filterObj1</span><span class="p">)</span>
 
-query := filterObj.BuildQuery() // (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-java">Filter filter = new Filter();
-filter.where("vat_number", Operator.EQ, "03812340161");
+<span class="nx">query</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filterObj</span><span class="p">.</span><span class="nx">BuildQuery</span><span class="p">()</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">Filter</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Filter</span><span class="p">();</span>
+<span class="n">filter</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="na">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"03812340161"</span><span class="p">);</span>
 
-Filter filter1 = new Filter();
-filter1.where("tax_code", Operator.EQ, "RSSMRG99A23206D");
+<span class="n">Filter</span><span class="w"> </span><span class="n">filter1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Filter</span><span class="p">();</span>
+<span class="n">filter1</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="p">.</span><span class="na">EQ</span><span class="p">,</span><span class="w"> </span><span class="s">"RSSMRG99A23206D"</span><span class="p">);</span>
 
-filter.andFilter(filter1);
+<span class="n">filter</span><span class="p">.</span><span class="na">andFilter</span><span class="p">(</span><span class="n">filter1</span><span class="p">);</span>
 
-String query = filter.buildQuery(); // (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-js">var filter = new Filter();
-filter.where("vat_number", Operator.EQ, "03812340161");
+<span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="p">.</span><span class="na">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Filter</span><span class="p">();</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
 
-var filter1 = new Filter();
-filter1.where("tax_code", Operator.EQ, "RSSMRG99A23206D");
+<span class="kd">var</span><span class="w"> </span><span class="nx">filter1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Filter</span><span class="p">();</span>
+<span class="nx">filter1</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="s2">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"RSSMRG99A23206D"</span><span class="p">);</span>
 
-filter.andFilter(filter1);
+<span class="nx">filter</span><span class="p">.</span><span class="nx">andFilter</span><span class="p">(</span><span class="nx">filter1</span><span class="p">);</span>
 
-var query = filter.buildQuery(); // (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-php">$filter = new Filter();
-$filter-&gt;where('vat_number', Operator::EQ, '03812340161');
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">$filter = new Filter();</span>
+<span class="x">$filter-&gt;where('vat_number', Operator::EQ, '03812340161');</span>
 
-$filter1 = new Filter();
-$filter1-&gt;where('tax_code', Operator::EQ, 'RSSMRG99A23206D');
+<span class="x">$filter1 = new Filter();</span>
+<span class="x">$filter1-&gt;where('tax_code', Operator::EQ, 'RSSMRG99A23206D');</span>
 
-$filter-&gt;andFilter($filter1);
+<span class="x">$filter-&gt;andFilter($filter1);</span>
 
-$query = $filter-&gt;buildQuery(); // (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-py">filter = Filter()
-filter.where_condition(field="vat_number", op=Operator.EQ, value="03812340161")
+<span class="x">$query = $filter-&gt;buildQuery(); // (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">filter</span> <span class="o">=</span> <span class="n">Filter</span><span class="p">()</span>
+<span class="nb">filter</span><span class="o">.</span><span class="n">where_condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"vat_number"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">EQ</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"03812340161"</span><span class="p">)</span>
 
-filter1 = Filter()
-filter1.where_condition(field="tax_code", op=Operator.EQ, value="RSSMRG99A23206D")
+<span class="n">filter1</span> <span class="o">=</span> <span class="n">Filter</span><span class="p">()</span>
+<span class="n">filter1</span><span class="o">.</span><span class="n">where_condition</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">"tax_code"</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">Operator</span><span class="o">.</span><span class="n">EQ</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">"RSSMRG99A23206D"</span><span class="p">)</span>
 
-filter.and_filter(filter1)
+<span class="nb">filter</span><span class="o">.</span><span class="n">and_filter</span><span class="p">(</span><span class="n">filter1</span><span class="p">)</span>
 
-query = filter.build_query() # (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-rb">filter = FattureInCloud_Ruby_Sdk::Filter.new()
-filter.where('vat_number', FattureInCloud_Ruby_Sdk::Operator::EQ, '03812340161')
+<span class="n">query</span> <span class="o">=</span> <span class="nb">filter</span><span class="o">.</span><span class="n">build_query</span><span class="p">()</span> <span class="c1"># (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Filter</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">filter</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">'vat_number'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">EQ</span><span class="p">,</span><span class="w"> </span><span class="s1">'03812340161'</span><span class="p">)</span>
 
-filter1 = FattureInCloud_Ruby_Sdk::Filter.new()
-filter1.where('tax_code', FattureInCloud_Ruby_Sdk::Operator::EQ, 'RSSMRG99A23206D')
+<span class="n">filter1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Filter</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">filter1</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">'tax_code'</span><span class="p">,</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Operator</span><span class="o">::</span><span class="no">EQ</span><span class="p">,</span><span class="w"> </span><span class="s1">'RSSMRG99A23206D'</span><span class="p">)</span>
 
-filter.and_filter(filter1)
+<span class="n">filter</span><span class="o">.</span><span class="n">and_filter</span><span class="p">(</span><span class="n">filter1</span><span class="p">)</span>
 
-query = filter.build_query # (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')
-</code></pre>
-<pre><code class="language-ts">var filter = new Filter();
-filter.where("vat_number", Operator.EQ, "03812340161");
+<span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter</span><span class="o">.</span><span class="n">build_query</span><span class="w"> </span><span class="c1"># (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Filter</span><span class="p">();</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="s2">"vat_number"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"03812340161"</span><span class="p">);</span>
 
-var filter1 = new Filter();
-filter1.where("tax_code", Operator.EQ, "RSSMRG99A23206D");
+<span class="kd">var</span><span class="w"> </span><span class="nx">filter1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Filter</span><span class="p">();</span>
+<span class="nx">filter1</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="s2">"tax_code"</span><span class="p">,</span><span class="w"> </span><span class="nx">Operator</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="s2">"RSSMRG99A23206D"</span><span class="p">);</span>
 
-filter.andFilter(filter1);
+<span class="nx">filter</span><span class="p">.</span><span class="nx">andFilter</span><span class="p">(</span><span class="nx">filter1</span><span class="p">);</span>
 
-var query = filter.buildQuery(); // (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')
-</code></pre>
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filter</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// (vat_number = '03812340161' and tax_code = 'RSSMRG99A23206D')</span>
+</code></pre></div>
 <p>Now that your query is ready the last thing to do is to set the <strong>q</strong> parameter equal to the just obtained <strong>query</strong> and you are ready to make your request!</p>
 </article>
 </div>

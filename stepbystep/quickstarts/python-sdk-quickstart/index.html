@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#prerequisites">
+<a class="md-skip" href="#zero-prerequisites">
           Skip to content
         </a>
 </div>
@@ -253,30 +253,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites
+      :zero:  Prerequisites
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-install-the-tse-in-cloud-sdk">
+<a class="md-nav__link" href="#one-step-one-install-the-tse-in-cloud-sdk">
 <span class="md-ellipsis">
-        Step One: Install the TSE in Cloud SDK
+      :one:  Step One: Install the TSE in Cloud SDK
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval
+      :two:  Step Two: Set up the OAuth access token retrieval
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#four-step-four-set-up-the-sample">
 <span class="md-ellipsis">
-        What now?
+      :four:  Step Four: Set up the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#five-step-five-run-the-sample">
+<span class="md-ellipsis">
+      :five:  Step Five: Run the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now?
     </span>
 </a>
 </li>
@@ -582,7 +596,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../support/general-knowledge/">
+<a class="md-nav__link" href="../../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -644,30 +658,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites
+      :zero:  Prerequisites
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-install-the-tse-in-cloud-sdk">
+<a class="md-nav__link" href="#one-step-one-install-the-tse-in-cloud-sdk">
 <span class="md-ellipsis">
-        Step One: Install the TSE in Cloud SDK
+      :one:  Step One: Install the TSE in Cloud SDK
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval
+      :two:  Step Two: Set up the OAuth access token retrieval
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#four-step-four-set-up-the-sample">
 <span class="md-ellipsis">
-        What now?
+      :four:  Step Four: Set up the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#five-step-five-run-the-sample">
+<span class="md-ellipsis">
+      :five:  Step Five: Run the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now?
     </span>
 </a>
 </li>
@@ -683,140 +711,123 @@
 import TabItem from "@theme/TabItem";</p>
 <p>Following the steps described on this page, you'll create a simple Python application that interacts with the TSE in Cloud API.</p>
 <p>If you want to download the complete working example you can find it <a href="https://github.com/fattureincloud/fattureincloud-quickstarts/tree/master/sdk/python">here</a>.</p>
-<h2 id="prerequisites"><img alt="0️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0030-20e3.png" title=":zero:"/>  Prerequisites</h2>
+<h2 id="zero-prerequisites">:zero:  Prerequisites</h2>
 <p>In this guide, we assume that these prerequisites are met:</p>
 <ul>
 <li>Python &gt;= 3.6 installed</li>
 <li>A <a href="/basics/create-an-app.mdx">private app</a> using the <a href="/authentication/code-flow/index.mdx">OAuth 2.0 Authorization Code Flow</a></li>
 <li>A TSE in Cloud account.</li>
 </ul>
-<h2 id="step-one-install-the-tse-in-cloud-sdk"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Step One: Install the TSE in Cloud SDK</h2>
+<h2 id="one-step-one-install-the-tse-in-cloud-sdk">:one:  Step One: Install the TSE in Cloud SDK</h2>
 <p>In this quickstart, we'll use the <a href="https://github.com/fattureincloud/fattureincloud-python-sdk">TSE in Cloud SDK</a>, published to <a href="https://pypi.org/project/fattureincloud-python-sdk/">PyPI</a>.</p>
 <p>To install it using pip:</p>
-<pre><code class="language-console">pip install fattureincloud-python-sdk
-</code></pre>
-<h2 id="step-two-set-up-the-oauth-access-token-retrieval"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Step Two: Set up the OAuth access token retrieval</h2>
+<div class="highlight"><pre><span></span><code><span class="go">pip install fattureincloud-python-sdk</span>
+</code></pre></div>
+<h2 id="two-step-two-set-up-the-oauth-access-token-retrieval">:two:  Step Two: Set up the OAuth access token retrieval</h2>
 <p>Create the file <strong>oauth.py</strong> and copy in the following code:</p>
-<p>```py title="oauth.py"
-import json
-from urllib.parse import urlparse
-from urllib.parse import parse_qs
-from fattureincloud_python_sdk.oauth2.oauth2 import OAuth2AuthorizationCodeManager
-from fattureincloud_python_sdk.oauth2.oauth2 import Scope</p>
-<p>class Oauth:
-    def get_oauth_access_token(self):
-        oauth = OAuth2AuthorizationCodeManager('CLIENT_ID', 'CLIENT_SECRET', 'http://localhost:8000/oauth')
-        query_components = parse_qs(urlparse(self.path).query)
-        if 'code' in query_components:
-            self.send_response(200)
-            self.send_header('Content-type','text/html')
-            self.end_headers()
-            code = query_components['code'][0]
-            token = oauth.fetch_token(code)
-            file = open('./token.json', 'w')
-            file.write(json.dumps({"access_token": token.access_token}))  #saving the oAuth access token in the token.json file
-            file.close()
-            self.wfile.write(bytes('Token saved succesfully in ./token.json', 'utf8'))
-        else:
-            url = oauth.get_authorization_url([Scope.ENTITY_SUPPLIERS_READ], 'EXAMPLE_STATE')
-            self.send_response(302)
-            self.send_header('Location', url)
-            self.end_headers()
-        return</p>
-<pre><code>
-To make this code work properly the only thing you need to set your client id, client secret and eventually the redirect uri at line 9.
+<div class="highlight"><span class="filename">oauth.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlparse</span>
+<span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">parse_qs</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.oauth2.oauth2</span> <span class="kn">import</span> <span class="n">OAuth2AuthorizationCodeManager</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.oauth2.oauth2</span> <span class="kn">import</span> <span class="n">Scope</span>
 
-:::danger Store the Token safely!
+<span class="k">class</span> <span class="nc">Oauth</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">get_oauth_access_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">oauth</span> <span class="o">=</span> <span class="n">OAuth2AuthorizationCodeManager</span><span class="p">(</span><span class="s1">'CLIENT_ID'</span><span class="p">,</span> <span class="s1">'CLIENT_SECRET'</span><span class="p">,</span> <span class="s1">'http://localhost:8000/oauth'</span><span class="p">)</span>
+        <span class="n">query_components</span> <span class="o">=</span> <span class="n">parse_qs</span><span class="p">(</span><span class="n">urlparse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">query</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">'code'</span> <span class="ow">in</span> <span class="n">query_components</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_response</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">'Content-type'</span><span class="p">,</span><span class="s1">'text/html'</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+            <span class="n">code</span> <span class="o">=</span> <span class="n">query_components</span><span class="p">[</span><span class="s1">'code'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">token</span> <span class="o">=</span> <span class="n">oauth</span><span class="o">.</span><span class="n">fetch_token</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+            <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./token.json'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">"access_token"</span><span class="p">:</span> <span class="n">token</span><span class="o">.</span><span class="n">access_token</span><span class="p">}))</span>  <span class="c1">#saving the oAuth access token in the token.json file</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="s1">'Token saved succesfully in ./token.json'</span><span class="p">,</span> <span class="s1">'utf8'</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="n">oauth</span><span class="o">.</span><span class="n">get_authorization_url</span><span class="p">([</span><span class="n">Scope</span><span class="o">.</span><span class="n">ENTITY_SUPPLIERS_READ</span><span class="p">],</span> <span class="s1">'EXAMPLE_STATE'</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_response</span><span class="p">(</span><span class="mi">302</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">'Location'</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+        <span class="k">return</span>
+</code></pre></div>
+<p>To make this code work properly the only thing you need to set your client id, client secret and eventually the redirect uri at line 9.</p>
+<p>:::danger Store the Token safely!</p>
+<p>In this QuickStart the access token and refresh token are stored in a file, this is only for educational purposes, the OAuth access token and refresh token are sensitive data and should be saved securely on your database.
+Also, never share your Client Secret with third-party actors, or publish it to your frontend!</p>
+<p>:::</p>
+<h2 id="four-step-four-set-up-the-sample">:four:  Step Four: Set up the sample</h2>
+<p>:::tip Retrieve your Company ID!</p>
+<p>In this example, we'll show how to retrieve your Company ID using the Python SDK. If you plan to manage only one company, you can insert it directly into your code as a variable.
+Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
+<p>:::</p>
+<p>Create the files <strong>index.py</strong> and <strong>quickstart.py</strong> in your working directory and copy in the following code:</p>
+<div class="highlight"><span class="filename">index.py</span><pre><span></span><code><span class="kn">from</span> <span class="nn">http.server</span> <span class="kn">import</span> <span class="n">BaseHTTPRequestHandler</span><span class="p">,</span> <span class="n">HTTPServer</span>
+<span class="kn">from</span> <span class="nn">oauth</span> <span class="kn">import</span> <span class="n">Oauth</span> <span class="c1">#import the Oauth class</span>
+<span class="kn">from</span> <span class="nn">quickstart</span> <span class="kn">import</span> <span class="n">Quickstart</span> <span class="c1">#import the Quickstart class</span>
 
-In this QuickStart the access token and refresh token are stored in a file, this is only for educational purposes, the OAuth access token and refresh token are sensitive data and should be saved securely on your database.
-Also, never share your Client Secret with third-party actors, or publish it to your frontend!
+<span class="k">class</span> <span class="nc">testHTTPServer_RequestHandler</span><span class="p">(</span><span class="n">BaseHTTPRequestHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">do_GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#url routing</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'/oauth'</span><span class="p">):</span> <span class="c1">#oauth endpoint</span>
+            <span class="n">Oauth</span><span class="o">.</span><span class="n">get_oauth_access_token</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">==</span> <span class="s1">'/quickstart'</span><span class="p">:</span> <span class="c1">#quickstart endpoint</span>
+            <span class="n">Quickstart</span><span class="o">.</span><span class="n">get_first_company_suppliers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">return</span>
 
-:::
+<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Avvio del server...'</span><span class="p">)</span>
+    <span class="n">server_address</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'127.0.0.1'</span><span class="p">,</span> <span class="mi">8000</span><span class="p">)</span> <span class="c1">#set your hostname and port</span>
+    <span class="n">httpd</span> <span class="o">=</span> <span class="n">HTTPServer</span><span class="p">(</span><span class="n">server_address</span><span class="p">,</span> <span class="n">testHTTPServer_RequestHandler</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Server in esecuzione...'</span><span class="p">)</span>
+    <span class="n">httpd</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+<span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">quickstart.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">fattureincloud_python_sdk</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.api</span> <span class="kn">import</span> <span class="n">user_api</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.api</span> <span class="kn">import</span> <span class="n">suppliers_api</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.models.list_user_companies_response</span> <span class="kn">import</span> <span class="n">ListUserCompaniesResponse</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">collections</span>
+<span class="n">collections</span><span class="o">.</span><span class="n">Callable</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Callable</span> <span class="c1">#needed if you are using python &gt; 3.10</span>
 
-## :four:&amp;nbsp; Step Four: Set up the sample
 
-:::tip Retrieve your Company ID!
+<span class="k">class</span> <span class="nc">Quickstart</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">get_first_company_suppliers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-In this example, we'll show how to retrieve your Company ID using the Python SDK. If you plan to manage only one company, you can insert it directly into your code as a variable.
-Check the [Company-scoped Methods](/basics/company-scoped-methods.mdx) page for more info.
+        <span class="n">token_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./token.json"</span><span class="p">)</span>
+        <span class="n">json_file</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">token_file</span><span class="p">)</span>
+        <span class="n">token_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">configuration</span> <span class="o">=</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">Configuration</span><span class="p">()</span>
+        <span class="n">configuration</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="n">json_file</span><span class="p">[</span><span class="s2">"access_token"</span><span class="p">]</span>
+        <span class="k">with</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">ApiClient</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span> <span class="k">as</span> <span class="n">api_client</span><span class="p">:</span>
 
-:::
+            <span class="c1"># Retrieve the first company id</span>
+            <span class="n">user_api_instance</span> <span class="o">=</span> <span class="n">user_api</span><span class="o">.</span><span class="n">UserApi</span><span class="p">(</span><span class="n">api_client</span><span class="p">)</span>
+            <span class="n">user_companies_response</span> <span class="o">=</span> <span class="n">user_api_instance</span><span class="o">.</span><span class="n">list_user_companies</span><span class="p">()</span>
+            <span class="n">first_company_id</span> <span class="o">=</span> <span class="n">user_companies_response</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">companies</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span>
 
-Create the files **index.py** and **quickstart.py** in your working directory and copy in the following code:
-
-
-```py title="index.py"
-from http.server import BaseHTTPRequestHandler, HTTPServer
-from oauth import Oauth #import the Oauth class
-from quickstart import Quickstart #import the Quickstart class
-
-class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        #url routing
-        if self.path.startswith('/oauth'): #oauth endpoint
-            Oauth.get_oauth_access_token(self)
-        elif self.path == '/quickstart': #quickstart endpoint
-            Quickstart.get_first_company_suppliers(self)
-        return
-
-def run():
-    print('Avvio del server...')
-    server_address = ('127.0.0.1', 8000) #set your hostname and port
-    httpd = HTTPServer(server_address, testHTTPServer_RequestHandler)
-    print('Server in esecuzione...')
-    httpd.serve_forever()
-run()
-</code></pre>
-<p>```py title="quickstart.py"
-import fattureincloud_python_sdk
-from fattureincloud_python_sdk.api import user_api
-from fattureincloud_python_sdk.api import suppliers_api
-from fattureincloud_python_sdk.models.list_user_companies_response import ListUserCompaniesResponse
-import json
-import collections
-collections.Callable = collections.abc.Callable #needed if you are using python &gt; 3.10</p>
-<p>class Quickstart:
-    def get_first_company_suppliers(self):</p>
-<pre><code>    token_file = open("./token.json")
-    json_file = json.load(token_file)
-    token_file.close()
-    configuration = fattureincloud_python_sdk.Configuration()
-    configuration.access_token = json_file["access_token"]
-    with fattureincloud_python_sdk.ApiClient(configuration) as api_client:
-
-        # Retrieve the first company id
-        user_api_instance = user_api.UserApi(api_client)
-        user_companies_response = user_api_instance.list_user_companies()
-        first_company_id = user_companies_response.data.companies[0].id
-
-        # Retrieve the list of the Suppliers
-        suppliers_api_instance = suppliers_api.SuppliersApi(api_client)
-        company_suppliers = suppliers_api_instance.list_suppliers(first_company_id)
-        self.send_response(200)
-        self.send_header('Content-type','text/html')
-        self.end_headers()
-        self.wfile.write(bytes(str(company_suppliers.data), "utf8"))
-    return
-</code></pre>
-<pre><code>
-
-:::warning Check the Redirect URL
-
-Make sure your FattureInCloud app redirect URL points to the just defined /oauth endpoint (e.g. http://localhost:8000/oauth).
-
-:::
-
-## :five:&amp;nbsp; Step Five: Run the sample
-
-From the command line, run the following command:
-
-```console
-python3 index.py
-</code></pre>
+            <span class="c1"># Retrieve the list of the Suppliers</span>
+            <span class="n">suppliers_api_instance</span> <span class="o">=</span> <span class="n">suppliers_api</span><span class="o">.</span><span class="n">SuppliersApi</span><span class="p">(</span><span class="n">api_client</span><span class="p">)</span>
+            <span class="n">company_suppliers</span> <span class="o">=</span> <span class="n">suppliers_api_instance</span><span class="o">.</span><span class="n">list_suppliers</span><span class="p">(</span><span class="n">first_company_id</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_response</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">'Content-type'</span><span class="p">,</span><span class="s1">'text/html'</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">company_suppliers</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="s2">"utf8"</span><span class="p">))</span>
+        <span class="k">return</span>
+</code></pre></div>
+<p>:::warning Check the Redirect URL</p>
+<p>Make sure your FattureInCloud app redirect URL points to the just defined /oauth endpoint (e.g. http://localhost:8000/oauth).</p>
+<p>:::</p>
+<h2 id="five-step-five-run-the-sample">:five:  Step Five: Run the sample</h2>
+<p>From the command line, run the following command:</p>
+<div class="highlight"><pre><span></span><code><span class="go">python3 index.py</span>
+</code></pre></div>
 <p>Now visit <em>http://localhost:8000/oauth</em> (or whatever your URL is), you will be redirected to the TSE in Cloud login page where you will be asked to grant some permissions, according to what scopes you specified previously.
 Finally, you will see the success message and the access token will be stored in the token.json file.</p>
 <p>You can now visit <em>http://localhost:8000/quickstart</em> (or whatever your URL is) to test the application.</p>
-<h2 id="what-now"><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:"/>  What now?</h2>
+<h2 id="question-what-now">:question:  What now?</h2>
 <p>In this example, we used a limited set of the available API methods to show how to use our SDK.</p>
 <p>If you want to access the full documentation of the available methods and models, you can check the following resources:</p>
 <ul>

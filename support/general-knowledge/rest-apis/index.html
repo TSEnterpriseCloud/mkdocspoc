@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#uniform-interface">
+<a class="md-skip" href="#one-uniform-interface">
           Skip to content
         </a>
 </div>
@@ -537,7 +537,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../">
+<a class="md-nav__link" href="../oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -599,65 +599,65 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#uniform-interface">
+<a class="md-nav__link" href="#one-uniform-interface">
 <span class="md-ellipsis">
-        Uniform Interface
+      :one:  Uniform Interface
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#client-server">
+<a class="md-nav__link" href="#two-client-server">
 <span class="md-ellipsis">
-        Client-server
+      :two:  Client-server
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#stateless">
+<a class="md-nav__link" href="#three-stateless">
 <span class="md-ellipsis">
-        Stateless
+      :three:  Stateless
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cacheable">
+<a class="md-nav__link" href="#four-cacheable">
 <span class="md-ellipsis">
-        Cacheable
+      :four:  Cacheable
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#layered-system">
+<a class="md-nav__link" href="#five-layered-system">
 <span class="md-ellipsis">
-        Layered System
+      :five:  Layered System
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#code-on-demand-optional">
+<a class="md-nav__link" href="#six-code-on-demand-optional">
 <span class="md-ellipsis">
-        Code-on-demand (optional)
+      :six:  Code-on-demand (optional)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#resources">
+<a class="md-nav__link" href="#briefcase-resources">
 <span class="md-ellipsis">
-        Resources
+      :briefcase:  Resources
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#interface-representation">
+<a class="md-nav__link" href="#page_with_curl-interface-representation">
 <span class="md-ellipsis">
-        Interface representation
+      :page_with_curl:  Interface representation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#additional-resources">
+<a class="md-nav__link" href="#books-additional-resources">
 <span class="md-ellipsis">
-      Additional Resources
+      :books: Additional Resources
     </span>
 </a>
 </li>
@@ -678,7 +678,7 @@
 <p>:::warning This is a theoretical description of REST</p>
 <p>The <strong>TSE in Cloud API</strong> <em>loosely</em> applies the principles described on this page.</p>
 <p>:::</p>
-<h2 id="uniform-interface"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Uniform Interface</h2>
+<h2 id="one-uniform-interface">:one:  Uniform Interface</h2>
 <p>A <strong>Uniform Interface</strong> helps simplify and decouple the system architecture.</p>
 <p>The following constraints make it possible to achieve a uniform REST interface:</p>
 <ul>
@@ -687,19 +687,19 @@
 <li><strong>Self-descriptive messaged</strong>: Each resource representation should carry enough information to describe how to process the message (for example, using <em>Media-Type</em>).</li>
 <li><strong>Hypermedia as the engine of application state (HATEOAS)</strong>: The client should be aware only of the initial URI for the REST application, and it should be able to discover all the other available resources using the URIs provided by the application itself. For example, a resource should contain links to correlated resources.</li>
 </ul>
-<h2 id="client-server"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Client-server</h2>
+<h2 id="two-client-server">:two:  Client-server</h2>
 <p>The <strong>client-server design pattern</strong> enforces the principle of <strong>separation of concerns</strong>: separating the user interface concerns from the data storage concerns.
 This principle improves the portability of the interface across multiple platforms and the scalability by simplifying the server components.</p>
-<h2 id="stateless"><img alt="3️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0033-20e3.png" title=":three:"/>  Stateless</h2>
+<h2 id="three-stateless">:three:  Stateless</h2>
 <p>The communication must be <strong>stateless</strong>: each request from the client must contain all of the information necessary to understand and complete the request, and the session is stored completely on the client.</p>
-<h2 id="cacheable"><img alt="4️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0034-20e3.png" title=":four:"/>  Cacheable</h2>
+<h2 id="four-cacheable">:four:  Cacheable</h2>
 <p>A response should implicitly or explicitly label itself as <strong>cacheable</strong> or <strong>non-cacheable</strong>. If a response is cacheable, the client has the right to reuse it later for equivalent requests.</p>
-<h2 id="layered-system"><img alt="5️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0035-20e3.png" title=":five:"/>  Layered System</h2>
+<h2 id="five-layered-system">:five:  Layered System</h2>
 <p>An architecture can be composed of hierarchical layers by constraining component behavior. It means that each component cannot see beyond the immediate layer they are interacting with; also, it makes it possible to interact with a system using its standardized interfaces without knowing its actual implementation (for example it could be a legacy application).</p>
-<h2 id="code-on-demand-optional"><img alt="6️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0036-20e3.png" title=":six:"/>  Code-on-demand (optional)</h2>
+<h2 id="six-code-on-demand-optional">:six:  Code-on-demand (optional)</h2>
 <p>The client could extend its functionality by downloading code provided by the server in the form of applets or scripts. This makes it possible to reduce the client complexity: some features will not be implemented by the client itself but provided by the server, while the client will just have to execute the code.
 At the same time, this makes it possible for the server to delegate some of the processing efforts to the client.</p>
-<h2 id="resources"><img alt="💼" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4bc.png" title=":briefcase:"/>  Resources</h2>
+<h2 id="briefcase-resources">:briefcase:  Resources</h2>
 <p>Any information that we can name can be a <strong>resource</strong>. For example, a REST resource can be a document or image, a temporal service, a collection of other resources, or a non-virtual object (e.g., a person).</p>
 <p>The state of the resource, at any particular time, is known as the <strong>resource representation</strong>. It consists of:</p>
 <ul>
@@ -707,13 +707,13 @@ At the same time, this makes it possible for the server to delegate some of the 
 <li>the <strong>metadata</strong> describing the data.</li>
 <li>the <strong>hypermedia link</strong> that can help the client in transition to the next desired state.</li>
 </ul>
-<h2 id="interface-representation"><img alt="📃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4c3.png" title=":page_with_curl:"/>  Interface representation</h2>
+<h2 id="page_with_curl-interface-representation">:page_with_curl:  Interface representation</h2>
 <p>REST doesn't define an <em>Interface Definition Language</em>, but many have been proposed during the years.
 The <a href="https://www.openapis.org/">Open API Specification</a> (OAS) is the most used, but some others are available like <a href="https://apiblueprint.org/">API Blueprint</a> or <a href="https://raml.org/">RAML</a>.</p>
 <p>:::info We use OpenAPI!</p>
 <p>We described our API using an OpenAPI specification. For more information, check <a href="/openapi-specification.md">this page</a>.</p>
 <p>:::</p>
-<h2 id="additional-resources"><img alt="📚" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4da.png" title=":books:"/> Additional Resources</h2>
+<h2 id="books-additional-resources">:books: Additional Resources</h2>
 <ul>
 <li><a href="https://restfulapi.net/">What is REST</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST on Wikipedia</a></li>

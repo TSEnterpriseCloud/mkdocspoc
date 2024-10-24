@@ -296,16 +296,16 @@
 <nav aria-label=":open_book:  List Example" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-create-the-apps-script-function">
+<a class="md-nav__link" href="#one-step-one-create-the-apps-script-function">
 <span class="md-ellipsis">
-        Step one: Create the Apps Script function
+      :one:  Step one: Create the Apps Script function
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-try-it">
+<a class="md-nav__link" href="#two-step-two-try-it">
 <span class="md-ellipsis">
-        Step Two: Try it!
+      :two:  Step Two: Try it!
     </span>
 </a>
 </li>
@@ -321,16 +321,16 @@
 <nav aria-label=":open_book:  Create Example" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-edit-the-apps-script-functions">
+<a class="md-nav__link" href="#one-step-one-edit-the-apps-script-functions">
 <span class="md-ellipsis">
-        Step one: Edit the Apps Script functions
+      :one:  Step one: Edit the Apps Script functions
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-try-it_1">
+<a class="md-nav__link" href="#two-step-two-try-it_1">
 <span class="md-ellipsis">
-        Step Two: Try it!
+      :two:  Step Two: Try it!
     </span>
 </a>
 </li>
@@ -338,9 +338,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#google-apps-script-documentation">
+<a class="md-nav__link" href="#books-google-apps-script-documentation">
 <span class="md-ellipsis">
-        Google Apps Script Documentation
+      :books:  Google Apps Script Documentation
     </span>
 </a>
 </li>
@@ -611,7 +611,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../support/general-knowledge/">
+<a class="md-nav__link" href="../../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -681,16 +681,16 @@
 <nav aria-label=":open_book:  List Example" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-create-the-apps-script-function">
+<a class="md-nav__link" href="#one-step-one-create-the-apps-script-function">
 <span class="md-ellipsis">
-        Step one: Create the Apps Script function
+      :one:  Step one: Create the Apps Script function
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-try-it">
+<a class="md-nav__link" href="#two-step-two-try-it">
 <span class="md-ellipsis">
-        Step Two: Try it!
+      :two:  Step Two: Try it!
     </span>
 </a>
 </li>
@@ -706,16 +706,16 @@
 <nav aria-label=":open_book:  Create Example" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-edit-the-apps-script-functions">
+<a class="md-nav__link" href="#one-step-one-edit-the-apps-script-functions">
 <span class="md-ellipsis">
-        Step one: Edit the Apps Script functions
+      :one:  Step one: Edit the Apps Script functions
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-try-it_1">
+<a class="md-nav__link" href="#two-step-two-try-it_1">
 <span class="md-ellipsis">
-        Step Two: Try it!
+      :two:  Step Two: Try it!
     </span>
 </a>
 </li>
@@ -723,9 +723,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#google-apps-script-documentation">
+<a class="md-nav__link" href="#books-google-apps-script-documentation">
 <span class="md-ellipsis">
-        Google Apps Script Documentation
+      :books:  Google Apps Script Documentation
     </span>
 </a>
 </li>
@@ -742,7 +742,7 @@ import TabItem from '@theme/TabItem';</p>
 <p>In this guide, we'll explain how to use <em>Apps Script</em> to load and create resources with our APIs into <em>Google Sheets</em>.</p>
 <h2 id="open_book-list-example">:open_book:  List Example</h2>
 <p>In this example, we will load our invoices list using the <a href="/api-reference#get-/c/-company_id-/issued_documents">List Issued Documents</a> method, but you can adapt this guide to using it with the API method you need.</p>
-<h3 id="step-one-create-the-apps-script-function"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Step one: Create the Apps Script function</h3>
+<h3 id="one-step-one-create-the-apps-script-function">:one:  Step one: Create the Apps Script function</h3>
 <p>:::tip Retrieve your Company ID!</p>
 <p>In this example, we'll suppose you have to manage just one Company, so we simply inserted its ID directly in the code. If instead, you need to be able to manage multiple companies, you'll need to retrieve the ID of the current company in some way.
 Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
@@ -752,212 +752,212 @@ Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a
 <p>Then we need to create the <em>listInvoice</em> method and define the menu we'll use to trigger it:
 <tabs>
 <tabitem value="onOpen"></tabitem></tabs></p>
-<pre><code class="language-js">// This function creates a menu tab to execute the listInvoices function
-function onOpen() {
-  var ui = SpreadsheetApp.getUi();
-  ui.createMenu("TSE in Cloud API")
-    .addItem("List invoices", "listInvoices")
-    .addToUi();
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">// This function creates a menu tab to execute the listInvoices function</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">onOpen</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">ui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">ui</span><span class="p">.</span><span class="nx">createMenu</span><span class="p">(</span><span class="s2">"TSE in Cloud API"</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">addItem</span><span class="p">(</span><span class="s2">"List invoices"</span><span class="p">,</span><span class="w"> </span><span class="s2">"listInvoices"</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">addToUi</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>
 <tabitem value="listInvoices"></tabitem></p>
-<pre><code class="language-js">// This function loops between all the pages of the response and pushes the results on the sheet
-function listInvoices() {
-  var sheet = SpreadsheetApp.getActiveSheet();
-  sheet.clear();
-  sheet.appendRow([
-    "id",
-    "type",
-    "numeration",
-    "subject",
-    "visible_subject",
-    "amount_net",
-    "amount_vat",
-    "date",
-    "next_due_date",
-    "url",
-    "client name",
-    "client tax_code",
-    "client vat_number",
-  ]);
-  var url = "https://api-v2.fattureincloud.it";
-  var endpoint = "/c/{company_id}/issued_documents";
-  var headers = {
-    "Content-Type": "application/json",
-    Authorization: "Bearer YOUR_ACCESS_TOKEN",
-  };
+<div class="highlight"><pre><span></span><code><span class="c1">// This function loops between all the pages of the response and pushes the results on the sheet</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">listInvoices</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">sheet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveSheet</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">sheet</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">sheet</span><span class="p">.</span><span class="nx">appendRow</span><span class="p">([</span>
+<span class="w">    </span><span class="s2">"id"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"type"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"numeration"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"subject"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"visible_subject"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"amount_net"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"amount_vat"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"date"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"next_due_date"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"url"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"client name"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"client tax_code"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"client vat_number"</span><span class="p">,</span>
+<span class="w">  </span><span class="p">]);</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"https://api-v2.fattureincloud.it"</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">endpoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"/c/{company_id}/issued_documents"</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">"Content-Type"</span><span class="o">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">Authorization</span><span class="o">:</span><span class="w"> </span><span class="s2">"Bearer YOUR_ACCESS_TOKEN"</span><span class="p">,</span>
+<span class="w">  </span><span class="p">};</span>
 
-  var options = {
-    method: "get",
-    headers: headers,
-  };
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">"get"</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="nx">headers</span><span class="p">,</span>
+<span class="w">  </span><span class="p">};</span>
 
-  var queryParams = ["type=" + "invoice"];
-  var pageKey = "page";
-  var pageNum = 1;
-  var nextPageUrl;
-  var data = {},
-    output = [];
-  do {
-    var currentUrl = url + endpoint + "?" + queryParams.join("&amp;");
-    currentUrl += "&amp;" + pageKey + "=" + pageNum;
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">queryParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"type="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"invoice"</span><span class="p">];</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">pageKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"page"</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">pageNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">nextPageUrl</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">    </span><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">  </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">currentUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">endpoint</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"?"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">queryParams</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">"&amp;"</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">currentUrl</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">"&amp;"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">pageKey</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">pageNum</span><span class="p">;</span>
 
-    var response = UrlFetchApp.fetch(currentUrl, options);
-    data = JSON.parse(response.getContentText());
-    var invoices = data.data;
-    for (const index in invoices) {
-      sheet.appendRow([
-        invoices[index].id,
-        invoices[index].type,
-        invoices[index].numeration,
-        invoices[index].subject,
-        invoices[index].visible_subject,
-        invoices[index].amount_net,
-        invoices[index].amount_vat,
-        invoices[index].date,
-        invoices[index].next_due_date,
-        invoices[index].url,
-        invoices[index].entity.name,
-        invoices[index].entity.tax_code,
-        invoices[index].entity.vat_number,
-      ]);
-    }
-    pageNum++;
-    nextPageUrl = data.next_page_url;
-  } while (nextPageUrl);
-}
-</code></pre>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">UrlFetchApp</span><span class="p">.</span><span class="nx">fetch</span><span class="p">(</span><span class="nx">currentUrl</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">getContentText</span><span class="p">());</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">invoices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">invoices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">sheet</span><span class="p">.</span><span class="nx">appendRow</span><span class="p">([</span>
+<span class="w">        </span><span class="nx">invoices</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">id</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">invoices</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">type</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">invoices</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">numeration</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">invoices</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">subject</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">invoices</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">visible_subject</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">invoices</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">amount_net</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">invoices</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">amount_vat</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">invoices</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">date</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">invoices</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">next_due_date</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">invoices</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">url</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">invoices</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">entity</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">invoices</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">entity</span><span class="p">.</span><span class="nx">tax_code</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">invoices</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">entity</span><span class="p">.</span><span class="nx">vat_number</span><span class="p">,</span>
+<span class="w">      </span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">pageNum</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">nextPageUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">next_page_url</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">nextPageUrl</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>
 </p>
 <p>As you can see we are calling the <a href="/api-reference#get-/c/-company_id-/issued_documents">List Issued Documents</a> method, accessible to the following URL:</p>
-<pre><code class="language-text">https://api-v2.fattureincloud.it/c/\{company_id\}/issued_documents
-</code></pre>
+<div class="highlight"><pre><span></span><code>https://api-v2.fattureincloud.it/c/\{company_id\}/issued_documents
+</code></pre></div>
 <p>additionally, it requires defining some parameters as <em>Query String</em> (e.g. the "?type=invoice" part), but you can substitute it with the endpoint of the method you want. Please, make sure to replace the {company_id} placeholder with your company ID.</p>
 <p>Our APIs also require authentication, so we need to set the <em>Authorization header</em>. You just need to replace the "YOUR<em>ACCESS_TOKEN" placeholder with your actual _Access Token</em>; you can obtain a valid one following <a href="/authentication/manual-authentication.mdx">this procedure</a>.</p>
-<h3 id="step-two-try-it"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Step Two: Try it!</h3>
+<h3 id="two-step-two-try-it">:two:  Step Two: Try it!</h3>
 <p>If you inserted the connection parameters correctly, you can now click on the list invoices button that just appeared in your sheet's menu and see the results:</p>
 <p><img alt="list invoices" src="../assets/sheets/list_invoices.png"/></p>
 <h2 id="open_book-create-example">:open_book:  Create Example</h2>
 <p>In this example, we will create an invoice using the <a href="/api-reference#post-/c/-company_id-/issued_documents">Create Issued Document</a> method.</p>
-<h3 id="step-one-edit-the-apps-script-functions"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Step one: Edit the Apps Script functions</h3>
+<h3 id="one-step-one-edit-the-apps-script-functions">:one:  Step one: Edit the Apps Script functions</h3>
 <p>If you followed the <em>list</em> example you can now come back to your editor to implement also the invoice creation.</p>
 <p>First of all, we need to create a simple form for the inputs, so create the <em>Page.html</em> file and paste in the following code:</p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;base target="_top" /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;center&gt;
-      &lt;input
-        type="text"
-        id="clientName"
-        placeholder="Client Name"
-        style="font-size:20px !important;"
-      /&gt;
-      &lt;br /&gt;&lt;br /&gt;
-      &lt;input
-        type="text"
-        id="clientVatNumber"
-        placeholder="Client Vat Number"
-        style="font-size:20px !important;"
-      /&gt;
-      &lt;br /&gt;&lt;br /&gt;
-      &lt;input
-        type="text"
-        id="amountNet"
-        placeholder="Amount Net"
-        style="font-size:20px !important;"
-      /&gt;
-      &lt;br /&gt;&lt;br /&gt;
-      &lt;input
-        type="text"
-        id="visibleSubject"
-        placeholder="Subject"
-        style="font-size:20px !important;"
-      /&gt;
-      &lt;br /&gt;&lt;br /&gt;
-      &lt;button
-        onclick="google.script.run.createInvoice(document.getElementById('clientName').value, document.getElementById('clientVatNumber').value, document.getElementById('amountNet').value, document.getElementById('visibleSubject').value)"
-        style="font-size:20px !important;"
-      &gt;
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">base</span> <span class="na">target</span><span class="o">=</span><span class="s">"_top"</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span>
+        <span class="na">type</span><span class="o">=</span><span class="s">"text"</span>
+        <span class="na">id</span><span class="o">=</span><span class="s">"clientName"</span>
+        <span class="na">placeholder</span><span class="o">=</span><span class="s">"Client Name"</span>
+        <span class="na">style</span><span class="o">=</span><span class="s">"font-size:20px !important;"</span>
+      <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span>
+        <span class="na">type</span><span class="o">=</span><span class="s">"text"</span>
+        <span class="na">id</span><span class="o">=</span><span class="s">"clientVatNumber"</span>
+        <span class="na">placeholder</span><span class="o">=</span><span class="s">"Client Vat Number"</span>
+        <span class="na">style</span><span class="o">=</span><span class="s">"font-size:20px !important;"</span>
+      <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span>
+        <span class="na">type</span><span class="o">=</span><span class="s">"text"</span>
+        <span class="na">id</span><span class="o">=</span><span class="s">"amountNet"</span>
+        <span class="na">placeholder</span><span class="o">=</span><span class="s">"Amount Net"</span>
+        <span class="na">style</span><span class="o">=</span><span class="s">"font-size:20px !important;"</span>
+      <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span>
+        <span class="na">type</span><span class="o">=</span><span class="s">"text"</span>
+        <span class="na">id</span><span class="o">=</span><span class="s">"visibleSubject"</span>
+        <span class="na">placeholder</span><span class="o">=</span><span class="s">"Subject"</span>
+        <span class="na">style</span><span class="o">=</span><span class="s">"font-size:20px !important;"</span>
+      <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span>
+        <span class="na">onclick</span><span class="o">=</span><span class="s">"google.script.run.createInvoice(document.getElementById('clientName').value, document.getElementById('clientVatNumber').value, document.getElementById('amountNet').value, document.getElementById('visibleSubject').value)"</span>
+        <span class="na">style</span><span class="o">=</span><span class="s">"font-size:20px !important;"</span>
+      <span class="p">&gt;</span>
         Create
-      &lt;/button&gt;
-    &lt;/center&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+      <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
 <p>As you can see, we put only a few fields to exemplify the procedure; of course, you can add all the fields you need.<br/>
 The next step is to modify the menu and add some other functions (the <em>showCreateInvoiceDialog</em> will open the creation form, while the <em>createInvoice</em> will contact our APIs):</p>
 <p><tabs>
 <tabitem value="onOpen"></tabitem></tabs></p>
-<pre><code class="language-js">// We edit this function to add the new Create invoice button
-function onOpen() {
-  var ui = SpreadsheetApp.getUi();
-  ui.createMenu("TSE in Cloud API")
-    .addItem("List invoices", "listInvoices")
-    .addItem("Create invoice", "showCreateInvoiceDialog")
-    .addToUi();
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">// We edit this function to add the new Create invoice button</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">onOpen</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">ui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">ui</span><span class="p">.</span><span class="nx">createMenu</span><span class="p">(</span><span class="s2">"TSE in Cloud API"</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">addItem</span><span class="p">(</span><span class="s2">"List invoices"</span><span class="p">,</span><span class="w"> </span><span class="s2">"listInvoices"</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">addItem</span><span class="p">(</span><span class="s2">"Create invoice"</span><span class="p">,</span><span class="w"> </span><span class="s2">"showCreateInvoiceDialog"</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">addToUi</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>
 <tabitem value="showCreateInvoiceDialog"></tabitem></p>
-<pre><code class="language-js">// This function prompts the html page previously created
-function showCreateInvoiceDialog() {
-  var html = HtmlService.createHtmlOutputFromFile("Page")
-    .setWidth(400)
-    .setHeight(300);
-  SpreadsheetApp.getUi().showModalDialog(html, "Create Invoice");
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">// This function prompts the html page previously created</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">showCreateInvoiceDialog</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">html</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">HtmlService</span><span class="p">.</span><span class="nx">createHtmlOutputFromFile</span><span class="p">(</span><span class="s2">"Page"</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">setWidth</span><span class="p">(</span><span class="mf">400</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">setHeight</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">().</span><span class="nx">showModalDialog</span><span class="p">(</span><span class="nx">html</span><span class="p">,</span><span class="w"> </span><span class="s2">"Create Invoice"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>
 <tabitem value="createInvoice"></tabitem></p>
-<pre><code class="language-js">// This function makes the actual API call to create the invoice
-function createInvoice(clientName, clientVatNumber, amountNet, subject) {
-    var url = "https://api-v2.fattureincloud.it";
-    var endpoint = "/c/\{company_id\}/issued_documents";
-    var headers = {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer YOUR_ACCESS_TOKEN"
-    };
+<div class="highlight"><pre><span></span><code><span class="c1">// This function makes the actual API call to create the invoice</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">createInvoice</span><span class="p">(</span><span class="nx">clientName</span><span class="p">,</span><span class="w"> </span><span class="nx">clientVatNumber</span><span class="p">,</span><span class="w"> </span><span class="nx">amountNet</span><span class="p">,</span><span class="w"> </span><span class="nx">subject</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"https://api-v2.fattureincloud.it"</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">endpoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"/c/\{company_id\}/issued_documents"</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"Content-Type"</span><span class="o">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"Authorization"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Bearer YOUR_ACCESS_TOKEN"</span>
+<span class="w">    </span><span class="p">};</span>
 
-    var body = {
-        data: {
-            type: "invoice",
-            amount_net: amountNet,
-            visible_subject: subject,
-            entity: {
-                name: clientName,
-                vart_number: clientVatNumber
-            }
-        }
-    }
-    var options = {
-        "method": "post",
-        "headers": headers,
-        "payload": JSON.stringify(body)
-    };
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">"invoice"</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">amount_net</span><span class="o">:</span><span class="w"> </span><span class="nx">amountNet</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">visible_subject</span><span class="o">:</span><span class="w"> </span><span class="nx">subject</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">entity</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nx">clientName</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">vart_number</span><span class="o">:</span><span class="w"> </span><span class="nx">clientVatNumber</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"method"</span><span class="o">:</span><span class="w"> </span><span class="s2">"post"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"headers"</span><span class="o">:</span><span class="w"> </span><span class="nx">headers</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"payload"</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span>
+<span class="w">    </span><span class="p">};</span>
 
-    try {
-        var response = UrlFetchApp.fetch(url + endpoint, options);
-        data = JSON.parse(response.getContentText());
-        SpreadsheetApp.getUi().alert("Invoice created succesfully with id: " + data.data.id)
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">UrlFetchApp</span><span class="p">.</span><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">endpoint</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">getContentText</span><span class="p">());</span>
+<span class="w">        </span><span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">().</span><span class="nx">alert</span><span class="p">(</span><span class="s2">"Invoice created succesfully with id: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span>
 
-    } catch (e) {
-        SpreadsheetApp.getUi().alert(e.message)
-    }
-</code></pre>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">().</span><span class="nx">alert</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
 <p>
 </p>
 <p>Remember to replace the placeholders as explained in the <em>list</em> example.</p>
-<h3 id="step-two-try-it_1"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Step Two: Try it!</h3>
+<h3 id="two-step-two-try-it_1">:two:  Step Two: Try it!</h3>
 <p>Nou can now click on the create invoice button that just appeared in your sheet's menu:</p>
 <p><img alt="create invoice" src="../assets/sheets/create_invoice.png"/></p>
 <p>This will show you the HTML page we defined:</p>
 <p><img alt="create invoice" src="../assets/sheets/create_invoice2.png"/></p>
 <p>If you click on the "Create" button you'll trigger the invoice creation. You'll be able to see the results using the List Invoices menu one more time.</p>
-<h2 id="google-apps-script-documentation"><img alt="📚" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4da.png" title=":books:"/>  Google Apps Script Documentation</h2>
+<h2 id="books-google-apps-script-documentation">:books:  Google Apps Script Documentation</h2>
 <p>Here you can find some additional resources:</p>
 <ul>
 <li><a href="https://developers.google.com/apps-script/guides/bound">Container-bound Scripts</a></li>

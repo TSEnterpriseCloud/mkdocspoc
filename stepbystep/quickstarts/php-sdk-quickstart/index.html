@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#prerequisites">
+<a class="md-skip" href="#zero-prerequisites">
           Skip to content
         </a>
 </div>
@@ -246,37 +246,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites
+      :zero:  Prerequisites
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-install-the-tse-in-cloud-sdk">
+<a class="md-nav__link" href="#one-step-one-install-the-tse-in-cloud-sdk">
 <span class="md-ellipsis">
-        Step One: Install the TSE in Cloud SDK
+      :one:  Step One: Install the TSE in Cloud SDK
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval
+      :two:  Step Two: Set up the OAuth access token retrieval
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-four-run-the-sample">
+<a class="md-nav__link" href="#three-step-three-set-up-the-sample">
 <span class="md-ellipsis">
-        Step Four: Run the sample
+      :three:  Step Three: Set up the sample
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#four-step-four-run-the-sample">
 <span class="md-ellipsis">
-        What now?
+      :four:  Step Four: Run the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now?
     </span>
 </a>
 </li>
@@ -589,7 +596,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../support/general-knowledge/">
+<a class="md-nav__link" href="../../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -651,37 +658,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites
+      :zero:  Prerequisites
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-install-the-tse-in-cloud-sdk">
+<a class="md-nav__link" href="#one-step-one-install-the-tse-in-cloud-sdk">
 <span class="md-ellipsis">
-        Step One: Install the TSE in Cloud SDK
+      :one:  Step One: Install the TSE in Cloud SDK
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval
+      :two:  Step Two: Set up the OAuth access token retrieval
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-four-run-the-sample">
+<a class="md-nav__link" href="#three-step-three-set-up-the-sample">
 <span class="md-ellipsis">
-        Step Four: Run the sample
+      :three:  Step Three: Set up the sample
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#four-step-four-run-the-sample">
 <span class="md-ellipsis">
-        What now?
+      :four:  Step Four: Run the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now?
     </span>
 </a>
 </li>
@@ -697,7 +711,7 @@
 import TabItem from "@theme/TabItem";</p>
 <p>Following the steps described on this page, you'll create a simple PHP command-line application that interacts with the TSE in Cloud API.</p>
 <p>If you want to download the complete working example you can find it <a href="https://github.com/fattureincloud/fattureincloud-quickstarts/tree/master/sdk/php">here</a>.</p>
-<h2 id="prerequisites"><img alt="0️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0030-20e3.png" title=":zero:"/>  Prerequisites</h2>
+<h2 id="zero-prerequisites">:zero:  Prerequisites</h2>
 <p>In this guide, we assume that these prerequisites are met:</p>
 <ul>
 <li>PHP 7.1 or greater</li>
@@ -705,118 +719,103 @@ import TabItem from "@theme/TabItem";</p>
 <li>A <a href="/basics/create-an-app.mdx">private app</a> using the <a href="/authentication/code-flow/index.mdx">OAuth 2.0 Authorization Code Flow</a></li>
 <li>A TSE in Cloud account.</li>
 </ul>
-<h2 id="step-one-install-the-tse-in-cloud-sdk"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Step One: Install the TSE in Cloud SDK</h2>
+<h2 id="one-step-one-install-the-tse-in-cloud-sdk">:one:  Step One: Install the TSE in Cloud SDK</h2>
 <p>In this quickstart, we'll use the <a href="https://github.com/fattureincloud/fattureincloud-php-sdk">TSE in Cloud SDK</a>, published to <a href="https://packagist.org/packages/fattureincloud/fattureincloud-php-sdk">Packagist</a>.</p>
 <p>To install it using Composer:</p>
-<pre><code class="language-console">composer require fattureincloud/fattureincloud-php-sdk
-</code></pre>
-<h2 id="step-two-set-up-the-oauth-access-token-retrieval"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Step Two: Set up the OAuth access token retrieval</h2>
+<div class="highlight"><pre><span></span><code><span class="go">composer require fattureincloud/fattureincloud-php-sdk</span>
+</code></pre></div>
+<h2 id="two-step-two-set-up-the-oauth-access-token-retrieval">:two:  Step Two: Set up the OAuth access token retrieval</h2>
 <p>Create the file <strong>oauth.php</strong> and copy in the following code:</p>
-<p>```php title="oauth.php"</p>
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
+<div class="highlight"><span class="filename">oauth.php</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span><span class="p">(</span><span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">);</span>
 
-use FattureInCloud\OAuth2\OAuth2AuthorizationCodeManager;
-use FattureInCloud\OAuth2\Scope;
+<span class="k">use</span> <span class="nx">FattureInCloud\OAuth2\OAuth2AuthorizationCodeManager</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">FattureInCloud\OAuth2\Scope</span><span class="p">;</span>
 
-session_set_cookie_params(86400);
-session_start();
+<span class="nb">session_set_cookie_params</span><span class="p">(</span><span class="mi">86400</span><span class="p">);</span>
+<span class="nb">session_start</span><span class="p">();</span>
 
-$oauth = new OAuth2AuthorizationCodeManager("CLIENT_ID", "CLIENT_SECRET", "http://localhost:8000/oauth.php");
+<span class="nv">$oauth</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">OAuth2AuthorizationCodeManager</span><span class="p">(</span><span class="s2">"CLIENT_ID"</span><span class="p">,</span> <span class="s2">"CLIENT_SECRET"</span><span class="p">,</span> <span class="s2">"http://localhost:8000/oauth.php"</span><span class="p">);</span>
 
-if(isset($_SESSION['token'])) die('You already have an access token');
+<span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'token'</span><span class="p">]))</span> <span class="k">die</span><span class="p">(</span><span class="s1">'You already have an access token'</span><span class="p">);</span>
 
-if(!isset($_GET['code'])) {
-  $url = $oauth->getAuthorizationUrl([Scope::ENTITY_SUPPLIERS_READ], "EXAMPLE_STATE");
-  header('location: '.$url);
-} else {
-    $code = $_GET['code'];
-    $obj = $oauth-&gt;fetchToken($code);
-    if(!isset($obj-&gt;error)) {
-      $_SESSION['token'] = $obj-&gt;getAccessToken(); //saving the oAuth access token in a session variable
-      $_SESSION['refresh'] = $obj-&gt;getRefreshToken();
-    }
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'code'</span><span class="p">]))</span> <span class="p">{</span>
+  <span class="nv">$url</span> <span class="o">=</span> <span class="nv">$oauth</span><span class="o">-&gt;</span><span class="na">getAuthorizationUrl</span><span class="p">([</span><span class="nx">Scope</span><span class="o">::</span><span class="na">ENTITY_SUPPLIERS_READ</span><span class="p">],</span> <span class="s2">"EXAMPLE_STATE"</span><span class="p">);</span>
+  <span class="nb">header</span><span class="p">(</span><span class="s1">'location: '</span><span class="o">.</span><span class="nv">$url</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nv">$code</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'code'</span><span class="p">];</span>
+    <span class="nv">$obj</span> <span class="o">=</span> <span class="nv">$oauth</span><span class="o">-&gt;</span><span class="na">fetchToken</span><span class="p">(</span><span class="nv">$code</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$obj</span><span class="o">-&gt;</span><span class="na">error</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'token'</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$obj</span><span class="o">-&gt;</span><span class="na">getAccessToken</span><span class="p">();</span> <span class="c1">//saving the oAuth access token in a session variable</span>
+      <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'refresh'</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$obj</span><span class="o">-&gt;</span><span class="na">getRefreshToken</span><span class="p">();</span>
+    <span class="p">}</span>
 
-    echo 'Token saved correctly in the session variable';
-}
+    <span class="k">echo</span> <span class="s1">'Token saved correctly in the session variable'</span><span class="p">;</span>
+<span class="p">}</span>
 
-?&gt;
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>To make this code work properly the only thing you need to set your client id, client secret and eventually the redirect uri at line 10.</p>
+<p>:::warning Check the Redirect URL</p>
+<p>Make sure your FattureInCloud app redirect URL points to your just created <strong>oauth.php</strong> file.</p>
+<p>:::</p>
+<p>:::danger Keep your Client Secret safe!</p>
+<p>Never share your Client Secret with third-party actors, or publish it to your frontend! If you did, then we suggest to delete your TSE in Cloud app and to recreate it.</p>
+<p>:::</p>
+<h2 id="three-step-three-set-up-the-sample">:three:  Step Three: Set up the sample</h2>
+<p>:::tip Retrieve your Company ID!</p>
+<p>In this example, we'll show how to retrieve your Company ID using the PHP SDK. If you plan to manage only one company, you can insert it directly into your code as a variable.
+Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
+<p>:::</p>
+<p>Create a file called <strong>quickstart.php</strong> in your working directory and copy in the following code:</p>
+<div class="highlight"><span class="filename">quickstart.php</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
-<pre><code>
-To make this code work properly the only thing you need to set your client id, client secret and eventually the redirect uri at line 10.
+<span class="k">use</span> <span class="nx">FattureInCloud\Api\SuppliersApi</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">FattureInCloud\Api\UserApi</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">FattureInCloud\Configuration</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">GuzzleHttp\Client</span><span class="p">;</span>
 
-:::warning Check the Redirect URL
+<span class="k">require</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
+<span class="nb">session_start</span><span class="p">();</span>
 
-Make sure your FattureInCloud app redirect URL points to your just created **oauth.php** file.
+<span class="c1">// Retrieve the access token from the session variable</span>
+<span class="nv">$accessToken</span> <span class="o">=</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'token'</span><span class="p">];</span>
 
-:::
+<span class="c1">// Get the API config and construct the service object.</span>
+<span class="nv">$config</span> <span class="o">=</span> <span class="nx">FattureInCloud\Configuration</span><span class="o">::</span><span class="na">getDefaultConfiguration</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">setAccessToken</span><span class="p">(</span><span class="nv">$accessToken</span><span class="p">);</span>
 
-:::danger Keep your Client Secret safe!
+<span class="nv">$userApi</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FattureInCloud\Api\UserApi</span><span class="p">(</span>
+    <span class="k">new</span> <span class="nx">GuzzleHttp\Client</span><span class="p">(),</span>
+    <span class="nv">$config</span>
+<span class="p">);</span>
+<span class="nv">$suppliersApi</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FattureInCloud\Api\SuppliersApi</span><span class="p">(</span>
+    <span class="k">new</span> <span class="nx">GuzzleHttp\Client</span><span class="p">(),</span>
+    <span class="nv">$config</span>
+<span class="p">);</span>
 
-Never share your Client Secret with third-party actors, or publish it to your frontend! If you did, then we suggest to delete your TSE in Cloud app and to recreate it.
+<span class="k">try</span> <span class="p">{</span>
+    <span class="c1">// Retrieve the first company id</span>
+    <span class="nv">$companies</span> <span class="o">=</span> <span class="nv">$userApi</span><span class="o">-&gt;</span><span class="na">listUserCompanies</span><span class="p">();</span>
+    <span class="nv">$firstCompanyId</span> <span class="o">=</span> <span class="nv">$companies</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getCompanies</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">getId</span><span class="p">();</span>
 
-:::
+    <span class="c1">// Retrieve the list of first 10 Suppliers for the selected company</span>
+    <span class="nv">$suppliers</span> <span class="o">=</span> <span class="nv">$suppliersApi</span><span class="o">-&gt;</span><span class="na">listSuppliers</span><span class="p">(</span><span class="nv">$firstCompanyId</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$suppliers</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$supplier</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$supplier</span><span class="o">-&gt;</span><span class="na">getName</span><span class="p">();</span>
+    <span class="p">}</span>
 
-## :three:&amp;nbsp; Step Three: Set up the sample
-
-:::tip Retrieve your Company ID!
-
-In this example, we'll show how to retrieve your Company ID using the PHP SDK. If you plan to manage only one company, you can insert it directly into your code as a variable.
-Check the [Company-scoped Methods](/basics/company-scoped-methods.mdx) page for more info.
-
-:::
-
-Create a file called **quickstart.php** in your working directory and copy in the following code:
-
-```php title="quickstart.php"
-&lt;?php
-
-use FattureInCloud\Api\SuppliersApi;
-use FattureInCloud\Api\UserApi;
-use FattureInCloud\Configuration;
-use GuzzleHttp\Client;
-
-require __DIR__ . '/vendor/autoload.php';
-session_start();
-
-// Retrieve the access token from the session variable
-$accessToken = $_SESSION['token'];
-
-// Get the API config and construct the service object.
-$config = FattureInCloud\Configuration::getDefaultConfiguration()-&gt;setAccessToken($accessToken);
-
-$userApi = new FattureInCloud\Api\UserApi(
-    new GuzzleHttp\Client(),
-    $config
-);
-$suppliersApi = new FattureInCloud\Api\SuppliersApi(
-    new GuzzleHttp\Client(),
-    $config
-);
-
-try {
-    // Retrieve the first company id
-    $companies = $userApi-&gt;listUserCompanies();
-    $firstCompanyId = $companies-&gt;getData()-&gt;getCompanies()[0]-&gt;getId();
-
-    // Retrieve the list of first 10 Suppliers for the selected company
-    $suppliers = $suppliersApi-&gt;listSuppliers($firstCompanyId, null, null, null, 1, 10);
-    foreach ($suppliers-&gt;getData() as $supplier) {
-        $name = $supplier-&gt;getName();
-    }
-
-} catch (Exception $e) {
-    echo 'Exception when calling the API: ', $e-&gt;getMessage(), PHP_EOL;
-}
-</code></pre>
-<h2 id="step-four-run-the-sample"><img alt="4️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0034-20e3.png" title=":four:"/>  Step Four: Run the sample</h2>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">'Exception when calling the API: '</span><span class="p">,</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="four-step-four-run-the-sample">:four:  Step Four: Run the sample</h2>
 <p>Now start the webserver using the following command:</p>
-<pre><code class="language-console">php -S localhost:8000
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="go">php -S localhost:8000</span>
+</code></pre></div>
 <p>and go to <em>http://localhost:8000/oauth.php</em> (or whatever your URL is), you will be redirected to the TSE in Cloud login page where you will be asked to grant some permissions, according to what scopes you specified previously.
 Finally, you will see the success message, the access token will be stored in the session variable ready to be used.</p>
 <p>You can now visit <em>http://localhost:8000/quickstart.php</em> (or whatever your URL is) to test the application.</p>
-<h2 id="what-now"><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:"/>  What now?</h2>
+<h2 id="question-what-now">:question:  What now?</h2>
 <p>In this example, we used a limited set of the available API methods to show how to use our SDK.</p>
 <p>If you want to access the full documentation of the available methods and models, you can check the following resources:</p>
 <ul>

@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#step-zero-the-client-type">
+<a class="md-skip" href="#zero-step-zero-the-client-type">
           Skip to content
         </a>
 </div>
@@ -537,7 +537,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../support/general-knowledge/">
+<a class="md-nav__link" href="../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -599,37 +599,37 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-zero-the-client-type">
+<a class="md-nav__link" href="#zero-step-zero-the-client-type">
 <span class="md-ellipsis">
-        Step Zero: The Client Type
+      :zero:  Step Zero: The Client Type
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-the-client-data">
+<a class="md-nav__link" href="#one-step-one-the-client-data">
 <span class="md-ellipsis">
-        Step One: The Client Data
+      :one:  Step One: The Client Data
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-advanced-options">
+<a class="md-nav__link" href="#two-step-two-advanced-options">
 <span class="md-ellipsis">
-        Step Two: Advanced Options
+      :two:  Step Two: Advanced Options
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#client-uniqueness">
+<a class="md-nav__link" href="#copyright-client-uniqueness">
 <span class="md-ellipsis">
-        Client uniqueness
+      :copyright:  Client uniqueness
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-the-client">
+<a class="md-nav__link" href="#white_check_mark-create-the-client">
 <span class="md-ellipsis">
-        Create the client!
+      :white_check_mark:  Create the client!
     </span>
 </a>
 </li>
@@ -657,10 +657,10 @@ Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a
 <p><a href="/docs/quickstarts/zapier-quickstart.md">Zapier Actions</a> provide all the fields offered by the APIs, but it does not mean you need to compile all of them!
 For example, while creating a new Client the Document ID must be left blank!</p>
 <p>To follow this guide, you will be required to search the fields used in our example on the Zapier page and insert the related values.</p>
-<p>The code of the fields will follow the JSON structure: for example, the "type" field is included in the "data" object, so the Zapier code will be "data.type". You can use the <em>CRTL + F</em> command to search the field's code faster <img alt="😉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f609.png" title=":wink:"/></p>
+<p>The code of the fields will follow the JSON structure: for example, the "type" field is included in the "data" object, so the Zapier code will be "data.type". You can use the <em>CRTL + F</em> command to search the field's code faster :wink:</p>
 <p>In this example, we'll insert the values directly, but please remember that Zapier was built to let you select the workflow's previous steps' outputs as input in the Action, for example selecting the values returned by a trigger!</p>
 <p>:::</p>
-<h2 id="step-zero-the-client-type"><img alt="0️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0030-20e3.png" title=":zero:"/>  Step Zero: The Client Type</h2>
+<h2 id="zero-step-zero-the-client-type">:zero:  Step Zero: The Client Type</h2>
 <p>TSE in Cloud lets you to define four different types of clients.</p>
 <p>The available types are:</p>
 <ul>
@@ -670,7 +670,7 @@ For example, while creating a new Client the Document ID must be left blank!</p>
 <li><strong>condo</strong></li>
 </ul>
 <p>In the next step we'll suppose to create a company, but the procedure is the same for the other clients types too.</p>
-<h2 id="step-one-the-client-data"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Step One: The Client Data</h2>
+<h2 id="one-step-one-the-client-data">:one:  Step One: The Client Data</h2>
 <p>Every Client can be defined by a set of basic values, here you can find a list of the main ones:</p>
 <ul>
 <li>
@@ -711,137 +711,137 @@ For example, while creating a new Client the Document ID must be left blank!</p>
 </li>
 </ul>
 <p>The partial request looks like this:</p>
-<pre><code class="language-json">// NOTE: this is a partial request, please wait before sending it
-{
-  "data": {
-    "type": "company",
-    "name": "Mario Rossi",
-    "vat_number": "47803200154",
-    "tax_code": "RSSMRA91M20B967Q",
-    "address_street": "Via Italia, 66",
-    "address_postal_code": "20900",
-    "address_city": "Milano",
-    "address_province": "MI"
-  }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a partial request, please wait before sending it</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"company"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mario Rossi"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"vat_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"47803200154"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"tax_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RSSMRA91M20B967Q"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"address_street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Via Italia, 66"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"address_postal_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20900"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Milano"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"address_province"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MI"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>The corresponding code with our SDKs:</p>
-<pre><code class="language-cs">// NOTE: this is a partial request, please wait before sending it
-// in this example we are using our C# SDK
-// https://www.nuget.org/packages/It.FattureInCloud.Sdk/
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a partial request, please wait before sending it</span>
+<span class="c1">// in this example we are using our C# SDK</span>
+<span class="c1">// https://www.nuget.org/packages/It.FattureInCloud.Sdk/</span>
 
-ModelClient entity = new ModelClient(
-    type: ClientType.Company,
-    name: "Mario Rossi",
-    vatNumber: "47803200154",
-    taxCode: "RSSMRA91M20B967Q",
-    addressStreet: "Via Italia, 66",
-    addressPostalCode: "20900",
-    addressCity: "Milano",
-    addressProvince: "MI"
-);
-</code></pre>
-<pre><code class="language-go">// NOTE: this is a partial request, please wait before sending it
-// in this example we are using our Go SDK
-// https://github.com/fattureincloud/fattureincloud-go-sdk
+<span class="n">ModelClient</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ModelClient</span><span class="p">(</span>
+<span class="w">    </span><span class="n">type</span><span class="p">:</span><span class="w"> </span><span class="n">ClientType</span><span class="p">.</span><span class="n">Company</span><span class="p">,</span>
+<span class="w">    </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Mario Rossi"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">vatNumber</span><span class="p">:</span><span class="w"> </span><span class="s">"47803200154"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">taxCode</span><span class="p">:</span><span class="w"> </span><span class="s">"RSSMRA91M20B967Q"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">addressStreet</span><span class="p">:</span><span class="w"> </span><span class="s">"Via Italia, 66"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">addressPostalCode</span><span class="p">:</span><span class="w"> </span><span class="s">"20900"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">addressCity</span><span class="p">:</span><span class="w"> </span><span class="s">"Milano"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">addressProvince</span><span class="p">:</span><span class="w"> </span><span class="s">"MI"</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a partial request, please wait before sending it</span>
+<span class="c1">// in this example we are using our Go SDK</span>
+<span class="c1">// https://github.com/fattureincloud/fattureincloud-go-sdk</span>
 
-entity := *fattureincloud.NewClient().
-    SetType(fattureincloud.ClientTypes.COMPANY).
-    SetName("Mario Rossi").
-    SetVatNumber("47803200154").
-    SetTaxCode("RSSMRA91M20B967Q").
-    SetAddressStreet("Via Italia, 66").
-    SetAddressPostalCode("20900").
-    SetAddressCity("Milano").
-    SetAddressProvince("MI")
-</code></pre>
-<pre><code class="language-java">// NOTE: this is a partial request, please wait before sending it
-// in this example we are using our Java SDK
-// https://search.maven.org/artifact/it.fattureincloud/fattureincloud-java-sdk
+<span class="nx">entity</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">*</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">NewClient</span><span class="p">().</span>
+<span class="w">    </span><span class="nx">SetType</span><span class="p">(</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">ClientTypes</span><span class="p">.</span><span class="nx">COMPANY</span><span class="p">).</span>
+<span class="w">    </span><span class="nx">SetName</span><span class="p">(</span><span class="s">"Mario Rossi"</span><span class="p">).</span>
+<span class="w">    </span><span class="nx">SetVatNumber</span><span class="p">(</span><span class="s">"47803200154"</span><span class="p">).</span>
+<span class="w">    </span><span class="nx">SetTaxCode</span><span class="p">(</span><span class="s">"RSSMRA91M20B967Q"</span><span class="p">).</span>
+<span class="w">    </span><span class="nx">SetAddressStreet</span><span class="p">(</span><span class="s">"Via Italia, 66"</span><span class="p">).</span>
+<span class="w">    </span><span class="nx">SetAddressPostalCode</span><span class="p">(</span><span class="s">"20900"</span><span class="p">).</span>
+<span class="w">    </span><span class="nx">SetAddressCity</span><span class="p">(</span><span class="s">"Milano"</span><span class="p">).</span>
+<span class="w">    </span><span class="nx">SetAddressProvince</span><span class="p">(</span><span class="s">"MI"</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a partial request, please wait before sending it</span>
+<span class="c1">// in this example we are using our Java SDK</span>
+<span class="c1">// https://search.maven.org/artifact/it.fattureincloud/fattureincloud-java-sdk</span>
 
-Client entity = new Client()
-        .type(ClientType.COMPANY)
-        .name("Mario Rossi")
-        .vatNumber("47803200154")
-        .taxCode("RSSMRA91M20B967Q")
-        .addressStreet("Via Italia, 66")
-        .addressPostalCode("20900")
-        .addressCity("Milano")
-        .addressProvince("MI");
-</code></pre>
-<pre><code class="language-php">// NOTE: this is a partial request, please wait before sending it
-// in this example we are using our PHP SDK
-// https://packagist.org/packages/fattureincloud/fattureincloud-php-sdk
+<span class="n">Client</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Client</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">type</span><span class="p">(</span><span class="n">ClientType</span><span class="p">.</span><span class="na">COMPANY</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">name</span><span class="p">(</span><span class="s">"Mario Rossi"</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">vatNumber</span><span class="p">(</span><span class="s">"47803200154"</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">taxCode</span><span class="p">(</span><span class="s">"RSSMRA91M20B967Q"</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">addressStreet</span><span class="p">(</span><span class="s">"Via Italia, 66"</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">addressPostalCode</span><span class="p">(</span><span class="s">"20900"</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">addressCity</span><span class="p">(</span><span class="s">"Milano"</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">addressProvince</span><span class="p">(</span><span class="s">"MI"</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">// NOTE: this is a partial request, please wait before sending it</span>
+<span class="x">// in this example we are using our PHP SDK</span>
+<span class="x">// https://packagist.org/packages/fattureincloud/fattureincloud-php-sdk</span>
 
-$entity = new Client;
-$entity
-    -&gt;setType(ClientType::COMPANY)
-    -&gt;setName("Mario Rossi")
-    -&gt;setVatNumber("47803200154")
-    -&gt;setTaxCode("RSSMRA91M20B967Q")
-    -&gt;setAddressStreet("Via Italia, 66")
-    -&gt;setAddressPostalCode("20900")
-    -&gt;setAddressCity("Milano")
-    -&gt;setAddressProvince("MI");
-</code></pre>
-<pre><code class="language-js">// NOTE: this is a partial request, please wait before sending it
-// in this example we are using our JS SDK
-// https://www.npmjs.com/package/@fattureincloud/fattureincloud-js-sdk
+<span class="x">$entity = new Client;</span>
+<span class="x">$entity</span>
+<span class="x">    -&gt;setType(ClientType::COMPANY)</span>
+<span class="x">    -&gt;setName("Mario Rossi")</span>
+<span class="x">    -&gt;setVatNumber("47803200154")</span>
+<span class="x">    -&gt;setTaxCode("RSSMRA91M20B967Q")</span>
+<span class="x">    -&gt;setAddressStreet("Via Italia, 66")</span>
+<span class="x">    -&gt;setAddressPostalCode("20900")</span>
+<span class="x">    -&gt;setAddressCity("Milano")</span>
+<span class="x">    -&gt;setAddressProvince("MI");</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a partial request, please wait before sending it</span>
+<span class="c1">// in this example we are using our JS SDK</span>
+<span class="c1">// https://www.npmjs.com/package/@fattureincloud/fattureincloud-js-sdk</span>
 
-let entity = new fattureInCloudSdk.Client();
-entity.type = new fattureInCloudSdk.ClientType().company;
-entity.name = "Mario Rossi";
-entity.vat_number = "47803200154";
-entity.tax_code = "RSSMRA91M20B967Q";
-entity.address_street = "Via Italia, 66";
-entity.address_postal_code = "20900";
-entity.address_city = "Milano";
-entity.address_province = "MI";
-</code></pre>
-<pre><code class="language-py"># NOTE: this is a partial request, please wait before sending it
-# in this example we are using our Python SDK
-# https://pypi.org/project/fattureincloud-python-sdk/
+<span class="kd">let</span><span class="w"> </span><span class="nx">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">Client</span><span class="p">();</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ClientType</span><span class="p">().</span><span class="nx">company</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Mario Rossi"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">vat_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"47803200154"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">tax_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"RSSMRA91M20B967Q"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_street</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Via Italia, 66"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_postal_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"20900"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Milano"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_province</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"MI"</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># NOTE: this is a partial request, please wait before sending it</span>
+<span class="c1"># in this example we are using our Python SDK</span>
+<span class="c1"># https://pypi.org/project/fattureincloud-python-sdk/</span>
 
-entity = Client(
-    type = ClientType("company"),
-    name="Mario Rossi",
-    vat_number="47803200154",
-    tax_code="RSSMRA91M20B967Q",
-    address_street="Via Italia, 66",
-    address_postal_code="20900",
-    address_city="Milano",
-    address_province="MI"
-)
-</code></pre>
-<pre><code class="language-rb"># NOTE: this is a partial request, please wait before sending it
-# in this example we are using our Ruby SDK
-# https://rubygems.org/gems/fattureincloud_ruby_sdk
+<span class="n">entity</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="n">ClientType</span><span class="p">(</span><span class="s2">"company"</span><span class="p">),</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">"Mario Rossi"</span><span class="p">,</span>
+    <span class="n">vat_number</span><span class="o">=</span><span class="s2">"47803200154"</span><span class="p">,</span>
+    <span class="n">tax_code</span><span class="o">=</span><span class="s2">"RSSMRA91M20B967Q"</span><span class="p">,</span>
+    <span class="n">address_street</span><span class="o">=</span><span class="s2">"Via Italia, 66"</span><span class="p">,</span>
+    <span class="n">address_postal_code</span><span class="o">=</span><span class="s2">"20900"</span><span class="p">,</span>
+    <span class="n">address_city</span><span class="o">=</span><span class="s2">"Milano"</span><span class="p">,</span>
+    <span class="n">address_province</span><span class="o">=</span><span class="s2">"MI"</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># NOTE: this is a partial request, please wait before sending it</span>
+<span class="c1"># in this example we are using our Ruby SDK</span>
+<span class="c1"># https://rubygems.org/gems/fattureincloud_ruby_sdk</span>
 
-entity = FattureInCloud_Ruby_Sdk::Client.new(
-  type: FattureInCloud_Ruby_Sdk::ClientType::COMPANY,
-  name: "Mario Rossi",
-  vat_number: "47803200154",
-  tax_code: "RSSMRA91M20B967Q",
-  address_street: "Via Italia, 66",
-  address_postal_code: "20900",
-  address_city: "Milano",
-  address_province: "MI"
-)
-</code></pre>
-<pre><code class="language-ts">// NOTE: this is a partial request, please wait before sending it
-// in this example we are using our TS SDK
-// https://www.npmjs.com/package/@fattureincloud/fattureincloud-ts-sdk
+<span class="n">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="w">  </span><span class="ss">type</span><span class="p">:</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">ClientType</span><span class="o">::</span><span class="no">COMPANY</span><span class="p">,</span>
+<span class="w">  </span><span class="nb">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mario Rossi"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">vat_number</span><span class="p">:</span><span class="w"> </span><span class="s2">"47803200154"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">tax_code</span><span class="p">:</span><span class="w"> </span><span class="s2">"RSSMRA91M20B967Q"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">address_street</span><span class="p">:</span><span class="w"> </span><span class="s2">"Via Italia, 66"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">address_postal_code</span><span class="p">:</span><span class="w"> </span><span class="s2">"20900"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">address_city</span><span class="p">:</span><span class="w"> </span><span class="s2">"Milano"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">address_province</span><span class="p">:</span><span class="w"> </span><span class="s2">"MI"</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a partial request, please wait before sending it</span>
+<span class="c1">// in this example we are using our TS SDK</span>
+<span class="c1">// https://www.npmjs.com/package/@fattureincloud/fattureincloud-ts-sdk</span>
 
-let entity: Client = {};
-entity.type = ClientType.Company;
-entity.name = "Mario Rossi";
-entity.vat_number = "47803200154";
-entity.tax_code = "RSSMRA91M20B967Q";
-entity.address_street = "Via Italia, 66";
-entity.address_postal_code = "20900";
-entity.address_city = "Milano";
-entity.address_province = "MI";
-</code></pre>
+<span class="kd">let</span><span class="w"> </span><span class="nx">entity</span><span class="o">:</span><span class="w"> </span><span class="kt">Client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
+<span class="nx">entity</span><span class="p">.</span><span class="kr">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ClientType</span><span class="p">.</span><span class="nx">Company</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Mario Rossi"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">vat_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"47803200154"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">tax_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"RSSMRA91M20B967Q"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_street</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Via Italia, 66"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_postal_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"20900"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Milano"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_province</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"MI"</span><span class="p">;</span>
+</code></pre></div>
 <p>In Zapier, first, you need to select your Company ID. Luckily, our Actions let you select it from a simple dropdown menu.
 <img alt="Zapier - Company ID Selection" src="../assets/company-id-selection.png"/></p>
 <p>Next, you must set the Client Type we described in the previous step, you just need to select the correct value in the available list.</p>
@@ -917,7 +917,7 @@ Here you can find the list of all the fields and values you must fill for this e
 </tr>
 </tbody>
 </table>
-<h2 id="step-two-advanced-options"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Step Two: Advanced Options</h2>
+<h2 id="two-step-two-advanced-options">:two:  Step Two: Advanced Options</h2>
 <p>In addition to the basic data explained in the previous step, some advanced fields can be used:</p>
 <ul>
 <li>
@@ -930,417 +930,417 @@ Here you can find the list of all the fields and values you must fill for this e
 <p><strong>has_intent_declaration</strong>: flag that adds <em>Lettera d'intento</em> fields to the electronic document, <strong>intent_declaration_protocol_number</strong> and <strong>intent_declaration_protocol_date</strong> also need to be set.</p>
 </li>
 </ul>
-<h2 id="client-uniqueness"><img alt="©️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/00a9.png" title=":copyright:"/>  Client uniqueness</h2>
+<h2 id="copyright-client-uniqueness">:copyright:  Client uniqueness</h2>
 <p>We have strong checks to ensure clients' uniqueness. The applied rule differs based on the defined fields:</p>
 <ul>
 <li>if you are only setting the client's <strong>name</strong>, then you will receive an error if a client with the same name already exists.</li>
 <li>if you are setting <strong>code</strong>, <strong>vat_number</strong>, and <strong>tax_code</strong>, these values must be unique for all your clients.</li>
 </ul>
-<h2 id="create-the-client"><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:"/>  Create the client!</h2>
+<h2 id="white_check_mark-create-the-client">:white_check_mark:  Create the client!</h2>
 <p>Now we are ready to create a client, so let's <a href="/api-reference#post-/c/-company_id-/entities/clients">create a client</a> using the request we just built:</p>
-<pre><code class="language-http">POST /c/1235/entities/clients HTTP/1.1
-Accept: application/json
-Content-Type: application/json
-Host: api-v2.fattureincloud.it
-Content-Length: 200
+<div class="highlight"><pre><span></span><code><span class="nf">POST</span> <span class="nn">/c/1235/entities/clients</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">api-v2.fattureincloud.it</span>
+<span class="na">Content-Length</span><span class="o">:</span> <span class="l">200</span>
 
-{"data":{"name":"Mario Rossi","vat_number":"47803200154","tax_code":"RSSMRA91M20B967Q","address_street":"Via Italia, 66","address_postal_code":"20900","address_city":"Milano","address_province":"MI"}}
-</code></pre>
+<span class="p">{</span><span class="nt">"data"</span><span class="p">:{</span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"Mario Rossi"</span><span class="p">,</span><span class="nt">"vat_number"</span><span class="p">:</span><span class="s2">"47803200154"</span><span class="p">,</span><span class="nt">"tax_code"</span><span class="p">:</span><span class="s2">"RSSMRA91M20B967Q"</span><span class="p">,</span><span class="nt">"address_street"</span><span class="p">:</span><span class="s2">"Via Italia, 66"</span><span class="p">,</span><span class="nt">"address_postal_code"</span><span class="p">:</span><span class="s2">"20900"</span><span class="p">,</span><span class="nt">"address_city"</span><span class="p">:</span><span class="s2">"Milano"</span><span class="p">,</span><span class="nt">"address_province"</span><span class="p">:</span><span class="s2">"MI"</span><span class="p">}}</span>
+</code></pre></div>
 <p>The corresponding code with our SDKs:</p>
-<pre><code class="language-cs">using System;
-using System.Collections.Generic;
-using It.FattureInCloud.Sdk.Api;
-using It.FattureInCloud.Sdk.Client;
-using It.FattureInCloud.Sdk.Model;
-
-namespace test {
-    class Program {
-        static void Main(string[] args) {
-            Configuration config = new Configuration();
-
-            //set your access token
-            config.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new ClientsApi(config);
-            //set your company id
-            var companyId = 12345;
-
-            // NOTE: this is a complete request, but please customize it!!!
-            // In the next step we'll explain how to perform the request to the API.
-
-            // in this example we are using our C# SDK
-            // https://www.nuget.org/packages/It.FattureInCloud.Sdk/
-
-            ModelClient entity = new ModelClient(
-                type: ClientType.Company,
-                name: "Mario Rossi",
-                vatNumber: "47803200154",
-                taxCode: "RSSMRA91M20B967Q",
-                addressStreet: "Via Italia, 66",
-                addressPostalCode: "20900",
-                addressCity: "Milano",
-                addressProvince: "MI"
-            );
-
-            // Here we put our entity in the request object
-            CreateClientRequest createClientRequest = new CreateClientRequest(
-                data: entity
-            );
-
-            // Now we are all set for the final call
-            // Create the client: https://github.com/fattureincloud/fattureincloud-csharp-sdk/blob/master/docs/ClientsApi.md#createclient
-            try {
-                CreateClientResponse result = apiInstance.CreateClient(companyId, createClientRequest);
-                Console.WriteLine(result);
-            } catch (ApiException e) {
-                Console.WriteLine("Exception when calling ClientsApi.CreateClient: " + e.Message);
-                Console.WriteLine("Status Code: " + e.ErrorCode);
-                Console.WriteLine(e.StackTrace);
-            }
-        }
-    }
-}
-</code></pre>
-<pre><code class="language-go">// NOTE: this is a complete request, but please customize it!!!
-// In the next step we'll explain how to perform the request to the API.
-
-// in this example we are using our Go SDK
-// https://github.com/fattureincloud/fattureincloud-go-sdk
-package main
-
-import (
-    "context"
-    "encoding/json"
-    "fmt"
-    "os"
-
-    fattureincloudapi "github.com/fattureincloud/fattureincloud-go-sdk/v2/api"
-    fattureincloud "github.com/fattureincloud/fattureincloud-go-sdk/v2/model"
-)
-
-func main() {
-    //set your access token
-    auth := context.WithValue(context.Background(), fattureincloudapi.ContextAccessToken, "YOUR_ACCESS_TOKEN")
-    configuration := fattureincloudapi.NewConfiguration()
-    apiClient := fattureincloudapi.NewAPIClient(configuration)
-
-    //set your company id
-    companyId := int32(12345)
-
-    entity := *fattureincloud.NewClient().
-        SetType(fattureincloud.ClientTypes.COMPANY).
-        SetName("Mario Rossi").
-        SetVatNumber("47803200154").
-        SetTaxCode("RSSMRA91M20B967Q").
-        SetAddressStreet("Via Italia, 66").
-        SetAddressPostalCode("20900").
-        SetAddressCity("Milano").
-        SetAddressProvince("MI")
-
-    // Here we put our entity in the request object
-    createClientRequest := *fattureincloud.NewCreateClientRequest().SetData(entity)
-
-    // Now we are all set for the final call
-    // Create the client: https://github.com/fattureincloud/fattureincloud-go-sdk/blob/master/docs/ClientsAPI.md#createclient
-    resp, r, err := apiClient.ClientsAPI.CreateClient(auth, companyId).CreateClientRequest(createClientRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ClientsAPI.CreateClient``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    json.NewEncoder(os.Stdout).Encode(resp)
-}
-</code></pre>
-<pre><code class="language-java">import it.fattureincloud.sdk.ApiClient;
-import it.fattureincloud.sdk.ApiException;
-import it.fattureincloud.sdk.Configuration;
-import it.fattureincloud.sdk.auth.*;
-import it.fattureincloud.sdk.model.*;
-import it.fattureincloud.sdk.api.ClientsApi;
-import java.math.BigDecimal;
-import java.time.LocalDate;
-
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-        //set your access token
-        // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
-        OAuth OAuth2AuthenticationCodeFlow = (OAuth) defaultClient.getAuthentication("OAuth2AuthenticationCodeFlow");
-        OAuth2AuthenticationCodeFlow.setAccessToken("YOUR ACCESS TOKEN");
-
-        ClientsApi apiInstance = new ClientsApi(defaultClient);
-        //set your company id
-        Integer companyId = 12345;
-
-        // NOTE: this is a complete request, but please customize it!!!
-        // In the next step we'll explain how to perform the request to the API.
-
-        // in this example we are using our Java SDK
-        // https://search.maven.org/artifact/it.fattureincloud/fattureincloud-java-sdk
-
-        Client entity = new Client()
-                .type(ClientType.COMPANY)
-                .name("Mario Rossi")
-                .vatNumber("47803200154")
-                .taxCode("RSSMRA91M20B967Q")
-                .addressStreet("Via Italia, 66")
-                .addressPostalCode("20900")
-                .addressCity("Milano")
-                .addressProvince("MI");
-
-        // Here we put our entity in the request object
-        CreateClientRequest createClientRequest = new CreateClientRequest()
-                .data(entity);
-
-        // Now we are all set for the final call
-        // Create the client: https://github.com/fattureincloud/fattureincloud-java-sdk/blob/master/docs/ClientsApi.md#createclient
-        try {
-            CreateClientResponse result = apiInstance.createClient(companyId, createClientRequest);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ClientsApi#createClient");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
-</code></pre>
-<pre><code class="language-php">// NOTE: this is a complete request, but please customize it before trying to send it!
-
-// In this example we are using our PHP SDK
-// https://packagist.org/packages/fattureincloud/fattureincloud-php-sdk
-
-&lt;?php
-
-require_once(__DIR__ . '/vendor/autoload.php');
-
-//set your access token
-$config = FattureInCloud\Configuration::getDefaultConfiguration()-&gt;setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new FattureInCloud\Api\ClientsApi(
-    new GuzzleHttp\Client(),
-    $config
-);
-
-//set your company id
-$company_id = 12345;
-
-$entity = new FattureInCloud\Model\Client;
-$entity
-    -&gt;setType(FattureInCloud\Model\Client::COMPANY)
-    -&gt;setName("Mario Rossi")
-    -&gt;setVatNumber("47803200154")
-    -&gt;setTaxCode("RSSMRA91M20B967Q")
-    -&gt;setAddressStreet("Via Italia, 66")
-    -&gt;setAddressPostalCode("20900")
-    -&gt;setAddressCity("Milano")
-    -&gt;setAddressProvince("MI");
-
-// Here we put our entity in the request object
-$create_client_request = new FattureInCloud\Model\CreateClientRequest;
-$create_client_request-&gt;setData($entity);
-
-// Now we are all set for the final call
-// Create the client: https://github.com/fattureincloud/fattureincloud-php-sdk/blob/master/docs/Api/ClientsApi.md#createclient
-try {
-    $result = $apiInstance-&gt;createClient($company_id, $create_client_request);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ClientsApi-&gt;createClient: ', $e-&gt;getMessage(), PHP_EOL;
-}
-</code></pre>
-<pre><code class="language-js">// NOTE: this is a complete request, but please customize it before trying to send it!
-
-// in this example we are using our JS SDK
-// https://www.npmjs.com/package/@fattureincloud/fattureincloud-js-sdk
-
-var fattureInCloudSdk = require("@fattureincloud/fattureincloud-js-sdk");
-let defaultClient = fattureInCloudSdk.ApiClient.instance;
-
-//set your access token
-let OAuth2AuthenticationCodeFlow =
-  defaultClient.authentications["OAuth2AuthenticationCodeFlow"];
-OAuth2AuthenticationCodeFlow.accessToken = "YOUR_ACCESS_TOKEN";
-
-let apiInstance = new fattureInCloudSdk.ClientsApi();
-//set your company id
-let companyId = 12345;
-
-let entity = new fattureInCloudSdk.Client();
-entity.type = new fattureInCloudSdk.ClientType().company;
-entity.name = "Mario Rossi";
-entity.vat_number = "47803200154";
-entity.tax_code = "RSSMRA91M20B967Q";
-entity.address_street = "Via Italia, 66";
-entity.address_postal_code = "20900";
-entity.address_city = "Milano";
-entity.address_province = "MI";
-
-// Here we put our entity in the request object
-let createClientRequest = new fattureInCloudSdk.CreateClientRequest();
-createClientRequest.data = entity;
-
-let opts = {
-  createClientRequest: createClientRequest,
-};
-
-// Now we are all set for the final call
-// Create the client: https://github.com/fattureincloud/fattureincloud-js-sdk/blob/master/docs/ClientsApi.md#createClient
-apiInstance.createClient(companyId, opts).then(
-  (result) =&gt; {
-    console.log(
-      "API called successfully. Returned result: " + JSON.stringify(result)
-    );
-  },
-  (error) =&gt; {
-    console.error(error);
-  }
-);
-</code></pre>
-<pre><code class="language-py">import datetime
-import fattureincloud_python_sdk
-from fattureincloud_python_sdk.api import clients_api
-from fattureincloud_python_sdk.models.client import Client
-from fattureincloud_python_sdk.models.client_type import ClientType
-from fattureincloud_python_sdk.models.create_client_request import CreateClientRequest
-from fattureincloud_python_sdk.models.create_client_response import CreateClientResponse
-
-from pprint import pprint
-
-# set your access token
-configuration = fattureincloud_python_sdk.Configuration()
-configuration.access_token = "YOUR_ACCESS_TOKEN"
-
-# set your company id
-company_id = 12345
-
-# NOTE: this is a complete request, but please customize it!!!
-# In the next step we'll explain how to perform the request to the API.
-
-# in this example we are using our Python SDK
-# https://pypi.org/project/fattureincloud-python-sdk/
-
-entity = Client(
-    type = ClientType("company"),
-    name="Mario Rossi",
-    vat_number="47803200154",
-    tax_code="RSSMRA91M20B967Q",
-    address_street="Via Italia, 66",
-    address_postal_code="20900",
-    address_city="Milano",
-    address_province="MI"
-)
-
-# Here we put our entity in the request object
-create_client_request = CreateClientRequest(
-    data = entity
-)
-
-# Now we are all set for the final call
-# Create the client: https://github.com/fattureincloud/fattureincloud-python-sdk/blob/master/docs/ClientsApi.md#create_client
-
-with fattureincloud_python_sdk.ApiClient(configuration) as api_client:
-
-    api_instance = clients_api.ClientsApi(api_client)
-    try:
-        api_response = api_instance.create_client(company_id, create_client_request=create_client_request)
-        pprint(api_response)
-    except fattureincloud_python_sdk.ApiException as e:
-        print("Exception when calling ClientsApi-&gt;create_client: %s\n" % e)
-</code></pre>
-<pre><code class="language-rb">require 'time'
-require 'fattureincloud_ruby_sdk'
-
-FattureInCloud_Ruby_Sdk.configure do |config|
-  # set your access token
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = FattureInCloud_Ruby_Sdk::ClientsApi.new
-# set your company id
-company_id = 12345
-
-# NOTE: this is a complete request, but please customize it!!!
-# In the next step we'll explain how to perform the request to the API.
-
-# in this example we are using our Ruby SDK
-# https://rubygems.org/gems/fattureincloud_ruby_sdk
-
-entity = FattureInCloud_Ruby_Sdk::Client.new(
-  type: FattureInCloud_Ruby_Sdk::ClientType::COMPANY,
-  name: "Mario Rossi",
-  vat_number: "47803200154",
-  tax_code: "RSSMRA91M20B967Q",
-  address_street: "Via Italia, 66",
-  address_postal_code: "20900",
-  address_city: "Milano",
-  address_province: "MI"
-)
-
-# Here we put our entity in the request object
-opts = {
-  create_client_request: FattureInCloud_Ruby_Sdk::CreateClientRequest.new(data: entity)
-}
-# Now we are all set for the final call
-# Create the client: https://github.com/fattureincloud/fattureincloud-ruby-sdk/blob/master/docs/ClientsApi.md#create_client
-begin
-  result = api_instance.create_client(company_id, opts)
-  p result
-rescue FattureInCloud_Ruby_Sdk::ApiError =&gt; e
-  puts "Error when calling ClientsApi-&gt;create_client: #{e}"
-end
-</code></pre>
-<pre><code class="language-ts">// NOTE: this is a complete request, but please customize it before trying to send it!
-
-// in this example we are using our TS SDK
-// https://www.npmjs.com/package/@fattureincloud/fattureincloud-ts-sdk
-
-import {
-  Configuration,
-  ClientsApi,
-  Client,
-  ClientType,
-  CreateClientRequest,
-} from "@fattureincloud/fattureincloud-ts-sdk";
-
-//set your access token
-const apiConfig = new Configuration({
-  accessToken: "YOUR ACCESS TOKEN",
-});
-
-let apiInstance = new ClientsApi(apiConfig);
-
-//set your company id
-let companyId = 12345;
-
-let entity: Client = {};
-entity.type = ClientType.Company;
-entity.name = "Mario Rossi";
-entity.vat_number = "47803200154";
-entity.tax_code = "RSSMRA91M20B967Q";
-entity.address_street = "Via Italia, 66";
-entity.address_postal_code = "20900";
-entity.address_city = "Milano";
-entity.address_province = "MI";
-
-// Here we put our entity in the request object
-let createClientRequest: CreateClientRequest = {
-  data: entity,
-};
-
-// Now we are all set for the final call
-// Create the client: https://github.com/fattureincloud/fattureincloud-ts-sdk/blob/master/docs/ClientsApi.md#createClient
-apiInstance.apiInstance.createClient(companyId, createClientRequest).then(
-  (data) =&gt; {
-    console.log(data);
-  },
-  (error) =&gt; {
-    console.error(error);
-  }
-);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Api</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Client</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Model</span><span class="p">;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">test</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Configuration</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Configuration</span><span class="p">();</span>
+
+<span class="w">            </span><span class="c1">//set your access token</span>
+<span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">AccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
+
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ClientsApi</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">//set your company id</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12345</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// NOTE: this is a complete request, but please customize it!!!</span>
+<span class="w">            </span><span class="c1">// In the next step we'll explain how to perform the request to the API.</span>
+
+<span class="w">            </span><span class="c1">// in this example we are using our C# SDK</span>
+<span class="w">            </span><span class="c1">// https://www.nuget.org/packages/It.FattureInCloud.Sdk/</span>
+
+<span class="w">            </span><span class="n">ModelClient</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ModelClient</span><span class="p">(</span>
+<span class="w">                </span><span class="n">type</span><span class="p">:</span><span class="w"> </span><span class="n">ClientType</span><span class="p">.</span><span class="n">Company</span><span class="p">,</span>
+<span class="w">                </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Mario Rossi"</span><span class="p">,</span>
+<span class="w">                </span><span class="n">vatNumber</span><span class="p">:</span><span class="w"> </span><span class="s">"47803200154"</span><span class="p">,</span>
+<span class="w">                </span><span class="n">taxCode</span><span class="p">:</span><span class="w"> </span><span class="s">"RSSMRA91M20B967Q"</span><span class="p">,</span>
+<span class="w">                </span><span class="n">addressStreet</span><span class="p">:</span><span class="w"> </span><span class="s">"Via Italia, 66"</span><span class="p">,</span>
+<span class="w">                </span><span class="n">addressPostalCode</span><span class="p">:</span><span class="w"> </span><span class="s">"20900"</span><span class="p">,</span>
+<span class="w">                </span><span class="n">addressCity</span><span class="p">:</span><span class="w"> </span><span class="s">"Milano"</span><span class="p">,</span>
+<span class="w">                </span><span class="n">addressProvince</span><span class="p">:</span><span class="w"> </span><span class="s">"MI"</span>
+<span class="w">            </span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// Here we put our entity in the request object</span>
+<span class="w">            </span><span class="n">CreateClientRequest</span><span class="w"> </span><span class="n">createClientRequest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CreateClientRequest</span><span class="p">(</span>
+<span class="w">                </span><span class="n">data</span><span class="p">:</span><span class="w"> </span><span class="n">entity</span>
+<span class="w">            </span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// Now we are all set for the final call</span>
+<span class="w">            </span><span class="c1">// Create the client: https://github.com/fattureincloud/fattureincloud-csharp-sdk/blob/master/docs/ClientsApi.md#createclient</span>
+<span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">CreateClientResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="n">CreateClient</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="n">createClientRequest</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ApiException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Exception when calling ClientsApi.CreateClient: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Status Code: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">ErrorCode</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">StackTrace</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it!!!</span>
+<span class="c1">// In the next step we'll explain how to perform the request to the API.</span>
+
+<span class="c1">// in this example we are using our Go SDK</span>
+<span class="c1">// https://github.com/fattureincloud/fattureincloud-go-sdk</span>
+<span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">"context"</span>
+<span class="w">    </span><span class="s">"encoding/json"</span>
+<span class="w">    </span><span class="s">"fmt"</span>
+<span class="w">    </span><span class="s">"os"</span>
+
+<span class="w">    </span><span class="nx">fattureincloudapi</span><span class="w"> </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/api"</span>
+<span class="w">    </span><span class="nx">fattureincloud</span><span class="w"> </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/model"</span>
+<span class="p">)</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//set your access token</span>
+<span class="w">    </span><span class="nx">auth</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">WithValue</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">Background</span><span class="p">(),</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">ContextAccessToken</span><span class="p">,</span><span class="w"> </span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">configuration</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewConfiguration</span><span class="p">()</span>
+<span class="w">    </span><span class="nx">apiClient</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewAPIClient</span><span class="p">(</span><span class="nx">configuration</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c1">//set your company id</span>
+<span class="w">    </span><span class="nx">companyId</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">int32</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nx">entity</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">*</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">NewClient</span><span class="p">().</span>
+<span class="w">        </span><span class="nx">SetType</span><span class="p">(</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">ClientTypes</span><span class="p">.</span><span class="nx">COMPANY</span><span class="p">).</span>
+<span class="w">        </span><span class="nx">SetName</span><span class="p">(</span><span class="s">"Mario Rossi"</span><span class="p">).</span>
+<span class="w">        </span><span class="nx">SetVatNumber</span><span class="p">(</span><span class="s">"47803200154"</span><span class="p">).</span>
+<span class="w">        </span><span class="nx">SetTaxCode</span><span class="p">(</span><span class="s">"RSSMRA91M20B967Q"</span><span class="p">).</span>
+<span class="w">        </span><span class="nx">SetAddressStreet</span><span class="p">(</span><span class="s">"Via Italia, 66"</span><span class="p">).</span>
+<span class="w">        </span><span class="nx">SetAddressPostalCode</span><span class="p">(</span><span class="s">"20900"</span><span class="p">).</span>
+<span class="w">        </span><span class="nx">SetAddressCity</span><span class="p">(</span><span class="s">"Milano"</span><span class="p">).</span>
+<span class="w">        </span><span class="nx">SetAddressProvince</span><span class="p">(</span><span class="s">"MI"</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c1">// Here we put our entity in the request object</span>
+<span class="w">    </span><span class="nx">createClientRequest</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">*</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">NewCreateClientRequest</span><span class="p">().</span><span class="nx">SetData</span><span class="p">(</span><span class="nx">entity</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c1">// Now we are all set for the final call</span>
+<span class="w">    </span><span class="c1">// Create the client: https://github.com/fattureincloud/fattureincloud-go-sdk/blob/master/docs/ClientsAPI.md#createclient</span>
+<span class="w">    </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">apiClient</span><span class="p">.</span><span class="nx">ClientsAPI</span><span class="p">.</span><span class="nx">CreateClient</span><span class="p">(</span><span class="nx">auth</span><span class="p">,</span><span class="w"> </span><span class="nx">companyId</span><span class="p">).</span><span class="nx">CreateClientRequest</span><span class="p">(</span><span class="nx">createClientRequest</span><span class="p">).</span><span class="nx">Execute</span><span class="p">()</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Error when calling `ClientsAPI.CreateClient``: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Full HTTP response: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">json</span><span class="p">.</span><span class="nx">NewEncoder</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">).</span><span class="nx">Encode</span><span class="p">(</span><span class="nx">resp</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiClient</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.Configuration</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.auth.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.model.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.api.ClientsApi</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.math.BigDecimal</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.time.LocalDate</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Example</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ApiClient</span><span class="w"> </span><span class="n">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Configuration</span><span class="p">.</span><span class="na">getDefaultApiClient</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">//set your access token</span>
+<span class="w">        </span><span class="c1">// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow</span>
+<span class="w">        </span><span class="n">OAuth</span><span class="w"> </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">OAuth</span><span class="p">)</span><span class="w"> </span><span class="n">defaultClient</span><span class="p">.</span><span class="na">getAuthentication</span><span class="p">(</span><span class="s">"OAuth2AuthenticationCodeFlow"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="na">setAccessToken</span><span class="p">(</span><span class="s">"YOUR ACCESS TOKEN"</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">ClientsApi</span><span class="w"> </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ClientsApi</span><span class="p">(</span><span class="n">defaultClient</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//set your company id</span>
+<span class="w">        </span><span class="n">Integer</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// NOTE: this is a complete request, but please customize it!!!</span>
+<span class="w">        </span><span class="c1">// In the next step we'll explain how to perform the request to the API.</span>
+
+<span class="w">        </span><span class="c1">// in this example we are using our Java SDK</span>
+<span class="w">        </span><span class="c1">// https://search.maven.org/artifact/it.fattureincloud/fattureincloud-java-sdk</span>
+
+<span class="w">        </span><span class="n">Client</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Client</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">type</span><span class="p">(</span><span class="n">ClientType</span><span class="p">.</span><span class="na">COMPANY</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">name</span><span class="p">(</span><span class="s">"Mario Rossi"</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">vatNumber</span><span class="p">(</span><span class="s">"47803200154"</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">taxCode</span><span class="p">(</span><span class="s">"RSSMRA91M20B967Q"</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">addressStreet</span><span class="p">(</span><span class="s">"Via Italia, 66"</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">addressPostalCode</span><span class="p">(</span><span class="s">"20900"</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">addressCity</span><span class="p">(</span><span class="s">"Milano"</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">addressProvince</span><span class="p">(</span><span class="s">"MI"</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Here we put our entity in the request object</span>
+<span class="w">        </span><span class="n">CreateClientRequest</span><span class="w"> </span><span class="n">createClientRequest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CreateClientRequest</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">data</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Now we are all set for the final call</span>
+<span class="w">        </span><span class="c1">// Create the client: https://github.com/fattureincloud/fattureincloud-java-sdk/blob/master/docs/ClientsApi.md#createclient</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">CreateClientResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="na">createClient</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="n">createClientRequest</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ApiException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Exception when calling ClientsApi#createClient"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Status code: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getCode</span><span class="p">());</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Reason: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getResponseBody</span><span class="p">());</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Response headers: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getResponseHeaders</span><span class="p">());</span>
+<span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">// NOTE: this is a complete request, but please customize it before trying to send it!</span>
+
+<span class="x">// In this example we are using our PHP SDK</span>
+<span class="x">// https://packagist.org/packages/fattureincloud/fattureincloud-php-sdk</span>
+
+<span class="cp">&lt;?php</span>
+
+<span class="k">require_once</span><span class="p">(</span><span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">);</span>
+
+<span class="c1">//set your access token</span>
+<span class="nv">$config</span> <span class="o">=</span> <span class="nx">FattureInCloud\Configuration</span><span class="o">::</span><span class="na">getDefaultConfiguration</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">setAccessToken</span><span class="p">(</span><span class="s1">'YOUR_ACCESS_TOKEN'</span><span class="p">);</span>
+
+<span class="nv">$apiInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FattureInCloud\Api\ClientsApi</span><span class="p">(</span>
+    <span class="k">new</span> <span class="nx">GuzzleHttp\Client</span><span class="p">(),</span>
+    <span class="nv">$config</span>
+<span class="p">);</span>
+
+<span class="c1">//set your company id</span>
+<span class="nv">$company_id</span> <span class="o">=</span> <span class="mi">12345</span><span class="p">;</span>
+
+<span class="nv">$entity</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FattureInCloud\Model\Client</span><span class="p">;</span>
+<span class="nv">$entity</span>
+    <span class="o">-&gt;</span><span class="na">setType</span><span class="p">(</span><span class="nx">FattureInCloud\Model\Client</span><span class="o">::</span><span class="na">COMPANY</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s2">"Mario Rossi"</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">setVatNumber</span><span class="p">(</span><span class="s2">"47803200154"</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">setTaxCode</span><span class="p">(</span><span class="s2">"RSSMRA91M20B967Q"</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">setAddressStreet</span><span class="p">(</span><span class="s2">"Via Italia, 66"</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">setAddressPostalCode</span><span class="p">(</span><span class="s2">"20900"</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">setAddressCity</span><span class="p">(</span><span class="s2">"Milano"</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">setAddressProvince</span><span class="p">(</span><span class="s2">"MI"</span><span class="p">);</span>
+
+<span class="c1">// Here we put our entity in the request object</span>
+<span class="nv">$create_client_request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FattureInCloud\Model\CreateClientRequest</span><span class="p">;</span>
+<span class="nv">$create_client_request</span><span class="o">-&gt;</span><span class="na">setData</span><span class="p">(</span><span class="nv">$entity</span><span class="p">);</span>
+
+<span class="c1">// Now we are all set for the final call</span>
+<span class="c1">// Create the client: https://github.com/fattureincloud/fattureincloud-php-sdk/blob/master/docs/Api/ClientsApi.md#createclient</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$apiInstance</span><span class="o">-&gt;</span><span class="na">createClient</span><span class="p">(</span><span class="nv">$company_id</span><span class="p">,</span> <span class="nv">$create_client_request</span><span class="p">);</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">'Exception when calling ClientsApi-&gt;createClient: '</span><span class="p">,</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it before trying to send it!</span>
+
+<span class="c1">// in this example we are using our JS SDK</span>
+<span class="c1">// https://www.npmjs.com/package/@fattureincloud/fattureincloud-js-sdk</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"@fattureincloud/fattureincloud-js-sdk"</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ApiClient</span><span class="p">.</span><span class="nx">instance</span><span class="p">;</span>
+
+<span class="c1">//set your access token</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="nx">defaultClient</span><span class="p">.</span><span class="nx">authentications</span><span class="p">[</span><span class="s2">"OAuth2AuthenticationCodeFlow"</span><span class="p">];</span>
+<span class="nx">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ClientsApi</span><span class="p">();</span>
+<span class="c1">//set your company id</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12345</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">Client</span><span class="p">();</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ClientType</span><span class="p">().</span><span class="nx">company</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Mario Rossi"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">vat_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"47803200154"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">tax_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"RSSMRA91M20B967Q"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_street</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Via Italia, 66"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_postal_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"20900"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Milano"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_province</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"MI"</span><span class="p">;</span>
+
+<span class="c1">// Here we put our entity in the request object</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">createClientRequest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">CreateClientRequest</span><span class="p">();</span>
+<span class="nx">createClientRequest</span><span class="p">.</span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">entity</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">createClientRequest</span><span class="o">:</span><span class="w"> </span><span class="nx">createClientRequest</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="c1">// Now we are all set for the final call</span>
+<span class="c1">// Create the client: https://github.com/fattureincloud/fattureincloud-js-sdk/blob/master/docs/ClientsApi.md#createClient</span>
+<span class="nx">apiInstance</span><span class="p">.</span><span class="nx">createClient</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+<span class="w">      </span><span class="s2">"API called successfully. Returned result: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">fattureincloud_python_sdk</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.api</span> <span class="kn">import</span> <span class="n">clients_api</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.models.client</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.models.client_type</span> <span class="kn">import</span> <span class="n">ClientType</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.models.create_client_request</span> <span class="kn">import</span> <span class="n">CreateClientRequest</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.models.create_client_response</span> <span class="kn">import</span> <span class="n">CreateClientResponse</span>
+
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+
+<span class="c1"># set your access token</span>
+<span class="n">configuration</span> <span class="o">=</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">Configuration</span><span class="p">()</span>
+<span class="n">configuration</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="s2">"YOUR_ACCESS_TOKEN"</span>
+
+<span class="c1"># set your company id</span>
+<span class="n">company_id</span> <span class="o">=</span> <span class="mi">12345</span>
+
+<span class="c1"># NOTE: this is a complete request, but please customize it!!!</span>
+<span class="c1"># In the next step we'll explain how to perform the request to the API.</span>
+
+<span class="c1"># in this example we are using our Python SDK</span>
+<span class="c1"># https://pypi.org/project/fattureincloud-python-sdk/</span>
+
+<span class="n">entity</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="n">ClientType</span><span class="p">(</span><span class="s2">"company"</span><span class="p">),</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">"Mario Rossi"</span><span class="p">,</span>
+    <span class="n">vat_number</span><span class="o">=</span><span class="s2">"47803200154"</span><span class="p">,</span>
+    <span class="n">tax_code</span><span class="o">=</span><span class="s2">"RSSMRA91M20B967Q"</span><span class="p">,</span>
+    <span class="n">address_street</span><span class="o">=</span><span class="s2">"Via Italia, 66"</span><span class="p">,</span>
+    <span class="n">address_postal_code</span><span class="o">=</span><span class="s2">"20900"</span><span class="p">,</span>
+    <span class="n">address_city</span><span class="o">=</span><span class="s2">"Milano"</span><span class="p">,</span>
+    <span class="n">address_province</span><span class="o">=</span><span class="s2">"MI"</span>
+<span class="p">)</span>
+
+<span class="c1"># Here we put our entity in the request object</span>
+<span class="n">create_client_request</span> <span class="o">=</span> <span class="n">CreateClientRequest</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">entity</span>
+<span class="p">)</span>
+
+<span class="c1"># Now we are all set for the final call</span>
+<span class="c1"># Create the client: https://github.com/fattureincloud/fattureincloud-python-sdk/blob/master/docs/ClientsApi.md#create_client</span>
+
+<span class="k">with</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">ApiClient</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span> <span class="k">as</span> <span class="n">api_client</span><span class="p">:</span>
+
+    <span class="n">api_instance</span> <span class="o">=</span> <span class="n">clients_api</span><span class="o">.</span><span class="n">ClientsApi</span><span class="p">(</span><span class="n">api_client</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">api_response</span> <span class="o">=</span> <span class="n">api_instance</span><span class="o">.</span><span class="n">create_client</span><span class="p">(</span><span class="n">company_id</span><span class="p">,</span> <span class="n">create_client_request</span><span class="o">=</span><span class="n">create_client_request</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="p">(</span><span class="n">api_response</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">ApiException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Exception when calling ClientsApi-&gt;create_client: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">require</span><span class="w"> </span><span class="s1">'time'</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">'fattureincloud_ruby_sdk'</span>
+
+<span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">.</span><span class="n">configure</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">config</span><span class="o">|</span>
+<span class="w">  </span><span class="c1"># set your access token</span>
+<span class="w">  </span><span class="n">config</span><span class="o">.</span><span class="n">access_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'YOUR ACCESS TOKEN'</span>
+<span class="k">end</span>
+
+<span class="n">api_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">ClientsApi</span><span class="o">.</span><span class="n">new</span>
+<span class="c1"># set your company id</span>
+<span class="n">company_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span>
+
+<span class="c1"># NOTE: this is a complete request, but please customize it!!!</span>
+<span class="c1"># In the next step we'll explain how to perform the request to the API.</span>
+
+<span class="c1"># in this example we are using our Ruby SDK</span>
+<span class="c1"># https://rubygems.org/gems/fattureincloud_ruby_sdk</span>
+
+<span class="n">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="w">  </span><span class="ss">type</span><span class="p">:</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">ClientType</span><span class="o">::</span><span class="no">COMPANY</span><span class="p">,</span>
+<span class="w">  </span><span class="nb">name</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mario Rossi"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">vat_number</span><span class="p">:</span><span class="w"> </span><span class="s2">"47803200154"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">tax_code</span><span class="p">:</span><span class="w"> </span><span class="s2">"RSSMRA91M20B967Q"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">address_street</span><span class="p">:</span><span class="w"> </span><span class="s2">"Via Italia, 66"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">address_postal_code</span><span class="p">:</span><span class="w"> </span><span class="s2">"20900"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">address_city</span><span class="p">:</span><span class="w"> </span><span class="s2">"Milano"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">address_province</span><span class="p">:</span><span class="w"> </span><span class="s2">"MI"</span>
+<span class="p">)</span>
+
+<span class="c1"># Here we put our entity in the request object</span>
+<span class="n">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="ss">create_client_request</span><span class="p">:</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">CreateClientRequest</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">data</span><span class="p">:</span><span class="w"> </span><span class="n">entity</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1"># Now we are all set for the final call</span>
+<span class="c1"># Create the client: https://github.com/fattureincloud/fattureincloud-ruby-sdk/blob/master/docs/ClientsApi.md#create_client</span>
+<span class="k">begin</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">api_instance</span><span class="o">.</span><span class="n">create_client</span><span class="p">(</span><span class="n">company_id</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="p">)</span>
+<span class="w">  </span><span class="nb">p</span><span class="w"> </span><span class="n">result</span>
+<span class="k">rescue</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">ApiError</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">e</span>
+<span class="w">  </span><span class="nb">puts</span><span class="w"> </span><span class="s2">"Error when calling ClientsApi-&gt;create_client: </span><span class="si">#{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it before trying to send it!</span>
+
+<span class="c1">// in this example we are using our TS SDK</span>
+<span class="c1">// https://www.npmjs.com/package/@fattureincloud/fattureincloud-ts-sdk</span>
+
+<span class="k">import</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">Configuration</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">ClientsApi</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">Client</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">ClientType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">CreateClientRequest</span><span class="p">,</span>
+<span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@fattureincloud/fattureincloud-ts-sdk"</span><span class="p">;</span>
+
+<span class="c1">//set your access token</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">apiConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Configuration</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">accessToken</span><span class="o">:</span><span class="w"> </span><span class="s2">"YOUR ACCESS TOKEN"</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ClientsApi</span><span class="p">(</span><span class="nx">apiConfig</span><span class="p">);</span>
+
+<span class="c1">//set your company id</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12345</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">entity</span><span class="o">:</span><span class="w"> </span><span class="kt">Client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
+<span class="nx">entity</span><span class="p">.</span><span class="kr">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ClientType</span><span class="p">.</span><span class="nx">Company</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Mario Rossi"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">vat_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"47803200154"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">tax_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"RSSMRA91M20B967Q"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_street</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Via Italia, 66"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_postal_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"20900"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Milano"</span><span class="p">;</span>
+<span class="nx">entity</span><span class="p">.</span><span class="nx">address_province</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"MI"</span><span class="p">;</span>
+
+<span class="c1">// Here we put our entity in the request object</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">createClientRequest</span><span class="o">:</span><span class="w"> </span><span class="kt">CreateClientRequest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="kt">entity</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="c1">// Now we are all set for the final call</span>
+<span class="c1">// Create the client: https://github.com/fattureincloud/fattureincloud-ts-sdk/blob/master/docs/ClientsApi.md#createClient</span>
+<span class="nx">apiInstance</span><span class="p">.</span><span class="nx">apiInstance</span><span class="p">.</span><span class="nx">createClient</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="nx">createClientRequest</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
 <p>Once you filled all the fields you need, you can click the "Continue" button and follow the wizard to create your Zap!</p>
 <p>You just created your first client. Congratulations!</p>
 </article>

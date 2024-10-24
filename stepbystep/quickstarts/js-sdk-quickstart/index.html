@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#prerequisites">
+<a class="md-skip" href="#zero-prerequisites">
           Skip to content
         </a>
 </div>
@@ -239,30 +239,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites
+      :zero:  Prerequisites
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-install-the-tse-in-cloud-sdk">
+<a class="md-nav__link" href="#one-step-one-install-the-tse-in-cloud-sdk">
 <span class="md-ellipsis">
-        Step One: Install the TSE in Cloud SDK
+      :one:  Step One: Install the TSE in Cloud SDK
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval
+      :two:  Step Two: Set up the OAuth access token retrieval
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#three-step-three-set-up-the-sample">
 <span class="md-ellipsis">
-        What now?
+      :three:  Step Three: Set up the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#five-step-five-run-the-sample">
+<span class="md-ellipsis">
+      :five:  Step Five: Run the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now?
     </span>
 </a>
 </li>
@@ -582,7 +596,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../support/general-knowledge/">
+<a class="md-nav__link" href="../../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -644,30 +658,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites
+      :zero:  Prerequisites
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-install-the-tse-in-cloud-sdk">
+<a class="md-nav__link" href="#one-step-one-install-the-tse-in-cloud-sdk">
 <span class="md-ellipsis">
-        Step One: Install the TSE in Cloud SDK
+      :one:  Step One: Install the TSE in Cloud SDK
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval
+      :two:  Step Two: Set up the OAuth access token retrieval
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#three-step-three-set-up-the-sample">
 <span class="md-ellipsis">
-        What now?
+      :three:  Step Three: Set up the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#five-step-five-run-the-sample">
+<span class="md-ellipsis">
+      :five:  Step Five: Run the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now?
     </span>
 </a>
 </li>
@@ -683,169 +711,155 @@
 import TabItem from "@theme/TabItem";</p>
 <p>Following the steps described on this page, you'll create a simple Node Js application that interacts with the TSE in Cloud API.</p>
 <p>If you want to download the complete working example you can find it <a href="https://github.com/fattureincloud/fattureincloud-quickstarts/tree/master/sdk/js">here</a>.</p>
-<h2 id="prerequisites"><img alt="0️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0030-20e3.png" title=":zero:"/>  Prerequisites</h2>
+<h2 id="zero-prerequisites">:zero:  Prerequisites</h2>
 <p>In this guide, we assume that these prerequisites are met:</p>
 <ul>
 <li>Node.js installed</li>
 <li>A <a href="/basics/create-an-app.mdx">private app</a> using the <a href="/authentication/code-flow/index.mdx">OAuth 2.0 Authorization Code Flow</a></li>
 <li>A TSE in Cloud account.</li>
 </ul>
-<h2 id="step-one-install-the-tse-in-cloud-sdk"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Step One: Install the TSE in Cloud SDK</h2>
+<h2 id="one-step-one-install-the-tse-in-cloud-sdk">:one:  Step One: Install the TSE in Cloud SDK</h2>
 <p>In this quickstart, we'll use the <a href="https://github.com/fattureincloud/fattureincloud-js-sdk">TSE in Cloud SDK</a>, published to <a href="https://www.npmjs.com/package/@fattureincloud/fattureincloud-js-sdk">NPM</a>.</p>
 <p>To install it using Npm:</p>
-<pre><code class="language-console">npm install @fattureincloud/fattureincloud-js-sdk
-</code></pre>
-<h2 id="step-two-set-up-the-oauth-access-token-retrieval"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Step Two: Set up the OAuth access token retrieval</h2>
+<div class="highlight"><pre><span></span><code><span class="go">npm install @fattureincloud/fattureincloud-js-sdk</span>
+</code></pre></div>
+<h2 id="two-step-two-set-up-the-oauth-access-token-retrieval">:two:  Step Two: Set up the OAuth access token retrieval</h2>
 <p>Create the file <strong>oauth.js</strong> copy in the following code:</p>
-<p>```js title="oauth.js"
-const fs = require("fs");
-const fattureInCloudSdk = require("@fattureincloud/fattureincloud-js-sdk");
-const oauth = new fattureInCloudSdk.OAuth2AuthorizationCodeManager(
-  "CLIENT_ID",
-  "CLIENT_SECRET",
-  "http://localhost:8000/oauth"
-);</p>
-<p>async function saveAccessToken(req, res) {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");</p>
-<p>let query = req.url.split("?")[1];
-  let params = new URLSearchParams(query);</p>
-<p>if (params.get("code") == null) {
-    res.writeHead(302, {
-      Location: oauth.getAuthorizationUrl(
-        [fattureInCloudSdk.Scope.ENTITY_SUPPLIERS_READ],
-        "EXAMPLE_STATE"
-      ),
-    });
-    res.end();
-  } else {
-    try {
-      let token = await oauth.fetchToken(params.get("code"));</p>
-<pre><code>  fs.writeFileSync(
-    "./token.json",
-    JSON.stringify(token, null, 4),
-    (err) =&gt; {
-      if (err) {
-        console.error(err);
-        return;
-      }
-    }
-  );
-  res.write("Token succesfully retrived and stored in token.json");
-} catch (e) {
-  console.log(e);
-}
-res.end();
-</code></pre>
-<p>}
-}</p>
-<p>module.exports = {
-  saveAccessToken,
-};</p>
-<pre><code>
-To make this code work properly the only thing you need to set your client id, client secret and eventually the redirect uri at line 3.
+<div class="highlight"><span class="filename">oauth.js</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"fs"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"@fattureincloud/fattureincloud-js-sdk"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">oauth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">OAuth2AuthorizationCodeManager</span><span class="p">(</span>
+<span class="w">  </span><span class="s2">"CLIENT_ID"</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">"CLIENT_SECRET"</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">"http://localhost:8000/oauth"</span>
+<span class="p">);</span>
 
-:::danger Store the Token safely!
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">saveAccessToken</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">statusCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">200</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s2">"Content-Type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"text/plain"</span><span class="p">);</span>
 
-In this QuickStart the access token and refresh token are stored in a file. This is only for educational purposes, the OAuth access token and refresh token are sensitive data and should be saved securely on your database.
-Also, never share your Client Secret with third-party actors, or publish it to your frontend!
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">url</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">"?"</span><span class="p">)[</span><span class="mf">1</span><span class="p">];</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">URLSearchParams</span><span class="p">(</span><span class="nx">query</span><span class="p">);</span>
 
-:::
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"code"</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mf">302</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">Location</span><span class="o">:</span><span class="w"> </span><span class="nx">oauth</span><span class="p">.</span><span class="nx">getAuthorizationUrl</span><span class="p">(</span>
+<span class="w">        </span><span class="p">[</span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">Scope</span><span class="p">.</span><span class="nx">ENTITY_SUPPLIERS_READ</span><span class="p">],</span>
+<span class="w">        </span><span class="s2">"EXAMPLE_STATE"</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">oauth</span><span class="p">.</span><span class="nx">fetchToken</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"code"</span><span class="p">));</span>
 
-## :three:&amp;nbsp; Step Three: Set up the sample
+<span class="w">      </span><span class="nx">fs</span><span class="p">.</span><span class="nx">writeFileSync</span><span class="p">(</span>
+<span class="w">        </span><span class="s2">"./token.json"</span><span class="p">,</span>
+<span class="w">        </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">token</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">),</span>
+<span class="w">        </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">);</span>
+<span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"Token succesfully retrived and stored in token.json"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 
-:::tip Retrieve your Company ID!
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">saveAccessToken</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>To make this code work properly the only thing you need to set your client id, client secret and eventually the redirect uri at line 3.</p>
+<p>:::danger Store the Token safely!</p>
+<p>In this QuickStart the access token and refresh token are stored in a file. This is only for educational purposes, the OAuth access token and refresh token are sensitive data and should be saved securely on your database.
+Also, never share your Client Secret with third-party actors, or publish it to your frontend!</p>
+<p>:::</p>
+<h2 id="three-step-three-set-up-the-sample">:three:  Step Three: Set up the sample</h2>
+<p>:::tip Retrieve your Company ID!</p>
+<p>In this example, we'll show how to retrieve your Company ID using the JavaScript SDK. If you plan to manage only one company, you can insert it directly into your code as a variable.
+Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
+<p>:::</p>
+<p>Create the files <strong>index.js</strong> and <strong>quickstart.js</strong> in your working directory and copy in the following code:</p>
+<div class="highlight"><span class="filename">index.js</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"http"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"url"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">oauthPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"./oauth.js"</span><span class="p">);</span><span class="w"> </span><span class="c1">//import the oauth methods</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">quickstart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"./quickstart.js"</span><span class="p">);</span><span class="w"> </span><span class="c1">//import the quickstart</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">hostname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"127.0.0.1"</span><span class="p">;</span><span class="w"> </span><span class="c1">//set your hostname</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8000</span><span class="p">;</span><span class="w"> </span><span class="c1">//set your port</span>
 
-In this example, we'll show how to retrieve your Company ID using the JavaScript SDK. If you plan to manage only one company, you can insert it directly into your code as a variable.
-Check the [Company-scoped Methods](/basics/company-scoped-methods.mdx) page for more info.
+<span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">pathname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">url</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">url</span><span class="p">).</span><span class="nx">pathname</span><span class="p">;</span>
 
-:::
+<span class="w">  </span><span class="c1">//url routing</span>
+<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">pathname</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">"/oauth"</span><span class="o">:</span><span class="w"> </span><span class="c1">//oauth endpoint</span>
+<span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="nx">oauthPath</span><span class="p">.</span><span class="nx">getOAuthAccessToken</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">));</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">"/quickstart"</span><span class="o">:</span><span class="w"> </span><span class="c1">//quickstart endpoint</span>
+<span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="nx">quickstart</span><span class="p">.</span><span class="nx">getFirstCompanySuppliers</span><span class="p">());</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="o">:</span>
+<span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+<span class="p">});</span>
 
-Create the files **index.js** and **quickstart.js** in your working directory and copy in the following code:
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">,</span><span class="w"> </span><span class="nx">hostname</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Server running at http://</span><span class="si">${</span><span class="nx">hostname</span><span class="si">}</span><span class="sb">:</span><span class="si">${</span><span class="nx">port</span><span class="si">}</span><span class="sb">/`</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">quickstart.js</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"@fattureincloud/fattureincloud-js-sdk"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"fs"</span><span class="p">);</span>
 
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">getFirstCompanySuppliers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">rawdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">__dirname</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"/token.json"</span><span class="p">);</span>
 
-```js title="index.js"
-const http = require("http");
-const url = require("url");
-const oauthPath = require("./oauth.js"); //import the oauth methods
-const quickstart = require("./quickstart.js"); //import the quickstart
-const hostname = "127.0.0.1"; //set your hostname
-const port = 8000; //set your port
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">rawdata</span><span class="p">);</span>
 
-const server = http.createServer(async (req, res) =&gt; {
-  let pathname = url.parse(req.url).pathname;
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ApiClient</span><span class="p">.</span><span class="nx">instance</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="nx">defaultClient</span><span class="p">.</span><span class="nx">authentications</span><span class="p">[</span><span class="s2">"OAuth2AuthenticationCodeFlow"</span><span class="p">];</span>
+<span class="w">    </span><span class="nx">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">json</span><span class="p">[</span><span class="s2">"access_token"</span><span class="p">];</span>
 
-  //url routing
-  switch (pathname) {
-    case "/oauth": //oauth endpoint
-      res.end(oauthPath.getOAuthAccessToken(req, res));
-      break;
-    case "/quickstart": //quickstart endpoint
-      res.end(quickstart.getFirstCompanySuppliers());
-      break;
-    default:
-      res.end();
-      break;
-  }
-  res.end();
-});
+<span class="w">    </span><span class="c1">// Retrieve the first company id</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">userApiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">UserApi</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">userCompaniesResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">userApiInstance</span><span class="p">.</span><span class="nx">listUserCompanies</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">firstCompanyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">userCompaniesResponse</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">companies</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">id</span><span class="p">;</span>
 
-server.listen(port, hostname, () =&gt; {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
-</code></pre>
-<p>```js title="quickstart.js"
-const fattureInCloudSdk = require("@fattureincloud/fattureincloud-js-sdk");
-const fs = require("fs");</p>
-<p>async function getFirstCompanySuppliers() {
-  try {
-    let rawdata = fs.readFileSync(__dirname + "/token.json");</p>
-<pre><code>let json = JSON.parse(rawdata);
+<span class="w">    </span><span class="c1">// Retrieve the list of the Suppliers</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">suppliersApiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">SuppliersApi</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">companySuppliers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">suppliersApiInstance</span><span class="p">.</span><span class="nx">listSuppliers</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">firstCompanyId</span>
+<span class="w">    </span><span class="p">);</span>
 
-let defaultClient = fattureInCloudSdk.ApiClient.instance;
-let OAuth2AuthenticationCodeFlow =
-  defaultClient.authentications["OAuth2AuthenticationCodeFlow"];
-OAuth2AuthenticationCodeFlow.accessToken = json["access_token"];
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">companySuppliers</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 
-// Retrieve the first company id
-let userApiInstance = new fattureInCloudSdk.UserApi();
-let userCompaniesResponse = await userApiInstance.listUserCompanies();
-let firstCompanyId = userCompaniesResponse.data.companies[0].id;
-
-// Retrieve the list of the Suppliers
-let suppliersApiInstance = new fattureInCloudSdk.SuppliersApi();
-let companySuppliers = await suppliersApiInstance.listSuppliers(
-  firstCompanyId
-);
-
-return JSON.stringify(companySuppliers.data);
-</code></pre>
-<p>} catch (e) {
-    return JSON.stringify(e);
-  }
-}</p>
-<p>module.exports = {
-  getFirstCompanySuppliers,
-};</p>
-<pre><code>
-
-:::warning Check the Redirect URL
-
-Make sure your FattureInCloud app redirect URL points at the just edited file (e.g. http://localhost:5000/Index).
-
-:::
-
-## :five:&amp;nbsp; Step Five: Run the sample
-
-From the command line, run the following command:
-
-```console
-node index.js
-</code></pre>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">getFirstCompanySuppliers</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>:::warning Check the Redirect URL</p>
+<p>Make sure your FattureInCloud app redirect URL points at the just edited file (e.g. http://localhost:5000/Index).</p>
+<p>:::</p>
+<h2 id="five-step-five-run-the-sample">:five:  Step Five: Run the sample</h2>
+<p>From the command line, run the following command:</p>
+<div class="highlight"><pre><span></span><code><span class="go">node index.js</span>
+</code></pre></div>
 <p>Now visit <em>http://localhost:8000/auth</em> (or whatever your URL is), you will be redirected to the TSE in Cloud login page where you will be asked to grant some permissions, according to what scopes you specified previously.
 Finally, you will see the success message and the access token will be stored in the token.json file.</p>
 <p>You can now visit <em>http://localhost:8000/quickstart</em> (or whatever your URL is) to test the application.</p>
-<h2 id="what-now"><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:"/>  What now?</h2>
+<h2 id="question-what-now">:question:  What now?</h2>
 <p>In this example, we used a limited set of the available API methods to show how to use our SDK.</p>
 <p>If you want to access the full documentation of the available methods and models, you can check the following resources:</p>
 <ul>

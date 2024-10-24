@@ -1,0 +1,857 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Excel Power Query Quickstart for the TSE in Cloud APIs" name="description"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>Excel Power Query Quickstart - TeamSystem Enterprise Cloud</title>
+<link href="../../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="/static/css/custom.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#open_book-list-example">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="TeamSystem Enterprise Cloud" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="TeamSystem Enterprise Cloud">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            TeamSystem Enterprise Cloud
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Excel Power Query Quickstart
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="TeamSystem Enterprise Cloud" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="TeamSystem Enterprise Cloud">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    TeamSystem Enterprise Cloud
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../started/getting-started/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../started/authentication/">
+<span class="md-ellipsis">
+    Authentication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../started/howto/">
+<span class="md-ellipsis">
+    How to
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Step by step guide
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Step by step guide
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../common-terms/">
+<span class="md-ellipsis">
+    Common Terms
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../company-scoped-methods/">
+<span class="md-ellipsis">
+    Company methods
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../manual-authentication/">
+<span class="md-ellipsis">
+    Authentication mode
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Quickstarts
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Quickstarts
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../postman-collection/">
+<span class="md-ellipsis">
+    Postaman Collections
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../csharp-sdk-quickstart/">
+<span class="md-ellipsis">
+    C# SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../go-sdk-quickstart/">
+<span class="md-ellipsis">
+    GO SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java-sdk-quickstart/">
+<span class="md-ellipsis">
+    Java SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../js-sdk-quickstart/">
+<span class="md-ellipsis">
+    JavaScript SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../php-sdk-quickstart/">
+<span class="md-ellipsis">
+    PHP SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../python-sdk-quickstart/">
+<span class="md-ellipsis">
+    Python SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ruby-sdk-quickstart/">
+<span class="md-ellipsis">
+    Ruby SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ts-sdk-quickstart/">
+<span class="md-ellipsis">
+    TypeScript SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vanilla-code/">
+<span class="md-ellipsis">
+    Vanilla Code Sample
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows-form-quickstart/">
+<span class="md-ellipsis">
+    Windows Form Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../google-sheets-quickstart/">
+<span class="md-ellipsis">
+    Google Sheets Apps Script Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../zapier-quickstart/">
+<span class="md-ellipsis">
+    Zapier Quickstart
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Supported scenarios
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Supported scenarios
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../scenario/anagrafiche/">
+<span class="md-ellipsis">
+    Anagrafiche
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../scenario/invoice-creation/">
+<span class="md-ellipsis">
+    Invoice creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../scenario/e-invoice-xml-customisation/">
+<span class="md-ellipsis">
+    E-Invoice XML Customisation
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Basics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/scopes/">
+<span class="md-ellipsis">
+    Scopes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/errors/">
+<span class="md-ellipsis">
+    Errors
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/limits-and-quotas/">
+<span class="md-ellipsis">
+    Limits adn Quotas
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Additional capabilities
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_4">
+<span class="md-nav__icon md-icon"></span>
+            Additional capabilities
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/additional-capabilities/sort-results/">
+<span class="md-ellipsis">
+    Sort Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/additional-capabilities/paginate-results/">
+<span class="md-ellipsis">
+    Paginate results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/additional-capabilities/customize-response/">
+<span class="md-ellipsis">
+    Customize response
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/additional-capabilities/filter-results/">
+<span class="md-ellipsis">
+    Filter results
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/debug-your-integration/">
+<span class="md-ellipsis">
+    Debug your integration
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Api Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Api Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/api-reference-co/">
+<span class="md-ellipsis">
+    Common api
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/api-reference-fi/">
+<span class="md-ellipsis">
+    Finance api
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/api-reference-mg/">
+<span class="md-ellipsis">
+    Warehouse api
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/api-reference/">
+<span class="md-ellipsis">
+    Use the API Reference
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    SDKs
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            SDKs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sdks/typescript-sdk/">
+<span class="md-ellipsis">
+    TypeScript SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sdks/java-sdk/">
+<span class="md-ellipsis">
+    Java SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sdks/javascript-sdk/">
+<span class="md-ellipsis">
+    JavaScript SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sdks/net-sdk/">
+<span class="md-ellipsis">
+    .NET SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sdks/python-sdk/">
+<span class="md-ellipsis">
+    Python SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sdks/ruby-sdk/">
+<span class="md-ellipsis">
+    Ruby SDK
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Support &amp; Feature Request
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Support &amp; Feature Request
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../support/faq/">
+<span class="md-ellipsis">
+    FAQs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../support/general-knowledge/oauth2/index.md">
+<span class="md-ellipsis">
+    General Knowledge
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Legal
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Legal
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../legal/terms/">
+<span class="md-ellipsis">
+    Condizioni generali di utilizzo delle API MadBit
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../legal/policy-acceptable-use/">
+<span class="md-ellipsis">
+    Policy di Acceptable Use
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../legal/marketing-resources-and-identity-guidelines/">
+<span class="md-ellipsis">
+    Marketing Resources and Identity Guidelines
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open_book-list-example">
+<span class="md-ellipsis">
+      :open_book:  List Example
+    </span>
+</a>
+<nav aria-label=":open_book:  List Example" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-one-setup-the-data-source">
+<span class="md-ellipsis">
+        Step one: Setup the Data Source
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-two-extract-the-data">
+<span class="md-ellipsis">
+        Step Two: Extract the data
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-three-enable-auto-update">
+<span class="md-ellipsis">
+        Step Three: Enable auto update
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-four-what-about-pagination">
+<span class="md-ellipsis">
+        Step Four: What about pagination?
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Excel Power Query Quickstart</h1>
+<p>In this guide, we'll explain how to use <em>Power Query</em> to load contents from our APIs into <em>Microsoft Excel</em>.</p>
+<h2 id="open_book-list-example">:open_book:  List Example</h2>
+<p>In this example, we will load our invoices list using the <a href="/api-reference#get-/c/-company_id-/issued_documents">List Issued Documents</a> method, but you can adapt this guide to using it with the API method you need.</p>
+<h3 id="step-one-setup-the-data-source"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Step one: Setup the Data Source</h3>
+<p>:::tip Retrieve your Company ID!</p>
+<p>In this example, we'll suppose you have to manage just one Company, so we simply inserted its ID directly in the code. If instead, you need to be able to manage multiple companies, you'll need to retrieve the ID of the current company in some way.
+Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
+<p>:::</p>
+<p>First, we must select the <a href="https://support.microsoft.com/en-us/office/import-data-from-the-web-b13eed81-33fe-410d-9247-1747269c28e4#:~:text=Select%20Data%20%3E%20Get%20%26%20Transform%20%3E,View%20pane%20on%20the%20right.">Import from Web</a> functionality as shown below:</p>
+<p><img alt="Get Data From Web" src="../assets/excel/get_data_from_web.png"/></p>
+<p>Then we need to define the URL that will be contacted by Power Query. The <a href="/api-reference#get-/c/-company_id-/issued_documents">List Issued Documents</a> method is accessible to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://api-v2.fattureincloud.it/c/\{company_id\}/issued_documents
+</code></pre></div>
+<p>additionally, it requires to define some parameters as <em>Query String</em> (e.g. the "?type=invoice" part), but you can substitute it with the endpoint of the method you want. Please, make sure to replace the {company_id} placeholder with your company ID.</p>
+<p>Our APIs require authentication, so we also need to set the <em>Authorization header</em> as shown below. Remember to replace the "YOUR<em>ACCESS_TOKEN" placeholder with your actual _Access Token</em>; you can obtain a valid one following <a href="/authentication/manual-authentication.mdx">this procedure</a>.</p>
+<p><img alt="Set the source" src="../assets/excel/set_source_url.png"/></p>
+<h3 id="step-two-extract-the-data"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Step Two: Extract the data</h3>
+<p>If you inserted the connection parameters correctly, Excel should already have retrieved the method response from our APIs.</p>
+<p>Now, we have to extract the list of invoices from the API response:</p>
+<p><img alt="Extract invoices list" src="../assets/excel/extract_invoices_list.png"/></p>
+<p>and then convert the result into a <em>Table</em> like shown below:</p>
+<p><img alt="Convert results to table" src="../assets/excel/convert_to_table.png"/>
+<img alt="Convert results to table" src="../assets/excel/convert_to_table_step2.png"/></p>
+<p>Once obtained the table, we must extract the records of the invoices using the <em>Record Extractor</em>:</p>
+<p><img alt="Extract the invoices" src="../assets/excel/extract_single_invoices.png"/></p>
+<p>then we must select the fields that we are interested in from the menu:</p>
+<p><img alt="Field selection" src="../assets/excel/select_fields.png"/></p>
+<p>And finally we can export the records to your sheet:</p>
+<p><img alt="Export" src="../assets/excel/export.png"/></p>
+<h3 id="step-three-enable-auto-update"><img alt="3️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0033-20e3.png" title=":three:"/>  Step Three: Enable auto update</h3>
+<p>Using Power Query it is possible to activate periodic updates of the data, selecting the <strong>query -&gt; properties -&gt; check the 'update every x minutes'</strong> functionality as shown below.</p>
+<p><img alt="Auto update" src="../assets/excel/automatic_update.png"/></p>
+<h3 id="step-four-what-about-pagination"><img alt="4️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0034-20e3.png" title=":four:"/>  Step Four: What about pagination?</h3>
+<p>The <a href="/api-reference#get-/c/-company_id-/issued_documents">List Issued Documents</a> response is <a href="/basics/additional-capabilities/paginate-results.mdx">paginated</a>, this means that the results will be split into different sets; each set will contain a certain number of records up to the maximum value as explained on the dedicated page. Until now we just fetched the first page from the API, and this means that to retrieve the whole result we need to <em>manage pagination</em>.</p>
+<p>Unluckily it is not trivial, so you have to open advanced the Power Query editor and paste in the following code</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span>
+<span class="w">    </span><span class="nx">Source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Json</span><span class="p">.</span><span class="nx">Document</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">Web</span><span class="p">.</span><span class="nx">Contents</span><span class="p">(</span>
+<span class="w">            </span><span class="nx">url</span><span class="p">,</span>
+<span class="w">            </span><span class="p">[</span>
+<span class="w">                </span><span class="nx">Timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">#</span><span class="nx">duration</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">),</span>
+<span class="w">                </span><span class="nx">Headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">Authorization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Bearer YOUR_ACCESS_TOKEN"</span><span class="p">]</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">    </span><span class="nx">iterations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Source</span><span class="p">[</span><span class="nx">last_page</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"https://api-v2.fattureincloud.it/c/\{company_id\}/issued_documents"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="s2">"?"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="s2">"type=invoice"</span><span class="p">,</span>
+
+<span class="w">    </span><span class="nx">FnGetOnePage</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">record</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">    </span><span class="kd">let</span>
+<span class="w">        </span><span class="nx">Source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Json</span><span class="p">.</span><span class="nx">Document</span><span class="p">(</span>
+<span class="w">            </span><span class="nx">Web</span><span class="p">.</span><span class="nx">Contents</span><span class="p">(</span>
+<span class="w">                </span><span class="nx">url</span><span class="p">,</span>
+<span class="w">                </span><span class="p">[</span>
+<span class="w">                    </span><span class="nx">Timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">#</span><span class="nx">duration</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">),</span>
+<span class="w">                    </span><span class="nx">Headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">Authorization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Bearer YOUR_ACCESS_TOKEN"</span><span class="p">]</span>
+<span class="w">                </span><span class="p">]</span>
+<span class="w">            </span><span class="p">)</span>
+<span class="w">        </span><span class="p">),</span>
+<span class="w">        </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="nx">Source</span><span class="p">[</span><span class="nx">data</span><span class="p">]</span><span class="w"> </span><span class="nx">otherwise</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="nx">Source</span><span class="p">[</span><span class="nx">next_page_url</span><span class="p">]</span><span class="w"> </span><span class="nx">otherwise</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">Next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">next</span><span class="p">]</span>
+<span class="ow">in</span>
+<span class="nx">res</span><span class="p">,</span>
+<span class="nx">GeneratedList</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="nx">List</span><span class="p">.</span><span class="nx">Generate</span><span class="p">(</span>
+<span class="w">        </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FnGetOnePage</span><span class="p">(</span><span class="nx">url</span><span class="p">)],</span>
+<span class="w">        </span><span class="nx">each</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">iterations</span><span class="w"> </span><span class="nx">and</span><span class="p">[</span><span class="nx">res</span><span class="p">][</span><span class="nx">Data</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">each</span><span class="p">[</span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FnGetOnePage</span><span class="p">([</span><span class="nx">res</span><span class="p">][</span><span class="nx">Next</span><span class="p">])],</span>
+<span class="w">        </span><span class="nx">each</span><span class="p">[</span><span class="nx">res</span><span class="p">][</span><span class="nx">Data</span><span class="p">]),</span>
+<span class="w">    </span><span class="err">#</span><span class="s2">"Table conversion"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Table</span><span class="p">.</span><span class="nx">FromList</span><span class="p">(</span><span class="nx">GeneratedList</span><span class="p">,</span><span class="w"> </span><span class="nx">Splitter</span><span class="p">.</span><span class="nx">SplitByNothing</span><span class="p">(),</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">ExtraValues</span><span class="p">.</span><span class="ne">Error</span><span class="p">),</span>
+<span class="w">    </span><span class="err">#</span><span class="s2">"Expanded list"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Table</span><span class="p">.</span><span class="nx">ExpandListColumn</span><span class="p">(</span><span class="err">#</span><span class="s2">"Table conversion"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Column1"</span><span class="p">),</span>
+<span class="w">    </span><span class="err">#</span><span class="s2">"Expanded Records"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Table</span><span class="p">.</span><span class="nx">ExpandRecordColumn</span><span class="p">(</span><span class="err">#</span><span class="s2">"Expanded list"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Column1"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"id"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"type"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"numeration"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"subject"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"visible_subject"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"amount_net"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"amount_vat"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"amount_gross"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"date"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"number"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"next_due_date"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"url"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"entity"</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"id"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"type"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"numeration"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"subject"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"visible_subject"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"amount_net"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"amount_vat"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"amount_gross"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"date"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"number"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"next_due_date"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"url"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"entity"</span>
+<span class="w">    </span><span class="p">}),</span>
+<span class="w">    </span><span class="err">#</span><span class="s2">"Expanded Entity"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Table</span><span class="p">.</span><span class="nx">ExpandRecordColumn</span><span class="p">(</span><span class="err">#</span><span class="s2">"Expanded Records"</span><span class="p">,</span><span class="w"> </span><span class="s2">"entity"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"name"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"tax_code"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"vat_number"</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"client.name"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"client.tax_code"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"client.vat_number"</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="ow">in</span>
+<span class="err">#</span><span class="s2">"Expanded Entity"</span>
+</code></pre></div>
+<p><img alt="Advanced query" src="../assets/excel/advanced_query.png"/></p>
+<p>The code above loops all the pages of the response and aggregates the results; additionally, it extracts the entity field to show the client name, tax_code and vat_number.
+To use this code you mustreplace the placeholders 'YOUR_ACCESS_TOKEN' and {company_id} as explained previously.</p>
+<p>Please, notice that this will increment the number of API requests executed, so you must be sure to not hit the <a href="/basics/limits-and-quotas.mdx">quota limits</a> to avoid the related errors.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["icons", "navigation.collapsible"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

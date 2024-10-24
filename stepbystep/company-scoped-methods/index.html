@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#where-can-i-find-my-company_id">
+<a class="md-skip" href="#microscope-where-can-i-find-my-company_id">
           Skip to content
         </a>
 </div>
@@ -180,9 +180,9 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#where-can-i-find-my-company_id">
+<a class="md-nav__link" href="#microscope-where-can-i-find-my-company_id">
 <span class="md-ellipsis">
-        Where can I find my company_id?
+      :microscope:  Where can I find my company_id?
     </span>
 </a>
 </li>
@@ -195,23 +195,23 @@
 <nav aria-label=":raising_hand_man:  How can I know if a method is company-scoped?" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#check-on-the-api-reference">
+<a class="md-nav__link" href="#earth_africa-check-on-the-api-reference">
 <span class="md-ellipsis">
-        Check on the API Reference
+      :earth_africa:  Check on the API Reference
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#check-on-your-sdk-documentation">
+<a class="md-nav__link" href="#briefcase-check-on-your-sdk-documentation">
 <span class="md-ellipsis">
-        Check on your SDK documentation
+      :briefcase:  Check on your SDK documentation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#check-our-postman-collection">
+<a class="md-nav__link" href="#mailbox_with_mail-check-our-postman-collection">
 <span class="md-ellipsis">
-        Check our Postman Collection
+      :mailbox_with_mail:  Check our Postman Collection
     </span>
 </a>
 </li>
@@ -600,7 +600,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../support/general-knowledge/">
+<a class="md-nav__link" href="../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -662,9 +662,9 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#where-can-i-find-my-company_id">
+<a class="md-nav__link" href="#microscope-where-can-i-find-my-company_id">
 <span class="md-ellipsis">
-        Where can I find my company_id?
+      :microscope:  Where can I find my company_id?
     </span>
 </a>
 </li>
@@ -677,23 +677,23 @@
 <nav aria-label=":raising_hand_man:  How can I know if a method is company-scoped?" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#check-on-the-api-reference">
+<a class="md-nav__link" href="#earth_africa-check-on-the-api-reference">
 <span class="md-ellipsis">
-        Check on the API Reference
+      :earth_africa:  Check on the API Reference
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#check-on-your-sdk-documentation">
+<a class="md-nav__link" href="#briefcase-check-on-your-sdk-documentation">
 <span class="md-ellipsis">
-        Check on your SDK documentation
+      :briefcase:  Check on your SDK documentation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#check-our-postman-collection">
+<a class="md-nav__link" href="#mailbox_with_mail-check-our-postman-collection">
 <span class="md-ellipsis">
-        Check our Postman Collection
+      :mailbox_with_mail:  Check our Postman Collection
     </span>
 </a>
 </li>
@@ -719,9 +719,9 @@
 import TabItem from "@theme/TabItem";</p>
 <p>Most of our API resources are not owned by the user, but by a company. This makes it possible for all the users who have access to a single company to interact with all the resources it owns (if the user has the related permissions, of course).
 This is why most of our methods are <strong>Company-scoped</strong>: it means that you need to provide an additional <strong>company_id</strong> parameter to use the method correctly.</p>
-<h2 id="where-can-i-find-my-company_id"><img alt="🔬" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f52c.png" title=":microscope:"/>  Where can I find my company_id?</h2>
+<h2 id="microscope-where-can-i-find-my-company_id">:microscope:  Where can I find my company_id?</h2>
 <p>One of the questions that we receive more often is: <em>"How can I find my company_id?"</em></p>
-<p>Don't worry, it is really easy. You can list all the companies accessible by the user using the <a href="/api-reference#get-/user/companies">List User Companies</a> method, which will return you an array of companies. Of course, this method is not company-scoped! <img alt="😁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f601.png" title=":grin:"/>  You just need to select the right company from the returned list and extract its ID, and you're done!</p>
+<p>Don't worry, it is really easy. You can list all the companies accessible by the user using the <a href="/api-reference#get-/user/companies">List User Companies</a> method, which will return you an array of companies. Of course, this method is not company-scoped! :grin:  You just need to select the right company from the returned list and extract its ID, and you're done!</p>
 <p>If you're implementing a simple application for a single company, then you can use our <a href="/api-reference#get-/user/companies">API Reference</a> or our <a href="/quickstarts/postman-collection.md">Postman Collection</a> to retrieve the Company ID, and then insert it as a constant in your code; this way, you'll avoid writing code to retrieve a value that will never change.
 Otherwise, if you need to manage multiple company IDs that are unknown at developing time, then you can check the SDK examples below to retrieve the Company ID from your code.</p>
 <p>Here you can find the steps to use the API Reference to retrieve the Company ID:</p>
@@ -731,201 +731,201 @@ Otherwise, if you need to manage multiple company IDs that are unknown at develo
 <li>Search the <strong>List User Companies</strong> method and click the "Try" button, the Company ID will be included in the obtained response.</li>
 </ul>
 <p>Here you can find a few examples using our SDKs:</p>
-<pre><code class="language-cs">using System.Collections.Generic;
-using System.Diagnostics;
-using It.FattureInCloud.Sdk.Api;
-using It.FattureInCloud.Sdk.Client;
-using It.FattureInCloud.Sdk.Model;
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Diagnostics</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Api</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Client</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Model</span><span class="p">;</span>
 
-Configuration config = new Configuration();
-config.BasePath = "https://api-v2.fattureincloud.it";
-// Check out the Authentication section to retrieve the Access Token
-config.AccessToken = "YOUR_ACCESS_TOKEN";
+<span class="n">Configuration</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Configuration</span><span class="p">();</span>
+<span class="n">config</span><span class="p">.</span><span class="n">BasePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"https://api-v2.fattureincloud.it"</span><span class="p">;</span>
+<span class="c1">// Check out the Authentication section to retrieve the Access Token</span>
+<span class="n">config</span><span class="p">.</span><span class="n">AccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
 
-var apiInstance = new UserApi(config);
+<span class="kt">var</span><span class="w"> </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">UserApi</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
 
-try
-{
-    // List User Companies
-    ListUserCompaniesResponse result = apiInstance.ListUserCompanies();
-    // In the result you'll find a list of companies, you must use the "Id" field of one of those
-    Console.Write(result.Data.Companies[0].Id);
-}
-catch (ApiException  e)
-{
-    Console.Write("Exception when calling UserApi.ListUserCompanies: " + e.Message);
-    Console.Write("Status Code: " + e.ErrorCode);
-    Console.Write(e.StackTrace);
-}
-</code></pre>
-<pre><code class="language-go">package main
+<span class="k">try</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// List User Companies</span>
+<span class="w">    </span><span class="n">ListUserCompaniesResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="n">ListUserCompanies</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">// In the result you'll find a list of companies, you must use the "Id" field of one of those</span>
+<span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Companies</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Id</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ApiException</span><span class="w">  </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">"Exception when calling UserApi.ListUserCompanies: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">"Status Code: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">ErrorCode</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">StackTrace</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-import (
-    "context"
-    "fmt"
-    "os"
-    fattureincloudapi "github.com/fattureincloud/fattureincloud-go-sdk/v2/api"
-    fattureincloud "github.com/fattureincloud/fattureincloud-go-sdk/v2/model"
-)
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">"context"</span>
+<span class="w">    </span><span class="s">"fmt"</span>
+<span class="w">    </span><span class="s">"os"</span>
+<span class="w">    </span><span class="nx">fattureincloudapi</span><span class="w"> </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/api"</span>
+<span class="w">    </span><span class="nx">fattureincloud</span><span class="w"> </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/model"</span>
+<span class="p">)</span>
 
-func main() {
-  // Check out the Authentication section to retrieve the Access Token
-  auth := context.WithValue(context.Background(), fattureincloudapi.ContextAccessToken, "ACCESS_TOKEN")
-  configuration := fattureincloudapi.NewConfiguration()
-  apiClient := fattureincloudapi.NewAPIClient(configuration)
-  resp, r, err := apiClient.UserAPI.ListUserCompanies(auth).Execute()
-  if err != nil {
-      fmt.Fprintf(os.Stderr, "Error when calling `UserAPI.ListUserCompanies``: %v\n", err)
-      fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-  }
-  // response from `ListUserCompanies`: ListUserCompaniesResponse
-  // In the result you'll find a list of companies, you must use the "Id" field of one of those
-  fmt.Printf("%d", resp.GetData().GetCompanies()[0].GetId())
-}
-</code></pre>
-<pre><code class="language-java">import it.fattureincloud.sdk.ApiClient;
-import it.fattureincloud.sdk.ApiException;
-import it.fattureincloud.sdk.Configuration;
-import it.fattureincloud.sdk.auth.*;
-import it.fattureincloud.sdk.models.*;
-import it.fattureincloud.sdk.api.UserApi;
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Check out the Authentication section to retrieve the Access Token</span>
+<span class="w">  </span><span class="nx">auth</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">WithValue</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">Background</span><span class="p">(),</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">ContextAccessToken</span><span class="p">,</span><span class="w"> </span><span class="s">"ACCESS_TOKEN"</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">configuration</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewConfiguration</span><span class="p">()</span>
+<span class="w">  </span><span class="nx">apiClient</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewAPIClient</span><span class="p">(</span><span class="nx">configuration</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">apiClient</span><span class="p">.</span><span class="nx">UserAPI</span><span class="p">.</span><span class="nx">ListUserCompanies</span><span class="p">(</span><span class="nx">auth</span><span class="p">).</span><span class="nx">Execute</span><span class="p">()</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Error when calling `UserAPI.ListUserCompanies``: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">      </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Full HTTP response: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// response from `ListUserCompanies`: ListUserCompaniesResponse</span>
+<span class="w">  </span><span class="c1">// In the result you'll find a list of companies, you must use the "Id" field of one of those</span>
+<span class="w">  </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="w"> </span><span class="nx">resp</span><span class="p">.</span><span class="nx">GetData</span><span class="p">().</span><span class="nx">GetCompanies</span><span class="p">()[</span><span class="mi">0</span><span class="p">].</span><span class="nx">GetId</span><span class="p">())</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiClient</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.Configuration</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.auth.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.models.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.api.UserApi</span><span class="p">;</span>
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-defaultClient.setBasePath("https://api-v2.fattureincloud.it");
+<span class="n">ApiClient</span><span class="w"> </span><span class="n">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Configuration</span><span class="p">.</span><span class="na">getDefaultApiClient</span><span class="p">();</span>
+<span class="n">defaultClient</span><span class="p">.</span><span class="na">setBasePath</span><span class="p">(</span><span class="s">"https://api-v2.fattureincloud.it"</span><span class="p">);</span>
 
-// Check out the Authentication section to retrieve the Access Token
-OAuth OAuth2AuthenticationCodeFlow = (OAuth) defaultClient.getAuthentication("OAuth2AuthenticationCodeFlow");
-OAuth2AuthenticationCodeFlow.setAccessToken("YOUR ACCESS TOKEN");
+<span class="c1">// Check out the Authentication section to retrieve the Access Token</span>
+<span class="n">OAuth</span><span class="w"> </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">OAuth</span><span class="p">)</span><span class="w"> </span><span class="n">defaultClient</span><span class="p">.</span><span class="na">getAuthentication</span><span class="p">(</span><span class="s">"OAuth2AuthenticationCodeFlow"</span><span class="p">);</span>
+<span class="n">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="na">setAccessToken</span><span class="p">(</span><span class="s">"YOUR ACCESS TOKEN"</span><span class="p">);</span>
 
-UserApi apiInstance = new UserApi(defaultClient);
-try {
-  ListUserCompaniesResponse result = apiInstance.listUserCompanies();
-  // In the result you'll find a list of companies, you must use the "id" field of one of those
-  System.out.println(result.getData().getCompanies().get(0).getId());
-} catch (ApiException e) {
-  System.err.println("Exception when calling UserApi#listUserCompanies");
-  System.err.println("Status code: " + e.getCode());
-  System.err.println("Reason: " + e.getResponseBody());
-  System.err.println("Response headers: " + e.getResponseHeaders());
-  e.printStackTrace();
-}
-</code></pre>
-<pre><code class="language-js">import fattureInCloudSdk from "@fattureincloud/fattureincloud-js-sdk";
-let defaultClient = fattureInCloudSdk.ApiClient.instance;
+<span class="n">UserApi</span><span class="w"> </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">UserApi</span><span class="p">(</span><span class="n">defaultClient</span><span class="p">);</span>
+<span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">ListUserCompaniesResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="na">listUserCompanies</span><span class="p">();</span>
+<span class="w">  </span><span class="c1">// In the result you'll find a list of companies, you must use the "id" field of one of those</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">getData</span><span class="p">().</span><span class="na">getCompanies</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="na">getId</span><span class="p">());</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ApiException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Exception when calling UserApi#listUserCompanies"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Status code: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getCode</span><span class="p">());</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Reason: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getResponseBody</span><span class="p">());</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Response headers: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getResponseHeaders</span><span class="p">());</span>
+<span class="w">  </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@fattureincloud/fattureincloud-js-sdk"</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ApiClient</span><span class="p">.</span><span class="nx">instance</span><span class="p">;</span>
 
-// Check out the Authentication section to retrieve the Access Token
-let OAuth2AuthenticationCodeFlow =
-  defaultClient.authentications["OAuth2AuthenticationCodeFlow"];
-OAuth2AuthenticationCodeFlow.accessToken = "YOUR ACCESS TOKEN";
+<span class="c1">// Check out the Authentication section to retrieve the Access Token</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="nx">defaultClient</span><span class="p">.</span><span class="nx">authentications</span><span class="p">[</span><span class="s2">"OAuth2AuthenticationCodeFlow"</span><span class="p">];</span>
+<span class="nx">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"YOUR ACCESS TOKEN"</span><span class="p">;</span>
 
-let apiInstance = new fattureInCloudSdk.UserApi();
-apiInstance.listUserCompanies().then(
-  (result) =&gt; {
-    // In the result you'll find a list of companies, you must use the "id" field of one of those
-    console.log(result.data.companies[0].id);
-  },
-  (error) =&gt; {
-    console.error(error);
-  }
-);
-</code></pre>
-<pre><code class="language-php">&lt;?php
-require_once(__DIR__ . '/vendor/autoload.php');
+<span class="kd">let</span><span class="w"> </span><span class="nx">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">UserApi</span><span class="p">();</span>
+<span class="nx">apiInstance</span><span class="p">.</span><span class="nx">listUserCompanies</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// In the result you'll find a list of companies, you must use the "id" field of one of those</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">companies</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">id</span><span class="p">);</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span><span class="p">(</span><span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">);</span>
 
-// Check out the Authentication section to retrieve the Access Token
-$config = FattureInCloud\Configuration::getDefaultConfiguration()-&gt;setAccessToken('YOUR_ACCESS_TOKEN');
+<span class="c1">// Check out the Authentication section to retrieve the Access Token</span>
+<span class="nv">$config</span> <span class="o">=</span> <span class="nx">FattureInCloud\Configuration</span><span class="o">::</span><span class="na">getDefaultConfiguration</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">setAccessToken</span><span class="p">(</span><span class="s1">'YOUR_ACCESS_TOKEN'</span><span class="p">);</span>
 
 
-$apiInstance = new FattureInCloud\Api\UserApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+<span class="nv">$apiInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FattureInCloud\Api\UserApi</span><span class="p">(</span>
+    <span class="c1">// If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.</span>
+    <span class="c1">// This is optional, `GuzzleHttp\Client` will be used as default.</span>
+    <span class="k">new</span> <span class="nx">GuzzleHttp\Client</span><span class="p">(),</span>
+    <span class="nv">$config</span>
+<span class="p">);</span>
 
-try {
-    $result = $apiInstance-&gt;listUserCompanies();
-    // In the result you'll find a list of companies, you must use the "id" field of one of those
-    print_r($result-&gt;getData()-&gt;getCompanies()[0]-&gt;getId());
-} catch (Exception $e) {
-    echo 'Exception when calling UserApi-&gt;listUserCompanies: ', $e-&gt;getMessage(), PHP_EOL;
-}
-</code></pre>
-<pre><code class="language-py">from __future__ import print_function
-import time
-import os
-import fattureincloud_python_sdk
-from fattureincloud_python_sdk.rest import ApiException
-from pprint import pprint
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$apiInstance</span><span class="o">-&gt;</span><span class="na">listUserCompanies</span><span class="p">();</span>
+    <span class="c1">// In the result you'll find a list of companies, you must use the "id" field of one of those</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$result</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getCompanies</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">getId</span><span class="p">());</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">'Exception when calling UserApi-&gt;listUserCompanies: '</span><span class="p">,</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">fattureincloud_python_sdk</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.rest</span> <span class="kn">import</span> <span class="n">ApiException</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
 
-# Defining the host is optional and defaults to https://api-v2.fattureincloud.it
-# See configuration.py for a list of all supported configuration parameters.
-configuration = fattureincloud_python_sdk.Configuration(
-    host = "https://api-v2.fattureincloud.it"
-)
+<span class="c1"># Defining the host is optional and defaults to https://api-v2.fattureincloud.it</span>
+<span class="c1"># See configuration.py for a list of all supported configuration parameters.</span>
+<span class="n">configuration</span> <span class="o">=</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">Configuration</span><span class="p">(</span>
+    <span class="n">host</span> <span class="o">=</span> <span class="s2">"https://api-v2.fattureincloud.it"</span>
+<span class="p">)</span>
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Check out the Authentication section to retrieve the Access Token
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+<span class="c1"># The client must configure the authentication and authorization parameters</span>
+<span class="c1"># in accordance with the API server security policy.</span>
+<span class="c1"># Check out the Authentication section to retrieve the Access Token</span>
+<span class="n">configuration</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"ACCESS_TOKEN"</span><span class="p">]</span>
 
-# Enter a context with an instance of the API client
-with fattureincloud_python_sdk.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = fattureincloud_python_sdk.UserApi(api_client)
+<span class="c1"># Enter a context with an instance of the API client</span>
+<span class="k">with</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">ApiClient</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span> <span class="k">as</span> <span class="n">api_client</span><span class="p">:</span>
+    <span class="c1"># Create an instance of the API class</span>
+    <span class="n">api_instance</span> <span class="o">=</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">UserApi</span><span class="p">(</span><span class="n">api_client</span><span class="p">)</span>
 
-    try:
-        # List User Companies
-        api_response = api_instance.list_user_companies()
-        # In the result you'll find a list of companies, you must use the "id" field of one of those
-        print(api_response.data.companies[0].id)
-    except Exception as e:
-        print("Exception when calling UserApi-&gt;list_user_companies: %s\n" % e)
-</code></pre>
-<pre><code class="language-rb">require 'time'
-require 'fattureincloud_ruby_sdk'
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># List User Companies</span>
+        <span class="n">api_response</span> <span class="o">=</span> <span class="n">api_instance</span><span class="o">.</span><span class="n">list_user_companies</span><span class="p">()</span>
+        <span class="c1"># In the result you'll find a list of companies, you must use the "id" field of one of those</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">api_response</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">companies</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Exception when calling UserApi-&gt;list_user_companies: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">require</span><span class="w"> </span><span class="s1">'time'</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">'fattureincloud_ruby_sdk'</span>
 
-# setup authorization
-FattureInCloud_Ruby_Sdk.configure do |config|
-  # Check out the Authentication section to retrieve the Access Token
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
+<span class="c1"># setup authorization</span>
+<span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">.</span><span class="n">configure</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">config</span><span class="o">|</span>
+<span class="w">  </span><span class="c1"># Check out the Authentication section to retrieve the Access Token</span>
+<span class="w">  </span><span class="n">config</span><span class="o">.</span><span class="n">access_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'YOUR ACCESS TOKEN'</span>
+<span class="k">end</span>
 
-api_instance = FattureInCloud_Ruby_Sdk::UserApi.new
+<span class="n">api_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">UserApi</span><span class="o">.</span><span class="n">new</span>
 
-begin
-  # List User Companies
-  result = api_instance.list_user_companies
-  # In the result you'll find a list of companies, you must use the "id" field of one of those
-  p result.data.companies[0].id
-rescue FattureInCloud_Ruby_Sdk::ApiError =&gt; e
-  puts "Error when calling UserApi-&gt;list_user_companies: #{e}"
-end
-</code></pre>
-<pre><code class="language-ts">import { Configuration, UserApi } from "@fattureincloud/fattureincloud-ts-sdk";
-// Check out the Authentication section to retrieve the Access Token
-const apiConfig = new Configuration({
-  accessToken: "YOUR ACCESS TOKEN",
-});
+<span class="k">begin</span>
+<span class="w">  </span><span class="c1"># List User Companies</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">api_instance</span><span class="o">.</span><span class="n">list_user_companies</span>
+<span class="w">  </span><span class="c1"># In the result you'll find a list of companies, you must use the "id" field of one of those</span>
+<span class="w">  </span><span class="nb">p</span><span class="w"> </span><span class="n">result</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">companies</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="n">id</span>
+<span class="k">rescue</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">ApiError</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">e</span>
+<span class="w">  </span><span class="nb">puts</span><span class="w"> </span><span class="s2">"Error when calling UserApi-&gt;list_user_companies: </span><span class="si">#{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Configuration</span><span class="p">,</span><span class="w"> </span><span class="nx">UserApi</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@fattureincloud/fattureincloud-ts-sdk"</span><span class="p">;</span>
+<span class="c1">// Check out the Authentication section to retrieve the Access Token</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">apiConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Configuration</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">accessToken</span><span class="o">:</span><span class="w"> </span><span class="s2">"YOUR ACCESS TOKEN"</span><span class="p">,</span>
+<span class="p">});</span>
 
-let apiInstance = new UserApi(apiConfig);
-apiInstance.listUserCompanies().then(
-  (result) =&gt; {
-    // In the result you'll find a list of companies, you must use the "id" field of one of those
-    console.log(result.data.companies[0].id);
-  },
-  (error) =&gt; {
-    console.error(error);
-  }
-);
-</code></pre>
+<span class="kd">let</span><span class="w"> </span><span class="nx">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">UserApi</span><span class="p">(</span><span class="nx">apiConfig</span><span class="p">);</span>
+<span class="nx">apiInstance</span><span class="p">.</span><span class="nx">listUserCompanies</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// In the result you'll find a list of companies, you must use the "id" field of one of those</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">companies</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">id</span><span class="p">);</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
 <p>If you want more examples, you can find them in the <em>Readme file</em> of each <a href="/sdks/index.mdx">SDK</a> or in the <a href="/quickstarts/index.mdx">Quickstart</a> section.</p>
-<p>If you want to retrieve the details of a specific company, you can always use the <a href="/api-reference#get-/c/-company_id-/company/info">Get Company Info</a> method, but in this case, this method is company-scoped, so you need an ID! <img alt="😉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f609.png" title=":wink:"/> </p>
+<p>If you want to retrieve the details of a specific company, you can always use the <a href="/api-reference#get-/c/-company_id-/company/info">Get Company Info</a> method, but in this case, this method is company-scoped, so you need an ID! :wink: </p>
 <h2 id="raising_hand_man-how-can-i-know-if-a-method-is-company-scoped">:raising_hand_man:  How can I know if a method is company-scoped?</h2>
 <p>The majority of our methods are <em>company-scoped</em>, so there's a high probability that the method you need to use is included in this group.
 If you want to be sure if your API method is actually company-scoped, you just need to check if it requires a <strong>company_id</strong> parameter.</p>
 <p>In order to do it, you have a few possibilities:</p>
-<h3 id="check-on-the-api-reference"><img alt="🌍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f30d.png" title=":earth_africa:"/>  Check on the API Reference</h3>
+<h3 id="earth_africa-check-on-the-api-reference">:earth_africa:  Check on the API Reference</h3>
 <p>This is the easier option, that only requires you to search the method on our <a href="/api-reference">API Reference</a> section.
 For example, let's check the <a href="/api-reference#get-/c/-company_id-/issued_documents">List Issued Documents</a> method. Checking the URL on top of the page, you can notice that it contains the <strong>/c/{company_id}</strong> portion, indicating that it is a company-scoped URL that requires to substitute the placeholder to be executed correctly.</p>
 <p><img alt="API Reference Method URL" src="../assets/api-reference-method-url.png#gh-light-mode-only"/>
@@ -933,7 +933,7 @@ For example, let's check the <a href="/api-reference#get-/c/-company_id-/issued_
 <p>On the same page, you can also check if you have a <strong>company_id</strong> box in the <strong>Path Params</strong> section: here you must insert your company<em>id while trying to use the API method using the _Try</em> button.</p>
 <p><img alt="API Reference Method Path Params" src="../assets/api-reference-method-path-params.png#gh-light-mode-only"/>
 <img alt="API Reference Method Path Params" src="../assets/dark-api-reference-method-path-params.png#gh-dark-mode-only"/></p>
-<h3 id="check-on-your-sdk-documentation"><img alt="💼" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4bc.png" title=":briefcase:"/>  Check on your SDK documentation</h3>
+<h3 id="briefcase-check-on-your-sdk-documentation">:briefcase:  Check on your SDK documentation</h3>
 <p>If you're using a specific <a href="/sdks/index.mdx">SDK</a>, probably it will be easier for you to take advantage of it to check if a method is company-scoped: all the methods that are in this category require an integer <strong>company_id</strong> to be executed correctly.
 You can check if the company_id parameter is required by checking the signature of your method (for example using your IDE's functionalities) or accessing your SDK's documentation. Read your SDK's page for further info.</p>
 <p>For example, using our PHP SDK you have two alternatives:</p>
@@ -942,7 +942,7 @@ You can check if the company_id parameter is required by checking the signature 
 <li>Use your favorite IDE to check if the method requires it, without having to access our documentation online</li>
 <li>Some of the SDKs provide standard documentation for the language they're based on; for example, Java's <a href="https://javadoc.io/doc/it.fattureincloud/fattureincloud-java-sdk/latest/index.html">JavaDoc</a> or Ruby's <a href="https://www.rubydoc.info/gems/fattureincloud_ruby_sdk/">RubyDoc</a>.</li>
 </ul>
-<h3 id="check-our-postman-collection"><img alt="📬" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4ec.png" title=":mailbox_with_mail:"/>  Check our Postman Collection</h3>
+<h3 id="mailbox_with_mail-check-our-postman-collection">:mailbox_with_mail:  Check our Postman Collection</h3>
 <p>If you're testing our API using our <a href="../quickstarts/postman-collection">Postman Collection</a>, you can check if the method needs the company<em>id parameter.
 You can check if the method's URL includes the </em><em>/c/:company_id</em><em> portion, where </em>:company<em>id</em> is the placeholder that must be replaced with the actual numeric ID:</p>
 <p><img alt="Postman url" src="../assets/postman-url.png#gh-light-mode-only"/>
@@ -953,17 +953,17 @@ You can check if the method's URL includes the </em><em>/c/:company_id</em><em> 
 <h3 id="memo-check-our-openapi-file">:memo:  Check our OpenAPI file</h3>
 <p>This is probably the most complicated method because it requires you to know how to read an OpenAPI file (or at least a YAML file) or to use an OpenAPI editor; at the same time, this is our source of truth: all the previous method derive from our OpenAPI specification, so this is where the company<em>id param is defined.
 Checking our <a href="/openapi-specification.md">OpenAPI Specification</a>, you can find out if our method requires a company_id parameter by checking the _openapi.yaml</em> file: below you can notice that the URL contains the <strong>{company_id}</strong> placeholder and that the company_id param is listed in the parameters section.</p>
-<p><code>yaml title="openapi.yaml"
-/c/\{company_id\}/issued_documents:
-  parameters:
-    - $ref: "#/components/parameters/company_id"
-  get:
-    summary: List Issued Documents
-    tags:
-      - Issued Documents
-    responses:
-      "200":
-        $ref: "#/components/responses/ListIssuedDocumentsResponse"</code></p>
+<div class="highlight"><span class="filename">openapi.yaml</span><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">/c/\{company_id\}/issued_documents</span><span class="p p-Indicator">:</span>
+<span class="w">  </span><span class="nt">parameters</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">$ref</span><span class="p">:</span><span class="w"> </span><span class="s">"#/components/parameters/company_id"</span>
+<span class="w">  </span><span class="nt">get</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">List Issued Documents</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Issued Documents</span>
+<span class="w">    </span><span class="nt">responses</span><span class="p">:</span>
+<span class="w">      </span><span class="s">"200"</span><span class="p p-Indicator">:</span>
+<span class="w">        </span><span class="nt">$ref</span><span class="p">:</span><span class="w"> </span><span class="s">"#/components/responses/ListIssuedDocumentsResponse"</span>
+</code></pre></div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
