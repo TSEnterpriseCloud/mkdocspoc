@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#prerequisites">
+<a class="md-skip" href="#zero-prerequisites">
           Skip to content
         </a>
 </div>
@@ -225,30 +225,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites
+      :zero:  Prerequisites
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-install-the-tse-in-cloud-sdk">
+<a class="md-nav__link" href="#one-step-one-install-the-tse-in-cloud-sdk">
 <span class="md-ellipsis">
-        Step One: Install the TSE in Cloud SDK
+      :one:  Step One: Install the TSE in Cloud SDK
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval
+      :two:  Step Two: Set up the OAuth access token retrieval
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#four-step-four-set-up-the-sample">
 <span class="md-ellipsis">
-        What now?
+      :four:  Step Four: Set up the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#five-step-five-run-the-sample">
+<span class="md-ellipsis">
+      :five:  Step Five: Run the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now?
     </span>
 </a>
 </li>
@@ -582,7 +596,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../support/general-knowledge/">
+<a class="md-nav__link" href="../../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -644,30 +658,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites
+      :zero:  Prerequisites
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-install-the-tse-in-cloud-sdk">
+<a class="md-nav__link" href="#one-step-one-install-the-tse-in-cloud-sdk">
 <span class="md-ellipsis">
-        Step One: Install the TSE in Cloud SDK
+      :one:  Step One: Install the TSE in Cloud SDK
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval
+      :two:  Step Two: Set up the OAuth access token retrieval
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#four-step-four-set-up-the-sample">
 <span class="md-ellipsis">
-        What now?
+      :four:  Step Four: Set up the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#five-step-five-run-the-sample">
+<span class="md-ellipsis">
+      :five:  Step Five: Run the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now?
     </span>
 </a>
 </li>
@@ -683,165 +711,150 @@
 import TabItem from "@theme/TabItem";</p>
 <p>Following the steps described on this page, you'll create a simple Go application that interacts with the TSE in Cloud API.</p>
 <p>If you want to download the complete working example you can find it <a href="https://github.com/fattureincloud/fattureincloud-quickstarts/tree/master/sdk/go">here</a>.</p>
-<h2 id="prerequisites"><img alt="0️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0030-20e3.png" title=":zero:"/>  Prerequisites</h2>
+<h2 id="zero-prerequisites">:zero:  Prerequisites</h2>
 <p>In this guide, we assume that these prerequisites are met:</p>
 <ul>
 <li>Go installed</li>
 <li>A <a href="/basics/create-an-app.mdx">private app</a> using the <a href="/authentication/code-flow/index.mdx">OAuth 2.0 Authorization Code Flow</a></li>
 <li>A TSE in Cloud account.</li>
 </ul>
-<h2 id="step-one-install-the-tse-in-cloud-sdk"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Step One: Install the TSE in Cloud SDK</h2>
+<h2 id="one-step-one-install-the-tse-in-cloud-sdk">:one:  Step One: Install the TSE in Cloud SDK</h2>
 <p>In this quickstart, we'll use the <a href="https://github.com/fattureincloud/fattureincloud-go-sdk">TSE in Cloud SDK</a>.</p>
 <p>To install it:</p>
-<pre><code class="language-console">go get github.com/fattureincloud/fattureincloud-go-sdk
-</code></pre>
-<h2 id="step-two-set-up-the-oauth-access-token-retrieval"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Step Two: Set up the OAuth access token retrieval</h2>
+<div class="highlight"><pre><span></span><code><span class="go">go get github.com/fattureincloud/fattureincloud-go-sdk</span>
+</code></pre></div>
+<h2 id="two-step-two-set-up-the-oauth-access-token-retrieval">:two:  Step Two: Set up the OAuth access token retrieval</h2>
 <p>Create the file <strong>oauth.go</strong> and copy in the following code:</p>
-<p>```go title="oauth.go"
-package main</p>
-<p>import (
-    "encoding/json"
-    "fmt"
-    "io/ioutil"
-    "log"
-    "net/http"</p>
-<pre><code>oauth "github.com/fattureincloud/fattureincloud-go-sdk/v2/oauth2"
-</code></pre>
-<p>)</p>
-<p>func getOAuthAccessToken(w http.ResponseWriter, r *http.Request) {
-    query := r.URL.Query()
-    auth := oauth.NewOAuth2AuthorizationCodeManager("CLIENT_ID", "CLIENT_SECRET", "http://localhost:8000/oauth")</p>
-<pre><code>if query.Get("code") == "" {
-    http.Redirect(w, r, auth.GetAuthorizationUrl([]oauth.Scope{oauth.Scopes.ENTITY_SUPPLIERS_READ}, "EXAMPLE_STATE"), http.StatusFound)
-} else {
-    code := query.Get("code")
+<div class="highlight"><span class="filename">oauth.go</span><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-    token, err := auth.FetchToken(code)
-    if err != nil {
-        log.Println("Error on response.\n[ERROR] -", err)
-        http.Error(w, "500 internal server error.", http.StatusInternalServerError)
-        return
-    }
-    jsonObj, _ := json.Marshal(token)
-    // saving the oAuth access token in the token.json file
-    err = ioutil.WriteFile("token.json", jsonObj, 0644)
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">"encoding/json"</span>
+<span class="w">    </span><span class="s">"fmt"</span>
+<span class="w">    </span><span class="s">"io/ioutil"</span>
+<span class="w">    </span><span class="s">"log"</span>
+<span class="w">    </span><span class="s">"net/http"</span>
 
-    if err != nil {
-        log.Println("Error on writing the file.\n[ERROR] -", err)
-        http.Error(w, "500 internal server error.", http.StatusInternalServerError)
-        return
-    }
+<span class="w">    </span><span class="nx">oauth</span><span class="w"> </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/oauth2"</span>
+<span class="p">)</span>
 
-    fmt.Fprintf(w, "Token succesfully retrived and stored in token.json")
+<span class="kd">func</span><span class="w"> </span><span class="nx">getOAuthAccessToken</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">query</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">Query</span><span class="p">()</span>
+<span class="w">    </span><span class="nx">auth</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">oauth</span><span class="p">.</span><span class="nx">NewOAuth2AuthorizationCodeManager</span><span class="p">(</span><span class="s">"CLIENT_ID"</span><span class="p">,</span><span class="w"> </span><span class="s">"CLIENT_SECRET"</span><span class="p">,</span><span class="w"> </span><span class="s">"http://localhost:8000/oauth"</span><span class="p">)</span>
 
-}
-</code></pre>
-<p>}</p>
-<pre><code>
-To make this code work properly the only thing you need to set your client id, client secret and eventually the redirect uri at line 15.
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">query</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s">"code"</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">""</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">http</span><span class="p">.</span><span class="nx">Redirect</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">,</span><span class="w"> </span><span class="nx">auth</span><span class="p">.</span><span class="nx">GetAuthorizationUrl</span><span class="p">([]</span><span class="nx">oauth</span><span class="p">.</span><span class="nx">Scope</span><span class="p">{</span><span class="nx">oauth</span><span class="p">.</span><span class="nx">Scopes</span><span class="p">.</span><span class="nx">ENTITY_SUPPLIERS_READ</span><span class="p">},</span><span class="w"> </span><span class="s">"EXAMPLE_STATE"</span><span class="p">),</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusFound</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">code</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">query</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s">"code"</span><span class="p">)</span>
 
-:::danger Store the Token safely!
+<span class="w">        </span><span class="nx">token</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">auth</span><span class="p">.</span><span class="nx">FetchToken</span><span class="p">(</span><span class="nx">code</span><span class="p">)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">"Error on response.\n[ERROR] -"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">            </span><span class="nx">http</span><span class="p">.</span><span class="nx">Error</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">"500 internal server error."</span><span class="p">,</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusInternalServerError</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nx">jsonObj</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">Marshal</span><span class="p">(</span><span class="nx">token</span><span class="p">)</span>
+<span class="w">        </span><span class="c1">// saving the oAuth access token in the token.json file</span>
+<span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">WriteFile</span><span class="p">(</span><span class="s">"token.json"</span><span class="p">,</span><span class="w"> </span><span class="nx">jsonObj</span><span class="p">,</span><span class="w"> </span><span class="mo">0644</span><span class="p">)</span>
 
-In this QuickStart the access token and refresh token are stored in a file. This is only for educational purposes, the OAuth access token and refresh token are sensitive data and should be saved securely on your database.
-Also, never share your Client Secret with third-party actors, or publish it to your frontend!
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">"Error on writing the file.\n[ERROR] -"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">            </span><span class="nx">http</span><span class="p">.</span><span class="nx">Error</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">"500 internal server error."</span><span class="p">,</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusInternalServerError</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span>
+<span class="w">        </span><span class="p">}</span>
 
-:::
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">"Token succesfully retrived and stored in token.json"</span><span class="p">)</span>
 
-## :four:&amp;nbsp; Step Four: Set up the sample
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>To make this code work properly the only thing you need to set your client id, client secret and eventually the redirect uri at line 15.</p>
+<p>:::danger Store the Token safely!</p>
+<p>In this QuickStart the access token and refresh token are stored in a file. This is only for educational purposes, the OAuth access token and refresh token are sensitive data and should be saved securely on your database.
+Also, never share your Client Secret with third-party actors, or publish it to your frontend!</p>
+<p>:::</p>
+<h2 id="four-step-four-set-up-the-sample">:four:  Step Four: Set up the sample</h2>
+<p>:::tip Retrieve your Company ID!</p>
+<p>In this example, we'll show how to retrieve your Company ID using the Go SDK. If you plan to manage only one company, you can insert it directly into your code as a variable.
+Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
+<p>:::</p>
+<p>Create the files <strong>main.go</strong> and <strong>quickstart.go</strong> in your working directory and copy in the following code:</p>
+<div class="highlight"><span class="filename">main.go</span><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-:::tip Retrieve your Company ID!
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">"fmt"</span>
+<span class="w">    </span><span class="s">"log"</span>
+<span class="w">    </span><span class="s">"net/http"</span>
+<span class="p">)</span>
 
-In this example, we'll show how to retrieve your Company ID using the Go SDK. If you plan to manage only one company, you can insert it directly into your code as a variable.
-Check the [Company-scoped Methods](/basics/company-scoped-methods.mdx) page for more info.
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">"/oauth"</span><span class="p">,</span><span class="w"> </span><span class="nx">getOAuthAccessToken</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">"/quickstart"</span><span class="p">,</span><span class="w"> </span><span class="nx">getFirstCompanySuppliers</span><span class="p">)</span>
 
-:::
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">"Starting server at port 8000\n"</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">":8000"</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">);</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">quickstart.go</span><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-Create the files **main.go** and **quickstart.go** in your working directory and copy in the following code:
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">"context"</span>
+<span class="w">    </span><span class="s">"encoding/json"</span>
+<span class="w">    </span><span class="s">"fmt"</span>
+<span class="w">    </span><span class="s">"net/http"</span>
+<span class="w">    </span><span class="s">"os"</span>
 
+<span class="w">    </span><span class="nx">fattureincloudapi</span><span class="w"> </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/api"</span>
+<span class="w">    </span><span class="nx">oauth</span><span class="w"> </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/oauth2"</span>
+<span class="p">)</span>
 
-```go title="main.go"
-package main
+<span class="kd">func</span><span class="w"> </span><span class="nx">getFirstCompanySuppliers</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">rawData</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">ReadFile</span><span class="p">(</span><span class="s">"token.json"</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
 
-import (
-    "fmt"
-    "log"
-    "net/http"
-)
+<span class="w">    </span><span class="nx">tokenObj</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">oauth</span><span class="p">.</span><span class="nx">OAuth2AuthorizationCodeTokenResponse</span><span class="p">{}</span>
+<span class="w">    </span><span class="nx">json</span><span class="p">.</span><span class="nx">Unmarshal</span><span class="p">(</span><span class="nx">rawData</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">tokenObj</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">accessToken</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">tokenObj</span><span class="p">.</span><span class="nx">AccessToken</span>
 
-func main() {
-    http.HandleFunc("/oauth", getOAuthAccessToken)
-    http.HandleFunc("/quickstart", getFirstCompanySuppliers)
+<span class="w">    </span><span class="c1">// Configure OAuth2 access token for authorization:</span>
+<span class="w">    </span><span class="nx">auth</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">WithValue</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">Background</span><span class="p">(),</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">ContextAccessToken</span><span class="p">,</span><span class="w"> </span><span class="nx">accessToken</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">configuration</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewConfiguration</span><span class="p">()</span>
+<span class="w">    </span><span class="nx">apiClient</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewAPIClient</span><span class="p">(</span><span class="nx">configuration</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// Retrieve the first company id</span>
+<span class="w">    </span><span class="nx">userCompaniesResponse</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">apiClient</span><span class="p">.</span><span class="nx">UserAPI</span><span class="p">.</span><span class="nx">ListUserCompanies</span><span class="p">(</span><span class="nx">auth</span><span class="p">).</span><span class="nx">Execute</span><span class="p">()</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Error when calling `UserAPI.ListUserCompanies``: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Full HTTP response: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">http</span><span class="p">.</span><span class="nx">Error</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">"500 internal server error."</span><span class="p">,</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusInternalServerError</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">firstCompanyId</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">userCompaniesResponse</span><span class="p">.</span><span class="nx">GetData</span><span class="p">().</span><span class="nx">Companies</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">GetId</span><span class="p">()</span>
+<span class="w">    </span><span class="c1">// Retrieve the list of the Suppliers</span>
+<span class="w">    </span><span class="nx">companySuppliers</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">apiClient</span><span class="p">.</span><span class="nx">SuppliersAPI</span><span class="p">.</span><span class="nx">ListSuppliers</span><span class="p">(</span><span class="nx">auth</span><span class="p">,</span><span class="w"> </span><span class="nx">firstCompanyId</span><span class="p">).</span><span class="nx">Execute</span><span class="p">()</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Error when calling `UserAPI.ListSuppliers``: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Full HTTP response: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">http</span><span class="p">.</span><span class="nx">Error</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">"500 internal server error."</span><span class="p">,</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusInternalServerError</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">json</span><span class="p">.</span><span class="nx">NewEncoder</span><span class="p">(</span><span class="nx">w</span><span class="p">).</span><span class="nx">Encode</span><span class="p">(</span><span class="nx">companySuppliers</span><span class="p">)</span>
 
-    fmt.Printf("Starting server at port 8000\n")
-    if err := http.ListenAndServe(":8000", nil); err != nil {
-        log.Fatal(err)
-    }
-}
-</code></pre>
-<p>```go title="quickstart.go"
-package main</p>
-<p>import (
-    "context"
-    "encoding/json"
-    "fmt"
-    "net/http"
-    "os"</p>
-<pre><code>fattureincloudapi "github.com/fattureincloud/fattureincloud-go-sdk/v2/api"
-oauth "github.com/fattureincloud/fattureincloud-go-sdk/v2/oauth2"
-</code></pre>
-<p>)</p>
-<p>func getFirstCompanySuppliers(w http.ResponseWriter, r *http.Request) {
-    rawData, err := os.ReadFile("token.json")
-    if err != nil {
-        fmt.Println(err)
-    }</p>
-<pre><code>tokenObj := oauth.OAuth2AuthorizationCodeTokenResponse{}
-json.Unmarshal(rawData, &amp;tokenObj)
-accessToken := tokenObj.AccessToken
-
-// Configure OAuth2 access token for authorization:
-auth := context.WithValue(context.Background(), fattureincloudapi.ContextAccessToken, accessToken)
-configuration := fattureincloudapi.NewConfiguration()
-apiClient := fattureincloudapi.NewAPIClient(configuration)
-// Retrieve the first company id
-userCompaniesResponse, _, err := apiClient.UserAPI.ListUserCompanies(auth).Execute()
-if err != nil {
-    fmt.Fprintf(os.Stderr, "Error when calling `UserAPI.ListUserCompanies``: %v\n", err)
-    fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    http.Error(w, "500 internal server error.", http.StatusInternalServerError)
-    return
-}
-firstCompanyId := userCompaniesResponse.GetData().Companies[0].GetId()
-// Retrieve the list of the Suppliers
-companySuppliers, _, err := apiClient.SuppliersAPI.ListSuppliers(auth, firstCompanyId).Execute()
-if err != nil {
-    fmt.Fprintf(os.Stderr, "Error when calling `UserAPI.ListSuppliers``: %v\n", err)
-    fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    http.Error(w, "500 internal server error.", http.StatusInternalServerError)
-    return
-}
-json.NewEncoder(w).Encode(companySuppliers)
-</code></pre>
-<p>}</p>
-<pre><code>
-
-:::warning Check the Redirect URL
-
-Make sure your FattureInCloud app redirect URL points at the just edited file (e.g. http://localhost:8000/oauth).
-
-:::
-
-## :five:&amp;nbsp; Step Five: Run the sample
-
-From the command line, run the following command:
-
-```console
-go run .
-</code></pre>
+<span class="p">}</span>
+</code></pre></div>
+<p>:::warning Check the Redirect URL</p>
+<p>Make sure your FattureInCloud app redirect URL points at the just edited file (e.g. http://localhost:8000/oauth).</p>
+<p>:::</p>
+<h2 id="five-step-five-run-the-sample">:five:  Step Five: Run the sample</h2>
+<p>From the command line, run the following command:</p>
+<div class="highlight"><pre><span></span><code><span class="go">go run .</span>
+</code></pre></div>
 <p>Now visit <em>http://localhost:8000/oauth</em> (or whatever your URL is), you will be redirected to the TSE in Cloud login page where you will be asked to grant some permissions, according to what scopes you specified previously.
 Finally, you will see the success message and the access token will be stored in the token.json file.</p>
 <p>You can now visit <em>http://localhost:8000/quickstart</em> (or whatever your URL is) to test the application.</p>
-<h2 id="what-now"><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:"/>  What now?</h2>
+<h2 id="question-what-now">:question:  What now?</h2>
 <p>In this example, we used a limited set of the available API methods to show how to use our SDK.</p>
 <p>If you want to access the full documentation of the available methods and models, you can check the following resources:</p>
 <ul>

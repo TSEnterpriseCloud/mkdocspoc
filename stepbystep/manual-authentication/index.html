@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#token-generation">
+<a class="md-skip" href="#raised_hand-token-generation">
           Skip to content
         </a>
 </div>
@@ -187,23 +187,23 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#token-generation">
+<a class="md-nav__link" href="#raised_hand-token-generation">
 <span class="md-ellipsis">
-        Token generation
+      :raised_hand:  Token generation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#find-your-company-id">
+<a class="md-nav__link" href="#briefcase-find-your-company-id">
 <span class="md-ellipsis">
-        Find your Company ID
+      :briefcase:  Find your Company ID
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#perform-an-api-request">
+<a class="md-nav__link" href="#white_check_mark-perform-an-api-request">
 <span class="md-ellipsis">
-        Perform an API request
+      :white_check_mark:  Perform an API request
     </span>
 </a>
 </li>
@@ -582,7 +582,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../support/general-knowledge/">
+<a class="md-nav__link" href="../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -644,23 +644,23 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#token-generation">
+<a class="md-nav__link" href="#raised_hand-token-generation">
 <span class="md-ellipsis">
-        Token generation
+      :raised_hand:  Token generation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#find-your-company-id">
+<a class="md-nav__link" href="#briefcase-find-your-company-id">
 <span class="md-ellipsis">
-        Find your Company ID
+      :briefcase:  Find your Company ID
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#perform-an-api-request">
+<a class="md-nav__link" href="#white_check_mark-perform-an-api-request">
 <span class="md-ellipsis">
-        Perform an API request
+      :white_check_mark:  Perform an API request
     </span>
 </a>
 </li>
@@ -700,8 +700,8 @@ import TabItem from "@theme/TabItem";</p>
 <li>Simple scripts that will be used by a single TSE in Cloud User (usually the programmer himself) to manage his account (for example for one-time exports or imports of resources).</li>
 <li>When the <a href="/basics/authentication.mdx">other flows</a> are not applicable.</li>
 </ul>
-<h2 id="token-generation"><img alt="✋" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/270b.png" title=":raised_hand:"/>  Token generation</h2>
-<p>Technically speaking, to implement this method you need to do nothing to create a new Access Token: this responsibility lies entirely on the User's shoulders <img alt="😫" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f62b.png" title=":tired_face:"/>. Even so, if your app needs to manage different users you will need to:</p>
+<h2 id="raised_hand-token-generation">:raised_hand:  Token generation</h2>
+<p>Technically speaking, to implement this method you need to do nothing to create a new Access Token: this responsibility lies entirely on the User's shoulders :tired_face:. Even so, if your app needs to manage different users you will need to:</p>
 <ul>
 <li>Provide your Client ID to the User (you can find it on your Application page, in the Sviluppatore section).
   <img alt="Client ID" src="../assets/manual-client-id.png"/></li>
@@ -724,259 +724,259 @@ import TabItem from "@theme/TabItem";</p>
 <p>:::warning Forbidden!</p>
 <p>Since the User will have the possibility to select the permissions he wants to grant to the application, it is likely that some "Forbidden" error will happen. Also, if a new version of your app needs additional scopes, all your users will need to update the permissions on the Connected Applications page. You should be aware of that and your code should be able to manage this situation correctly.</p>
 <p>:::</p>
-<h2 id="find-your-company-id"><img alt="💼" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4bc.png" title=":briefcase:"/>  Find your Company ID</h2>
+<h2 id="briefcase-find-your-company-id">:briefcase:  Find your Company ID</h2>
 <p>Even if this step is not strictly part of the Authentication process, it is required to be able to use the Company-scoped Methods.
 Once you obtain the Access Token, you can use the <a href="/api-reference#get-/user/companies">List User Companies</a> method to retrieve the ID of the related Company; please check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for further info.</p>
-<h2 id="perform-an-api-request"><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:"/>  Perform an API request</h2>
+<h2 id="white_check_mark-perform-an-api-request">:white_check_mark:  Perform an API request</h2>
 <p>A valid <strong>Access Token</strong> can be used to authorize requests included in the scopes authorized by the user; to obtain a valid response it is necessary to include the Access Token in your request as an HTTP header.</p>
 <p>In the following example, we'll simulate a <a href="/api-reference#get-/c/-company_id-/entities/suppliers/-supplier_id-">Get Supplier</a> call. We choose this method because it is relatively easy to understand and it requires the <em>entity.suppliers:r</em> scope to be authorized correctly.</p>
 <p>Please, notice that for the purposes of this example we will assume that we already know the parameters required by the request and that we have previously collected a valid Access Token.</p>
-<pre><code class="language-bash">curl --request GET \
-     --url https://api-v2.fattureincloud.it/c/17/entities/suppliers/16 \
-     --header 'Accept: application/json'
-     --header 'Authorization: Bearer a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4'
-</code></pre>
-<pre><code class="language-http">GET /c/17/entities/suppliers/16 HTTP/1.1
-Host: api-v2.fattureincloud.it
-Accept: application/json
-Authorization: Bearer a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4
-</code></pre>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>--url<span class="w"> </span>https://api-v2.fattureincloud.it/c/17/entities/suppliers/16<span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>--header<span class="w"> </span><span class="s1">'Accept: application/json'</span>
+<span class="w">     </span>--header<span class="w"> </span><span class="s1">'Authorization: Bearer a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4'</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/c/17/entities/suppliers/16</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">api-v2.fattureincloud.it</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
+<span class="na">Authorization</span><span class="o">:</span> <span class="l">Bearer a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4</span>
+</code></pre></div>
 <p>Below you can find some vanilla code examples implementing the same command.</p>
-<pre><code class="language-cs">// this code uses RestSharp Client: https://restsharp.dev
-// you can install it with the following command:
-// dotnet add package RestSharp
+<div class="highlight"><pre><span></span><code><span class="c1">// this code uses RestSharp Client: https://restsharp.dev</span>
+<span class="c1">// you can install it with the following command:</span>
+<span class="c1">// dotnet add package RestSharp</span>
 
-using System;
-using RestSharp;
+<span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">RestSharp</span><span class="p">;</span>
 
-namespace restclient
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // for this example we define the token as string, but you should have obtained it in the previous steps
-            var token = "a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4";
+<span class="k">namespace</span><span class="w"> </span><span class="nn">restclient</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// for this example we define the token as string, but you should have obtained it in the previous steps</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4"</span><span class="p">;</span>
 
-            // these parameters are usually retrieved through our APIs or stored in a DB
-            var companyId = 16;
-            var supplierId = 17;
+<span class="w">            </span><span class="c1">// these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">supplierId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">;</span>
 
-            var url = "https://api-v2.fattureincloud.it/c/" + companyId  + "/entities/suppliers/" + supplierId,;
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"https://api-v2.fattureincloud.it/c/"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">companyId</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s">"/entities/suppliers/"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">supplierId</span><span class="p">,;</span>
 
-            var client = new RestClient(url);
-            var request = new RestRequest(Method.GET);
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RestClient</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RestRequest</span><span class="p">(</span><span class="n">Method</span><span class="p">.</span><span class="n">GET</span><span class="p">);</span>
 
-            request.AddHeader("authorization", "Bearer " + token);
-            IRestResponse response = client.Execute(request);
-            Console.Write(response.Content.ToString());
-        }
-    }
-}
-</code></pre>
-<pre><code class="language-go">package main
+<span class="w">            </span><span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">"authorization"</span><span class="p">,</span><span class="w"> </span><span class="s">"Bearer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">token</span><span class="p">);</span>
+<span class="w">            </span><span class="n">IRestResponse</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-import (
-    "io/ioutil"
-    "log"
-    "net/http"
-)
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">"io/ioutil"</span>
+<span class="w">    </span><span class="s">"log"</span>
+<span class="w">    </span><span class="s">"net/http"</span>
+<span class="p">)</span>
 
-func main() {
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-    // for this example we define the token as string, but you should have obtained it in the previous steps
-    token := "Bearer " + "a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4"
+<span class="w">    </span><span class="c1">// for this example we define the token as string, but you should have obtained it in the previous steps</span>
+<span class="w">    </span><span class="nx">token</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">"Bearer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4"</span>
 
-    // these parameters are usually retrieved through our APIs or stored in a DB
-    companyId := "16"
-    supplierId := "17"
-    uri := "http://api-v2.local.fattureincloud.it/c/" + companyId + "/entities/suppliers/" + supplierId
+<span class="w">    </span><span class="c1">// these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="w">    </span><span class="nx">companyId</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">"16"</span>
+<span class="w">    </span><span class="nx">supplierId</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">"17"</span>
+<span class="w">    </span><span class="nx">uri</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">"http://api-v2.local.fattureincloud.it/c/"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"/entities/suppliers/"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">supplierId</span>
 
-    req, _ := http.NewRequest("GET", uri, nil)
-    req.Header.Add("Authorization", token)
+<span class="w">    </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span><span class="w"> </span><span class="nx">uri</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">"Authorization"</span><span class="p">,</span><span class="w"> </span><span class="nx">token</span><span class="p">)</span>
 
-    client := &amp;http.Client{}
-    resp, err := client.Do(req)
-    if err != nil {
-        log.Println("Error on response.\n[ERROR] -", err)
-    }
-    defer resp.Body.Close()
+<span class="w">    </span><span class="nx">client</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{}</span>
+<span class="w">    </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">"Error on response.\n[ERROR] -"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
 
-    body, err := ioutil.ReadAll(resp.Body)
-    if err != nil {
-        log.Println("Error while reading the response bytes:", err)
-    }
-    log.Println(string([]byte(body)))
+<span class="w">    </span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">"Error while reading the response bytes:"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">body</span><span class="p">)))</span>
 
-}
-</code></pre>
-<pre><code class="language-java">import okhttp3.HttpUrl;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import java.io.IOException;
-import java.net.URL;
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">okhttp3.HttpUrl</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">okhttp3.OkHttpClient</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">okhttp3.Request</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">okhttp3.Response</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.net.URL</span><span class="p">;</span>
 
-public class Application {
-    public static void main(String[] args) throws IOException {
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Application</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
 
-        // for this example we define the token as string, but you should have obtained it in the previous steps
-        String token = "a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4";
+<span class="w">        </span><span class="c1">// for this example we define the token as string, but you should have obtained it in the previous steps</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4"</span><span class="p">;</span>
 
-        // these parameters are usually retrieved through our APIs or stored in a DB
-        Integer companyId = 16;
-        Integer supplierId = 17;
+<span class="w">        </span><span class="c1">// these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="w">        </span><span class="n">Integer</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Integer</span><span class="w"> </span><span class="n">supplierId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span>
 
-        URL url = new HttpUrl.Builder()
-                .scheme("https")
-                .host("api-v2.fattureincloud.it")
-                .addPathSegments("c/" + companyId  + "/entities/suppliers/" + supplierId)
-                .build().url();
+<span class="w">        </span><span class="n">URL</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpUrl</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">scheme</span><span class="p">(</span><span class="s">"https"</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">host</span><span class="p">(</span><span class="s">"api-v2.fattureincloud.it"</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">addPathSegments</span><span class="p">(</span><span class="s">"c/"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">companyId</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s">"/entities/suppliers/"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">supplierId</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">build</span><span class="p">().</span><span class="na">url</span><span class="p">();</span>
 
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder()
-                .header("Authorization", "Bearer " + token)
-                .url(url)
-                .build();
-        Response response = client.newCall(request).execute();
-        System.out.println(response.body().string());
-    }
-}
-</code></pre>
-<pre><code class="language-js">var http = require("https");
+<span class="w">        </span><span class="n">OkHttpClient</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OkHttpClient</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Request</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Request</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">"Authorization"</span><span class="p">,</span><span class="w"> </span><span class="s">"Bearer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">token</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Response</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="na">newCall</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">body</span><span class="p">().</span><span class="na">string</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"https"</span><span class="p">);</span>
 
-// for this example we define the token as string, but you should have obtained it in the previous steps
-var token =
-  "a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4";
+<span class="c1">// for this example we define the token as string, but you should have obtained it in the previous steps</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s2">"a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4"</span><span class="p">;</span>
 
-// these parameters are usually retrieved through our APIs or stored in a DB
-var companyId = 16;
-var supplierId = 17;
+<span class="c1">// these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">supplierId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">17</span><span class="p">;</span>
 
-var options = {
-  method: "GET",
-  hostname: "api-v2.fattureincloud.it",
-  port: null,
-  path: "/c/" + companyId + "/entities/suppliers/" + supplierId,
-  headers: {
-    authorization: "Bearer " + token,
-  },
-};
+<span class="kd">var</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">hostname</span><span class="o">:</span><span class="w"> </span><span class="s2">"api-v2.fattureincloud.it"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s2">"/c/"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"/entities/suppliers/"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">supplierId</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">authorization</span><span class="o">:</span><span class="w"> </span><span class="s2">"Bearer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">token</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
 
-var req = http.request(options, function (res) {
-  var chunks = [];
+<span class="kd">var</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">chunks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
 
-  res.on("data", function (chunk) {
-    chunks.push(chunk);
-  });
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">chunks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chunk</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
 
-  res.on("end", function () {
-    var body = Buffer.concat(chunks);
-    console.log(body.toString());
-  });
-});
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"end"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Buffer</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">chunks</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
 
-req.end();
-</code></pre>
-<pre><code class="language-php">// this code uses Guzzle HTTP Client: https://docs.guzzlephp.org/en/stable/
-// and also ext-json
-// you can install them with the following command:
-// composer require guzzlehttp/guzzle ext-json
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Psr7;
+<span class="nx">req</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">// this code uses Guzzle HTTP Client: https://docs.guzzlephp.org/en/stable/</span>
+<span class="x">// and also ext-json</span>
+<span class="x">// you can install them with the following command:</span>
+<span class="x">// composer require guzzlehttp/guzzle ext-json</span>
+<span class="x">use GuzzleHttp\Client;</span>
+<span class="x">use GuzzleHttp\Exception\ClientException;</span>
+<span class="x">use GuzzleHttp\Psr7;</span>
 
 
-// for this example we define the token as string, but you should have obtained it in the previous steps
-$token = 'a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4';
+<span class="x">// for this example we define the token as string, but you should have obtained it in the previous steps</span>
+<span class="x">$token = 'a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJZMElqc1pVWEpUZkxCSkZ3aG5iZmpSYTRJRktYTDk3ayIsImV4cCI6MTU4OTY0MjAzMX0.qn869ICUSS3_hx84ZTToMsB5slWQZjGZXGklSIiBkB4';</span>
 
-// these parameters are usually retrieved through our APIs or stored in a DB
-$companyId = 17;
-$supplierId = 16;
+<span class="x">// these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="x">$companyId = 17;</span>
+<span class="x">$supplierId = 16;</span>
 
-$client = new Client();
+<span class="x">$client = new Client();</span>
 
-$url = "https://api-v2.fattureincloud.it/c/$companyId/entities/suppliers/$supplierId";
+<span class="x">$url = "https://api-v2.fattureincloud.it/c/$companyId/entities/suppliers/$supplierId";</span>
 
-try {
-  $response = $client-&gt;request('GET', $url, [
-    'headers' =&gt; [
-      'Accept' =&gt; 'application/json',
-      'Authorization' =&gt; 'Bearer ' . $token,
-    ],
-  ]);
+<span class="x">try {</span>
+<span class="x">  $response = $client-&gt;request('GET', $url, [</span>
+<span class="x">    'headers' =&gt; [</span>
+<span class="x">      'Accept' =&gt; 'application/json',</span>
+<span class="x">      'Authorization' =&gt; 'Bearer ' . $token,</span>
+<span class="x">    ],</span>
+<span class="x">  ]);</span>
 
-    return json_decode((string) $response-&gt;getBody());
-} catch (ClientException $e) {
-    echo Psr7\Message::toString($e-&gt;getRequest());
-    echo Psr7\Message::toString($e-&gt;getResponse());
-}
-</code></pre>
-<pre><code class="language-py">import requests
+<span class="x">    return json_decode((string) $response-&gt;getBody());</span>
+<span class="x">} catch (ClientException $e) {</span>
+<span class="x">    echo Psr7\Message::toString($e-&gt;getRequest());</span>
+<span class="x">    echo Psr7\Message::toString($e-&gt;getResponse());</span>
+<span class="x">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
 
-# for this example we define the token as string, but you should have obtained it in the previous steps
-token = "a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJYOGxDaFR4dHVsQkx0cXVVSjNCQlZEME1KOVY0NTl3QiIsImV4cCI6MTYzOTcyODAzM30.A-uMzLDpaEzGRqzUodJfdJPKo8SWMCytWUElQdOEP0c"
+<span class="c1"># for this example we define the token as string, but you should have obtained it in the previous steps</span>
+<span class="n">token</span> <span class="o">=</span> <span class="s2">"a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJYOGxDaFR4dHVsQkx0cXVVSjNCQlZEME1KOVY0NTl3QiIsImV4cCI6MTYzOTcyODAzM30.A-uMzLDpaEzGRqzUodJfdJPKo8SWMCytWUElQdOEP0c"</span>
 
-# these parameters are usually retrieved through our APIs or stored in a DB
-company_id = 16
-supplier_id = 17
+<span class="c1"># these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="n">company_id</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="n">supplier_id</span> <span class="o">=</span> <span class="mi">17</span>
 
-headers = { 'authorization': "Bearer " + token}
-response = requests.get(f"https://api-v2.fattureincloud.it/c/\{company_id\}/entities/suppliers/{supplier_id}", headers=headers)
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'authorization'</span><span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">token</span><span class="p">}</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">"https://api-v2.fattureincloud.it/c/\</span><span class="si">{</span><span class="n">company_id</span><span class="err">\</span><span class="si">}</span><span class="s2">/entities/suppliers/</span><span class="si">{</span><span class="n">supplier_id</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
-print(response.json())
-</code></pre>
-<pre><code class="language-rb">require 'uri'
-require 'net/http'
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">require</span><span class="w"> </span><span class="s1">'uri'</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">'net/http'</span>
 
-# for this example we define the token as string, but you should have obtained it in the previous steps
-token = "a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJYOGxDaFR4dHVsQkx0cXVVSjNCQlZEME1KOVY0NTl3QiIsImV4cCI6MTYzOTcyODAzM30.A-uMzLDpaEzGRqzUodJfdJPKo8SWMCytWUElQdOEP0c"
+<span class="c1"># for this example we define the token as string, but you should have obtained it in the previous steps</span>
+<span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJYOGxDaFR4dHVsQkx0cXVVSjNCQlZEME1KOVY0NTl3QiIsImV4cCI6MTYzOTcyODAzM30.A-uMzLDpaEzGRqzUodJfdJPKo8SWMCytWUElQdOEP0c"</span>
 
-# these parameters are usually retrieved through our APIs or stored in a DB
-company_id = 16
-supplier_id = 17
+<span class="c1"># these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="n">company_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span>
+<span class="n">supplier_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span>
 
-uri = URI("https://api-v2.fattureincloud.it/c/#\{company_id\}/entities/suppliers/#{supplier_id}")
-headers = { authorization: "Bearer " + token}
-res = Net::HTTP.get_response(uri, headers)
+<span class="n">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">URI</span><span class="p">(</span><span class="s2">"https://api-v2.fattureincloud.it/c/#\{company_id\}/entities/suppliers/</span><span class="si">#{</span><span class="n">supplier_id</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="ss">authorization</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">token</span><span class="p">}</span>
+<span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">.</span><span class="n">get_response</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span><span class="w"> </span><span class="n">headers</span><span class="p">)</span>
 
-puts res.body
-</code></pre>
-<pre><code class="language-ts">// in this example we are using the node-fetch library to make the request
-import fetch, { Headers } from "node-fetch";
+<span class="nb">puts</span><span class="w"> </span><span class="n">res</span><span class="o">.</span><span class="n">body</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// in this example we are using the node-fetch library to make the request</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">fetch</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Headers</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"node-fetch"</span><span class="p">;</span>
 
-// for this example we define the token as a string, but you should have obtained it in the previous steps
-var token =
-  "a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJYOGxDaFR4dHVsQkx0cXVVSjNCQlZEME1KOVY0NTl3QiIsImV4cCI6MTYzOTcyODAzM30.A-uMzLDpaEzGRqzUodJfdJPKo8SWMCytWUElQdOEP0c";
+<span class="c1">// for this example we define the token as a string, but you should have obtained it in the previous steps</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s2">"a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJYOGxDaFR4dHVsQkx0cXVVSjNCQlZEME1KOVY0NTl3QiIsImV4cCI6MTYzOTcyODAzM30.A-uMzLDpaEzGRqzUodJfdJPKo8SWMCytWUElQdOEP0c"</span><span class="p">;</span>
 
-// these parameters are usually retrieved through our APIs or stored in a DB
-var companyId = 16;
-var supplierId = 17;
+<span class="c1">// these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">supplierId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">17</span><span class="p">;</span>
 
-var headers = new Headers({
-  "Content-Type": "application/json",
-  Authorization: "Bearer " + token,
-});
+<span class="kd">var</span><span class="w"> </span><span class="nx">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Headers</span><span class="p">({</span>
+<span class="w">  </span><span class="s2">"Content-Type"</span><span class="o">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">Authorization</span><span class="o">:</span><span class="w"> </span><span class="s2">"Bearer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">token</span><span class="p">,</span>
+<span class="p">});</span>
 
-var options = {
-  method: "GET",
-  headers: headers,
-};
+<span class="kd">var</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="kt">headers</span><span class="p">,</span>
+<span class="p">};</span>
 
-try {
-  var res = await fetch(
-    "https://api-v2.fattureincloud.it/c/" +
-      companyId +
-      "/entities/suppliers" +
-      supplierId,
-    options
-  );
-  var json = await res.json();
-  console.log(json);
-} catch (err) {
-  console.log(err);
-}
-</code></pre>
+<span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">"https://api-v2.fattureincloud.it/c/"</span><span class="w"> </span><span class="o">+</span>
+<span class="w">      </span><span class="nx">companyId</span><span class="w"> </span><span class="o">+</span>
+<span class="w">      </span><span class="s2">"/entities/suppliers"</span><span class="w"> </span><span class="o">+</span>
+<span class="w">      </span><span class="nx">supplierId</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">options</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>If the Access Token is valid and provided correctly in the header, the response will be a 200 OK.
 To check the possible error responses, please check the <a href="/basics/errors.md">dedicated page</a>.</p>
 <p>:::info Easy switch!</p>

@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#prerequisites">
+<a class="md-skip" href="#zero-prerequisites">
           Skip to content
         </a>
 </div>
@@ -267,30 +267,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites
+      :zero:  Prerequisites
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-install-the-tse-in-cloud-sdk">
+<a class="md-nav__link" href="#one-step-one-install-the-tse-in-cloud-sdk">
 <span class="md-ellipsis">
-        Step One: Install the TSE in Cloud SDK
+      :one:  Step One: Install the TSE in Cloud SDK
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval
+      :two:  Step Two: Set up the OAuth access token retrieval
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#four-step-four-set-up-the-sample">
 <span class="md-ellipsis">
-        What now?
+      :four:  Step Four: Set up the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#five-step-five-run-the-sample">
+<span class="md-ellipsis">
+      :five:  Step Five: Run the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now?
     </span>
 </a>
 </li>
@@ -582,7 +596,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../support/general-knowledge/">
+<a class="md-nav__link" href="../../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -644,30 +658,44 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#zero-prerequisites">
 <span class="md-ellipsis">
-        Prerequisites
+      :zero:  Prerequisites
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-one-install-the-tse-in-cloud-sdk">
+<a class="md-nav__link" href="#one-step-one-install-the-tse-in-cloud-sdk">
 <span class="md-ellipsis">
-        Step One: Install the TSE in Cloud SDK
+      :one:  Step One: Install the TSE in Cloud SDK
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-two-set-up-the-oauth-access-token-retrieval">
+<a class="md-nav__link" href="#two-step-two-set-up-the-oauth-access-token-retrieval">
 <span class="md-ellipsis">
-        Step Two: Set up the OAuth access token retrieval
+      :two:  Step Two: Set up the OAuth access token retrieval
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-now">
+<a class="md-nav__link" href="#four-step-four-set-up-the-sample">
 <span class="md-ellipsis">
-        What now?
+      :four:  Step Four: Set up the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#five-step-five-run-the-sample">
+<span class="md-ellipsis">
+      :five:  Step Five: Run the sample
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question-what-now">
+<span class="md-ellipsis">
+      :question:  What now?
     </span>
 </a>
 </li>
@@ -683,171 +711,156 @@
 import TabItem from "@theme/TabItem";</p>
 <p>Following the steps described on this page, you'll create a simple Node Js application that interacts with the TSE in Cloud API.</p>
 <p>If you want to download the complete working example you can find it <a href="https://github.com/fattureincloud/fattureincloud-quickstarts/tree/master/sdk/ts">here</a>.</p>
-<h2 id="prerequisites"><img alt="0️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0030-20e3.png" title=":zero:"/>  Prerequisites</h2>
+<h2 id="zero-prerequisites">:zero:  Prerequisites</h2>
 <p>In this guide, we assume that these prerequisites are met:</p>
 <ul>
 <li>Node.js and ts-node installed</li>
 <li>A <a href="/basics/create-an-app.mdx">private app</a> using the <a href="/authentication/code-flow/index.mdx">OAuth 2.0 Authorization Code Flow</a></li>
 <li>A TSE in Cloud account.</li>
 </ul>
-<h2 id="step-one-install-the-tse-in-cloud-sdk"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0031-20e3.png" title=":one:"/>  Step One: Install the TSE in Cloud SDK</h2>
+<h2 id="one-step-one-install-the-tse-in-cloud-sdk">:one:  Step One: Install the TSE in Cloud SDK</h2>
 <p>In this quickstart, we'll use the <a href="https://github.com/fattureincloud/fattureincloud-ts-sdk">TSE in Cloud SDK</a>, published to <a href="https://www.npmjs.com/package/@fattureincloud/fattureincloud-ts-sdk">NPM</a>.</p>
 <p>To install it using Npm:</p>
-<pre><code class="language-console">npm install @fattureincloud/fattureincloud-ts-sdk
-</code></pre>
-<h2 id="step-two-set-up-the-oauth-access-token-retrieval"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0032-20e3.png" title=":two:"/>  Step Two: Set up the OAuth access token retrieval</h2>
+<div class="highlight"><pre><span></span><code><span class="go">npm install @fattureincloud/fattureincloud-ts-sdk</span>
+</code></pre></div>
+<h2 id="two-step-two-set-up-the-oauth-access-token-retrieval">:two:  Step Two: Set up the OAuth access token retrieval</h2>
 <p>Create the file <strong>oauth.ts</strong> and copy in the following code:</p>
-<p>```ts title="oauth.ts"
-import {
-  OAuth2AuthorizationCodeManager,
-  Scope,
-} from "@fattureincloud/fattureincloud-ts-sdk";
-import fs from "fs";
-import http from "http";</p>
-<p>export async function getOAuthAccessToken(
-  req: http.IncomingMessage,
-  res: http.ServerResponse
-) {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");</p>
-<p>let query = !!req.url &amp;&amp; req.url.split("?")[1];
-  let params = new URLSearchParams(query || "");</p>
-<p>let oauth = new OAuth2AuthorizationCodeManager(
-    "CLIENT_ID",
-    "CLIENT_SECRET",
-    "http://localhost:8000/oauth"
-  );</p>
-<p>if (params.get("code") == null) {
-    res.writeHead(302, {
-      Location: oauth.getAuthorizationUrl(
-        [Scope.ENTITY_SUPPLIERS_READ],
-        "EXAMPLE_STATE"
-      ),
-    });
-    res.end();
-  } else {
-    let code = params.get("code");</p>
-<pre><code>try {
-  let token = await oauth.fetchToken(code ?? "");
-  // saving the oAuth access token in the token.json file
-  fs.writeFileSync("./token.json", JSON.stringify(token, null, 4));
-  res.write("Token succesfully retrived and stored in token.json");
-} catch (e) {
-  console.log(e);
-}
-res.end();
-</code></pre>
-<p>}
-}</p>
-<pre><code>
-To make this code work properly the only thing you need to set your client id, client secret and eventually the redirect uri at line 12.
+<div class="highlight"><span class="filename">oauth.ts</span><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">OAuth2AuthorizationCodeManager</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">Scope</span><span class="p">,</span>
+<span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@fattureincloud/fattureincloud-ts-sdk"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"fs"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"http"</span><span class="p">;</span>
 
-:::danger Store the Token safely!
+<span class="k">export</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">getOAuthAccessToken</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">req</span><span class="o">:</span><span class="w"> </span><span class="kt">http.IncomingMessage</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">res</span><span class="o">:</span><span class="w"> </span><span class="kt">http.ServerResponse</span>
+<span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">statusCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">200</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s2">"Content-Type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"text/plain"</span><span class="p">);</span>
 
-In this QuickStart the access token and refresh token are stored in a file. This is only for educational purposes, the OAuth access token and refresh token are sensitive data and should be saved securely on your database.
-Also, never share your Client Secret with third-party actors, or publish it to your frontend!
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!!</span><span class="nx">req</span><span class="p">.</span><span class="nx">url</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">url</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">"?"</span><span class="p">)[</span><span class="mf">1</span><span class="p">];</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">URLSearchParams</span><span class="p">(</span><span class="nx">query</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">""</span><span class="p">);</span>
 
-:::
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">oauth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">OAuth2AuthorizationCodeManager</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">"CLIENT_ID"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"CLIENT_SECRET"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"http://localhost:8000/oauth"</span>
+<span class="w">  </span><span class="p">);</span>
 
-## :four:&amp;nbsp; Step Four: Set up the sample
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"code"</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mf">302</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">Location</span><span class="o">:</span><span class="w"> </span><span class="kt">oauth.getAuthorizationUrl</span><span class="p">(</span>
+<span class="w">        </span><span class="p">[</span><span class="nx">Scope</span><span class="p">.</span><span class="nx">ENTITY_SUPPLIERS_READ</span><span class="p">],</span>
+<span class="w">        </span><span class="s2">"EXAMPLE_STATE"</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">params</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"code"</span><span class="p">);</span>
 
-:::tip Retrieve your Company ID!
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">oauth</span><span class="p">.</span><span class="nx">fetchToken</span><span class="p">(</span><span class="nx">code</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s2">""</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// saving the oAuth access token in the token.json file</span>
+<span class="w">      </span><span class="nx">fs</span><span class="p">.</span><span class="nx">writeFileSync</span><span class="p">(</span><span class="s2">"./token.json"</span><span class="p">,</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">token</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">));</span>
+<span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"Token succesfully retrived and stored in token.json"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>To make this code work properly the only thing you need to set your client id, client secret and eventually the redirect uri at line 12.</p>
+<p>:::danger Store the Token safely!</p>
+<p>In this QuickStart the access token and refresh token are stored in a file. This is only for educational purposes, the OAuth access token and refresh token are sensitive data and should be saved securely on your database.
+Also, never share your Client Secret with third-party actors, or publish it to your frontend!</p>
+<p>:::</p>
+<h2 id="four-step-four-set-up-the-sample">:four:  Step Four: Set up the sample</h2>
+<p>:::tip Retrieve your Company ID!</p>
+<p>In this example, we'll show how to retrieve your Company ID using the TypeScript SDK. If you plan to manage only one company, you can insert it directly into your code as a variable.
+Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
+<p>:::</p>
+<p>Create the files <strong>index.ts</strong> and <strong>quickstart.ts</strong> in your working directory and copy in the following code:</p>
+<div class="highlight"><span class="filename">index.ts</span><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"http"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"url"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">getOAuthAccessToken</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./oauth"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">getFirstCompanySuppliers</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./quickstart"</span><span class="p">;</span>
 
-In this example, we'll show how to retrieve your Company ID using the TypeScript SDK. If you plan to manage only one company, you can insert it directly into your code as a variable.
-Check the [Company-scoped Methods](/basics/company-scoped-methods.mdx) page for more info.
+<span class="kd">const</span><span class="w"> </span><span class="nx">hostname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"127.0.0.1"</span><span class="p">;</span><span class="w"> </span><span class="c1">//set your hostname</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8000</span><span class="p">;</span><span class="w"> </span><span class="c1">//set your port</span>
 
-:::
+<span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">pathname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">url</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">url</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s2">""</span><span class="p">).</span><span class="nx">pathname</span><span class="p">;</span>
 
-Create the files **index.ts** and **quickstart.ts** in your working directory and copy in the following code:
+<span class="w">  </span><span class="c1">//url routing</span>
+<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">pathname</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">"/oauth"</span><span class="o">:</span><span class="w"> </span><span class="c1">//oauth endpoint</span>
+<span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="k">await</span><span class="w"> </span><span class="nx">getOAuthAccessToken</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">));</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">"/quickstart"</span><span class="o">:</span><span class="w"> </span><span class="c1">//quickstart endpoint</span>
+<span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="k">await</span><span class="w"> </span><span class="nx">getFirstCompanySuppliers</span><span class="p">());</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">default</span><span class="o">:</span>
+<span class="w">      </span><span class="kt">res.end</span><span class="p">();</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+<span class="p">});</span>
 
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">,</span><span class="w"> </span><span class="nx">hostname</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Server running at http://</span><span class="si">${</span><span class="nx">hostname</span><span class="si">}</span><span class="sb">:</span><span class="si">${</span><span class="nx">port</span><span class="si">}</span><span class="sb">/`</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">quickstart.ts</span><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">Configuration</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">ListUserCompaniesResponse</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">SuppliersApi</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UserApi</span><span class="p">,</span>
+<span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@fattureincloud/fattureincloud-ts-sdk"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"fs"</span><span class="p">;</span>
 
-```ts title="index.ts"
-import * as http from "http";
-import url from "url";
-import { getOAuthAccessToken } from "./oauth";
-import { getFirstCompanySuppliers } from "./quickstart";
+<span class="k">export</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">getFirstCompanySuppliers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">rawdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s2">"./token.json"</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">rawdata</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+<span class="w">    </span><span class="c1">// Configure OAuth2 access token for authorization:</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">apiConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Configuration</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">accessToken</span><span class="o">:</span><span class="w"> </span><span class="kt">json</span><span class="p">[</span><span class="s2">"access_token"</span><span class="p">],</span>
+<span class="w">    </span><span class="p">});</span>
 
-const hostname = "127.0.0.1"; //set your hostname
-const port = 8000; //set your port
+<span class="w">    </span><span class="c1">// Retrieve the first company id</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">userApiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">UserApi</span><span class="p">(</span><span class="nx">apiConfig</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">userCompaniesResponse</span><span class="o">:</span><span class="w"> </span><span class="kt">ListUserCompaniesResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="p">(</span>
+<span class="w">      </span><span class="k">await</span><span class="w"> </span><span class="nx">userApiInstance</span><span class="p">.</span><span class="nx">listUserCompanies</span><span class="p">()</span>
+<span class="w">    </span><span class="p">).</span><span class="nx">data</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">firstCompanyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">userCompaniesResponse</span><span class="o">?</span><span class="p">.</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">companies</span><span class="o">?</span><span class="p">.[</span><span class="mf">0</span><span class="p">]</span><span class="o">?</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
 
-const server = http.createServer(async (req, res) =&gt; {
-  var pathname = url.parse(req.url ?? "").pathname;
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">firstCompanyId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// Retrieve the list of the Suppliers</span>
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">suppliersApiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">SuppliersApi</span><span class="p">(</span><span class="nx">apiConfig</span><span class="p">);</span>
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">companySuppliers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">suppliersApiInstance</span><span class="p">.</span><span class="nx">listSuppliers</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">firstCompanyId</span>
+<span class="w">      </span><span class="p">);</span>
 
-  //url routing
-  switch (pathname) {
-    case "/oauth": //oauth endpoint
-      res.end(await getOAuthAccessToken(req, res));
-      break;
-    case "/quickstart": //quickstart endpoint
-      res.end(await getFirstCompanySuppliers());
-      break;
-    default:
-      res.end();
-      break;
-  }
-  res.end();
-});
-
-server.listen(port, hostname, () =&gt; {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
-</code></pre>
-<p>```ts title="quickstart.ts"
-import {
-  Configuration,
-  ListUserCompaniesResponse,
-  SuppliersApi,
-  UserApi,
-} from "@fattureincloud/fattureincloud-ts-sdk";
-import fs from "fs";</p>
-<p>export async function getFirstCompanySuppliers() {
-  try {
-    let rawdata = fs.readFileSync("./token.json");
-    let json = JSON.parse(rawdata.toString());
-    // Configure OAuth2 access token for authorization:
-    const apiConfig = new Configuration({
-      accessToken: json["access_token"],
-    });</p>
-<pre><code>// Retrieve the first company id
-var userApiInstance = new UserApi(apiConfig);
-var userCompaniesResponse: ListUserCompaniesResponse = await (
-  await userApiInstance.listUserCompanies()
-).data;
-var firstCompanyId = userCompaniesResponse?.data?.companies?.[0]?.id;
-
-if (firstCompanyId) {
-  // Retrieve the list of the Suppliers
-  var suppliersApiInstance = new SuppliersApi(apiConfig);
-  var companySuppliers = await suppliersApiInstance.listSuppliers(
-    firstCompanyId
-  );
-
-  return JSON.stringify(companySuppliers.data);
-}
-</code></pre>
-<p>} catch (e) {
-    return JSON.stringify(e);
-  }
-}</p>
-<pre><code>
-
-:::warning Check the Redirect URL
-
-Make sure your FattureInCloud app redirect URL points at the just edited file (e.g. http://localhost:8000/oauth).
-
-:::
-
-## :five:&amp;nbsp; Step Five: Run the sample
-
-From the command line, run the following command:
-
-```console
-ts-node index.ts
-</code></pre>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">companySuppliers</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>:::warning Check the Redirect URL</p>
+<p>Make sure your FattureInCloud app redirect URL points at the just edited file (e.g. http://localhost:8000/oauth).</p>
+<p>:::</p>
+<h2 id="five-step-five-run-the-sample">:five:  Step Five: Run the sample</h2>
+<p>From the command line, run the following command:</p>
+<div class="highlight"><pre><span></span><code><span class="go">ts-node index.ts</span>
+</code></pre></div>
 <p>Now visit <em>http://localhost:8000/oauth</em> (or whatever your URL is), you will be redirected to the TSE in Cloud login page where you will be asked to grant some permissions, according to what scopes you specified previously.
 Finally, you will see the success message and the access token will be stored in the token.json file.</p>
 <p>You can now visit <em>http://localhost:8000/quickstart</em> (or whatever your URL is) to test the application.</p>
-<h2 id="what-now"><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:"/>  What now?</h2>
+<h2 id="question-what-now">:question:  What now?</h2>
 <p>In this example, we used a limited set of the available API methods to show how to use our SDK.</p>
 <p>If you want to access the full documentation of the available methods and models, you can check the following resources:</p>
 <ul>

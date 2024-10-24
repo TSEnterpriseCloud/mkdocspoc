@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#join-or-transform">
+<a class="md-skip" href="#question-join-or-transform">
           Skip to content
         </a>
 </div>
@@ -537,7 +537,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../support/general-knowledge/">
+<a class="md-nav__link" href="../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -599,12 +599,12 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#join-or-transform">
+<a class="md-nav__link" href="#question-join-or-transform">
 <span class="md-ellipsis">
-      Join or Transform
+      :question: Join or Transform
     </span>
 </a>
-<nav aria-label="Join or Transform" class="md-nav">
+<nav aria-label=":question: Join or Transform" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#family_man_woman_girl_boy-join">
@@ -614,9 +614,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#transform">
+<a class="md-nav__link" href="#twisted_rightwards_arrows-transform">
 <span class="md-ellipsis">
-        Transform
+      :twisted_rightwards_arrows:  Transform
     </span>
 </a>
 </li>
@@ -624,9 +624,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#send-it">
+<a class="md-nav__link" href="#mailbox_with_mail-send-it">
 <span class="md-ellipsis">
-        Send It!
+      :mailbox_with_mail:  Send It!
     </span>
 </a>
 </li>
@@ -646,7 +646,7 @@ Of course, our APIs provide the same functionality, here we explain how to do it
 <p>In this example, we'll suppose you have to manage just one Company, so we simply inserted its ID directly in the code. If instead, you need to be able to manage multiple companies, you'll need to retrieve the ID of the current company in some way.
 Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
 <p>:::</p>
-<h2 id="join-or-transform"><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:"/> Join or Transform</h2>
+<h2 id="question-join-or-transform">:question: Join or Transform</h2>
 <p>Although the transform and join use cases may seem very different, our APIs similarly treat them.</p>
 <p>:::danger These calls will NOT create the document
 Executing a join or transform call will NOT create the new document but, instead, it will return a body that you will need to pass to the create document method.
@@ -660,236 +660,236 @@ Executing a join or transform call will NOT create the new document but, instead
 <li><strong>group</strong>: If this flag is set to 1, the request will group the items (e.g. if you have the same products in two different documents, they will be grouped); otherwise the items will be kept separate.</li>
 <li><strong>e_invoice</strong>: If this flag is set to 1, your new document will be electronic.</li>
 </ul>
-<pre><code class="language-http">GET /c/1235/issued_documents/join?ids=876991,876993,876997&amp;group=1&amp;e_invoice=1 HTTP/1.1
-Accept: application/json
-Host: api-v2.fattureincloud.it
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/c/1235/issued_documents/join?ids=876991,876993,876997&amp;group=1&amp;e_invoice=1</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">api-v2.fattureincloud.it</span>
+</code></pre></div>
 <p>The corresponding code with our SDKs:</p>
-<pre><code class="language-cs">using System;
-using It.FattureInCloud.Sdk.Api;
-using It.FattureInCloud.Sdk.Client;
-using It.FattureInCloud.Sdk.Model;
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Api</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Client</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Model</span><span class="p">;</span>
 
-namespace test
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Configuration config = new Configuration();
+<span class="k">namespace</span><span class="w"> </span><span class="nn">test</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Configuration</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Configuration</span><span class="p">();</span>
 
-            //set your access token
-            config.AccessToken = "YOUR_ACCESS_TOKEN";
-            //set your company id
-            var companyId = 12345;
+<span class="w">            </span><span class="c1">//set your access token</span>
+<span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">AccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">//set your company id</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12345</span><span class="p">;</span>
 
-            var apiInstance = new IssuedDocumentsApi(config);
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocumentsApi</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
 
-            // Join documents: https://github.com/fattureincloud/fattureincloud-csharp-sdk/blob/master/docs/IssuedDocumentsApi.md#joinissueddocuments
-            try
-            {
-                JoinIssuedDocumentsResponse result = apiInstance.JoinIssuedDocuments(companyId, "876991,876993,876997", 1, 1);
-                Console.Write(result);
-            }
-            catch (ApiException e)
-            {
-                Console.WriteLine("Exception when calling IssuedDocumentsApi.JoinIssuedDocuments: " + e.Message);
-                Console.WriteLine("Status Code: " + e.ErrorCode);
-                Console.WriteLine(e.StackTrace);
-            }
-        }
-    }
-}
-</code></pre>
-<pre><code class="language-go">package main
+<span class="w">            </span><span class="c1">// Join documents: https://github.com/fattureincloud/fattureincloud-csharp-sdk/blob/master/docs/IssuedDocumentsApi.md#joinissueddocuments</span>
+<span class="w">            </span><span class="k">try</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">JoinIssuedDocumentsResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="n">JoinIssuedDocuments</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="s">"876991,876993,876997"</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ApiException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Exception when calling IssuedDocumentsApi.JoinIssuedDocuments: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Status Code: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">ErrorCode</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">StackTrace</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-import (
-    "context"
-    "encoding/json"
-    "fmt"
-    "os"
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">"context"</span>
+<span class="w">    </span><span class="s">"encoding/json"</span>
+<span class="w">    </span><span class="s">"fmt"</span>
+<span class="w">    </span><span class="s">"os"</span>
 
-    fattureincloudapi "github.com/fattureincloud/fattureincloud-go-sdk/v2/api"
-)
+<span class="w">    </span><span class="nx">fattureincloudapi</span><span class="w"> </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/api"</span>
+<span class="p">)</span>
 
-func main() {
-    //set your access token
-    auth := context.WithValue(context.Background(), fattureincloudapi.ContextAccessToken, "YOUR_ACCESS_TOKEN")
-    configuration := fattureincloudapi.NewConfiguration()
-    apiClient := fattureincloudapi.NewAPIClient(configuration)
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//set your access token</span>
+<span class="w">    </span><span class="nx">auth</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">WithValue</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">Background</span><span class="p">(),</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">ContextAccessToken</span><span class="p">,</span><span class="w"> </span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">configuration</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewConfiguration</span><span class="p">()</span>
+<span class="w">    </span><span class="nx">apiClient</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewAPIClient</span><span class="p">(</span><span class="nx">configuration</span><span class="p">)</span>
 
-    //set your company id
-    companyId := int32(12345)
+<span class="w">    </span><span class="c1">//set your company id</span>
+<span class="w">    </span><span class="nx">companyId</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">int32</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
 
-    // Transform the document: https://github.com/fattureincloud/fattureincloud-go-sdk/blob/master/docs/IssuedDocumentsAPI.md#joinissueddocuments
-    resp, r, err := apiClient.IssuedDocumentsAPI.JoinIssuedDocuments(auth, companyId).Ids("876991,876993,876997").Group(1).EInvoice(1).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `IssuedDocumentsAPI.JoinIssuedDocuments``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    json.NewEncoder(os.Stdout).Encode(resp)
-}
-</code></pre>
-<pre><code class="language-java">import it.fattureincloud.sdk.ApiClient;
-import it.fattureincloud.sdk.ApiException;
-import it.fattureincloud.sdk.Configuration;
-import it.fattureincloud.sdk.auth.*;
-import it.fattureincloud.sdk.model.*;
-import it.fattureincloud.sdk.api.IssuedDocumentsApi;
+<span class="w">    </span><span class="c1">// Transform the document: https://github.com/fattureincloud/fattureincloud-go-sdk/blob/master/docs/IssuedDocumentsAPI.md#joinissueddocuments</span>
+<span class="w">    </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">apiClient</span><span class="p">.</span><span class="nx">IssuedDocumentsAPI</span><span class="p">.</span><span class="nx">JoinIssuedDocuments</span><span class="p">(</span><span class="nx">auth</span><span class="p">,</span><span class="w"> </span><span class="nx">companyId</span><span class="p">).</span><span class="nx">Ids</span><span class="p">(</span><span class="s">"876991,876993,876997"</span><span class="p">).</span><span class="nx">Group</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">EInvoice</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">Execute</span><span class="p">()</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Error when calling `IssuedDocumentsAPI.JoinIssuedDocuments``: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Full HTTP response: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">json</span><span class="p">.</span><span class="nx">NewEncoder</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">).</span><span class="nx">Encode</span><span class="p">(</span><span class="nx">resp</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiClient</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.Configuration</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.auth.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.model.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.api.IssuedDocumentsApi</span><span class="p">;</span>
 
-public class Application {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Application</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ApiClient</span><span class="w"> </span><span class="n">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Configuration</span><span class="p">.</span><span class="na">getDefaultApiClient</span><span class="p">();</span>
 
-        //set your access token
-        OAuth OAuth2AuthenticationCodeFlow = (OAuth) defaultClient.getAuthentication("OAuth2AuthenticationCodeFlow");
-        OAuth2AuthenticationCodeFlow.setAccessToken("YOUR_ACCESS_TOKEN");
+<span class="w">        </span><span class="c1">//set your access token</span>
+<span class="w">        </span><span class="n">OAuth</span><span class="w"> </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">OAuth</span><span class="p">)</span><span class="w"> </span><span class="n">defaultClient</span><span class="p">.</span><span class="na">getAuthentication</span><span class="p">(</span><span class="s">"OAuth2AuthenticationCodeFlow"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="na">setAccessToken</span><span class="p">(</span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">);</span>
 
-        IssuedDocumentsApi apiInstance = new IssuedDocumentsApi(defaultClient);
-        //set your company id
-        Integer companyId = 12345;
+<span class="w">        </span><span class="n">IssuedDocumentsApi</span><span class="w"> </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocumentsApi</span><span class="p">(</span><span class="n">defaultClient</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//set your company id</span>
+<span class="w">        </span><span class="n">Integer</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span><span class="p">;</span>
 
-        // Join documents: https://github.com/fattureincloud/fattureincloud-java-sdk/blob/master/docs/IssuedDocumentsApi.md#joinissueddocuments
-        try {
-            JoinIssuedDocumentsResponse result = apiInstance.joinIssuedDocuments(companyId, "876991,876993,876997", 1, 1);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling IssuedDocumentsApi#joinIssuedDocuments");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
-</code></pre>
-<pre><code class="language-php">&lt;?php
-require_once(__DIR__ . '/vendor/autoload.php');
+<span class="w">        </span><span class="c1">// Join documents: https://github.com/fattureincloud/fattureincloud-java-sdk/blob/master/docs/IssuedDocumentsApi.md#joinissueddocuments</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">JoinIssuedDocumentsResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="na">joinIssuedDocuments</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="s">"876991,876993,876997"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ApiException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Exception when calling IssuedDocumentsApi#joinIssuedDocuments"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Status code: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getCode</span><span class="p">());</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Reason: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getResponseBody</span><span class="p">());</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Response headers: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getResponseHeaders</span><span class="p">());</span>
+<span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span><span class="p">(</span><span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">);</span>
 
-use FattureInCloud\Configuration;
-use FattureInCloud\Api\IssuedDocumentsApi;
+<span class="k">use</span> <span class="nx">FattureInCloud\Configuration</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">FattureInCloud\Api\IssuedDocumentsApi</span><span class="p">;</span>
 
-//set your access token
-$config = Configuration::getDefaultConfiguration()-&gt;setAccessToken('YOUR_ACCESS_TOKEN');
+<span class="c1">//set your access token</span>
+<span class="nv">$config</span> <span class="o">=</span> <span class="nx">Configuration</span><span class="o">::</span><span class="na">getDefaultConfiguration</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">setAccessToken</span><span class="p">(</span><span class="s1">'YOUR_ACCESS_TOKEN'</span><span class="p">);</span>
 
-$apiInstance = new IssuedDocumentsApi(
-    new GuzzleHttp\Client(),
-    $config
-);
+<span class="nv">$apiInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IssuedDocumentsApi</span><span class="p">(</span>
+    <span class="k">new</span> <span class="nx">GuzzleHttp\Client</span><span class="p">(),</span>
+    <span class="nv">$config</span>
+<span class="p">);</span>
 
-//set your company id
-$company_id = 12345;
+<span class="c1">//set your company id</span>
+<span class="nv">$company_id</span> <span class="o">=</span> <span class="mi">12345</span><span class="p">;</span>
 
-// Join documents: https://github.com/fattureincloud/fattureincloud-php-sdk/blob/master/docs/Api/IssuedDocumentsApi.md#joinissueddocuments
-try {
-    $result = $apiInstance-&gt;joinIssuedDocuments($company_id, "876991,876993,876997", 1, 1);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling IssuedDocumentsApi-&gt;joinIssuedDocuments: ', $e-&gt;getMessage(), PHP_EOL;
-}
-</code></pre>
-<pre><code class="language-js">var fattureInCloudSdk = require("@fattureincloud/fattureincloud-js-sdk");
-let defaultClient = fattureInCloudSdk.ApiClient.instance;
+<span class="c1">// Join documents: https://github.com/fattureincloud/fattureincloud-php-sdk/blob/master/docs/Api/IssuedDocumentsApi.md#joinissueddocuments</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$apiInstance</span><span class="o">-&gt;</span><span class="na">joinIssuedDocuments</span><span class="p">(</span><span class="nv">$company_id</span><span class="p">,</span> <span class="s2">"876991,876993,876997"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">'Exception when calling IssuedDocumentsApi-&gt;joinIssuedDocuments: '</span><span class="p">,</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"@fattureincloud/fattureincloud-js-sdk"</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ApiClient</span><span class="p">.</span><span class="nx">instance</span><span class="p">;</span>
 
-//set your access token
-let OAuth2AuthenticationCodeFlow =
-  defaultClient.authentications["OAuth2AuthenticationCodeFlow"];
-OAuth2AuthenticationCodeFlow.accessToken = "YOUR_ACCESS_TOKEN";
+<span class="c1">//set your access token</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="nx">defaultClient</span><span class="p">.</span><span class="nx">authentications</span><span class="p">[</span><span class="s2">"OAuth2AuthenticationCodeFlow"</span><span class="p">];</span>
+<span class="nx">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
 
-let apiInstance = new fattureInCloudSdk.IssuedDocumentsApi();
-//set your company id
-let companyId = 12345;
+<span class="kd">let</span><span class="w"> </span><span class="nx">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">IssuedDocumentsApi</span><span class="p">();</span>
+<span class="c1">//set your company id</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12345</span><span class="p">;</span>
 
-let opts = {
-  group: 1,
-  eInvoice: 1,
-};
+<span class="kd">let</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">group</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">eInvoice</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="p">};</span>
 
-// Join documents: https://github.com/fattureincloud/fattureincloud-js-sdk/blob/master/docs/IssuedDocumentsApi.md#joinIssuedDocuments
-apiInstance.joinIssuedDocuments(companyId, "876991,876993,876997", opts).then(
-  (result) =&gt; {
-    console.log(
-      "API called successfully. Returned result: " + JSON.stringify(result)
-    );
-  },
-  (error) =&gt; {
-    console.error(error);
-  }
-);
-</code></pre>
-<pre><code class="language-py">import fattureincloud_python_sdk
-from fattureincloud_python_sdk.api import issued_documents_api
+<span class="c1">// Join documents: https://github.com/fattureincloud/fattureincloud-js-sdk/blob/master/docs/IssuedDocumentsApi.md#joinIssuedDocuments</span>
+<span class="nx">apiInstance</span><span class="p">.</span><span class="nx">joinIssuedDocuments</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="s2">"876991,876993,876997"</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+<span class="w">      </span><span class="s2">"API called successfully. Returned result: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">fattureincloud_python_sdk</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.api</span> <span class="kn">import</span> <span class="n">issued_documents_api</span>
 
-from pprint import pprint
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
 
-# set your access token
-configuration = fattureincloud_python_sdk.Configuration()
-configuration.access_token = "YOUR_ACCESS_TOKEN"
+<span class="c1"># set your access token</span>
+<span class="n">configuration</span> <span class="o">=</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">Configuration</span><span class="p">()</span>
+<span class="n">configuration</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="s2">"YOUR_ACCESS_TOKEN"</span>
 
-# set your company id
-company_id = 12345
+<span class="c1"># set your company id</span>
+<span class="n">company_id</span> <span class="o">=</span> <span class="mi">12345</span>
 
-# Join documents: https://github.com/fattureincloud/fattureincloud-python-sdk/blob/master/docs/IssuedDocumentsApi.md#join_issued_documents
-with fattureincloud_python_sdk.ApiClient(configuration) as api_client:
+<span class="c1"># Join documents: https://github.com/fattureincloud/fattureincloud-python-sdk/blob/master/docs/IssuedDocumentsApi.md#join_issued_documents</span>
+<span class="k">with</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">ApiClient</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span> <span class="k">as</span> <span class="n">api_client</span><span class="p">:</span>
 
-    api_instance = issued_documents_api.IssuedDocumentsApi(api_client)
-    try:
-        api_response = api_instance.join_issued_documents(company_id, "876991,876993,876997", group=1, e_invoice=1)
-        pprint(api_response)
-    except fattureincloud_python_sdk.ApiException as e:
-        print("Exception when calling IssuedDocumentsApi-&gt;join_issued_documents: %s\n" % e)
-</code></pre>
-<pre><code class="language-rb">require 'time'
-require 'fattureincloud_ruby_sdk'
+    <span class="n">api_instance</span> <span class="o">=</span> <span class="n">issued_documents_api</span><span class="o">.</span><span class="n">IssuedDocumentsApi</span><span class="p">(</span><span class="n">api_client</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">api_response</span> <span class="o">=</span> <span class="n">api_instance</span><span class="o">.</span><span class="n">join_issued_documents</span><span class="p">(</span><span class="n">company_id</span><span class="p">,</span> <span class="s2">"876991,876993,876997"</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">e_invoice</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="p">(</span><span class="n">api_response</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">ApiException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Exception when calling IssuedDocumentsApi-&gt;join_issued_documents: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">require</span><span class="w"> </span><span class="s1">'time'</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">'fattureincloud_ruby_sdk'</span>
 
-FattureInCloud_Ruby_Sdk.configure do |config|
-  # set your access token
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
+<span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">.</span><span class="n">configure</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">config</span><span class="o">|</span>
+<span class="w">  </span><span class="c1"># set your access token</span>
+<span class="w">  </span><span class="n">config</span><span class="o">.</span><span class="n">access_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'YOUR ACCESS TOKEN'</span>
+<span class="k">end</span>
 
-api_instance = FattureInCloud_Ruby_Sdk::IssuedDocumentsApi.new
-# set your company id
-company_id = 12345
+<span class="n">api_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocumentsApi</span><span class="o">.</span><span class="n">new</span>
+<span class="c1"># set your company id</span>
+<span class="n">company_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span>
 
-opts = {
-  group: 1,
-  e_invoice: 1
-}
+<span class="n">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="ss">group</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">e_invoice</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
 
-# Join documents: https://github.com/fattureincloud/fattureincloud-ruby-sdk/blob/master/docs/IssuedDocumentsApi.md#join_issued_documents
-begin
-  result = api_instance.join_issued_documents(company_id, "876991,876993,876997", opts)
-  p result
-rescue FattureInCloud_Ruby_Sdk::ApiError =&gt; e
-  puts "Error when calling IssuedDocumentsApi-&gt;join_issued_documents: #{e}"
-end
-</code></pre>
-<pre><code class="language-ts">import {
-  Configuration,
-  IssuedDocumentsApi,
-} from "@fattureincloud/fattureincloud-ts-sdk";
+<span class="c1"># Join documents: https://github.com/fattureincloud/fattureincloud-ruby-sdk/blob/master/docs/IssuedDocumentsApi.md#join_issued_documents</span>
+<span class="k">begin</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">api_instance</span><span class="o">.</span><span class="n">join_issued_documents</span><span class="p">(</span><span class="n">company_id</span><span class="p">,</span><span class="w"> </span><span class="s2">"876991,876993,876997"</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="p">)</span>
+<span class="w">  </span><span class="nb">p</span><span class="w"> </span><span class="n">result</span>
+<span class="k">rescue</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">ApiError</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">e</span>
+<span class="w">  </span><span class="nb">puts</span><span class="w"> </span><span class="s2">"Error when calling IssuedDocumentsApi-&gt;join_issued_documents: </span><span class="si">#{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">Configuration</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">IssuedDocumentsApi</span><span class="p">,</span>
+<span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@fattureincloud/fattureincloud-ts-sdk"</span><span class="p">;</span>
 
-//set your access token
-const apiConfig = new Configuration({
-  accessToken: "YOUR_ACCESS_TOKEN",
-});
+<span class="c1">//set your access token</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">apiConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Configuration</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">accessToken</span><span class="o">:</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span><span class="p">,</span>
+<span class="p">});</span>
 
-let apiInstance = new IssuedDocumentsApi(apiConfig);
+<span class="kd">let</span><span class="w"> </span><span class="nx">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">IssuedDocumentsApi</span><span class="p">(</span><span class="nx">apiConfig</span><span class="p">);</span>
 
-//set your company id
-let companyId = 12345;
+<span class="c1">//set your company id</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12345</span><span class="p">;</span>
 
-// Join documents: https://github.com/fattureincloud/fattureincloud-ts-sdk/blob/master/docs/IssuedDocumentsApi.md#joinIssuedDocuments
-apiInstance.joinIssuedDocuments(companyId, "876991,876993,876997", 1, 1).then(
-  (data) =&gt; {
-    console.log(data);
-  },
-  (error) =&gt; {
-    console.error(error);
-  }
-);
-</code></pre>
-<h3 id="transform"><img alt="🔀" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f500.png" title=":twisted_rightwards_arrows:"/>  Transform</h3>
+<span class="c1">// Join documents: https://github.com/fattureincloud/fattureincloud-ts-sdk/blob/master/docs/IssuedDocumentsApi.md#joinIssuedDocuments</span>
+<span class="nx">apiInstance</span><span class="p">.</span><span class="nx">joinIssuedDocuments</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="s2">"876991,876993,876997"</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<h3 id="twisted_rightwards_arrows-transform">:twisted_rightwards_arrows:  Transform</h3>
 <p>The <a href="/api-reference#get-/c/-company_id-/issued_documents/transform">Transform Issued Document</a> method makes it possible to transform a document into another type of document. Here you can find which types can be transformed and what they can become.</p>
 <table>
 <thead>
@@ -924,260 +924,260 @@ apiInstance.joinIssuedDocuments(companyId, "876991,876993,876997", 1, 1).then(
 <li><strong>e_invoice</strong>: If this flag is set to 1, your new document will be electronic.</li>
 <li><strong>transform_keep_copy</strong>: If this flag is set to 1, your old document will be preserved.</li>
 </ul>
-<pre><code class="language-http">GET /c/1235/issued_documents/transform?original_document_id=876993&amp;new_type=invoice&amp;e_invoice=1&amp;transform_keep_copy=1 HTTP/1.1
-Accept: application/json
-Host: api-v2.fattureincloud.it
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/c/1235/issued_documents/transform?original_document_id=876993&amp;new_type=invoice&amp;e_invoice=1&amp;transform_keep_copy=1</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">api-v2.fattureincloud.it</span>
+</code></pre></div>
 <p>The correspondig code with our SDKs:</p>
-<pre><code class="language-cs">using System;
-using It.FattureInCloud.Sdk.Api;
-using It.FattureInCloud.Sdk.Client;
-using It.FattureInCloud.Sdk.Model;
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Api</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Client</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Model</span><span class="p">;</span>
 
-namespace test
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Configuration config = new Configuration();
+<span class="k">namespace</span><span class="w"> </span><span class="nn">test</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Configuration</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Configuration</span><span class="p">();</span>
 
-            //set your access token
-            config.AccessToken = "YOUR_ACCESS_TOKEN";
-            //set your company id
-            var companyId = 12345;
+<span class="w">            </span><span class="c1">//set your access token</span>
+<span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">AccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">//set your company id</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12345</span><span class="p">;</span>
 
-            var apiInstance = new IssuedDocumentsApi(config);
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocumentsApi</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
 
-            // Transform the document: https://github.com/fattureincloud/fattureincloud-csharp-sdk/blob/master/docs/IssuedDocumentsApi.md#transformissueddocument
-            try
-            {
-                TransformIssuedDocumentResponse result = apiInstance.TransformIssuedDocument(companyId, 876993, "invoice", 1, 1);
-                Console.Write(result);
-            }
-            catch (ApiException e)
-            {
-                Console.WriteLine("Exception when calling IssuedDocumentsApi.TransformIssuedDocument: " + e.Message);
-                Console.WriteLine("Status Code: " + e.ErrorCode);
-                Console.WriteLine(e.StackTrace);
-            }
-        }
-    }
-}
-</code></pre>
-<pre><code class="language-go">package main
+<span class="w">            </span><span class="c1">// Transform the document: https://github.com/fattureincloud/fattureincloud-csharp-sdk/blob/master/docs/IssuedDocumentsApi.md#transformissueddocument</span>
+<span class="w">            </span><span class="k">try</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">TransformIssuedDocumentResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="n">TransformIssuedDocument</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="m">876993</span><span class="p">,</span><span class="w"> </span><span class="s">"invoice"</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ApiException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Exception when calling IssuedDocumentsApi.TransformIssuedDocument: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Status Code: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">ErrorCode</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">StackTrace</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-import (
-    "context"
-    "encoding/json"
-    "fmt"
-    "os"
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">"context"</span>
+<span class="w">    </span><span class="s">"encoding/json"</span>
+<span class="w">    </span><span class="s">"fmt"</span>
+<span class="w">    </span><span class="s">"os"</span>
 
-    fattureincloudapi "github.com/fattureincloud/fattureincloud-go-sdk/v2/api"
-)
+<span class="w">    </span><span class="nx">fattureincloudapi</span><span class="w"> </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/api"</span>
+<span class="p">)</span>
 
-func main() {
-    //set your access token
-    auth := context.WithValue(context.Background(), fattureincloudapi.ContextAccessToken, "YOUR_ACCESS_TOKEN")
-    configuration := fattureincloudapi.NewConfiguration()
-    apiClient := fattureincloudapi.NewAPIClient(configuration)
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//set your access token</span>
+<span class="w">    </span><span class="nx">auth</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">WithValue</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">Background</span><span class="p">(),</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">ContextAccessToken</span><span class="p">,</span><span class="w"> </span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">configuration</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewConfiguration</span><span class="p">()</span>
+<span class="w">    </span><span class="nx">apiClient</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewAPIClient</span><span class="p">(</span><span class="nx">configuration</span><span class="p">)</span>
 
-    //set your company id
-    companyId := int32(12345)
+<span class="w">    </span><span class="c1">//set your company id</span>
+<span class="w">    </span><span class="nx">companyId</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">int32</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
 
-    // Transform the document: https://github.com/fattureincloud/fattureincloud-go-sdk/blob/master/docs/IssuedDocumentsAPI.md#transformIssuedDocument
-    resp, r, err := apiClient.IssuedDocumentsAPI.TransformIssuedDocument(auth, companyId).OriginalDocumentId(876993).NewType("invoice").EInvoice(1).TransformKeepCopy(1).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `IssuedDocumentsAPI.TransformIssuedDocument``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    json.NewEncoder(os.Stdout).Encode(resp)
-}
-</code></pre>
-<pre><code class="language-java">import it.fattureincloud.sdk.ApiClient;
-import it.fattureincloud.sdk.ApiException;
-import it.fattureincloud.sdk.Configuration;
-import it.fattureincloud.sdk.auth.*;
-import it.fattureincloud.sdk.model.*;
-import it.fattureincloud.sdk.api.IssuedDocumentsApi;
+<span class="w">    </span><span class="c1">// Transform the document: https://github.com/fattureincloud/fattureincloud-go-sdk/blob/master/docs/IssuedDocumentsAPI.md#transformIssuedDocument</span>
+<span class="w">    </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">apiClient</span><span class="p">.</span><span class="nx">IssuedDocumentsAPI</span><span class="p">.</span><span class="nx">TransformIssuedDocument</span><span class="p">(</span><span class="nx">auth</span><span class="p">,</span><span class="w"> </span><span class="nx">companyId</span><span class="p">).</span><span class="nx">OriginalDocumentId</span><span class="p">(</span><span class="mi">876993</span><span class="p">).</span><span class="nx">NewType</span><span class="p">(</span><span class="s">"invoice"</span><span class="p">).</span><span class="nx">EInvoice</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">TransformKeepCopy</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">Execute</span><span class="p">()</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Error when calling `IssuedDocumentsAPI.TransformIssuedDocument``: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Full HTTP response: %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">json</span><span class="p">.</span><span class="nx">NewEncoder</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">).</span><span class="nx">Encode</span><span class="p">(</span><span class="nx">resp</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiClient</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.Configuration</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.auth.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.model.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.api.IssuedDocumentsApi</span><span class="p">;</span>
 
-public class Application {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Application</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ApiClient</span><span class="w"> </span><span class="n">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Configuration</span><span class="p">.</span><span class="na">getDefaultApiClient</span><span class="p">();</span>
 
-        //set your access token
-        OAuth OAuth2AuthenticationCodeFlow = (OAuth) defaultClient.getAuthentication("OAuth2AuthenticationCodeFlow");
-        OAuth2AuthenticationCodeFlow.setAccessToken("YOUR_ACCESS_TOKEN");
+<span class="w">        </span><span class="c1">//set your access token</span>
+<span class="w">        </span><span class="n">OAuth</span><span class="w"> </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">OAuth</span><span class="p">)</span><span class="w"> </span><span class="n">defaultClient</span><span class="p">.</span><span class="na">getAuthentication</span><span class="p">(</span><span class="s">"OAuth2AuthenticationCodeFlow"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="na">setAccessToken</span><span class="p">(</span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">);</span>
 
-        IssuedDocumentsApi apiInstance = new IssuedDocumentsApi(defaultClient);
-        //set your company id
-        Integer companyId = 12345;
+<span class="w">        </span><span class="n">IssuedDocumentsApi</span><span class="w"> </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocumentsApi</span><span class="p">(</span><span class="n">defaultClient</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//set your company id</span>
+<span class="w">        </span><span class="n">Integer</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span><span class="p">;</span>
 
-        // Transform the document: https://github.com/fattureincloud/fattureincloud-java-sdk/blob/master/docs/IssuedDocumentsApi.md#transformissueddocument
-        try {
-            TransformIssuedDocumentResponse result = apiInstance.transformIssuedDocument(companyId, 876993, "invoice", 1, 1);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling IssuedDocumentsApi#transformIssuedDocument");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
-</code></pre>
-<pre><code class="language-php">&lt;?php
-require_once(__DIR__ . '/vendor/autoload.php');
+<span class="w">        </span><span class="c1">// Transform the document: https://github.com/fattureincloud/fattureincloud-java-sdk/blob/master/docs/IssuedDocumentsApi.md#transformissueddocument</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">TransformIssuedDocumentResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="na">transformIssuedDocument</span><span class="p">(</span><span class="n">companyId</span><span class="p">,</span><span class="w"> </span><span class="mi">876993</span><span class="p">,</span><span class="w"> </span><span class="s">"invoice"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ApiException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Exception when calling IssuedDocumentsApi#transformIssuedDocument"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Status code: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getCode</span><span class="p">());</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Reason: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getResponseBody</span><span class="p">());</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Response headers: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getResponseHeaders</span><span class="p">());</span>
+<span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span><span class="p">(</span><span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">);</span>
 
-use FattureInCloud\Configuration;
-use FattureInCloud\Api\IssuedDocumentsApi;
+<span class="k">use</span> <span class="nx">FattureInCloud\Configuration</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">FattureInCloud\Api\IssuedDocumentsApi</span><span class="p">;</span>
 
-//set your access token
-$config = Configuration::getDefaultConfiguration()-&gt;setAccessToken('YOUR_ACCESS_TOKEN');
+<span class="c1">//set your access token</span>
+<span class="nv">$config</span> <span class="o">=</span> <span class="nx">Configuration</span><span class="o">::</span><span class="na">getDefaultConfiguration</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">setAccessToken</span><span class="p">(</span><span class="s1">'YOUR_ACCESS_TOKEN'</span><span class="p">);</span>
 
-$apiInstance = new IssuedDocumentsApi(
-    new GuzzleHttp\Client(),
-    $config
-);
+<span class="nv">$apiInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IssuedDocumentsApi</span><span class="p">(</span>
+    <span class="k">new</span> <span class="nx">GuzzleHttp\Client</span><span class="p">(),</span>
+    <span class="nv">$config</span>
+<span class="p">);</span>
 
-//set your company id
-$company_id = 12345;
+<span class="c1">//set your company id</span>
+<span class="nv">$company_id</span> <span class="o">=</span> <span class="mi">12345</span><span class="p">;</span>
 
-// Transform the document: https://github.com/fattureincloud/fattureincloud-php-sdk/blob/master/docs/Api/IssuedDocumentsApi.md#transformissueddocument
-try {
-    $result = $apiInstance-&gt;transformIssuedDocument($company_id, 876993, "invoice", 1, 1);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling IssuedDocumentsApi-&gt;transformIssuedDocument: ', $e-&gt;getMessage(), PHP_EOL;
-}
-</code></pre>
-<pre><code class="language-js">var fattureInCloudSdk = require("@fattureincloud/fattureincloud-js-sdk");
-let defaultClient = fattureInCloudSdk.ApiClient.instance;
+<span class="c1">// Transform the document: https://github.com/fattureincloud/fattureincloud-php-sdk/blob/master/docs/Api/IssuedDocumentsApi.md#transformissueddocument</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$apiInstance</span><span class="o">-&gt;</span><span class="na">transformIssuedDocument</span><span class="p">(</span><span class="nv">$company_id</span><span class="p">,</span> <span class="mi">876993</span><span class="p">,</span> <span class="s2">"invoice"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">'Exception when calling IssuedDocumentsApi-&gt;transformIssuedDocument: '</span><span class="p">,</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"@fattureincloud/fattureincloud-js-sdk"</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ApiClient</span><span class="p">.</span><span class="nx">instance</span><span class="p">;</span>
 
-//set your access token
-let OAuth2AuthenticationCodeFlow =
-  defaultClient.authentications["OAuth2AuthenticationCodeFlow"];
-OAuth2AuthenticationCodeFlow.accessToken = "YOUR_ACCESS_TOKEN";
+<span class="c1">//set your access token</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="nx">defaultClient</span><span class="p">.</span><span class="nx">authentications</span><span class="p">[</span><span class="s2">"OAuth2AuthenticationCodeFlow"</span><span class="p">];</span>
+<span class="nx">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
 
-let apiInstance = new fattureInCloudSdk.IssuedDocumentsApi();
-//set your company id
-let companyId = 12345;
+<span class="kd">let</span><span class="w"> </span><span class="nx">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">IssuedDocumentsApi</span><span class="p">();</span>
+<span class="c1">//set your company id</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12345</span><span class="p">;</span>
 
-let opts = {
-  eInvoice: 1,
-  transformKeepCopy: 1,
-};
+<span class="kd">let</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">eInvoice</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">transformKeepCopy</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="p">};</span>
 
-// Transform issued document: https://github.com/fattureincloud/fattureincloud-js-sdk/blob/master/docs/IssuedDocumentsApi.md#transformIssuedDocument
-apiInstance.transformIssuedDocument(companyId, 876993, "invoice", opts).then(
-  (result) =&gt; {
-    console.log(
-      "API called successfully. Returned result: " + JSON.stringify(result)
-    );
-  },
-  (error) =&gt; {
-    console.error(error);
-  }
-);
-</code></pre>
-<pre><code class="language-py">import fattureincloud_python_sdk
-from fattureincloud_python_sdk.api import issued_documents_api
+<span class="c1">// Transform issued document: https://github.com/fattureincloud/fattureincloud-js-sdk/blob/master/docs/IssuedDocumentsApi.md#transformIssuedDocument</span>
+<span class="nx">apiInstance</span><span class="p">.</span><span class="nx">transformIssuedDocument</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="mf">876993</span><span class="p">,</span><span class="w"> </span><span class="s2">"invoice"</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+<span class="w">      </span><span class="s2">"API called successfully. Returned result: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">fattureincloud_python_sdk</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.api</span> <span class="kn">import</span> <span class="n">issued_documents_api</span>
 
-from pprint import pprint
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
 
-# set your access token
-configuration = fattureincloud_python_sdk.Configuration()
-configuration.access_token = "YOUR_ACCESS_TOKEN"
+<span class="c1"># set your access token</span>
+<span class="n">configuration</span> <span class="o">=</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">Configuration</span><span class="p">()</span>
+<span class="n">configuration</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="s2">"YOUR_ACCESS_TOKEN"</span>
 
-# set your company id
-company_id = 12345
+<span class="c1"># set your company id</span>
+<span class="n">company_id</span> <span class="o">=</span> <span class="mi">12345</span>
 
-# Transform the document: https://github.com/fattureincloud/fattureincloud-python-sdk/blob/master/docs/IssuedDocumentsApi.md#transform_issued_document
-with fattureincloud_python_sdk.ApiClient(configuration) as api_client:
+<span class="c1"># Transform the document: https://github.com/fattureincloud/fattureincloud-python-sdk/blob/master/docs/IssuedDocumentsApi.md#transform_issued_document</span>
+<span class="k">with</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">ApiClient</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span> <span class="k">as</span> <span class="n">api_client</span><span class="p">:</span>
 
-    api_instance = issued_documents_api.IssuedDocumentsApi(api_client)
-    try:
-        api_response = api_instance.transform_issued_document(company_id, 876993, "invoice", e_invoice=1, transform_keep_copy=1)
-        pprint(api_response)
-    except fattureincloud_python_sdk.ApiException as e:
-        print("Exception when calling IssuedDocumentsApi-&gt;transform_issued_document: %s\n" % e)
-</code></pre>
-<pre><code class="language-rb">require 'time'
-require 'fattureincloud_ruby_sdk'
+    <span class="n">api_instance</span> <span class="o">=</span> <span class="n">issued_documents_api</span><span class="o">.</span><span class="n">IssuedDocumentsApi</span><span class="p">(</span><span class="n">api_client</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">api_response</span> <span class="o">=</span> <span class="n">api_instance</span><span class="o">.</span><span class="n">transform_issued_document</span><span class="p">(</span><span class="n">company_id</span><span class="p">,</span> <span class="mi">876993</span><span class="p">,</span> <span class="s2">"invoice"</span><span class="p">,</span> <span class="n">e_invoice</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">transform_keep_copy</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="p">(</span><span class="n">api_response</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">ApiException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Exception when calling IssuedDocumentsApi-&gt;transform_issued_document: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">require</span><span class="w"> </span><span class="s1">'time'</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">'fattureincloud_ruby_sdk'</span>
 
-FattureInCloud_Ruby_Sdk.configure do |config|
-  # set your access token
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
+<span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">.</span><span class="n">configure</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">config</span><span class="o">|</span>
+<span class="w">  </span><span class="c1"># set your access token</span>
+<span class="w">  </span><span class="n">config</span><span class="o">.</span><span class="n">access_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'YOUR ACCESS TOKEN'</span>
+<span class="k">end</span>
 
-api_instance = FattureInCloud_Ruby_Sdk::IssuedDocumentsApi.new
-# set your company id
-company_id = 12345
+<span class="n">api_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocumentsApi</span><span class="o">.</span><span class="n">new</span>
+<span class="c1"># set your company id</span>
+<span class="n">company_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span>
 
-opts = {
-  e_invoice: 1,
-  transform_keep_copy: 1
-}
+<span class="n">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="ss">e_invoice</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">transform_keep_copy</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
 
-# Transform the document: https://github.com/fattureincloud/fattureincloud-ruby-sdk/blob/master/docs/IssuedDocumentsApi.md#transform_issued_document
-begin
-  result = api_instance.transform_issued_document(company_id, 876993, "invoice", opts)
-  p result
-rescue FattureInCloud_Ruby_Sdk::ApiError =&gt; e
-  puts "Error when calling IssuedDocumentsApi-&gt;transform_issued_document: #{e}"
-end
-</code></pre>
-<pre><code class="language-ts">import {
-  Configuration,
-  IssuedDocumentsApi,
-} from "@fattureincloud/fattureincloud-ts-sdk";
+<span class="c1"># Transform the document: https://github.com/fattureincloud/fattureincloud-ruby-sdk/blob/master/docs/IssuedDocumentsApi.md#transform_issued_document</span>
+<span class="k">begin</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">api_instance</span><span class="o">.</span><span class="n">transform_issued_document</span><span class="p">(</span><span class="n">company_id</span><span class="p">,</span><span class="w"> </span><span class="mi">876993</span><span class="p">,</span><span class="w"> </span><span class="s2">"invoice"</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="p">)</span>
+<span class="w">  </span><span class="nb">p</span><span class="w"> </span><span class="n">result</span>
+<span class="k">rescue</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">ApiError</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">e</span>
+<span class="w">  </span><span class="nb">puts</span><span class="w"> </span><span class="s2">"Error when calling IssuedDocumentsApi-&gt;transform_issued_document: </span><span class="si">#{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">Configuration</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">IssuedDocumentsApi</span><span class="p">,</span>
+<span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@fattureincloud/fattureincloud-ts-sdk"</span><span class="p">;</span>
 
-//set your access token
-const apiConfig = new Configuration({
-  accessToken: "YOUR_ACCESS_TOKEN",
-});
+<span class="c1">//set your access token</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">apiConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Configuration</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">accessToken</span><span class="o">:</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span><span class="p">,</span>
+<span class="p">});</span>
 
-let apiInstance = new IssuedDocumentsApi(apiConfig);
+<span class="kd">let</span><span class="w"> </span><span class="nx">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">IssuedDocumentsApi</span><span class="p">(</span><span class="nx">apiConfig</span><span class="p">);</span>
 
-//set your company id
-let companyId = 12345;
+<span class="c1">//set your company id</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12345</span><span class="p">;</span>
 
-// Transform the document: https://github.com/fattureincloud/fattureincloud-ts-sdk/blob/master/docs/IssuedDocumentsApi.md#transformIssuedDocument
-apiInstance.transformIssuedDocument(companyId, 876993, "invoice", 1, 1).then(
-  (data) =&gt; {
-    console.log(data);
-  },
-  (error) =&gt; {
-    console.error(error);
-  }
-);
-</code></pre>
-<h2 id="send-it"><img alt="📬" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4ec.png" title=":mailbox_with_mail:"/>  Send It!</h2>
+<span class="c1">// Transform the document: https://github.com/fattureincloud/fattureincloud-ts-sdk/blob/master/docs/IssuedDocumentsApi.md#transformIssuedDocument</span>
+<span class="nx">apiInstance</span><span class="p">.</span><span class="nx">transformIssuedDocument</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="mf">876993</span><span class="p">,</span><span class="w"> </span><span class="s2">"invoice"</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<h2 id="mailbox_with_mail-send-it">:mailbox_with_mail:  Send It!</h2>
 <p>The two methods above won't perform any modification, but they will just return the body that you'll need to use to perform the desired action. This lets you eventually review the final result and modify it if needed.</p>
 <p>The request also includes an <strong>options</strong> section, that makes it possible for our APIs to distinguish a normal document creation from a join or transform request; it is critical that you don't modify this section, but you must send it exactly as it is returned by the API.</p>
 <p>:::warning THE OPTIONS
 Make sure to pass also the <strong>options</strong> field to the creation call, it's the most important part of the process.
 :::</p>
 <p>The response will look like this:</p>
-<pre><code class="language-http">HTTP/1.1 200 OK
-Content-Type: application/json;charset=UTF-8
+<div class="highlight"><pre><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json;charset=UTF-8</span>
 
-{
-    "data": {
-        "type": "invoice",
-        "e_invoice": true,
-        ...,
-    },
-    "options": {
-        "create_from": [
-            "89144071"
-        ],
-        "transform": true,
-        "keep_copy": true
-    }
-}
-</code></pre>
+<span class="p">{</span>
+<span class="w">    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"invoice"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"e_invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="err">...</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"create_from"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">"89144071"</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">"transform"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"keep_copy"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>To persist the operation you must use the <a href="/api-reference#post-/c/-company_id-/issued_documents">Create Issued Document</a> method, using the previously returned body as input of the request; of course, you can modify it if needed, but please remember to leave the options section as it is. You can also check the <a href="/guides/invoice-creation.mdx">Issued Document Creation Guide</a> for more details.</p>
 </article>
 </div>

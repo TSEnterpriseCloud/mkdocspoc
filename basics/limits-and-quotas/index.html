@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#long-term-usage-limits">
+<a class="md-skip" href="#calendar-long-term-usage-limits">
           Skip to content
         </a>
 </div>
@@ -371,30 +371,30 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#long-term-usage-limits">
+<a class="md-nav__link" href="#calendar-long-term-usage-limits">
 <span class="md-ellipsis">
-        Long-term usage limits
+      :calendar:  Long-term usage limits
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#short-term-rate-limits">
+<a class="md-nav__link" href="#stopwatch-short-term-rate-limits">
 <span class="md-ellipsis">
-        Short-term rate limits
+      :stopwatch:  Short-term rate limits
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#http-headers-and-response-codes">
+<a class="md-nav__link" href="#bookmark_tabs-http-headers-and-response-codes">
 <span class="md-ellipsis">
-        HTTP Headers and response codes
+      :bookmark_tabs:  HTTP Headers and response codes
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#is-it-still-not-enough">
+<a class="md-nav__link" href="#ocean-is-it-still-not-enough">
 <span class="md-ellipsis">
-        Is it still not enough?
+      :ocean:  Is it still not enough?
     </span>
 </a>
 </li>
@@ -406,9 +406,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#additional-resources">
+<a class="md-nav__link" href="#books-additional-resources">
 <span class="md-ellipsis">
-        Additional Resources
+      :books:  Additional Resources
     </span>
 </a>
 </li>
@@ -596,7 +596,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../support/general-knowledge/">
+<a class="md-nav__link" href="../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -658,30 +658,30 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#long-term-usage-limits">
+<a class="md-nav__link" href="#calendar-long-term-usage-limits">
 <span class="md-ellipsis">
-        Long-term usage limits
+      :calendar:  Long-term usage limits
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#short-term-rate-limits">
+<a class="md-nav__link" href="#stopwatch-short-term-rate-limits">
 <span class="md-ellipsis">
-        Short-term rate limits
+      :stopwatch:  Short-term rate limits
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#http-headers-and-response-codes">
+<a class="md-nav__link" href="#bookmark_tabs-http-headers-and-response-codes">
 <span class="md-ellipsis">
-        HTTP Headers and response codes
+      :bookmark_tabs:  HTTP Headers and response codes
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#is-it-still-not-enough">
+<a class="md-nav__link" href="#ocean-is-it-still-not-enough">
 <span class="md-ellipsis">
-        Is it still not enough?
+      :ocean:  Is it still not enough?
     </span>
 </a>
 </li>
@@ -693,9 +693,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#additional-resources">
+<a class="md-nav__link" href="#books-additional-resources">
 <span class="md-ellipsis">
-        Additional Resources
+      :books:  Additional Resources
     </span>
 </a>
 </li>
@@ -711,7 +711,7 @@
 import TabItem from "@theme/TabItem";</p>
 <p>To prevent abuse, avoid slowdowns, and ensure that all users make responsible use of our APIs, we enforce <strong>quota limits</strong>. If you perform too many requests you may exceed your quota; in this case, you will receive an <a href="/basics/errors.md">error</a> as a response until when your quota will be restored.</p>
 <p>We enforce two different kinds of limits, based on the time range that they apply to.</p>
-<h2 id="long-term-usage-limits"><img alt="📆" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4c6.png" title=":calendar:"/>  Long-term usage limits</h2>
+<h2 id="calendar-long-term-usage-limits">:calendar:  Long-term usage limits</h2>
 <p><strong>Long-term usage limits</strong> are meant to avoid improper usage of the APIs, by setting a limit on the maximum amount of requests in a certain period.</p>
 <p>:::note Long-term Usage quotas are different based on the app visibility!</p>
 <p>If the app is public every user that has access to a specific company through a specific app shares (and consumes) the same quotas as other users that have access to the same company through the same app, if the app is private the quotas are no more related to the app but only to the company, this means that creating a new private app won't increase your quotas.</p>
@@ -741,7 +741,7 @@ import TabItem from "@theme/TabItem";</p>
 </table>
 <p>Long-term limits use <strong>fixed time windows</strong>: these quotas are reset at the beginning of a new hour or month.</p>
 <p>If the limit is exceeded, the API returns a <strong>403 Forbidden</strong> HTTP status code; the response also includes a <em>Retry-After</em> header, indicating how long you should wait before retrying the request (in seconds).</p>
-<h2 id="short-term-rate-limits"><img alt="⏱️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/23f1.png" title=":stopwatch:"/>  Short-term rate limits</h2>
+<h2 id="stopwatch-short-term-rate-limits">:stopwatch:  Short-term rate limits</h2>
 <p><strong>Short-term rate limits</strong> are meant to avoid usage spikes that could affect the system availability, by preventing applications from sending too many requests in a short-time interval.</p>
 <p>:::note Short-term Usage quotas are company-related!!!</p>
 <p>This means that every app and user that has access to a specific company shares (and consumes) the same quotas with other apps and users that have access to the same company.</p>
@@ -763,7 +763,7 @@ import TabItem from "@theme/TabItem";</p>
 </table>
 <p>Short-term usage limits use a <strong>sliding-window algorithm</strong>, check the additional resources for further info.</p>
 <p>If the limit is exceeded, the API returns a <strong>429 Too Many Requests</strong> HTTP status code. The response also includes a <em>Retry-After</em> header, indicating how long you should wait before the request (in seconds).</p>
-<h2 id="http-headers-and-response-codes"><img alt="📑" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4d1.png" title=":bookmark_tabs:"/>  HTTP Headers and response codes</h2>
+<h2 id="bookmark_tabs-http-headers-and-response-codes">:bookmark_tabs:  HTTP Headers and response codes</h2>
 <p>Every response contains several HTTP headers containing info about long-term usage limits.</p>
 <table>
 <thead>
@@ -792,15 +792,15 @@ import TabItem from "@theme/TabItem";</p>
 </tbody>
 </table>
 <p>Here you can find an example of the HTTP response:</p>
-<pre><code class="language-http">HTTP/1.1 200 OK
-Date: Tue, 05 May 2020 17:27:06 GMT
-Status: 200 OK
-RateLimit-HourlyRemaining: 840
-RateLimit-HourlyLimit: 1000
-RateLimit-MonthlyRemaining: 1430
-RateLimit-MonthlyLimit: 20000
-</code></pre>
-<h2 id="is-it-still-not-enough"><img alt="🌊" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f30a.png" title=":ocean:"/>  Is it still not enough?</h2>
+<div class="highlight"><pre><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Date</span><span class="o">:</span> <span class="l">Tue, 05 May 2020 17:27:06 GMT</span>
+<span class="na">Status</span><span class="o">:</span> <span class="l">200 OK</span>
+<span class="na">RateLimit-HourlyRemaining</span><span class="o">:</span> <span class="l">840</span>
+<span class="na">RateLimit-HourlyLimit</span><span class="o">:</span> <span class="l">1000</span>
+<span class="na">RateLimit-MonthlyRemaining</span><span class="o">:</span> <span class="l">1430</span>
+<span class="na">RateLimit-MonthlyLimit</span><span class="o">:</span> <span class="l">20000</span>
+</code></pre></div>
+<h2 id="ocean-is-it-still-not-enough">:ocean:  Is it still not enough?</h2>
 <p>We designed our quotas to be able to satisfy the needs of the majority of the use cases. Nevertheless, in some cases, the default quotas could prove to be scarce, and in this situation, the only way is to increment the quota limit.</p>
 <p>If you think that your use case requires a higher quota, you can try to request us additional quota. <strong>It isn't automatic though</strong>, you'll have to explain your use case in detail to our team and demonstrate why our quotas are not sufficient to resolve it.</p>
 <p>We can increment only the <a href="#-long-term-usage-limits">long-term usage limits</a>.</p>
@@ -812,276 +812,276 @@ If that's the case, we'll reject every additional quota request we'll receive, a
 <p>As explained above, if the rate limit will be exceeded you'll receive a <em>429 response</em> to your requests. <strong>This is not a fatal error</strong> and we expect you to retry the request after a short interval; if the requests will keep arriving too quickly, your requests will result in another error result, and so on.</p>
 <p>It is then important to gradually <em>increase the delay between requests</em> to overcome this issue, this is usually done by applying <strong>exponential back-off</strong> to your requests.</p>
 <p>Here you can find some code examples that you can use to introduce exponential back-off on your code:</p>
-<pre><code class="language-cs">// We apply exponential backoff to our C# SDK
-// https://github.com/fattureincloud/fattureincloud-csharp-sdk/
+<div class="highlight"><pre><span></span><code><span class="c1">// We apply exponential backoff to our C# SDK</span>
+<span class="c1">// https://github.com/fattureincloud/fattureincloud-csharp-sdk/</span>
 
-// We suppose to use the http://www.thepollyproject.org
-// and the https://github.com/Polly-Contrib/Polly.Contrib.WaitAndRetry libraries
-// to implement the exponential back-off
-// to install them using the .Net cli:
-// dotnet add package Polly
-// dotnet add package Polly.Contrib.WaitAndRetry
+<span class="c1">// We suppose to use the http://www.thepollyproject.org</span>
+<span class="c1">// and the https://github.com/Polly-Contrib/Polly.Contrib.WaitAndRetry libraries</span>
+<span class="c1">// to implement the exponential back-off</span>
+<span class="c1">// to install them using the .Net cli:</span>
+<span class="c1">// dotnet add package Polly</span>
+<span class="c1">// dotnet add package Polly.Contrib.WaitAndRetry</span>
 
-using System;
-using Polly;
-using It.FattureInCloud.Sdk.Api;
-using It.FattureInCloud.Sdk.Model;
-using It.FattureInCloud.Sdk.Client;
-using Polly.Contrib.WaitAndRetry;
+<span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Polly</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Api</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Model</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">It.FattureInCloud.Sdk.Client</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Polly.Contrib.WaitAndRetry</span><span class="p">;</span>
 
-namespace Backoff
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Configuration config = new Configuration();
-            config.AccessToken = "YOUR_ACCESS_TOKEN";
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Backoff</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Configuration</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Configuration</span><span class="p">();</span>
+<span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">AccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
 
-            var apiInstance = new ProductsApi(config);
-            var companyId = 11;
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProductsApi</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">11</span><span class="p">;</span>
 
-            var maxRetryAttempts = 5;
-            var pauseBetweenFailures = Backoff.ExponentialBackoff(TimeSpan.FromSeconds(2), retryCount: maxRetryAttempts);
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">maxRetryAttempts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">pauseBetweenFailures</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Backoff</span><span class="p">.</span><span class="n">ExponentialBackoff</span><span class="p">(</span><span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromSeconds</span><span class="p">(</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">retryCount</span><span class="p">:</span><span class="w"> </span><span class="n">maxRetryAttempts</span><span class="p">);</span>
 
-            var retryPolicy = Policy
-                .WaitAndRetry(pauseBetweenFailures);
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">retryPolicy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Policy</span>
+<span class="w">                </span><span class="p">.</span><span class="n">WaitAndRetry</span><span class="p">(</span><span class="n">pauseBetweenFailures</span><span class="p">);</span>
 
-            retryPolicy.Execute(() =&gt;
-            {
-                ListProductsResponse result = apiInstance.ListProducts(companyId);
-                Console.Write("\n successful");
-                Console.Write(result);
-            });
-        }
-    }
-}
-</code></pre>
-<pre><code class="language-go">// We apply exponential backoff to our Go SDK
-// https://github.com/fattureincloud/fattureincloud-go-sdk/
+<span class="w">            </span><span class="n">retryPolicy</span><span class="p">.</span><span class="n">Execute</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">ListProductsResponse</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="n">ListProducts</span><span class="p">(</span><span class="n">companyId</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">"\n successful"</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="w">            </span><span class="p">});</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// We apply exponential backoff to our Go SDK</span>
+<span class="c1">// https://github.com/fattureincloud/fattureincloud-go-sdk/</span>
 
-// We suppose to use the https://pkg.go.dev/github.com/cenkalti/backoff/v4 library
-// to implement the exponential back-off
-// to install it:
-// go get github.com/cenkalti/backoff/v4
+<span class="c1">// We suppose to use the https://pkg.go.dev/github.com/cenkalti/backoff/v4 library</span>
+<span class="c1">// to implement the exponential back-off</span>
+<span class="c1">// to install it:</span>
+<span class="c1">// go get github.com/cenkalti/backoff/v4</span>
 
-package main
+<span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-import (
-    "context"
-    "encoding/json"
-    "fmt"
-    "os"
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">"context"</span>
+<span class="w">    </span><span class="s">"encoding/json"</span>
+<span class="w">    </span><span class="s">"fmt"</span>
+<span class="w">    </span><span class="s">"os"</span>
 
-    backoff "github.com/cenkalti/backoff/v4"
-    fattureincloudapi "github.com/fattureincloud/fattureincloud-go-sdk/v2/api"
-)
+<span class="w">    </span><span class="nx">backoff</span><span class="w"> </span><span class="s">"github.com/cenkalti/backoff/v4"</span>
+<span class="w">    </span><span class="nx">fattureincloudapi</span><span class="w"> </span><span class="s">"github.com/fattureincloud/fattureincloud-go-sdk/v2/api"</span>
+<span class="p">)</span>
 
-var (
-    companyId     = int32(2)
-    auth          = context.WithValue(context.Background(), fattureincloudapi.ContextAccessToken, "YOUR_ACCESS_TOKEN")
-    configuration = fattureincloudapi.NewConfiguration()
-    apiClient     = fattureincloudapi.NewAPIClient(configuration)
-)
+<span class="kd">var</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="nx">companyId</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="nb">int32</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">auth</span><span class="w">          </span><span class="p">=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">WithValue</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">Background</span><span class="p">(),</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">ContextAccessToken</span><span class="p">,</span><span class="w"> </span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">configuration</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewConfiguration</span><span class="p">()</span>
+<span class="w">    </span><span class="nx">apiClient</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="nx">fattureincloudapi</span><span class="p">.</span><span class="nx">NewAPIClient</span><span class="p">(</span><span class="nx">configuration</span><span class="p">)</span>
+<span class="p">)</span>
 
-func main() {
-    operation := func() error {
-        resp, _, err := apiClient.ProductsAPI.ListProducts(auth, companyId).Execute()
-        if resp != nil {
-            json.NewEncoder(os.Stdout).Encode(resp)
-        } else {
-            fmt.Println(err)
-        }
-        return err
-    }
-    err := backoff.Retry(operation, backoff.NewExponentialBackOff())
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error %v\n", err)
-        return
-    }
-}
-</code></pre>
-<pre><code class="language-java">// We apply exponential backoff to our Java SDK
-// https://github.com/fattureincloud/fattureincloud-java-sdk/
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">operation</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">apiClient</span><span class="p">.</span><span class="nx">ProductsAPI</span><span class="p">.</span><span class="nx">ListProducts</span><span class="p">(</span><span class="nx">auth</span><span class="p">,</span><span class="w"> </span><span class="nx">companyId</span><span class="p">).</span><span class="nx">Execute</span><span class="p">()</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">resp</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">json</span><span class="p">.</span><span class="nx">NewEncoder</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">).</span><span class="nx">Encode</span><span class="p">(</span><span class="nx">resp</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">err</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">backoff</span><span class="p">.</span><span class="nx">Retry</span><span class="p">(</span><span class="nx">operation</span><span class="p">,</span><span class="w"> </span><span class="nx">backoff</span><span class="p">.</span><span class="nx">NewExponentialBackOff</span><span class="p">())</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Error %v\n"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// We apply exponential backoff to our Java SDK</span>
+<span class="c1">// https://github.com/fattureincloud/fattureincloud-java-sdk/</span>
 
-// We suppose to use the https://resilience4j.readme.io library to implement the exponential back-off
-// to install it see: https://search.maven.org/artifact/io.github.resilience4j/resilience4j-retry/1.7.1/jar
+<span class="c1">// We suppose to use the https://resilience4j.readme.io library to implement the exponential back-off</span>
+<span class="c1">// to install it see: https://search.maven.org/artifact/io.github.resilience4j/resilience4j-retry/1.7.1/jar</span>
 
-import io.github.resilience4j.core.IntervalFunction;
-import io.github.resilience4j.retry.Retry;
-import io.github.resilience4j.retry.RetryConfig;
-import io.github.resilience4j.retry.RetryRegistry;
-import io.vavr.CheckedFunction0;
-import it.fattureincloud.sdk.ApiClient;
-import it.fattureincloud.sdk.ApiException;
-import it.fattureincloud.sdk.Configuration;
-import it.fattureincloud.sdk.api.ProductsApi;
-import it.fattureincloud.sdk.auth.OAuth;
-import it.fattureincloud.sdk.model.ListProductsResponse;
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.github.resilience4j.core.IntervalFunction</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.github.resilience4j.retry.Retry</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.github.resilience4j.retry.RetryConfig</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.github.resilience4j.retry.RetryRegistry</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.vavr.CheckedFunction0</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiClient</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.ApiException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.Configuration</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.api.ProductsApi</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.auth.OAuth</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">it.fattureincloud.sdk.model.ListProductsResponse</span><span class="p">;</span>
 
-public class Application {
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Application</span><span class="w"> </span><span class="p">{</span>
 
-    public static void main(String[] args) throws Throwable {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api-v2.fattureincloud.it");
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Throwable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ApiClient</span><span class="w"> </span><span class="n">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Configuration</span><span class="p">.</span><span class="na">getDefaultApiClient</span><span class="p">();</span>
+<span class="w">        </span><span class="n">defaultClient</span><span class="p">.</span><span class="na">setBasePath</span><span class="p">(</span><span class="s">"https://api-v2.fattureincloud.it"</span><span class="p">);</span>
 
-        OAuth OAuth2AuthenticationCodeFlow = (OAuth) defaultClient.getAuthentication("OAuth2AuthenticationCodeFlow");
-        OAuth2AuthenticationCodeFlow.setAccessToken("a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJoMWJVQWJiVmpDT3ZqWmliYXlhOGMzcEQ2aEVEeENPcSIsImV4cCI6MTY0MjA4NDgzNH0.mBOAhimqtRV6WurlfVWNj9Sq7zOBZvGqSzV1swG0AN4");
+<span class="w">        </span><span class="n">OAuth</span><span class="w"> </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">OAuth</span><span class="p">)</span><span class="w"> </span><span class="n">defaultClient</span><span class="p">.</span><span class="na">getAuthentication</span><span class="p">(</span><span class="s">"OAuth2AuthenticationCodeFlow"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="na">setAccessToken</span><span class="p">(</span><span class="s">"a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJoMWJVQWJiVmpDT3ZqWmliYXlhOGMzcEQ2aEVEeENPcSIsImV4cCI6MTY0MjA4NDgzNH0.mBOAhimqtRV6WurlfVWNj9Sq7zOBZvGqSzV1swG0AN4"</span><span class="p">);</span>
 
-        RetryConfig config = RetryConfig.custom()
-                .maxAttempts(10)
-                .retryExceptions(ApiException.class)
-                .intervalFunction(IntervalFunction.ofExponentialBackoff(1000, 2))
-                .build();
+<span class="w">        </span><span class="n">RetryConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RetryConfig</span><span class="p">.</span><span class="na">custom</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">maxAttempts</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">retryExceptions</span><span class="p">(</span><span class="n">ApiException</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">intervalFunction</span><span class="p">(</span><span class="n">IntervalFunction</span><span class="p">.</span><span class="na">ofExponentialBackoff</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
 
-        RetryRegistry registry = RetryRegistry.of(config);
-        Retry retry = registry.retry("listProducts", config);
+<span class="w">        </span><span class="n">RetryRegistry</span><span class="w"> </span><span class="n">registry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RetryRegistry</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Retry</span><span class="w"> </span><span class="n">retry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="na">retry</span><span class="p">(</span><span class="s">"listProducts"</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">);</span>
 
-        Retry.EventPublisher publisher = retry.getEventPublisher();
-        publisher.onRetry(event -&gt; System.out.println(event.toString()));
+<span class="w">        </span><span class="n">Retry</span><span class="p">.</span><span class="na">EventPublisher</span><span class="w"> </span><span class="n">publisher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">retry</span><span class="p">.</span><span class="na">getEventPublisher</span><span class="p">();</span>
+<span class="w">        </span><span class="n">publisher</span><span class="p">.</span><span class="na">onRetry</span><span class="p">(</span><span class="n">event</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="na">toString</span><span class="p">()));</span>
 
-        ProductsApi apiInstance = new ProductsApi(defaultClient);
+<span class="w">        </span><span class="n">ProductsApi</span><span class="w"> </span><span class="n">apiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProductsApi</span><span class="p">(</span><span class="n">defaultClient</span><span class="p">);</span>
 
-           Retry.decorateCheckedSupplier(retry,
-               () -&gt; apiInstance.listProducts(2, null, null, null, null, null));
+<span class="w">           </span><span class="n">Retry</span><span class="p">.</span><span class="na">decorateCheckedSupplier</span><span class="p">(</span><span class="n">retry</span><span class="p">,</span>
+<span class="w">               </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">apiInstance</span><span class="p">.</span><span class="na">listProducts</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">));</span>
 
-        System.out.println(retryingListSuppliers.apply().getData());
-    }
-}
-</code></pre>
-<pre><code class="language-js">// We apply exponential backoff to our JavaScript SDK
-// https://github.com/fattureincloud/fattureincloud-js-sdk/
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">retryingListSuppliers</span><span class="p">.</span><span class="na">apply</span><span class="p">().</span><span class="na">getData</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// We apply exponential backoff to our JavaScript SDK</span>
+<span class="c1">// https://github.com/fattureincloud/fattureincloud-js-sdk/</span>
 
-let defaultClient = fattureInCloudSdk.ApiClient.instance;
-let OAuth2AuthenticationCodeFlow =
-  defaultClient.authentications["OAuth2AuthenticationCodeFlow"];
-OAuth2AuthenticationCodeFlow.accessToken = "YOUR_ACCESS_TOKEN";
+<span class="kd">let</span><span class="w"> </span><span class="nx">defaultClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ApiClient</span><span class="p">.</span><span class="nx">instance</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">OAuth2AuthenticationCodeFlow</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="nx">defaultClient</span><span class="p">.</span><span class="nx">authentications</span><span class="p">[</span><span class="s2">"OAuth2AuthenticationCodeFlow"</span><span class="p">];</span>
+<span class="nx">OAuth2AuthenticationCodeFlow</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
 
-let productsApiInstance = new fattureInCloudSdk.ProductsApi();
+<span class="kd">let</span><span class="w"> </span><span class="nx">productsApiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">ProductsApi</span><span class="p">();</span>
 
-var companyId = 16;
-var opts = {};
+<span class="kd">var</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
 
-const delay = (retryCount) =&gt;
-  new Promise((resolve) =&gt; setTimeout(resolve, 2 ** retryCount * 1000));
-const getProd = async (retryCount = 0, lastError = null) =&gt; {
-  if (retryCount &gt; 20) throw new Error(lastError);
-  try {
-    return await productsApiInstance.listProducts(companyId, opts);
-  } catch (e) {
-    await delay(retryCount);
-    return getProd(retryCount + 1, e);
-  }
-};
+<span class="kd">const</span><span class="w"> </span><span class="nx">delay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">retryCount</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">  </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="nx">retryCount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">));</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">getProd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">retryCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">lastError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">retryCount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="nx">lastError</span><span class="p">);</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">productsApiInstance</span><span class="p">.</span><span class="nx">listProducts</span><span class="p">(</span><span class="nx">companyId</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">delay</span><span class="p">(</span><span class="nx">retryCount</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">getProd</span><span class="p">(</span><span class="nx">retryCount</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
 
-console.log(await getProd());
-</code></pre>
-<pre><code class="language-php">// We apply exponential backoff to our PHP SDK
-// https://github.com/fattureincloud/fattureincloud-php-sdk/
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">await</span><span class="w"> </span><span class="nx">getProd</span><span class="p">());</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">// We apply exponential backoff to our PHP SDK</span>
+<span class="x">// https://github.com/fattureincloud/fattureincloud-php-sdk/</span>
 
-// We suppose to use the https://github.com/stechstudio/backoff library
-// to implement the exponential back-off
-// to install: composer require stechstudio/backoff
+<span class="x">// We suppose to use the https://github.com/stechstudio/backoff library</span>
+<span class="x">// to implement the exponential back-off</span>
+<span class="x">// to install: composer require stechstudio/backoff</span>
 
-$backoff = new Backoff(10, 'exponential', 10000, true);
+<span class="x">$backoff = new Backoff(10, 'exponential', 10000, true);</span>
 
-$accessToken = "YOUR_ACCESS_TOKEN";
-$config = Configuration::getDefaultConfiguration()-&gt;setAccessToken($accessToken);
-$service = new UserApi(new Client(), $config);
+<span class="x">$accessToken = "YOUR_ACCESS_TOKEN";</span>
+<span class="x">$config = Configuration::getDefaultConfiguration()-&gt;setAccessToken($accessToken);</span>
+<span class="x">$service = new UserApi(new Client(), $config);</span>
 
-$result = $backoff-&gt;run(function() {
-  return $this-&gt;service-&gt;listUserCompanies();
-});
-return $result; // it contains the result of the closure
-</code></pre>
-<pre><code class="language-py"># We apply exponential backoff to our Python SDK
-# https://github.com/fattureincloud/fattureincloud-python-sdk/
+<span class="x">$result = $backoff-&gt;run(function() {</span>
+<span class="x">  return $this-&gt;service-&gt;listUserCompanies();</span>
+<span class="x">});</span>
+<span class="x">return $result; // it contains the result of the closure</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># We apply exponential backoff to our Python SDK</span>
+<span class="c1"># https://github.com/fattureincloud/fattureincloud-python-sdk/</span>
 
-# We suppose to use the https://github.com/litl/backoff library to implement the exponential back-off
-# to install: pip install backoff
+<span class="c1"># We suppose to use the https://github.com/litl/backoff library to implement the exponential back-off</span>
+<span class="c1"># to install: pip install backoff</span>
 
-import fattureincloud_python_sdk
-from fattureincloud_python_sdk.api import products_api
-from fattureincloud_python_sdk.exceptions import ApiException
-import backoff
-import collections
-collections.Callable = collections.abc.Callable # needed if you are using python &gt; 3.10
+<span class="kn">import</span> <span class="nn">fattureincloud_python_sdk</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.api</span> <span class="kn">import</span> <span class="n">products_api</span>
+<span class="kn">from</span> <span class="nn">fattureincloud_python_sdk.exceptions</span> <span class="kn">import</span> <span class="n">ApiException</span>
+<span class="kn">import</span> <span class="nn">backoff</span>
+<span class="kn">import</span> <span class="nn">collections</span>
+<span class="n">collections</span><span class="o">.</span><span class="n">Callable</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Callable</span> <span class="c1"># needed if you are using python &gt; 3.10</span>
 
-@backoff.on_exception(backoff.expo, ApiException, max_tries=10)
-def get_products(configuration, company_id):
-        with fattureincloud_python_sdk.ApiClient(configuration) as api_client:
-            products_api_instance = products_api.ProductsApi(api_client)
-            products_api_instance.list_products(company_id)
-        return
+<span class="nd">@backoff</span><span class="o">.</span><span class="n">on_exception</span><span class="p">(</span><span class="n">backoff</span><span class="o">.</span><span class="n">expo</span><span class="p">,</span> <span class="n">ApiException</span><span class="p">,</span> <span class="n">max_tries</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_products</span><span class="p">(</span><span class="n">configuration</span><span class="p">,</span> <span class="n">company_id</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">ApiClient</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span> <span class="k">as</span> <span class="n">api_client</span><span class="p">:</span>
+            <span class="n">products_api_instance</span> <span class="o">=</span> <span class="n">products_api</span><span class="o">.</span><span class="n">ProductsApi</span><span class="p">(</span><span class="n">api_client</span><span class="p">)</span>
+            <span class="n">products_api_instance</span><span class="o">.</span><span class="n">list_products</span><span class="p">(</span><span class="n">company_id</span><span class="p">)</span>
+        <span class="k">return</span>
 
 
-configuration = fattureincloud_python_sdk.Configuration()
-configuration.access_token = "YOUR_ACCESS_TOKEN"
-configuration.retries = 0 # needed to implement custom backoff
+<span class="n">configuration</span> <span class="o">=</span> <span class="n">fattureincloud_python_sdk</span><span class="o">.</span><span class="n">Configuration</span><span class="p">()</span>
+<span class="n">configuration</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="s2">"YOUR_ACCESS_TOKEN"</span>
+<span class="n">configuration</span><span class="o">.</span><span class="n">retries</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># needed to implement custom backoff</span>
 
-company_id = 11
-get_products(configuration, company_id)
-</code></pre>
-<pre><code class="language-rb"># We apply exponential backoff to our Ruby SDK
-# https://github.com/fattureincloud/fattureincloud-ruby-sdk/
-require 'fattureincloud_ruby_sdk'
+<span class="n">company_id</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">get_products</span><span class="p">(</span><span class="n">configuration</span><span class="p">,</span> <span class="n">company_id</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># We apply exponential backoff to our Ruby SDK</span>
+<span class="c1"># https://github.com/fattureincloud/fattureincloud-ruby-sdk/</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">'fattureincloud_ruby_sdk'</span>
 
-FattureInCloud_Ruby_Sdk.configure do |config|
-# Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
-config.access_token = "YOUR_TOKEN"
-end
-suppliers_api_instance = FattureInCloud_Ruby_Sdk::SuppliersApi.new
+<span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">.</span><span class="n">configure</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">config</span><span class="o">|</span>
+<span class="c1"># Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow</span>
+<span class="n">config</span><span class="o">.</span><span class="n">access_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"YOUR_TOKEN"</span>
+<span class="k">end</span>
+<span class="n">suppliers_api_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">SuppliersApi</span><span class="o">.</span><span class="n">new</span>
 
-retries = 0
-max_retries = 20
-company_id = 2
+<span class="n">retries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">max_retries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span>
+<span class="n">company_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
 
-begin
-    company_suppliers = suppliers_api_instance.list_suppliers(company_id)
-    puts company_suppliers
-rescue FattureInCloud_Ruby_Sdk::ApiError =&gt; e
-  if retries &lt;= max_retries
-    retries += 1
-    sleep 2 ** retries
-    retry
-  else
-    raise "Giving up on the server after #{retries} retries. Got error: #{e.message}"
-  end
-end
-</code></pre>
-<pre><code class="language-ts">// We apply exponential backoff to our TypeScript SDK
-// https://github.com/fattureincloud/fattureincloud-ts-sdk/
+<span class="k">begin</span>
+<span class="w">    </span><span class="n">company_suppliers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">suppliers_api_instance</span><span class="o">.</span><span class="n">list_suppliers</span><span class="p">(</span><span class="n">company_id</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="n">company_suppliers</span>
+<span class="k">rescue</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">ApiError</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">e</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">retries</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">max_retries</span>
+<span class="w">    </span><span class="n">retries</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nb">sleep</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">retries</span>
+<span class="w">    </span><span class="k">retry</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="k">raise</span><span class="w"> </span><span class="s2">"Giving up on the server after </span><span class="si">#{</span><span class="n">retries</span><span class="si">}</span><span class="s2"> retries. Got error: </span><span class="si">#{</span><span class="n">e</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">  </span><span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// We apply exponential backoff to our TypeScript SDK</span>
+<span class="c1">// https://github.com/fattureincloud/fattureincloud-ts-sdk/</span>
 
-import {
-  Configuration,
-  ProductsApi,
-} from "@fattureincloud/fattureincloud-ts-sdk";
+<span class="k">import</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">Configuration</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">ProductsApi</span><span class="p">,</span>
+<span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@fattureincloud/fattureincloud-ts-sdk"</span><span class="p">;</span>
 
-const apiConfig = new Configuration({
-  accessToken: "YOUR_ACCESS_TOKEN",
-});
+<span class="kd">const</span><span class="w"> </span><span class="nx">apiConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Configuration</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">accessToken</span><span class="o">:</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span><span class="p">,</span>
+<span class="p">});</span>
 
-let productsApiInstance = new ProductsApi(apiConfig);
+<span class="kd">let</span><span class="w"> </span><span class="nx">productsApiInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ProductsApi</span><span class="p">(</span><span class="nx">apiConfig</span><span class="p">);</span>
 
-var companyId = 2;
-var opts = {};
+<span class="kd">var</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
 
-const delay = (retryCount: number) =&gt;
-  new Promise((resolve) =&gt; setTimeout(resolve, 2 ** retryCount * 1000));
-const getProd: any = async (retryCount = 0, lastError?: string) =&gt; {
-  if (retryCount &gt; 20) throw new Error(lastError);
-  try {
-    return await productsApiInstance.listProducts(companyId);
-  } catch (e: any) {
-    await delay(retryCount);
-    return getProd(++retryCount, e.message);
-  }
-};
+<span class="kd">const</span><span class="w"> </span><span class="nx">delay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">retryCount</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">  </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="nx">retryCount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">));</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">getProd</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">retryCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">lastError?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">retryCount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="nx">lastError</span><span class="p">);</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">productsApiInstance</span><span class="p">.</span><span class="nx">listProducts</span><span class="p">(</span><span class="nx">companyId</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">delay</span><span class="p">(</span><span class="nx">retryCount</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">getProd</span><span class="p">(</span><span class="o">++</span><span class="nx">retryCount</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
 
-console.log(await getProd());
-</code></pre>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">await</span><span class="w"> </span><span class="nx">getProd</span><span class="p">());</span>
+</code></pre></div>
 <p>Alternatively, you can use the <em>Retry-After</em> header to wait the right amount of time before sending your request again.</p>
-<h2 id="additional-resources"><img alt="📚" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4da.png" title=":books:"/>  Additional Resources</h2>
+<h2 id="books-additional-resources">:books:  Additional Resources</h2>
 <ul>
 <li><a href="https://dev.to/satrobit/rate-limiting-using-the-fixed-window-algorithm-2hgm">Rate limiting using the Fixed Window algorithm</a></li>
 <li><a href="https://dev.to/satrobit/rate-limiting-using-the-sliding-window-algorithm-5fjn">Rate limiting using the Sliding Window algorithm</a></li>

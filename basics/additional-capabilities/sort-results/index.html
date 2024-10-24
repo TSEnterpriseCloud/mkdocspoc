@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#sortable-fields">
+<a class="md-skip" href="#notebook_with_decorative_cover-sortable-fields">
           Skip to content
         </a>
 </div>
@@ -392,16 +392,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sortable-fields">
+<a class="md-nav__link" href="#notebook_with_decorative_cover-sortable-fields">
 <span class="md-ellipsis">
-        Sortable fields
+      :notebook_with_decorative_cover:  Sortable fields
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#additional-resources">
+<a class="md-nav__link" href="#books-additional-resources">
 <span class="md-ellipsis">
-        Additional Resources
+      :books:  Additional Resources
     </span>
 </a>
 </li>
@@ -568,7 +568,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../support/general-knowledge/">
+<a class="md-nav__link" href="../../../support/general-knowledge/oauth2/index.md">
 <span class="md-ellipsis">
     General Knowledge
   </span>
@@ -630,16 +630,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sortable-fields">
+<a class="md-nav__link" href="#notebook_with_decorative_cover-sortable-fields">
 <span class="md-ellipsis">
-        Sortable fields
+      :notebook_with_decorative_cover:  Sortable fields
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#additional-resources">
+<a class="md-nav__link" href="#books-additional-resources">
 <span class="md-ellipsis">
-        Additional Resources
+      :books:  Additional Resources
     </span>
 </a>
 </li>
@@ -660,386 +660,386 @@ import TabItem from "@theme/TabItem";</p>
 <p>:::</p>
 <p>To order the returned resources, all you have to do is to add the <strong>sort</strong> parameter to the query string, containing a comma-separated set of the fields that define the sorting rule. The default order for each field is the <strong>ascending order</strong>, which doesn't require any prefix, while the <strong>descending order</strong> can be selected by adding the prefix "-" to the field name.</p>
 <p>For example, this request will sort all the expenses first by the "date" field in descending order and then by the "amount_net" field in ascending order.</p>
-<pre><code class="language-bash">curl --request GET \
-     --url 'https://api-v2.fattureincloud.it/c/company_id/received_documents?sort=-date,amount_net&amp;type=expense' \
-     --header 'Accept: application/json'
-     --header 'Authorization: Bearer YOUR_ACCESS_TOKEN'
-</code></pre>
-<pre><code class="language-http">GET https://api-v2.fattureincloud.it/c/{companyId}/received_documents?sort=-date,amount_net&amp;type=expense
-</code></pre>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>--url<span class="w"> </span><span class="s1">'https://api-v2.fattureincloud.it/c/company_id/received_documents?sort=-date,amount_net&amp;type=expense'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>--header<span class="w"> </span><span class="s1">'Accept: application/json'</span>
+<span class="w">     </span>--header<span class="w"> </span><span class="s1">'Authorization: Bearer YOUR_ACCESS_TOKEN'</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">GET https://api-v2.fattureincloud.it/c/{companyId}/received_documents?sort=-date,amount_net&amp;type=expense</span>
+</code></pre></div>
 <p>The corresponding code examples:</p>
-<pre><code class="language-cs">// this code uses RestSharp Client: https://restsharp.dev
-// you can install it with the following command:
-// dotnet add package RestSharp
+<div class="highlight"><pre><span></span><code><span class="c1">// this code uses RestSharp Client: https://restsharp.dev</span>
+<span class="c1">// you can install it with the following command:</span>
+<span class="c1">// dotnet add package RestSharp</span>
 
-using System;
-using RestSharp;
+<span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">RestSharp</span><span class="p">;</span>
 
-namespace restclient
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // for this example we define the token as a string, but you should have obtained it in the previous steps
-            // the token is valid for the "received_documents:r" scope needed to perform this operation
-            var token = "YOUR_ACCESS_TOKEN";
+<span class="k">namespace</span><span class="w"> </span><span class="nn">restclient</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// for this example we define the token as a string, but you should have obtained it in the previous steps</span>
+<span class="w">            </span><span class="c1">// the token is valid for the "received_documents:r" scope needed to perform this operation</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
 
-            // these parameters are usually retrieved through our APIs or stored in a DB
-            var companyId = 17;
+<span class="w">            </span><span class="c1">// these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">;</span>
 
-            var query = System.Web.HttpUtility.ParseQueryString(string.Empty);
-            query.Add("sort", "-date,amount_net");
-            query.Add("type", "expense");
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">HttpUtility</span><span class="p">.</span><span class="n">ParseQueryString</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">);</span>
+<span class="w">            </span><span class="n">query</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"sort"</span><span class="p">,</span><span class="w"> </span><span class="s">"-date,amount_net"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">query</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"type"</span><span class="p">,</span><span class="w"> </span><span class="s">"expense"</span><span class="p">);</span>
 
-            var url = "https://api-v2.fattureincloud.it/c/" + companyId  + "/received_documents" + "?" + query;
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"https://api-v2.fattureincloud.it/c/"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">companyId</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s">"/received_documents"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"?"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">query</span><span class="p">;</span>
 
-            var client = new RestClient(url);
-            var request = new RestRequest(Method.GET);
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RestClient</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RestRequest</span><span class="p">(</span><span class="n">Method</span><span class="p">.</span><span class="n">GET</span><span class="p">);</span>
 
-            request.AddHeader("authorization", "Bearer " + token);
-            IRestResponse response = client.Execute(request);
-            Console.Write(response.Content.ToString());
-        }
-    }
-}
-</code></pre>
-<pre><code class="language-go">// NOTE: this is a complete request, but please customize it!!!
-// In the next step we'll explain how to perform the request to the API.
+<span class="w">            </span><span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">"authorization"</span><span class="p">,</span><span class="w"> </span><span class="s">"Bearer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">token</span><span class="p">);</span>
+<span class="w">            </span><span class="n">IRestResponse</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it!!!</span>
+<span class="c1">// In the next step we'll explain how to perform the request to the API.</span>
 
-// in this example we are using our Go SDK
-// https://github.com/fattureincloud/fattureincloud-go-sdk
-package main
+<span class="c1">// in this example we are using our Go SDK</span>
+<span class="c1">// https://github.com/fattureincloud/fattureincloud-go-sdk</span>
+<span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-import (
-    "io/ioutil"
-    "log"
-    "net/http"
-    "net/url"
-)
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">"io/ioutil"</span>
+<span class="w">    </span><span class="s">"log"</span>
+<span class="w">    </span><span class="s">"net/http"</span>
+<span class="w">    </span><span class="s">"net/url"</span>
+<span class="p">)</span>
 
-func main() {
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-    var bearer = "Bearer " + "a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJtUm80MXlpSVFTbHN0bXRadG5jNEZhYk5QaW41ejJmdiIsImV4cCI6MTY2MjU1NDg5NX0.bvYHc9et0p9lsaTIWGX8vGqE6uHKiwBPyQlXwZqIH3o"
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">bearer</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">"Bearer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"a/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWYiOiJtUm80MXlpSVFTbHN0bXRadG5jNEZhYk5QaW41ejJmdiIsImV4cCI6MTY2MjU1NDg5NX0.bvYHc9et0p9lsaTIWGX8vGqE6uHKiwBPyQlXwZqIH3o"</span>
 
-    values := url.Values{}
-    values.Add("sort", "-date,amount_net")
-    values.Add("type", "expense")
-    query := values.Encode()
+<span class="w">    </span><span class="nx">values</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">url</span><span class="p">.</span><span class="nx">Values</span><span class="p">{}</span>
+<span class="w">    </span><span class="nx">values</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">"sort"</span><span class="p">,</span><span class="w"> </span><span class="s">"-date,amount_net"</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">values</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">"type"</span><span class="p">,</span><span class="w"> </span><span class="s">"expense"</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">query</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">values</span><span class="p">.</span><span class="nx">Encode</span><span class="p">()</span>
 
-    companyId := "2"
-    uri := "http://api-v2.local.fattureincloud.it/c/" + companyId + "/received_documents?" + query
+<span class="w">    </span><span class="nx">companyId</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">"2"</span>
+<span class="w">    </span><span class="nx">uri</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">"http://api-v2.local.fattureincloud.it/c/"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"/received_documents?"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">query</span>
 
-    req, _ := http.NewRequest("GET", uri, nil)
-    req.Header.Add("Authorization", bearer)
+<span class="w">    </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span><span class="w"> </span><span class="nx">uri</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">"Authorization"</span><span class="p">,</span><span class="w"> </span><span class="nx">bearer</span><span class="p">)</span>
 
-    client := &amp;http.Client{}
-    resp, err := client.Do(req)
-    if err != nil {
-        log.Println("Error on response.\n[ERROR] -", err)
-    }
-    defer resp.Body.Close()
+<span class="w">    </span><span class="nx">client</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{}</span>
+<span class="w">    </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">"Error on response.\n[ERROR] -"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
 
-    body, err := ioutil.ReadAll(resp.Body)
-    if err != nil {
-        log.Println("Error while reading the response bytes:", err)
-    }
-    log.Println(string([]byte(body)))
+<span class="w">    </span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">"Error while reading the response bytes:"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">body</span><span class="p">)))</span>
 
-}
-</code></pre>
-<pre><code class="language-java">import okhttp3.HttpUrl;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import java.io.IOException;
-import java.net.URL;
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">okhttp3.HttpUrl</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">okhttp3.OkHttpClient</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">okhttp3.Request</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">okhttp3.Response</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.net.URL</span><span class="p">;</span>
 
-public class Application {
-    public static void main(String[] args) throws IOException {
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Application</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
 
-        // for this example we define the token as a string, but you should have obtained it in the previous steps
-        // the token is valid for the "received_documents:r" scope needed to perform this operation
-        String token = "YOUR_ACCESS_TOKEN";
+<span class="w">        </span><span class="c1">// for this example we define the token as a string, but you should have obtained it in the previous steps</span>
+<span class="w">        </span><span class="c1">// the token is valid for the "received_documents:r" scope needed to perform this operation</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
 
-        // these parameters are usually retrieved through our APIs or stored in a DB
-        Integer companyId = 16;
+<span class="w">        </span><span class="c1">// these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="w">        </span><span class="n">Integer</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span>
 
-        URL url = new HttpUrl.Builder()
-                .scheme("https")
-                .host("api-v2.fattureincloud.it")
-                .addPathSegments("c/" + companyId  + "/received_documents")
-                .addQueryParameter("sort", "-date,net_amount")
-                .addQueryParameter("type", "expense")
-                .build().url();
+<span class="w">        </span><span class="n">URL</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpUrl</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">scheme</span><span class="p">(</span><span class="s">"https"</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">host</span><span class="p">(</span><span class="s">"api-v2.fattureincloud.it"</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">addPathSegments</span><span class="p">(</span><span class="s">"c/"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">companyId</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s">"/received_documents"</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">addQueryParameter</span><span class="p">(</span><span class="s">"sort"</span><span class="p">,</span><span class="w"> </span><span class="s">"-date,net_amount"</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">addQueryParameter</span><span class="p">(</span><span class="s">"type"</span><span class="p">,</span><span class="w"> </span><span class="s">"expense"</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">build</span><span class="p">().</span><span class="na">url</span><span class="p">();</span>
 
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder()
-                .header("Authorization", "Bearer " + token)
-                .url(url)
-                .build();
-        Response response = client.newCall(request).execute();
-        System.out.println(response.body().string());
-    }
-}
-</code></pre>
-<pre><code class="language-js">var http = require("https");
+<span class="w">        </span><span class="n">OkHttpClient</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OkHttpClient</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Request</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Request</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">"Authorization"</span><span class="p">,</span><span class="w"> </span><span class="s">"Bearer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">token</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Response</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="na">newCall</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">body</span><span class="p">().</span><span class="na">string</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"https"</span><span class="p">);</span>
 
-// for this example we define the token as a string, but you should have obtained it in the previous steps
-// the token is valid for the "received_documents:r" scope needed to perform this operation
-var token = "YOUR_ACCESS_TOKEN";
+<span class="c1">// for this example we define the token as a string, but you should have obtained it in the previous steps</span>
+<span class="c1">// the token is valid for the "received_documents:r" scope needed to perform this operation</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
 
-// these parameters are usually retrieved through our APIs or stored in a DB
-var companyId = 16;
+<span class="c1">// these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">;</span>
 
-var params = {
-  sort: "-date,net_amount",
-  type: "expense",
-};
+<span class="kd">var</span><span class="w"> </span><span class="nx">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">sort</span><span class="o">:</span><span class="w"> </span><span class="s2">"-date,net_amount"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">"expense"</span><span class="p">,</span>
+<span class="p">};</span>
 
-var query = new URLSearchParams(params).toString(); // url-encoded query string
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">URLSearchParams</span><span class="p">(</span><span class="nx">params</span><span class="p">).</span><span class="nx">toString</span><span class="p">();</span><span class="w"> </span><span class="c1">// url-encoded query string</span>
 
-var options = {
-  method: "GET",
-  hostname: "api-v2.fattureincloud.it",
-  port: null,
-  path: "/c/" + companyId + "/received_documents" + query,
-  headers: {
-    authorization: "Bearer " + token,
-  },
-};
+<span class="kd">var</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">hostname</span><span class="o">:</span><span class="w"> </span><span class="s2">"api-v2.fattureincloud.it"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s2">"/c/"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"/received_documents"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">query</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">authorization</span><span class="o">:</span><span class="w"> </span><span class="s2">"Bearer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">token</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
 
-var req = http.request(options, function (res) {
-  var chunks = [];
+<span class="kd">var</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">chunks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
 
-  res.on("data", function (chunk) {
-    chunks.push(chunk);
-  });
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">chunks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chunk</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
 
-  res.on("end", function () {
-    var body = Buffer.concat(chunks);
-    console.log(body.toString());
-  });
-});
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"end"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Buffer</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">chunks</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
 
-req.end();
-</code></pre>
-<pre><code class="language-php">// this code uses Guzzle HTTP Client: https://docs.guzzlephp.org/en/stable/
-// and also ext-json
-// you can install them with the following command:
-// composer require guzzlehttp/guzzle ext-json
-require 'vendor/autoload.php';
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Psr7;
+<span class="nx">req</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">// this code uses Guzzle HTTP Client: https://docs.guzzlephp.org/en/stable/</span>
+<span class="x">// and also ext-json</span>
+<span class="x">// you can install them with the following command:</span>
+<span class="x">// composer require guzzlehttp/guzzle ext-json</span>
+<span class="x">require 'vendor/autoload.php';</span>
+<span class="x">use GuzzleHttp\Client;</span>
+<span class="x">use GuzzleHttp\Exception\ClientException;</span>
+<span class="x">use GuzzleHttp\Psr7;</span>
 
 
-// for this example we define the token as a string, but you should have obtained it in the previous steps
-// the token is valid for the "received_documents:r" scope needed to perform this operation
-$token = 'YOUR_ACCESS_TOKEN';
+<span class="x">// for this example we define the token as a string, but you should have obtained it in the previous steps</span>
+<span class="x">// the token is valid for the "received_documents:r" scope needed to perform this operation</span>
+<span class="x">$token = 'YOUR_ACCESS_TOKEN';</span>
 
-// these parameters are usually retrieved through our APIs or stored in a DB
-$companyId = 17;
+<span class="x">// these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="x">$companyId = 17;</span>
 
-$client = new Client();
+<span class="x">$client = new Client();</span>
 
-$params = array(
-  'sort' =&gt; '-date,amount_net',
-  'type' =&gt; 'expense'
-);
+<span class="x">$params = array(</span>
+<span class="x">  'sort' =&gt; '-date,amount_net',</span>
+<span class="x">  'type' =&gt; 'expense'</span>
+<span class="x">);</span>
 
-$query = http_build_query($params); // url-encoded query string
+<span class="x">$query = http_build_query($params); // url-encoded query string</span>
 
-$url = "https://api-v2.fattureincloud.it/c/$companyId/received_documents". '?' . $query;
+<span class="x">$url = "https://api-v2.fattureincloud.it/c/$companyId/received_documents". '?' . $query;</span>
 
-try {
-  $response = $client-&gt;request('GET', $url, [
-    'headers' =&gt; [
-      'Accept' =&gt; 'application/json',
-      'Authorization' =&gt; 'Bearer ' . $token,
-    ],
-  ]);
+<span class="x">try {</span>
+<span class="x">  $response = $client-&gt;request('GET', $url, [</span>
+<span class="x">    'headers' =&gt; [</span>
+<span class="x">      'Accept' =&gt; 'application/json',</span>
+<span class="x">      'Authorization' =&gt; 'Bearer ' . $token,</span>
+<span class="x">    ],</span>
+<span class="x">  ]);</span>
 
-    echo $response-&gt;getBody();
-} catch (ClientException $e) {
-    echo Psr7\Message::toString($e-&gt;getRequest());
-    echo Psr7\Message::toString($e-&gt;getResponse());
-}
-</code></pre>
-<pre><code class="language-py"># pip install requests
-import requests
+<span class="x">    echo $response-&gt;getBody();</span>
+<span class="x">} catch (ClientException $e) {</span>
+<span class="x">    echo Psr7\Message::toString($e-&gt;getRequest());</span>
+<span class="x">    echo Psr7\Message::toString($e-&gt;getResponse());</span>
+<span class="x">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># pip install requests</span>
+<span class="kn">import</span> <span class="nn">requests</span>
 
-# for this example we define the token as a string, but you should have obtained it in the previous steps
-# the token is valid for the "received_documents:r" scope needed to perform this operation
-token = "YOUR_ACCESS_TOKEN"
+<span class="c1"># for this example we define the token as a string, but you should have obtained it in the previous steps</span>
+<span class="c1"># the token is valid for the "received_documents:r" scope needed to perform this operation</span>
+<span class="n">token</span> <span class="o">=</span> <span class="s2">"YOUR_ACCESS_TOKEN"</span>
 
-# these parameters are usually retrieved through our APIs or stored in a DB
-company_id = 2
+<span class="c1"># these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="n">company_id</span> <span class="o">=</span> <span class="mi">2</span>
 
-params = {
-    'sort': '-date,net_amount',
-    'type': 'expense'
-}
-headers = { 'authorization': "Bearer " + token }
-response = requests.get(f"https://api-v2.fattureincloud.it/c/\{company_id\}/received_documents", params=params, headers=headers)
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'sort'</span><span class="p">:</span> <span class="s1">'-date,net_amount'</span><span class="p">,</span>
+    <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'expense'</span>
+<span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'authorization'</span><span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">token</span> <span class="p">}</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">"https://api-v2.fattureincloud.it/c/\</span><span class="si">{</span><span class="n">company_id</span><span class="err">\</span><span class="si">}</span><span class="s2">/received_documents"</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
-print(response.json())
-</code></pre>
-<pre><code class="language-rb">require 'uri'
-require 'net/http'
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">require</span><span class="w"> </span><span class="s1">'uri'</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">'net/http'</span>
 
-# for this example we define the token as a string, but you should have obtained it in the previous steps
-# the token is valid for the "received_documents:r" scope needed to perform this operation
-token = "YOUR_ACCESS_TOKEN"
+<span class="c1"># for this example we define the token as a string, but you should have obtained it in the previous steps</span>
+<span class="c1"># the token is valid for the "received_documents:r" scope needed to perform this operation</span>
+<span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span>
 
-# these parameters are usually retrieved through our APIs or stored in a DB
-company_id = 16
+<span class="c1"># these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="n">company_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span>
 
-params = {
-    'sort': '-date,net_amount',
-    'type': 'expense'
-}
+<span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s1">'sort'</span><span class="p">:</span><span class="w"> </span><span class="s1">'-date,net_amount'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'type'</span><span class="p">:</span><span class="w"> </span><span class="s1">'expense'</span>
+<span class="p">}</span>
 
-uri = URI("https://api-v2.fattureincloud.it/c/#\{company_id\}/received_documents")
-uri.query = URI.encode_www_form(params)
-headers = { authorization: "Bearer " + token}
-res = Net::HTTP.get_response(uri, headers)
+<span class="n">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">URI</span><span class="p">(</span><span class="s2">"https://api-v2.fattureincloud.it/c/#\{company_id\}/received_documents"</span><span class="p">)</span>
+<span class="n">uri</span><span class="o">.</span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">URI</span><span class="o">.</span><span class="n">encode_www_form</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+<span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="ss">authorization</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">token</span><span class="p">}</span>
+<span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">.</span><span class="n">get_response</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span><span class="w"> </span><span class="n">headers</span><span class="p">)</span>
 
-puts res.body
-</code></pre>
-<pre><code class="language-ts">// in this example we are using the node-fetch library to make the request
-import fetch, { Headers } from "node-fetch";
+<span class="nb">puts</span><span class="w"> </span><span class="n">res</span><span class="o">.</span><span class="n">body</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// in this example we are using the node-fetch library to make the request</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">fetch</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Headers</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"node-fetch"</span><span class="p">;</span>
 
-// for this example we define the token as a string, but you should have obtained it in the previous steps
-// the token is valid for the "received_documents:r" scope needed to perform this operation
-var token = "YOUR_ACCESS_TOKEN";
+<span class="c1">// for this example we define the token as a string, but you should have obtained it in the previous steps</span>
+<span class="c1">// the token is valid for the "received_documents:r" scope needed to perform this operation</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span><span class="p">;</span>
 
-// these parameters are usually retrieved through our APIs or stored in a DB
-var companyId = 16;
+<span class="c1">// these parameters are usually retrieved through our APIs or stored in a DB</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">;</span>
 
-var params = {
-  sort: "-date,net_amount",
-  type: "expense",
-};
+<span class="kd">var</span><span class="w"> </span><span class="nx">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">sort</span><span class="o">:</span><span class="w"> </span><span class="s2">"-date,net_amount"</span><span class="p">,</span>
+<span class="w">  </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s2">"expense"</span><span class="p">,</span>
+<span class="p">};</span>
 
-var query = new URLSearchParams(params).toString(); // url-encoded query string
+<span class="kd">var</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">URLSearchParams</span><span class="p">(</span><span class="nx">params</span><span class="p">).</span><span class="nx">toString</span><span class="p">();</span><span class="w"> </span><span class="c1">// url-encoded query string</span>
 
-var headers = new Headers({
-  "Content-Type": "application/json",
-  Authorization: "Bearer " + token,
-});
+<span class="kd">var</span><span class="w"> </span><span class="nx">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Headers</span><span class="p">({</span>
+<span class="w">  </span><span class="s2">"Content-Type"</span><span class="o">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">Authorization</span><span class="o">:</span><span class="w"> </span><span class="s2">"Bearer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">token</span><span class="p">,</span>
+<span class="p">});</span>
 
-var options = {
-  method: "GET",
-  headers: headers,
-};
-try {
-  var res = await fetch(
-    "https://api-v2.fattureincloud.it/c/" +
-      companyId +
-      "/received_documents?" +
-      query,
-    options
-  );
-  var json = await res.json();
-  console.log(json);
-} catch (err) {
-  console.log(err);
-}
-</code></pre>
+<span class="kd">var</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="kt">headers</span><span class="p">,</span>
+<span class="p">};</span>
+<span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">"https://api-v2.fattureincloud.it/c/"</span><span class="w"> </span><span class="o">+</span>
+<span class="w">      </span><span class="nx">companyId</span><span class="w"> </span><span class="o">+</span>
+<span class="w">      </span><span class="s2">"/received_documents?"</span><span class="w"> </span><span class="o">+</span>
+<span class="w">      </span><span class="nx">query</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">options</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Here you can find an example response, please note that sorting is strictly related to the <a href="/basics/additional-capabilities/paginate-results.mdx">Pagination functionality</a>:</p>
-<pre><code class="language-json">{
-  "data": [
-    {
-      "id": 251,
-      "type": "expense",
-      "description": "Catene auto",
-      "amount_net": 68.03,
-      "amount_vat": 14.97,
-      "is_marked": false,
-      "entity": {
-        "id": 109,
-        "name": "Catene e catenacci S.r.l."
-      },
-      "date": "2021-12-23",
-      "next_due_date": "2013-12-23",
-      "amount_gross": 83
-    },
-    {
-      "id": 104328,
-      "type": "expense",
-      "description": "Ricarica Telefonica",
-      "amount_net": 20,
-      "amount_vat": 0,
-      "is_marked": false,
-      "entity": {
-        "id": 35,
-        "name": "Maracaibo Mobile S.p.a."
-      },
-      "date": "2021-08-01",
-      "next_due_date": "1970-01-01",
-      "amount_gross": 20
-    },
-    {
-      "id": 134828,
-      "type": "expense",
-      "description": "Soggiorno di lavoro",
-      "amount_net": 592,
-      "amount_vat": 0,
-      "is_marked": false,
-      "entity": {
-        "id": -1,
-        "name": "Hotel Paradiso"
-      },
-      "date": "2014-10-29",
-      "next_due_date": "2020-10-29",
-      "amount_gross": 592
-    },
-    {
-      "id": 134830,
-      "type": "expense",
-      "description": "SmartPhone Y",
-      "amount_net": 130,
-      "amount_vat": 0,
-      "is_marked": false,
-      "entity": {
-        "id": 14542,
-        "name": "Pear Inc."
-      },
-      "date": "2014-04-16",
-      "next_due_date": "2020-09-01",
-      "amount_gross": 130
-    },
-    {
-      "id": 134832,
-      "type": "expense",
-      "description": "BestBook Pro 2020",
-      "amount_net": 430,
-      "amount_vat": 0,
-      "is_marked": false,
-      "entity": {
-        "id": 14542,
-        "name": "Pear Inc."
-      },
-      "date": "2014-04-16",
-      "next_due_date": "2020-05-29",
-      "amount_gross": 430
-    }
-  ],
-  "current_page": 2,
-  "last_page": 67,
-  "per_page": "5",
-  "from": 6,
-  "to": 10,
-  "total": 335,
-  "path": "https://api-v2.fattureincloud.it/received_documents",
-  "first_page_url": "https://api-v2.fattureincloud.it/received_documents?per_page=5&amp;type=expense&amp;fieldset=basic&amp;page=1",
-  "last_page_url": "https://api-v2.fattureincloud.it/received_documents?per_page=5&amp;type=expense&amp;fieldset=basic&amp;page=67",
-  "next_page_url": "https://api-v2.fattureincloud.it/received_documents?per_page=5&amp;type=expense&amp;fieldset=basic&amp;page=3",
-  "prev_page_url": "https://api-v2.fattureincloud.it/received_documents?per_page=5&amp;type=expense&amp;fieldset=basic&amp;page=1"
-}
-</code></pre>
-<h2 id="sortable-fields"><img alt="📔" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4d4.png" title=":notebook_with_decorative_cover:"/>  Sortable fields</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">251</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"expense"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Catene auto"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_net"</span><span class="p">:</span><span class="w"> </span><span class="mf">68.03</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_vat"</span><span class="p">:</span><span class="w"> </span><span class="mf">14.97</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"is_marked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">109</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Catene e catenacci S.r.l."</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-23"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"next_due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2013-12-23"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_gross"</span><span class="p">:</span><span class="w"> </span><span class="mi">83</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">104328</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"expense"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ricarica Telefonica"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_net"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_vat"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"is_marked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Maracaibo Mobile S.p.a."</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-08-01"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"next_due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1970-01-01"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_gross"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134828</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"expense"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Soggiorno di lavoro"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_net"</span><span class="p">:</span><span class="w"> </span><span class="mi">592</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_vat"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"is_marked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Paradiso"</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-10-29"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"next_due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-10-29"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_gross"</span><span class="p">:</span><span class="w"> </span><span class="mi">592</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134830</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"expense"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SmartPhone Y"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_net"</span><span class="p">:</span><span class="w"> </span><span class="mi">130</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_vat"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"is_marked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">14542</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pear Inc."</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-04-16"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"next_due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-09-01"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_gross"</span><span class="p">:</span><span class="w"> </span><span class="mi">130</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134832</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"expense"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BestBook Pro 2020"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_net"</span><span class="p">:</span><span class="w"> </span><span class="mi">430</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_vat"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"is_marked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">14542</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pear Inc."</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-04-16"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"next_due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-29"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"amount_gross"</span><span class="p">:</span><span class="w"> </span><span class="mi">430</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">67</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">335</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-v2.fattureincloud.it/received_documents"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"first_page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-v2.fattureincloud.it/received_documents?per_page=5&amp;type=expense&amp;fieldset=basic&amp;page=1"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"last_page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-v2.fattureincloud.it/received_documents?per_page=5&amp;type=expense&amp;fieldset=basic&amp;page=67"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"next_page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-v2.fattureincloud.it/received_documents?per_page=5&amp;type=expense&amp;fieldset=basic&amp;page=3"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"prev_page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-v2.fattureincloud.it/received_documents?per_page=5&amp;type=expense&amp;fieldset=basic&amp;page=1"</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="notebook_with_decorative_cover-sortable-fields">:notebook_with_decorative_cover:  Sortable fields</h2>
 <p>Here you can find the list of fields that can be used to order the result for each <em>List method</em>; for every field, it is possible to use the ascending or descending order.</p>
 <table>
 <thead>
@@ -1083,7 +1083,7 @@ try {
 </tr>
 </tbody>
 </table>
-<h2 id="additional-resources"><img alt="📚" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4da.png" title=":books:"/>  Additional Resources</h2>
+<h2 id="books-additional-resources">:books:  Additional Resources</h2>
 <ul>
 <li><a href="https://www.freecodecamp.org/news/descending-order-vs-ascending-order-what-does-it-mean/">Descending Order VS Ascending Order – What Does it Mean?</a></li>
 <li><a href="https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/#">REST API Design: Filtering, Sorting, and Pagination</a></li>
