@@ -1,10 +1,5 @@
 {
   "openapi": "3.0.1",
-  "info": {
-    "title": "TSEnterpriseWebApi - TS Enterprise Service layer",
-    "description": "WebApi Version Group: v1_IntegrationCO - 155 Endpoint",
-    "version": "v1_IntegrationCO"
-  },
   "paths": {
     "/api/v1/{environment}/CO/AccountingReasonCodeCO/{id}": {
       "get": {

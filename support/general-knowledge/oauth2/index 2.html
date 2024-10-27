@@ -1,0 +1,837 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="What is the OAuth 2.0 protocol?" name="description"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>OAuth 2.0 - TeamSystem Enterprise Cloud</title>
+<link href="../../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="/static/css/custom.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#tada-whos-joining-the-party">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="TeamSystem Enterprise Cloud" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="TeamSystem Enterprise Cloud">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            TeamSystem Enterprise Cloud
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              OAuth 2.0
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="TeamSystem Enterprise Cloud" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="TeamSystem Enterprise Cloud">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    TeamSystem Enterprise Cloud
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../started/getting-started/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../started/authentication/">
+<span class="md-ellipsis">
+    Authentication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../started/howto/">
+<span class="md-ellipsis">
+    How to
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Step by step guide
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Step by step guide
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/common-terms/">
+<span class="md-ellipsis">
+    Common Terms
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/company-scoped-methods/">
+<span class="md-ellipsis">
+    Company methods
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/manual-authentication/">
+<span class="md-ellipsis">
+    Authentication mode
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Quickstarts
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Quickstarts
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/quickstarts/postman-collection/">
+<span class="md-ellipsis">
+    Postaman Collections
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/quickstarts/csharp-sdk-quickstart/">
+<span class="md-ellipsis">
+    C# SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/quickstarts/go-sdk-quickstart/">
+<span class="md-ellipsis">
+    GO SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/quickstarts/java-sdk-quickstart/">
+<span class="md-ellipsis">
+    Java SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/quickstarts/js-sdk-quickstart/">
+<span class="md-ellipsis">
+    JavaScript SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/quickstarts/php-sdk-quickstart/">
+<span class="md-ellipsis">
+    PHP SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/quickstarts/python-sdk-quickstart/">
+<span class="md-ellipsis">
+    Python SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/quickstarts/ruby-sdk-quickstart/">
+<span class="md-ellipsis">
+    Ruby SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/quickstarts/ts-sdk-quickstart/">
+<span class="md-ellipsis">
+    TypeScript SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/quickstarts/vanilla-code/">
+<span class="md-ellipsis">
+    Vanilla Code Sample
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/quickstarts/windows-form-quickstart/">
+<span class="md-ellipsis">
+    Windows Form Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/quickstarts/google-sheets-quickstart/">
+<span class="md-ellipsis">
+    Google Sheets Apps Script Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stepbystep/quickstarts/zapier-quickstart/">
+<span class="md-ellipsis">
+    Zapier Quickstart
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Supported scenarios
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Supported scenarios
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../scenario/anagrafiche/">
+<span class="md-ellipsis">
+    Anagrafiche
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../scenario/invoice-creation/">
+<span class="md-ellipsis">
+    Invoice creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../scenario/e-invoice-xml-customisation/">
+<span class="md-ellipsis">
+    E-Invoice XML Customisation
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Basics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/scopes/">
+<span class="md-ellipsis">
+    Scopes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/errors/">
+<span class="md-ellipsis">
+    Errors
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/limits-and-quotas/">
+<span class="md-ellipsis">
+    Limits adn Quotas
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Additional capabilities
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_4">
+<span class="md-nav__icon md-icon"></span>
+            Additional capabilities
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/additional-capabilities/sort-results/">
+<span class="md-ellipsis">
+    Sort Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/additional-capabilities/paginate-results/">
+<span class="md-ellipsis">
+    Paginate results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/additional-capabilities/customize-response/">
+<span class="md-ellipsis">
+    Customize response
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/additional-capabilities/filter-results/">
+<span class="md-ellipsis">
+    Filter results
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../basics/debug-your-integration/">
+<span class="md-ellipsis">
+    Debug your integration
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Api Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Api Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/api-reference-co/">
+<span class="md-ellipsis">
+    Common api
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/api-reference-fi/">
+<span class="md-ellipsis">
+    Finance api
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/api-reference-mg/">
+<span class="md-ellipsis">
+    Warehouse api
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../reference/api-reference/">
+<span class="md-ellipsis">
+    Use the API Reference
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    SDKs
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            SDKs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sdks/typescript-sdk/">
+<span class="md-ellipsis">
+    TypeScript SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sdks/java-sdk/">
+<span class="md-ellipsis">
+    Java SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sdks/javascript-sdk/">
+<span class="md-ellipsis">
+    JavaScript SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sdks/net-sdk/">
+<span class="md-ellipsis">
+    .NET SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sdks/python-sdk/">
+<span class="md-ellipsis">
+    Python SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sdks/ruby-sdk/">
+<span class="md-ellipsis">
+    Ruby SDK
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Support &amp; Feature Request
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Support &amp; Feature Request
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../faq/">
+<span class="md-ellipsis">
+    FAQs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="index.md">
+<span class="md-ellipsis">
+    General Knowledge
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Legal
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Legal
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../legal/terms/">
+<span class="md-ellipsis">
+    Condizioni generali di utilizzo delle API MadBit
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../legal/policy-acceptable-use/">
+<span class="md-ellipsis">
+    Policy di Acceptable Use
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../legal/marketing-resources-and-identity-guidelines/">
+<span class="md-ellipsis">
+    Marketing Resources and Identity Guidelines
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tada-whos-joining-the-party">
+<span class="md-ellipsis">
+      :tada:  Who’s joining the party?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-wait-a-minute-what-are-tokens">
+<span class="md-ellipsis">
+      :key:  Wait a minute, what are tokens?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#twisted_rightwards_arrows-oauth-20-flows-overview">
+<span class="md-ellipsis">
+      :twisted_rightwards_arrows:  OAuth 2.0 flows overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#closed_lock_with_key-authorization-code-flow">
+<span class="md-ellipsis">
+      :closed_lock_with_key:  Authorization Code Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iphone-device-code-flow">
+<span class="md-ellipsis">
+      :iphone:  Device Code Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#books-additional-resources">
+<span class="md-ellipsis">
+      :books:  Additional Resources
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>OAuth 2.0</h1>
+<p><strong>OAuth 2.0</strong> is the industry-standard protocol for authorization and it was developed to provide a universal way to secure communication between different services. The standard provides guidelines to build the authentication service but leaves many decisions to the implementers. Nevertheless, most of the web services that do implement OAuth 2.0 for their API come to many of the same decisions, and so most of the implementations look very similar.</p>
+<p>In this brief guide, we are going to illustrate the basic concepts of the standard, it should contain all you need to know about OAuth 2.0! 😁</p>
+<p>A detailed description of our implementations of the OAuth 2.0 flows is available here:</p>
+<ul>
+<li><a href="/authentication/code-flow/index.mdx">OAuth 2.0 Authorization Code Flow</a></li>
+<li><a href="/authentication/device-code.mdx">OAuth 2.0 Device Code Flow</a></li>
+</ul>
+<p>:::info Do I need to read this?</p>
+<p>Despite this mini-guide being optional and not necessary to use our API, we recommend reading it as it clarifies many concepts of the protocol that you will encounter very often.</p>
+<p>:::</p>
+<p>In the following sections, you can find a concise description of the fundamentals of the OAuth 2.0 protocol that will help you to understand some concepts widely used in our documentation.
+If you want to further investigate the OAuth 2.0 standard, feel free to check out the <strong>Additional Resources</strong> section, where we collected a lot of useful resources that should help you to fulfill your thirst for learning! 😌</p>
+<h2 id="tada-whos-joining-the-party">:tada:  Who’s joining the party?</h2>
+<p>Let’s start by introducing the subjects that take part in the authentication process:</p>
+<p>First of all, we have the app that you developed, which we’re going to name <strong>Client Application</strong>. It’s the applicant who wants to access the user’s data.</p>
+<p>This allows us to introduce the second subject, the <strong>End-User</strong>. He’s the owner of the data you want to access, and we need his authorization to do so.</p>
+<p>The user’s data in this case are stored in TSE in Cloud’s server, which we’re going to name <strong>Resource Server</strong>. To access this data we need a <em>token</em>, a string that acts as permission to ask the Resource Server to provide us the information we need.</p>
+<p>The <em>token</em> will be provided to us by the last subject, the <strong>Authorization Server</strong>. This can be a separate entity from the Resource Server, but in our implementation, they are technically the same. For the purpose of this guide though, we will assume that they are two separate entities.</p>
+<h2 id="key-wait-a-minute-what-are-tokens">:key:  Wait a minute, what are tokens?</h2>
+<p>Tokens are like keys, they allow the possessor to perform certain operations. There are two main types of tokens:</p>
+<ol>
+<li>The <strong>Access Token</strong> is the final token the Client Application will use to request data to the Resource Server. It expires, so it is required to request a new access token to continue using the APIs.</li>
+<li>When an Access Token expires, you don’t need to redo the whole process again. The <strong>Refresh Token</strong> allows the Client Application to request a new Access Token directly to the Authorization Server. It can also expire, but its expiration time is usually much larger with respect to the Access Token.</li>
+</ol>
+<p>When also the Refresh Token expires, you need to re-execute the Authorization flow to obtain new tokens.</p>
+<h2 id="twisted_rightwards_arrows-oauth-20-flows-overview">:twisted_rightwards_arrows:  OAuth 2.0 flows overview</h2>
+<p>OAuth 2.0 specifies several <a href="https://developer.okta.com/blog/2017/06/21/what-the-heck-is-oauth#oauth-flows">Flows</a> that can be used to retrieve those tokens. Each one of them is specialized for a different use case:</p>
+<ul>
+<li>Implicit Flow</li>
+<li>:white_check_mark:  Authorization Code Flow</li>
+<li>Client Credential Flow</li>
+<li>Resource Owner Password Flow</li>
+<li>Assertion Flow</li>
+<li>:white_check_mark:  Device Authorization Flow</li>
+</ul>
+<p>Currently, the TSE in Cloud API supports the <strong>Authorization Code Flow</strong> and <strong>Device Authorization Flow</strong>.</p>
+<h2 id="closed_lock_with_key-authorization-code-flow">:closed_lock_with_key:  Authorization Code Flow</h2>
+<p>The <a href="https://www.oauth.com/oauth2-servers/server-side-apps/authorization-code/">Authorization Code Flow</a> is the most common of the OAuth 2.0 grant types. Like the other flows, it describes how the application can retrieve the token required to interact with the APIs.</p>
+<p>:::info Wanna get technical?</p>
+<p>Our implementation of this flow can be found <a href="/authentication/code-flow/index.mdx">here</a>.</p>
+<p>:::</p>
+<p>At a high level, the flow can be divided into the following steps:</p>
+<ol>
+<li>The End-User wants to use the Client Application.</li>
+<li>The Client Application wants to access the user’s data, so it contacts the Authorization Server to get permission.</li>
+<li>The Authorization Server asks the End-User whether to grant the requested permissions to the Client Application.</li>
+<li>If the End-User approves the request, the Authorization Server redirects him to the Client Application with an <strong>Authorization Code</strong> in the query string.</li>
+<li>The Client Application contacts the Authorization Server to exchange the Authorization Code with an Access Token. In addition to the Access Token, the Authorization Server will provide a Refresh Token.</li>
+<li>The Client Application uses the received tokens to access the user's data.</li>
+</ol>
+<p>As you can see, the Authorization Code flow introduces a new token called <strong>Authorization code</strong>. It is a short-living one-time use token generated by the Authorization Server, and its only purpose is to be exchanged for an Access Token.</p>
+<p>Since the Authorization Code Grant requires the exchange of the Authorization Code for the Access Token, it provides an additional layer of security not present in other grant types.
+The code exchange step ensures that an attacker isn’t able to intercept the Access Token, given that the Access Token is always sent via a secure backchannel between the Client Application and the Authorization Server.</p>
+<p>The authorization step is performed directly by the End-User on a page provided by the Authorization Server, so the application needs to expose a Redirect Endpoint that will be used by the Authorization Server to send the Authorization code.</p>
+<h2 id="iphone-device-code-flow">:iphone:  Device Code Flow</h2>
+<p>The <a href="https://www.oauth.com/oauth2-servers/device-flow/">Device Code Flow</a> is an authorization process designed explicitly for browserless and input-constrained devices such as smart TVs, media consoles, picture frames, printers, or hardware video encoders.
+It can be also used for use cases where the Client cannot safely store a secret (making it impossible to use the Authorization Code Flow), such as CRM plugins or pure frontend applications.</p>
+<p>:::warning Wait a minute!</p>
+<p><strong>To enable this flow for your application, you have to contact us!</strong> We would like to know why you want to use the Device Authorization flow before activating it.</p>
+<p>:::</p>
+<p>The Device Code Flow tries to overcome the restrictions that affect the Client Application by asking the End User to manually access a web page, where the authentication and authorization steps will be performed; this second device will usually be a PC or another device browser-provided, where the End User will be able to open the page and perform the requested operations easily.</p>
+<p>We can then split the Device Code Flow into two different paths, one for the device where the Client Application is running (named "Device Flow") and one for the secondary device (named "Browser Flow"); the two flows will be executed parallelly until the End-User authorization will be provided.</p>
+<p>The <strong>Device Flow</strong> is executed on the device where the Client App is running, e.g. the device with the restrictions mentioned above.</p>
+<p>The steps are the following:</p>
+<ol>
+<li>The End-User wants to use the Client Application.</li>
+<li>The Client Application wants to access the user’s data, so it contacts the Authorization Server to get permission.</li>
+<li>The Authorization Server sends a verification URL and a code to the Client Application, which displays them to the End-User.</li>
+<li>The Client Application starts polling the Authorization Server for the authorization result. This process continues until the End-User approves the request.</li>
+<li>The first Client Application's check following the End-User approval will be successful, and the Authorization Server will provide the Access Token and Refresh Token to the user.</li>
+<li>The Client Application uses the received tokens to access the user's data.</li>
+</ol>
+<p>The <strong>Browser Flow</strong> will be executed manually by the user on a secondary device of his choice, and it can be placed between steps 3 and 5 of the Device Flow:</p>
+<ol>
+<li>The End User will open the verification page, writing the verification URL on a secondary device of his choice.</li>
+<li>The page will require the End User to insert the code and to give permissions to the Client Application to perform the operations on the API</li>
+</ol>
+<h2 id="books-additional-resources">:books:  Additional Resources</h2>
+<ul>
+<li><a href="https://developer.okta.com/blog/2017/06/21/what-the-heck-is-oauth">What the Heck is OAuth?</a></li>
+<li><a href="https://auth0.com/docs/authorization/which-oauth-2-0-flow-should-i-use">Which OAuth 2.0 Flow should I use</a></li>
+<li>Authorization Code Flow</li>
+<li><a href="https://www.oauth.com/oauth2-servers/server-side-apps/authorization-code/">Authorization Code Grant</a></li>
+<li><a href="https://auth0.com/docs/flows/authorization-code-flow">Authorization Code Flow</a></li>
+<li><a href="https://developer.okta.com/blog/2018/04/10/oauth-authorization-code-grant-type">What is the OAuth 2.0 Authorization Code Grant Type?</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.1">Specification</a></li>
+<li>Device Code Flow</li>
+<li><a href="https://www.oauth.com/oauth2-servers/device-flow/">Device Authorization Grant</a></li>
+<li><a href="https://auth0.com/docs/authorization/flows/device-authorization-flow">Device Authorization Flow</a></li>
+<li><a href="https://alexbilbie.com/2016/04/oauth-2-device-flow-grant/">OAuth 2.0 Device Flow Grant</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc8628">Specification</a></li>
+<li><a href="https://darutk.medium.com/the-simplest-guide-to-oauth-2-0-8c71bd9a15bb">The Simplest Guide To OAuth 2.0</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OAuth">Wikipedia</a></li>
+<li><a href="https://www.oauth.com/">OAuth 2.0 Simplified</a></li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["icons", "navigation.collapsible"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

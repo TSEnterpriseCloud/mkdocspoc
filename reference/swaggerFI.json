@@ -1,10 +1,5 @@
 {
   "openapi": "3.0.1",
-  "info": {
-    "title": "TSEnterpriseWebApi - TS Enterprise Service layer",
-    "description": "WebApi Version Group: v1_IntegrationFI - 172 Endpoint",
-    "version": "v1_IntegrationFI"
-  },
   "paths": {
     "/api/v1/{environment}/FI/AccountingReasonCodeFI/is_enlivened": {
       "post": {
