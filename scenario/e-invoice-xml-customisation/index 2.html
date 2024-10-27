@@ -1,0 +1,1501 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Customize additional e-invoice XML fields" name="description"/>
+<link href="../invoice-creation/" rel="prev"/>
+<link href="../../basics/scopes/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>E-Invoice XML customization - TeamSystem Enterprise Cloud</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="/static/css/custom.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#scroll-the-official-xml-structure">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="TeamSystem Enterprise Cloud" class="md-header__button md-logo" data-md-component="logo" href="../.." title="TeamSystem Enterprise Cloud">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            TeamSystem Enterprise Cloud
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              E-Invoice XML customization
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="TeamSystem Enterprise Cloud" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="TeamSystem Enterprise Cloud">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    TeamSystem Enterprise Cloud
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../started/getting-started/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../started/authentication/">
+<span class="md-ellipsis">
+    Authentication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../started/howto/">
+<span class="md-ellipsis">
+    How to
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Step by step guide
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Step by step guide
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/common-terms/">
+<span class="md-ellipsis">
+    Common Terms
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/company-scoped-methods/">
+<span class="md-ellipsis">
+    Company methods
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/manual-authentication/">
+<span class="md-ellipsis">
+    Authentication mode
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Quickstarts
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Quickstarts
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/postman-collection/">
+<span class="md-ellipsis">
+    Postaman Collections
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/csharp-sdk-quickstart/">
+<span class="md-ellipsis">
+    C# SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/go-sdk-quickstart/">
+<span class="md-ellipsis">
+    GO SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/java-sdk-quickstart/">
+<span class="md-ellipsis">
+    Java SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/js-sdk-quickstart/">
+<span class="md-ellipsis">
+    JavaScript SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/php-sdk-quickstart/">
+<span class="md-ellipsis">
+    PHP SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/python-sdk-quickstart/">
+<span class="md-ellipsis">
+    Python SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/ruby-sdk-quickstart/">
+<span class="md-ellipsis">
+    Ruby SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/ts-sdk-quickstart/">
+<span class="md-ellipsis">
+    TypeScript SDK Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/vanilla-code/">
+<span class="md-ellipsis">
+    Vanilla Code Sample
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/windows-form-quickstart/">
+<span class="md-ellipsis">
+    Windows Form Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/google-sheets-quickstart/">
+<span class="md-ellipsis">
+    Google Sheets Apps Script Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stepbystep/quickstarts/zapier-quickstart/">
+<span class="md-ellipsis">
+    Zapier Quickstart
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Supported scenarios
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Supported scenarios
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../anagrafiche/">
+<span class="md-ellipsis">
+    Anagrafiche
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../invoice-creation/">
+<span class="md-ellipsis">
+    Invoice creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    E-Invoice XML Customisation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    E-Invoice XML Customisation
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scroll-the-official-xml-structure">
+<span class="md-ellipsis">
+      :scroll:  The Official XML Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dango-the-ei_raw-flavours">
+<span class="md-ellipsis">
+      :dango:  The ei_raw flavours
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#page_with_curl-e-invoice-body">
+<span class="md-ellipsis">
+      :page_with_curl:  E-invoice body
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ramen-items-list">
+<span class="md-ellipsis">
+      :ramen:  Items list
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#money_with_wings-payments-list">
+<span class="md-ellipsis">
+      :money_with_wings:  Payments list
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Basics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/scopes/">
+<span class="md-ellipsis">
+    Scopes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/errors/">
+<span class="md-ellipsis">
+    Errors
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/limits-and-quotas/">
+<span class="md-ellipsis">
+    Limits adn Quotas
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Additional capabilities
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_4">
+<span class="md-nav__icon md-icon"></span>
+            Additional capabilities
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/additional-capabilities/sort-results/">
+<span class="md-ellipsis">
+    Sort Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/additional-capabilities/paginate-results/">
+<span class="md-ellipsis">
+    Paginate results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/additional-capabilities/customize-response/">
+<span class="md-ellipsis">
+    Customize response
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/additional-capabilities/filter-results/">
+<span class="md-ellipsis">
+    Filter results
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/debug-your-integration/">
+<span class="md-ellipsis">
+    Debug your integration
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Api Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Api Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/api-reference-co/">
+<span class="md-ellipsis">
+    Common api
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/api-reference-fi/">
+<span class="md-ellipsis">
+    Finance api
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/api-reference-mg/">
+<span class="md-ellipsis">
+    Warehouse api
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/api-reference/">
+<span class="md-ellipsis">
+    Use the API Reference
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    SDKs
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            SDKs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdks/typescript-sdk/">
+<span class="md-ellipsis">
+    TypeScript SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdks/java-sdk/">
+<span class="md-ellipsis">
+    Java SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdks/javascript-sdk/">
+<span class="md-ellipsis">
+    JavaScript SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdks/net-sdk/">
+<span class="md-ellipsis">
+    .NET SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdks/python-sdk/">
+<span class="md-ellipsis">
+    Python SDK
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdks/ruby-sdk/">
+<span class="md-ellipsis">
+    Ruby SDK
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Support &amp; Feature Request
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Support &amp; Feature Request
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../support/faq/">
+<span class="md-ellipsis">
+    FAQs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../support/general-knowledge/oauth2/index.md">
+<span class="md-ellipsis">
+    General Knowledge
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Legal
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Legal
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../legal/terms/">
+<span class="md-ellipsis">
+    Condizioni generali di utilizzo delle API MadBit
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../legal/policy-acceptable-use/">
+<span class="md-ellipsis">
+    Policy di Acceptable Use
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../legal/marketing-resources-and-identity-guidelines/">
+<span class="md-ellipsis">
+    Marketing Resources and Identity Guidelines
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scroll-the-official-xml-structure">
+<span class="md-ellipsis">
+      :scroll:  The Official XML Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dango-the-ei_raw-flavours">
+<span class="md-ellipsis">
+      :dango:  The ei_raw flavours
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#page_with_curl-e-invoice-body">
+<span class="md-ellipsis">
+      :page_with_curl:  E-invoice body
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ramen-items-list">
+<span class="md-ellipsis">
+      :ramen:  Items list
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#money_with_wings-payments-list">
+<span class="md-ellipsis">
+      :money_with_wings:  Payments list
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>E-Invoice XML Customisation</h1>
+<p>import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";</p>
+<p>While <a href="/guides/invoice-creation.mdx">creating an e-invoice</a> you could need to have more control over the XML that is generated through our APIs. On this page, we'll explain how to set up the <strong>e-invoice advanced attributes</strong>.</p>
+<h2 id="scroll-the-official-xml-structure">:scroll:  The Official XML Structure</h2>
+<p>The <strong>Official e-invoice XML structure</strong> is directly defined by the Italian Public Administration, and can be found <a href="https://www.fatturapa.gov.it/export/documenti/fatturapa/v1.3/Rappresentazione-tabellare-fattura-ordinaria.pdf">here</a>. This structure is subject to changes over time, and that's why we decided to manage some of these fields in a different way.</p>
+<p>If you want to know which additional attributes we support you can also read this <a href="https://help.fattureincloud.it/help/articolo/181">page</a>. The <em>TSE in Cloud Web App</em> lets you define these fields through dedicated components, so you can also check it to discover which attributes we support; we'll show you how to do it in the following sections.</p>
+<h2 id="dango-the-ei_raw-flavours">:dango:  The ei_raw flavours</h2>
+<p>If you already are familiar with creating e-invoices from our Web App, you already know that you can set advanced attributes in three different entities:</p>
+<ul>
+<li>E-invoice body</li>
+<li>Items list</li>
+<li>Payments list</li>
+</ul>
+<p>While using our <a href="/api-reference#post-/c/-company_id-/issued_documents">Create Issued Document</a> and <a href="/api-reference#put-/c/-company_id-/issued_documents/-document_id-">Modify Issued Document</a> API methods, the fields provided by our model don't let you define all the fields available through our Web App: these advanced fields can instead be managed using the <strong>ei_raw</strong> params.</p>
+<p>:::warning Strings everywhere!</p>
+<p>Keep in mind that every field in ei_raw is always managed as a <strong>String</strong>! This means, for example, that even numbers must be inserted in String format (eg. "NumItem": "5")</p>
+<p>:::</p>
+<h2 id="page_with_curl-e-invoice-body">:page_with_curl:  E-invoice body</h2>
+<p>In our Web Interface, you can add your custom XML fields here:</p>
+<p><img alt="Main body - Add Additional Attributes" src="../assets/einvoice-body-ei-raw.png"/></p>
+<p>In our API, that section corresponds to the <strong>data.ei_raw</strong> field. Let's try to set up one of these attributes.</p>
+<p>For this example, we'll suppose to need to manage the <em>NumItem field (2.1.5.4)</em>.</p>
+<p>This is the structure declared by the Official Structure:</p>
+<table>
+<thead>
+<tr>
+<th>XML Tag Name</th>
+<th>XML Tag ID</th>
+<th>Occurrences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FatturaElettronicaBody</td>
+<td>2</td>
+<td>root</td>
+</tr>
+<tr>
+<td>DatiGenerali</td>
+<td>2.1</td>
+<td>&lt;1,1&gt;</td>
+</tr>
+<tr>
+<td>DatiRicezione</td>
+<td>2.1.5</td>
+<td>&lt;0,N&gt;</td>
+</tr>
+<tr>
+<td>NumItem</td>
+<td>2.1.5.4</td>
+<td>&lt;0,1&gt;</td>
+</tr>
+</tbody>
+</table>
+<p>This is the final XML that we want to obtain:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>The <strong>ei_raw</strong> field uses JSON instead of XML but uses a similar structure.</p>
+<p>While mapping the XML structure to our JSON, you have to keep in mind a few things:</p>
+<ul>
+<li>The <em>FatturaElettronicaBody tag</em> is the <strong>root</strong> of our ei_raw field, and we accept only one instance of that in our e-invoices</li>
+<li>For the root subfields, you need to check if the field is mandatory and its occurrences (check the <strong>Obbligatorietà e occorrenze</strong> field in the official structure); if the field can have more than one occurrence then it must be represented as a <em>JSON list</em>. For example, DatiRicezione is &lt;0, N&gt;: it means that it isn't mandatory and that it must be represented as a JSON list.</li>
+</ul>
+<p>Mapping the XML shown above to our ei_raw JSON format we will obtain the following result:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"FatturaElettronicaBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"DatiGenerali"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"DatiRicezione"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"NumItem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"invoice"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mario Rossi"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-20"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"e_invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"items_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TV3"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tavolo in legno"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"net_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cucina"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"vat"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">386683</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"payments_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">122</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-23"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"paid_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-22"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"payment_account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"FatturaElettronicaBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"DatiGenerali"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"DatiRicezione"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">"NumItem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">          </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>And here you can see how to set the ei_raw field with our SDKs:</p>
+<div class="highlight"><pre><span></span><code><span class="n">IssuedDocument</span><span class="w"> </span><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocument</span><span class="p">(</span>
+<span class="w">    </span><span class="n">type</span><span class="p">:</span><span class="w"> </span><span class="n">IssuedDocumentType</span><span class="p">.</span><span class="n">Invoice</span><span class="p">,</span>
+<span class="w">    </span><span class="n">eiRaw</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">FatturaElettronicaBody</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DatiGenerali</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">DatiRicezione</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">NumItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"5"</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">invoice</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">*</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">NewIssuedDocument</span><span class="p">().</span>
+<span class="w">    </span><span class="nx">SetType</span><span class="p">(</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">IssuedDocumentTypes</span><span class="p">.</span><span class="nx">INVOICE</span><span class="p">).</span>
+<span class="w">    </span><span class="nx">SetEiRaw</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">        </span><span class="s">"FatturaElettronicaBody"</span><span class="p">:</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">            </span><span class="s">"DatiGenerali"</span><span class="p">:</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">                </span><span class="s">"DatiRicezione"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">                    </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">                        </span><span class="s">"NumItem"</span><span class="p">:</span><span class="w"> </span><span class="s">"5"</span><span class="p">,</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s">"FatturaElettronicaBody"</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">        </span><span class="s">"DatiGenerali"</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">            </span><span class="s">"DatiRicezione"</span><span class="p">,</span>
+<span class="w">            </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span>
+<span class="w">                </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">                    </span><span class="s">"NumItem"</span><span class="p">,</span><span class="w"> </span><span class="s">"5"</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">            </span><span class="p">)</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="n">IssuedDocument</span><span class="w"> </span><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocument</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">type</span><span class="p">(</span><span class="n">IssuedDocumentType</span><span class="p">.</span><span class="na">INVOICE</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">eiRaw</span><span class="p">(</span><span class="n">eiRaw</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">IssuedDocument</span><span class="p">();</span>
+<span class="nx">invoice</span><span class="p">.</span><span class="nx">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">IssuedDocumentType</span><span class="p">().</span><span class="nx">invoice</span><span class="p">;</span>
+<span class="nx">invoice</span><span class="p">.</span><span class="nx">ei_raw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">FatturaElettronicaBody</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">DatiGenerali</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">DatiRicezione</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">NumItem</span><span class="o">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">$invoice = new IssuedDocument();</span>
+<span class="x">$invoice</span>
+<span class="x">  -&gt;setType(IssuedDocumentType::INVOICE);</span>
+<span class="x">  -&gt;setEiRaw(</span>
+<span class="x">    [</span>
+<span class="x">        "FatturaElettronicaBody" =&gt; [</span>
+<span class="x">            "DatiGenerali" =&gt; [</span>
+<span class="x">                "DatiRicezione" =&gt; [</span>
+<span class="x">                    ["NumItem" =&gt; "5"]</span>
+<span class="x">                ]</span>
+<span class="x">            ]</span>
+<span class="x">        ]</span>
+<span class="x">    ]</span>
+<span class="x">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">invoice</span> <span class="o">=</span> <span class="n">IssuedDocument</span><span class="p">(</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="n">IssuedDocumentType</span><span class="p">(</span><span class="s2">"invoice"</span><span class="p">),</span>
+    <span class="n">ei_raw</span> <span class="o">=</span><span class="p">{</span>
+        <span class="s2">"FatturaElettronicaBody"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"DatiGenerali"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"DatiRicezione"</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">"NumItem"</span><span class="p">:</span> <span class="s2">"5"</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocument</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="w">    </span><span class="ss">type</span><span class="p">:</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocumentType</span><span class="o">::</span><span class="no">INVOICE</span><span class="p">,</span>
+<span class="w">    </span><span class="ss">ei_raw</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="ss">FatturaElettronicaBody</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="ss">DatiGenerali</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="ss">DatiRicezione</span><span class="p">:</span><span class="w"> </span><span class="o">[</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="ss">NumItem</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="o">]</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">invoice</span><span class="o">:</span><span class="w"> </span><span class="kt">IssuedDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="nx">IssuedDocumentType</span><span class="p">.</span><span class="nx">Invoice</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">ei_raw</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">FatturaElettronicaBody</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">DatiGenerali</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">DatiRicezione</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">NumItem</span><span class="o">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span>
+<span class="w">          </span><span class="p">},</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div>
+<h2 id="ramen-items-list">:ramen:  Items list</h2>
+<p>In our web interface, you can define advanced attributes for each of the inserted items:</p>
+<p><img alt="Items list - Add advanced attributes" src="../assets/einvoice-items-list-ei-raw.png"/></p>
+<p>This section is mapped in our API methods in the <strong>data.items_list.ei_raw</strong> field. This field's behavior is similar to what was explained in the previous section, but in this case, the root tag is <strong>DettaglioLinee (2.2.1)</strong>; this means that this is the first tag that we must represent in the item (you must ignore the parent nodes) and that there can be only one root tag per item.</p>
+<p>In the following example, we suppose that we need to set the <strong>TipoDato field (2.2.1.16.2)</strong>; the following table contains the Official XML Structure for the field:</p>
+<table>
+<thead>
+<tr>
+<th>XML Tag Name</th>
+<th>XML Tag ID</th>
+<th>Occurrences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FatturaElettronicaBody</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>DatiBeniServizi</td>
+<td>2.2</td>
+<td></td>
+</tr>
+<tr>
+<td>DettaglioLinee</td>
+<td>2.2.1</td>
+<td>root</td>
+</tr>
+<tr>
+<td>AltriDatiGestionali</td>
+<td>2.2.1.16</td>
+<td>&lt;0,N&gt;</td>
+</tr>
+<tr>
+<td>TipoDato</td>
+<td>2.2.1.16.2</td>
+<td>&lt;1,1&gt;</td>
+</tr>
+</tbody>
+</table>
+<p>This is the final XML that we want to obtain:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>While mapping this XML to our JSON, we have to keep in mind two things:</p>
+<ul>
+<li>The root is the DettaglioLinee tag, so its parents must be omitted;</li>
+<li>As explained before, AltriDatiGestionali can appear more than once, so it must be represented as a JSON list.</li>
+</ul>
+<p>The resulting JSON will be the following one:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"DettaglioLinee"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"AltriDatiGestionali"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"TipoDato"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TIPO_DATO"</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"invoice"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mario Rossi"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-20"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"e_invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"items_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TV3"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tavolo in legno"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"net_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cucina"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"vat"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"DettaglioLinee"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"AltriDatiGestionali"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"TipoDato"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TIPO_DATO"</span>
+<span class="w">              </span><span class="p">}</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">386683</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"payments_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">122</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-23"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"paid_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-22"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"payment_account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"FatturaElettronicaBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"DatiGenerali"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"DatiRicezione"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">"NumItem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">          </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>And here you can see how to set the ei_raw field with our SDKs:</p>
+<div class="highlight"><pre><span></span><code><span class="n">IssuedDocument</span><span class="w"> </span><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocument</span><span class="p">(</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="nf">IssuedDocumentItemsListItem</span><span class="p">(</span>
+<span class="w">            </span><span class="n">productId</span><span class="p">:</span><span class="w"> </span><span class="m">4</span><span class="p">,</span>
+<span class="w">            </span><span class="n">eiRaw</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">DettaglioLinee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">AltriDatiGestionali</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">TipoDato</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"TIPO DATO"</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">invoice</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">*</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">NewIssuedDocument</span><span class="p">().</span>
+<span class="w">    </span><span class="nx">SetType</span><span class="p">(</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">IssuedDocumentTypes</span><span class="p">.</span><span class="nx">INVOICE</span><span class="p">).</span>
+<span class="w">    </span><span class="nx">SetEiRaw</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">        </span><span class="s">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">            </span><span class="s">"DettaglioLinee"</span><span class="p">:</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">                </span><span class="s">"AltriDatiGestionali"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">                    </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">                        </span><span class="s">"TipoDato"</span><span class="p">:</span><span class="w"> </span><span class="s">"TIPO_DATO"</span><span class="p">,</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s">"DettaglioLinee"</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">        </span><span class="s">"AltriDatiGestionali"</span><span class="p">,</span>
+<span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span>
+<span class="w">            </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">                </span><span class="s">"TipoDato"</span><span class="p">,</span><span class="w"> </span><span class="s">"TIPO DATO"</span>
+<span class="w">            </span><span class="p">)</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="n">IssuedDocument</span><span class="w"> </span><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocument</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">addItemsListItem</span><span class="p">(</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocumentItemsListItem</span><span class="p">()</span>
+<span class="w">            </span><span class="p">.</span><span class="na">productId</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="na">eiRaw</span><span class="p">(</span><span class="n">eiRaw</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">IssuedDocument</span><span class="p">();</span>
+<span class="nx">invoice</span><span class="p">.</span><span class="nx">items_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">product_id</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ei_raw</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">DettaglioLinee</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">AltriDatiGestionali</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">TipoDato</span><span class="o">:</span><span class="w"> </span><span class="s2">"TIPO_DATO"</span><span class="p">,</span>
+<span class="w">          </span><span class="p">},</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">];</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">$invoice = new IssuedDocument();</span>
+<span class="x">$invoice-&gt;setItemsList(</span>
+<span class="x">    [</span>
+<span class="x">        new IssuedDocumentItemsListItem(</span>
+<span class="x">            [</span>
+<span class="x">                "product_id" =&gt; 4,</span>
+<span class="x">                "ei_raw" =&gt; [</span>
+<span class="x">                    "DettaglioLinee" =&gt; [</span>
+<span class="x">                        "AltriDatiGestionali" =&gt; [</span>
+<span class="x">                          [</span>
+<span class="x">                            "TipoDato" =&gt; "TIPO_DATO"</span>
+<span class="x">                          ]</span>
+<span class="x">                        ]</span>
+<span class="x">                    ]</span>
+<span class="x">                ]</span>
+<span class="x">            ]</span>
+<span class="x">        )</span>
+<span class="x">    ]</span>
+<span class="x">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">invoice</span> <span class="o">=</span> <span class="n">IssuedDocument</span><span class="p">(</span>
+    <span class="n">items_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">IssuedDocumentItemsListItem</span><span class="p">(</span>
+            <span class="n">product_id</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+            <span class="n">ei_raw</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">"DettaglioLinee"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"AltriDatiGestionali"</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">"TipoDato"</span><span class="p">:</span> <span class="s2">"TIPO_DATO"</span>
+                        <span class="p">}</span>
+                    <span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocument</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="w">    </span><span class="ss">items_list</span><span class="p">:</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span>
+<span class="w">      </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocumentItemsListItem</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="w">            </span><span class="ss">product_id</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">            </span><span class="ss">ei_raw</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="ss">DettaglioLinee</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="ss">AltriDatiGestionali</span><span class="p">:</span><span class="w"> </span><span class="o">[</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="ss">NumItem</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="o">]</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">invoice</span><span class="o">:</span><span class="w"> </span><span class="kt">IssuedDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">items_list</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">product_id</span><span class="o">:</span><span class="w"> </span><span class="kt">4</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">ei_raw</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">DettaglioLinee</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">AltriDatiGestionali</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">              </span><span class="nx">TipoDato</span><span class="o">:</span><span class="w"> </span><span class="s2">"TIPO_DATO"</span><span class="p">,</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">          </span><span class="p">],</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="p">};</span>
+</code></pre></div>
+<h2 id="money_with_wings-payments-list">:money_with_wings:  Payments list</h2>
+<p>In our web interface, you can define advanced attributes for each of the inserted payments:</p>
+<p><img alt="Payments list - Add advanced attributes" src="../assets/einvoice-payments-list-ei-raw.png"/></p>
+<p>This section is mapped in our API methods in the <strong>data.payments_list.ei_raw</strong> field. This field's behavior is similar to what was explained in the previous section, but in this case, the root tag is <strong>DettaglioPagamento (2.4.2)</strong>; this means that this is the first tag that we must represent in the item (you must ignore the parent nodes) and that there can be only one root tag per item.</p>
+<p>In the following example, we suppose that we need to set the <strong>CAB field (2.4.2.15)</strong>; the following table contains the Official XML Structure for the field:</p>
+<table>
+<thead>
+<tr>
+<th>XML Tag Name</th>
+<th>XML Tag ID</th>
+<th>Occurrences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FatturaElettronicaBody</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>DatiPagamento</td>
+<td>2.4</td>
+<td></td>
+</tr>
+<tr>
+<td>DettaglioPagamento</td>
+<td>2.4.2</td>
+<td>root</td>
+</tr>
+<tr>
+<td>CAB</td>
+<td>2.4.2.15</td>
+<td>&lt;0,1&gt;</td>
+</tr>
+</tbody>
+</table>
+<p>This is the final XML that we want to obtain:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>While mapping this XML to our JSON, we have to omit the root's parent tags, as already explained above.</p>
+<p>The resulting JSON will be the following one:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"DettaglioPagamento"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"CAB"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CAB"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"invoice"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mario Rossi"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-20"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"e_invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"items_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TV3"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tavolo in legno"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"net_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cucina"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"vat"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"DettaglioLinee"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"AltriDatiGestionali"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"TipoDato"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TIPO_DATO"</span>
+<span class="w">              </span><span class="p">}</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">386683</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"payments_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">122</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-23"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"paid_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-22"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"payment_account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"DettaglioPagamento"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"CAB"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CAB"</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"ei_raw"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"FatturaElettronicaBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"DatiGenerali"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"DatiRicezione"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">"NumItem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">          </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>And here you can see how to set the ei_raw field with our SDKs:</p>
+<div class="highlight"><pre><span></span><code><span class="n">IssuedDocument</span><span class="w"> </span><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocument</span><span class="p">(</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="nf">IssuedDocumentPaymentsListItem</span><span class="p">(</span>
+<span class="w">            </span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="m">122</span><span class="p">,</span>
+<span class="w">            </span><span class="n">eiRaw</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">DettaglioPagamento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">CAB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"CAB"</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">invoice</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">*</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">NewIssuedDocument</span><span class="p">().</span>
+<span class="w">    </span><span class="nx">SetType</span><span class="p">(</span><span class="nx">fattureincloud</span><span class="p">.</span><span class="nx">IssuedDocumentTypes</span><span class="p">.</span><span class="nx">INVOICE</span><span class="p">).</span>
+<span class="w">    </span><span class="nx">SetEiRaw</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">        </span><span class="s">"DettaglioPagamento"</span><span class="p">:</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<span class="w">            </span><span class="s">"CAB"</span><span class="p">:</span><span class="w"> </span><span class="s">"CAB"</span><span class="p">,</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s">"DettaglioPagamento"</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">        </span><span class="s">"CAB"</span><span class="p">,</span><span class="w"> </span><span class="s">"CAB"</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="n">IssuedDocument</span><span class="w"> </span><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocument</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">addPaymentsListItem</span><span class="p">(</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">IssuedDocumentPaymentsListItem</span><span class="p">()</span>
+<span class="w">            </span><span class="p">.</span><span class="na">amount</span><span class="p">(</span><span class="n">BigDecimal</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">122</span><span class="p">))</span>
+<span class="w">            </span><span class="p">.</span><span class="na">eiRaw</span><span class="p">(</span><span class="n">eiRaw</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">fattureInCloudSdk</span><span class="p">.</span><span class="nx">IssuedDocument</span><span class="p">();</span>
+<span class="nx">invoice</span><span class="p">.</span><span class="nx">payments_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="mf">122</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ei_raw</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">DettaglioPagamento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">CAB</span><span class="o">:</span><span class="w"> </span><span class="s2">"CAB"</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">];</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">$invoice = new IssuedDocument();</span>
+<span class="x">$invoice-&gt;setPaymentsList(</span>
+<span class="x">    [</span>
+<span class="x">        new IssuedDocumentPaymentsListItem(</span>
+<span class="x">            [</span>
+<span class="x">                "amount" =&gt; 122,</span>
+<span class="x">                "ei_raw" =&gt; [</span>
+<span class="x">                    "DettaglioPagamento" =&gt; [</span>
+<span class="x">                        "CAB" =&gt; "CAB"</span>
+<span class="x">                    ]</span>
+<span class="x">                ]</span>
+<span class="x">            ]</span>
+<span class="x">        )</span>
+<span class="x">    ]</span>
+<span class="x">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">invoice</span> <span class="o">=</span> <span class="n">IssuedDocument</span><span class="p">(</span>
+    <span class="n">payments_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">IssuedDocumentPaymentsListItem</span><span class="p">(</span>
+            <span class="n">amount</span><span class="o">=</span><span class="mi">122</span><span class="p">,</span>
+            <span class="n">ei_raw</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">"DettaglioPagamento"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"CAB"</span><span class="p">:</span> <span class="s2">"CAB"</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">invoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocument</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="w">    </span><span class="ss">payments_list</span><span class="p">:</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span>
+<span class="w">      </span><span class="no">FattureInCloud_Ruby_Sdk</span><span class="o">::</span><span class="no">IssuedDocumentPaymentsListItem</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="w">            </span><span class="ss">amount</span><span class="p">:</span><span class="w"> </span><span class="mi">122</span><span class="p">,</span>
+<span class="w">            </span><span class="ss">ei_raw</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="ss">DettaglioPagamento</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="ss">CAB</span><span class="p">:</span><span class="w"> </span><span class="s2">"CAB"</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">invoice</span><span class="o">:</span><span class="w"> </span><span class="kt">IssuedDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">payments_list</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="kt">122</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">ei_raw</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">DettaglioPagamento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">CAB</span><span class="o">:</span><span class="w"> </span><span class="s2">"CAB"</span><span class="p">,</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="p">};</span>
+</code></pre></div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["icons", "navigation.collapsible"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>
