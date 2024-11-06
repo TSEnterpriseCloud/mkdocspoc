@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#older_woman-old-or-new">
+<a class="md-skip" href="#old-or-new">
           Skip to content
         </a>
 </div>
@@ -713,24 +713,24 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#older_woman-old-or-new">
+<a class="md-nav__link" href="#old-or-new">
 <span class="md-ellipsis">
-      :older_woman:  Old or new?
+        Old or new?
     </span>
 </a>
-<nav aria-label=":older_woman:  Old or new?" class="md-nav">
+<nav aria-label="  Old or new?" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#star2-new-invoice-totals">
+<a class="md-nav__link" href="#new-invoice-totals">
 <span class="md-ellipsis">
-      :star2:  New invoice totals
+        New invoice totals
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#scroll-existing-invoice-totals">
+<a class="md-nav__link" href="#existing-invoice-totals">
 <span class="md-ellipsis">
-      :scroll:  Existing invoice totals
+        Existing invoice totals
     </span>
 </a>
 </li>
@@ -738,9 +738,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tophat-the-magic-field">
+<a class="md-nav__link" href="#the-magic-field">
 <span class="md-ellipsis">
-      :tophat:  The magic field
+        The magic field
     </span>
 </a>
 </li>
@@ -755,30 +755,30 @@
 <p>import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";</p>
 <p>If you are setting the payments list of your invoice you must know the <strong>total amount of your items list</strong>. Luckily for you, you don't have to take the calculator out of your drawer, we got you covered with a specific set of methods to suit your needs, so you won't be seeing the <em>Il totale dei pagamenti non corrisponde al totale da pagare</em> error anymore.</p>
-<p>:::warning Beware of roundings!
+<p>!!! warning Beware of roundings!
 If you use numbers with more than 2 decimal digits when specifying the amounts in the items list and payments list they will automatically be rounded to 2 digits before doing any calculation, so if you do not take this into consideration you probably will get the 'Il totale dei pagamenti non corrisponde al totale da pagare' error.
-:::</p>
-<p>:::tip Retrieve your Company ID!</p>
+!!! </p>
+<p>!!! tip Retrieve your Company ID!</p>
 <p>In this example, we'll suppose you have to manage just one Company, so we simply inserted its ID directly in the code. If instead, you need to be able to manage multiple companies, you'll need to retrieve the ID of the current company in some way.
 Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
-<p>:::</p>
-<p>:::info Are you using Zapier?</p>
+<p>!!! </p>
+<p>!!! info Are you using Zapier?</p>
 <p><a href="/docs/quickstarts/zapier-quickstart.md">Zapier Actions</a> provide all the fields offered by the APIs, but it does not mean you need to compile all of them!</p>
 <p>To follow this guide, you will be required to search the fields used in our example on the Zapier page and insert the related values.</p>
-<p>The code of the fields will follow the JSON structure: for example, the "type" field is included in the "data" object, so the Zapier code will be "data.type". You can use the <em>CRTL + F</em> command to search the field's code faster :wink:</p>
+<p>The code of the fields will follow the JSON structure: for example, the "type" field is included in the "data" object, so the Zapier code will be "data.type". You can use the <em>CRTL + F</em> command to search the field's code faster <img alt="😉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f609.svg" title=":wink:"/></p>
 <p>In this example, we'll insert the values directly, but please remember that Zapier was built to let you select the workflow's previous steps' outputs as input in the Action, for example selecting the values returned by a trigger!</p>
-<p>:::</p>
-<h2 id="older_woman-old-or-new">:older_woman:  Old or new?</h2>
+<p>!!! </p>
+<h2 id="old-or-new"><img alt="👵" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f475.svg" title=":older_woman:">  Old or new?</img></h2>
 <p>We got methods for all the cases you would possibly think of, either you are creating a new invoice or editing an old one we have a specific call.</p>
 <p>The two methods are:</p>
 <ul>
 <li><a href="/api-reference#post-/c/-company_id-/issued_documents/totals">Get New Issued Document Totals</a></li>
 <li><a href="/api-reference#post-/c/-company_id-/issued_documents/-document_id-/totals">Get Existing Issued Document Totals</a></li>
 </ul>
-<p>:::info Look out!</p>
+<p>!!! info Look out!</p>
 <p>Invoking these methods will <strong>not</strong> create or edit your invoice, it will only show you a preview of the totals. You still need to use the appropriate methods to apply the modifications.</p>
-<p>:::</p>
-<h3 id="star2-new-invoice-totals">:star2:  New invoice totals</h3>
+<p>!!! </p>
+<h3 id="new-invoice-totals"><img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f31f.svg" title=":star2:"/>  New invoice totals</h3>
 <p>You can invoke the <a href="/api-reference#post-/c/-company_id-/issued_documents/totals">Get New Issued Document Totals</a> method if you are creating a new invoice and want to know the totals after you added the items list to your invoice body: the response will contain all the info you need to finalize your invoice creation.</p>
 <p>Here you can find an example request and response.</p>
 <div class="highlight"><pre><span></span><code><span class="nf">POST</span> <span class="nn">/c/2/issued_document/totals</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
@@ -898,7 +898,7 @@ Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it!!!</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it!!! </span>
 <span class="c1">// In the next step we'll explain how to perform the request to the API.</span>
 
 <span class="c1">// in this example we are using our Go SDK</span>
@@ -1327,7 +1327,7 @@ After you select the action and log in, you need to select your Company ID. Luck
 <p><img alt="Zapier - Company ID Selection" src="../assets/company-id-selection.png"/></p>
 <p>Next, you must insert a request similar to the one we need for the <em>Create Issued Document</em> request. We suggest you check the <a href="/docs/guides/invoice-creation.mdx">Invoice Creation</a> Guide for more info.</p>
 <p>You can then use the resulting totals of this request in the creation request.</p>
-<h3 id="scroll-existing-invoice-totals">:scroll:  Existing invoice totals</h3>
+<h3 id="existing-invoice-totals"><img alt="📜" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4dc.svg" title=":scroll:"/>  Existing invoice totals</h3>
 <p>If you want to edit an existing invoice instead, for example, to add a new item, you can get the updated totals invoking the <a href="/api-reference#post-/c/-company_id-/issued_documents/-document_id-/totals">Get Existing Issued Document Totals</a> method and passing the updated fields in the request body.</p>
 <p>In the following example, we want to a third item to an existing invoice and we want to know what will be the resulting updated totals before making the <a href="/api-reference#put-/c/-company_id-/issued_documents/-document_id-">modify issued document</a> call, using the previously described method:</p>
 <div class="highlight"><pre><span></span><code><span class="nf">POST</span> <span class="nn">/c/2/issued_document/12345/totals</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
@@ -1459,7 +1459,7 @@ After you select the action and log in, you need to select your Company ID. Luck
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it!!!</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it!!! </span>
 <span class="c1">// In the next step we'll explain how to perform the request to the API.</span>
 
 <span class="c1">// in this example we are using our Go SDK</span>
@@ -1950,7 +1950,7 @@ After you select the action and log in, you need to select your Company ID. Luck
 <p>Additionally, you need to select the ID of the existing document, that can be provided by a previous step.</p>
 <p>Next, you must insert a request similar to the one we need for the <em>Modify Issued Document</em> request. We suggest you check the <a href="/docs/guides/invoice-creation.mdx">Invoice Creation</a> Guide for more info.</p>
 <p>You can then use the resulting totals of this request in the modification request.</p>
-<h2 id="tophat-the-magic-field">:tophat:  The magic field</h2>
+<h2 id="the-magic-field"><img alt="🎩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f3a9.svg" title=":tophat:"/>  The magic field</h2>
 <p>If you don't mind about the amounts of each payment, but you just want them to match the expected totals, we provide a magic field that could be perfect for you.</p>
 <p>The <strong>options.fix_payments</strong> field, when set to true, adjusts your <em>last</em> payment amount of the payments list to match your document total, incrementing or reducing the amount accordingly. Of course, if you have only one payment it will be modified to match the document total.</p>
 <p>The options.fix_payment field must be used in the <a href="/api-reference#post-/c/-company_id-/issued_documents">invoice creation request</a>. Please, notice that this field is <strong>not</strong> included in the <em>data</em> field that contains the main section of the request, as you can see in the following example.</p>

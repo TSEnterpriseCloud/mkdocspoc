@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#football-lets-start">
+<a class="md-skip" href="#lets-start">
           Skip to content
         </a>
 </div>
@@ -713,58 +713,58 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#football-lets-start">
+<a class="md-nav__link" href="#lets-start">
 <span class="md-ellipsis">
-      :football:  Let's start!
+        Let's start!
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#building_construction-libraries">
+<a class="md-nav__link" href="#libraries">
 <span class="md-ellipsis">
-      :building_construction:  Libraries
+        Libraries
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#one-initialize-our-sdk">
+<a class="md-nav__link" href="#initialize-our-sdk">
 <span class="md-ellipsis">
-      :one:  Initialize our SDK
+        Initialize our SDK
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#two-implement-the-exponential-backoff">
+<a class="md-nav__link" href="#implement-the-exponential-backoff">
 <span class="md-ellipsis">
-      :two:  Implement the Exponential Backoff
+        Implement the Exponential Backoff
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#three-the-api-method">
+<a class="md-nav__link" href="#the-api-method">
 <span class="md-ellipsis">
-      :three:  The API Method
+        The API Method
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#four-manage-the-response">
+<a class="md-nav__link" href="#manage-the-response">
 <span class="md-ellipsis">
-      :four:  Manage the response
+        Manage the response
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#computer-code-examples">
+<a class="md-nav__link" href="#code-examples">
 <span class="md-ellipsis">
-      :computer:  Code Examples
+        Code Examples
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#books-additional-resources">
+<a class="md-nav__link" href="#additional-resources">
 <span class="md-ellipsis">
-      :books:  Additional resources
+        Additional resources
     </span>
 </a>
 </li>
@@ -780,44 +780,44 @@
 import TabItem from "@theme/TabItem";</p>
 <p>In this use case, we suppose that you have a system that you want to <em>keep in sync with the TSE in Cloud API</em>, in particular <strong>retrieving the list of the products</strong> from our API and storing them in some way. In this example, we'll adopt a <strong>polling</strong> approach to retrieve the current state of the data stored in TSE in Cloud.</p>
 <p>If you want to download the complete SDKs examples you can find them <a href="https://github.com/fattureincloud/fattureincloud-quickstarts/tree/master/polling">here</a>.</p>
-<p>:::tip Retrieve your Company ID!</p>
+<p>!!! tip Retrieve your Company ID!</p>
 <p>In this example, we'll suppose you have to manage just one Company, so we simply inserted its ID directly in the code. If instead, you need to be able to manage multiple companies, you'll need to retrieve the ID of the current company in some way.
 Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
-<p>:::</p>
-<p>:::danger Are you sure?</p>
+<p>!!! </p>
+<p>!!! danger Are you sure?</p>
 <p>A better approach is to use our <a href="/webhooks/index.mdx">Webhooks</a> to keep your system updated. Check them out!</p>
-<p>:::</p>
-<h2 id="football-lets-start">:football:  Let's start!</h2>
+<p>!!! </p>
+<h2 id="lets-start"><img alt="🏈" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f3c8.svg" title=":football:">  Let's start!</img></h2>
 <p>To keep the code as simple as possible, we decided to write the data to a <a href="https://jsonlines.org/">JSON lines</a> file, that could be then sent as input for an external system; of course, it is possible to use the retrieved elements as needed: for example, to update a Database status or to perform API calls towards a third-party system.</p>
-<p>:::warning Schedule the execution!</p>
+<p>!!! warning Schedule the execution!</p>
 <p>To keep two systems in sync using polling, it is necessary to reiterate the extraction of the data from our APIs, <a href="https://en.wikipedia.org/wiki/Cron">scheduling</a> the code execution.</p>
 <p>In this example, we <em>deliberately</em> omitted to add the code to repeat the execution of our code. For example, you could decide to add a <strong>Cron Library</strong> to your application or to execute the script using a <strong>Job Scheduler</strong> on your operating system. <strong>This is up to you</strong>.</p>
-<p>:::</p>
-<p>:::info Or execute it once...</p>
+<p>!!! </p>
+<p>!!! info Or execute it once...</p>
 <p>Even if we created this code to keep two systems synchronized periodically, it can also be used for a one-off extraction of the data from the TSE in Cloud API. Just execute it as it is...</p>
-<p>:::</p>
-<h2 id="building_construction-libraries">:building_construction:  Libraries</h2>
+<p>!!! </p>
+<h2 id="libraries"><img alt="🏗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f3d7.svg" title=":building_construction:">  Libraries</img></h2>
 <p>In our examples, we'll use the <strong>TSE in Cloud SDKs</strong>; of course, you can just replace our SDKs with a simple HTTP Client if you prefer: check the <a href="/sdks/index.mdx">dedicated page</a> for further info.
 Additionally, for some languages, we added some other libraries to perform common tasks such as writing to the file system or performing the exponential backoff.</p>
-<h2 id="one-initialize-our-sdk">:one:  Initialize our SDK</h2>
+<h2 id="initialize-our-sdk"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:"/>  Initialize our SDK</h2>
 <p>In the first part of this example, we import our SDK and initialize it, using the Access Token requested to perform the API call. For simplicity, we didn't implement the code to retrieve the access token in these examples, but you can find more information in the <a href="/quickstarts/index.mdx">Quickstarts</a> or in the <a href="/authentication/index.mdx">Authentication Implementation</a> pages.</p>
 <p>Since we're trying to collect the list of products for a certain company, the <strong>products:r</strong> <a href="/basics/scopes.md">scope</a> will be required; if you need to use another API method please select the appropriate scopes.</p>
 <p>Once the token is provided to our SDK, it is possible to start using it to interrogate our APIs.</p>
-<h2 id="two-implement-the-exponential-backoff">:two:  Implement the Exponential Backoff</h2>
+<h2 id="implement-the-exponential-backoff"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0032-20e3.svg" title=":two:"/>  Implement the Exponential Backoff</h2>
 <p>The <strong>polling strategy</strong> implies the exigency to perform a potentially huge amount of requests in a really short period. As explained <a href="/basics/limits-and-quotas.mdx">here</a>, our APIs are protected by a set of limits that could result in an error if too many requests are performed in a certain interval.</p>
 <p>This is why in our examples we wrapped the API call with an <a href="https://en.wikipedia.org/wiki/Exponential_backoff">Exponential Backoff</a> method: it manages retries and time distance between two consecutive attempts, to avoid your script failing for a temporary quota-related issue.</p>
-<h2 id="three-the-api-method">:three:  The API Method</h2>
+<h2 id="the-api-method"><img alt="3️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0033-20e3.svg" title=":three:"/>  The API Method</h2>
 <p>The API method that we're using is the <a href="/api-reference#get-/c/-company_id-/products">List Products</a> method, which returns the list of all the possible products for a certain company.
 The <em>List</em> methods provide <a href="/basics/additional-capabilities/sort-results.mdx">Sorting</a> and <a href="/basics/additional-capabilities/customize-response.mdx">Customizing</a> functionalities, but in this example we'll not use them.</p>
 <p>Each response of the List methods will be <a href="/basics/additional-capabilities/paginate-results.mdx">Paginated</a>: to avoid returning enormous amounts of data with a single call, the list of products will be split into different pages, that can be retrieved consecutively. Each response contains a set of dedicated pagination parameters, that are meant to make the pages navigation task easier for you.</p>
 <p>In our code, we'll perform the first List request on the first page provided by our API, with a page size of five elements. Then we'll use the pagination parameter <em>last_page</em> to retrieve the subsequent pages, performing the needed number of API calls to export all the needed elements from the APIs.</p>
-<p>:::danger Be aware of the index!</p>
+<p>!!! danger Be aware of the index!</p>
 <p>Please, notice that the pages on our APIs use <em>one-based numbering</em>: the first page has index 1.</p>
-<p>:::</p>
-<h2 id="four-manage-the-response">:four:  Manage the response</h2>
+<p>!!! </p>
+<h2 id="manage-the-response"><img alt="4️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0034-20e3.svg" title=":four:"/>  Manage the response</h2>
 <p>Each response contains a <em>data</em> parameter, that is a JSON array representing one page (e.g. one subset of the list of products). Our SDKs parse the JSON array, so you can just use the elements contained in the array to perform the requested operations.</p>
 <p>In this example, we're just trying to populate a JSON Lines file, so for each product retrieved we obtain the related JSON representation and append it to the text file.</p>
-<h2 id="computer-code-examples">:computer:  Code Examples</h2>
+<h2 id="code-examples"><img alt="💻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4bb.svg" title=":computer:"/>  Code Examples</h2>
 <p>Here you can find the code described above.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// The following dependencies are required</span>
 <span class="c1">// dotnet add package It.FattureInCloud.Sdk</span>
@@ -1587,7 +1587,7 @@ The <em>List</em> methods provide <a href="/basics/additional-capabilities/sort-
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s2">"YOUR_TOKEN"</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="books-additional-resources">:books:  Additional resources</h2>
+<h2 id="additional-resources"><img alt="📚" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4da.svg" title=":books:"/>  Additional resources</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Exponential_backoff">Exponential Backoff</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Zero-based_numbering">Zero-based numbering</a></li>

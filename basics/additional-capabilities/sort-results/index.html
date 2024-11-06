@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#notebook_with_decorative_cover-sortable-fields">
+<a class="md-skip" href="#sortable-fields">
           Skip to content
         </a>
 </div>
@@ -506,16 +506,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#notebook_with_decorative_cover-sortable-fields">
+<a class="md-nav__link" href="#sortable-fields">
 <span class="md-ellipsis">
-      :notebook_with_decorative_cover:  Sortable fields
+        Sortable fields
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#books-additional-resources">
+<a class="md-nav__link" href="#additional-resources">
 <span class="md-ellipsis">
-      :books:  Additional Resources
+        Additional Resources
     </span>
 </a>
 </li>
@@ -744,16 +744,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#notebook_with_decorative_cover-sortable-fields">
+<a class="md-nav__link" href="#sortable-fields">
 <span class="md-ellipsis">
-      :notebook_with_decorative_cover:  Sortable fields
+        Sortable fields
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#books-additional-resources">
+<a class="md-nav__link" href="#additional-resources">
 <span class="md-ellipsis">
-      :books:  Additional Resources
+        Additional Resources
     </span>
 </a>
 </li>
@@ -769,9 +769,9 @@
 import TabItem from "@theme/TabItem";</p>
 <p>Some of our APIs (e.g. the <em>LIST</em> methods) return a set of resources instead of a single one. This means that a certain order is established between them and that your application could take advantage of a certain order.</p>
 <p><strong>Sorting</strong> lets you choose the rule that must be used to order the returned resources, delegating this task to our APIs.</p>
-<p>:::warning Check the fields!</p>
+<p>!!! warning Check the fields!</p>
 <p>Our APIs let you apply an ordering rule only on a certain set of fields. Please check the table below for the available fields for each method.</p>
-<p>:::</p>
+<p>!!! </p>
 <p>To order the returned resources, all you have to do is to add the <strong>sort</strong> parameter to the query string, containing a comma-separated set of the fields that define the sorting rule. The default order for each field is the <strong>ascending order</strong>, which doesn't require any prefix, while the <strong>descending order</strong> can be selected by adding the prefix "-" to the field name.</p>
 <p>For example, this request will sort all the expenses first by the "date" field in descending order and then by the "amount_net" field in ascending order.</p>
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
@@ -818,7 +818,7 @@ import TabItem from "@theme/TabItem";</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it!!!</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it!!! </span>
 <span class="c1">// In the next step we'll explain how to perform the request to the API.</span>
 
 <span class="c1">// in this example we are using our Go SDK</span>
@@ -1153,7 +1153,7 @@ import TabItem from "@theme/TabItem";</p>
 <span class="w">  </span><span class="nt">"prev_page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-v2.fattureincloud.it/received_documents?per_page=5&amp;type=expense&amp;fieldset=basic&amp;page=1"</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="notebook_with_decorative_cover-sortable-fields">:notebook_with_decorative_cover:  Sortable fields</h2>
+<h2 id="sortable-fields"><img alt="📔" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4d4.svg" title=":notebook_with_decorative_cover:">  Sortable fields</img></h2>
 <p>Here you can find the list of fields that can be used to order the result for each <em>List method</em>; for every field, it is possible to use the ascending or descending order.</p>
 <table>
 <thead>
@@ -1197,7 +1197,7 @@ import TabItem from "@theme/TabItem";</p>
 </tr>
 </tbody>
 </table>
-<h2 id="books-additional-resources">:books:  Additional Resources</h2>
+<h2 id="additional-resources"><img alt="📚" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4da.svg" title=":books:">  Additional Resources</img></h2>
 <ul>
 <li><a href="https://www.freecodecamp.org/news/descending-order-vs-ascending-order-what-does-it-mean/">Descending Order VS Ascending Order – What Does it Mean?</a></li>
 <li><a href="https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/#">REST API Design: Filtering, Sorting, and Pagination</a></li>

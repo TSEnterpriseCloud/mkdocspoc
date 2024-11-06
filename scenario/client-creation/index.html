@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#zero-step-zero-the-client-type">
+<a class="md-skip" href="#step-zero-the-client-type">
           Skip to content
         </a>
 </div>
@@ -713,37 +713,37 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#zero-step-zero-the-client-type">
+<a class="md-nav__link" href="#step-zero-the-client-type">
 <span class="md-ellipsis">
-      :zero:  Step Zero: The Client Type
+        Step Zero: The Client Type
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#one-step-one-the-client-data">
+<a class="md-nav__link" href="#step-one-the-client-data">
 <span class="md-ellipsis">
-      :one:  Step One: The Client Data
+        Step One: The Client Data
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#two-step-two-advanced-options">
+<a class="md-nav__link" href="#step-two-advanced-options">
 <span class="md-ellipsis">
-      :two:  Step Two: Advanced Options
+        Step Two: Advanced Options
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#copyright-client-uniqueness">
+<a class="md-nav__link" href="#client-uniqueness">
 <span class="md-ellipsis">
-      :copyright:  Client uniqueness
+        Client uniqueness
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#white_check_mark-create-the-client">
+<a class="md-nav__link" href="#create-the-client">
 <span class="md-ellipsis">
-      :white_check_mark:  Create the client!
+        Create the client!
     </span>
 </a>
 </li>
@@ -759,22 +759,24 @@
 import TabItem from "@theme/TabItem";</p>
 <p>In this guide, you will learn how to successfully <strong>create Clients and Suppliers from scratch</strong>. We'll build the request step by step, so wait until the end of the guide to send your first request!</p>
 <p>You can find the technical documentation of this API method in the <a href="/api-reference#post-/c/-company_id-/entities/clients">Create Client</a> section of the API Reference.</p>
-<p>:::note Client and Supplier
-The models for <em>Clients</em> and <em>Suppliers</em> differ only for a small subset of parameters; this guide will show in detail how to create a new Client, but it can be used in both cases.
+<div class="admonition note client and supplier">
+<p class="admonition-title">Note</p>
+</div>
+<p>The models for <em>Clients</em> and <em>Suppliers</em> differ only for a small subset of parameters; this guide will show in detail how to create a new Client, but it can be used in both cases.
 In the Suppliers case, you will need to use the <a href="/api-reference#post-/c/-company_id-/entities/suppliers">Create Supplier</a> method.
-:::</p>
-<p>:::tip Retrieve your Company ID!</p>
+!!! </p>
+<p>!!! tip Retrieve your Company ID!</p>
 <p>In this example, we'll suppose you have to manage just one Company, so we simply inserted its ID directly in the code. If instead, you need to be able to manage multiple companies, you'll need to retrieve the ID of the current company in some way.
 Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
-<p>:::</p>
-<p>:::warning Are you using Zapier?</p>
+<p>!!! </p>
+<p>!!! warning Are you using Zapier?</p>
 <p><a href="/docs/quickstarts/zapier-quickstart.md">Zapier Actions</a> provide all the fields offered by the APIs, but it does not mean you need to compile all of them!
 For example, while creating a new Client the Document ID must be left blank!</p>
 <p>To follow this guide, you will be required to search the fields used in our example on the Zapier page and insert the related values.</p>
-<p>The code of the fields will follow the JSON structure: for example, the "type" field is included in the "data" object, so the Zapier code will be "data.type". You can use the <em>CRTL + F</em> command to search the field's code faster :wink:</p>
+<p>The code of the fields will follow the JSON structure: for example, the "type" field is included in the "data" object, so the Zapier code will be "data.type". You can use the <em>CRTL + F</em> command to search the field's code faster <img alt="😉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f609.svg" title=":wink:"/></p>
 <p>In this example, we'll insert the values directly, but please remember that Zapier was built to let you select the workflow's previous steps' outputs as input in the Action, for example selecting the values returned by a trigger!</p>
-<p>:::</p>
-<h2 id="zero-step-zero-the-client-type">:zero:  Step Zero: The Client Type</h2>
+<p>!!! </p>
+<h2 id="step-zero-the-client-type"><img alt="0️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0030-20e3.svg" title=":zero:">  Step Zero: The Client Type</img></h2>
 <p>TSE in Cloud lets you to define four different types of clients.</p>
 <p>The available types are:</p>
 <ul>
@@ -784,7 +786,7 @@ For example, while creating a new Client the Document ID must be left blank!</p>
 <li><strong>condo</strong></li>
 </ul>
 <p>In the next step we'll suppose to create a company, but the procedure is the same for the other clients types too.</p>
-<h2 id="one-step-one-the-client-data">:one:  Step One: The Client Data</h2>
+<h2 id="step-one-the-client-data"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:"/>  Step One: The Client Data</h2>
 <p>Every Client can be defined by a set of basic values, here you can find a list of the main ones:</p>
 <ul>
 <li>
@@ -1031,7 +1033,7 @@ Here you can find the list of all the fields and values you must fill for this e
 </tr>
 </tbody>
 </table>
-<h2 id="two-step-two-advanced-options">:two:  Step Two: Advanced Options</h2>
+<h2 id="step-two-advanced-options"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0032-20e3.svg" title=":two:"/>  Step Two: Advanced Options</h2>
 <p>In addition to the basic data explained in the previous step, some advanced fields can be used:</p>
 <ul>
 <li>
@@ -1044,13 +1046,13 @@ Here you can find the list of all the fields and values you must fill for this e
 <p><strong>has_intent_declaration</strong>: flag that adds <em>Lettera d'intento</em> fields to the electronic document, <strong>intent_declaration_protocol_number</strong> and <strong>intent_declaration_protocol_date</strong> also need to be set.</p>
 </li>
 </ul>
-<h2 id="copyright-client-uniqueness">:copyright:  Client uniqueness</h2>
+<h2 id="client-uniqueness"><img alt="©️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/00a9.svg" title=":copyright:"/>  Client uniqueness</h2>
 <p>We have strong checks to ensure clients' uniqueness. The applied rule differs based on the defined fields:</p>
 <ul>
 <li>if you are only setting the client's <strong>name</strong>, then you will receive an error if a client with the same name already exists.</li>
 <li>if you are setting <strong>code</strong>, <strong>vat_number</strong>, and <strong>tax_code</strong>, these values must be unique for all your clients.</li>
 </ul>
-<h2 id="white_check_mark-create-the-client">:white_check_mark:  Create the client!</h2>
+<h2 id="create-the-client"><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2705.svg" title=":white_check_mark:"/>  Create the client!</h2>
 <p>Now we are ready to create a client, so let's <a href="/api-reference#post-/c/-company_id-/entities/clients">create a client</a> using the request we just built:</p>
 <div class="highlight"><pre><span></span><code><span class="nf">POST</span> <span class="nn">/c/1235/entities/clients</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
@@ -1079,7 +1081,7 @@ Here you can find the list of all the fields and values you must fill for this e
 <span class="w">            </span><span class="c1">//set your company id</span>
 <span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12345</span><span class="p">;</span>
 
-<span class="w">            </span><span class="c1">// NOTE: this is a complete request, but please customize it!!!</span>
+<span class="w">            </span><span class="c1">// NOTE: this is a complete request, but please customize it!!! </span>
 <span class="w">            </span><span class="c1">// In the next step we'll explain how to perform the request to the API.</span>
 
 <span class="w">            </span><span class="c1">// in this example we are using our C# SDK</span>
@@ -1115,7 +1117,7 @@ Here you can find the list of all the fields and values you must fill for this e
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it!!!</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it!!! </span>
 <span class="c1">// In the next step we'll explain how to perform the request to the API.</span>
 
 <span class="c1">// in this example we are using our Go SDK</span>
@@ -1186,7 +1188,7 @@ Here you can find the list of all the fields and values you must fill for this e
 <span class="w">        </span><span class="c1">//set your company id</span>
 <span class="w">        </span><span class="n">Integer</span><span class="w"> </span><span class="n">companyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span><span class="p">;</span>
 
-<span class="w">        </span><span class="c1">// NOTE: this is a complete request, but please customize it!!!</span>
+<span class="w">        </span><span class="c1">// NOTE: this is a complete request, but please customize it!!! </span>
 <span class="w">        </span><span class="c1">// In the next step we'll explain how to perform the request to the API.</span>
 
 <span class="w">        </span><span class="c1">// in this example we are using our Java SDK</span>
@@ -1330,7 +1332,7 @@ Here you can find the list of all the fields and values you must fill for this e
 <span class="c1"># set your company id</span>
 <span class="n">company_id</span> <span class="o">=</span> <span class="mi">12345</span>
 
-<span class="c1"># NOTE: this is a complete request, but please customize it!!!</span>
+<span class="c1"># NOTE: this is a complete request, but please customize it!!! </span>
 <span class="c1"># In the next step we'll explain how to perform the request to the API.</span>
 
 <span class="c1"># in this example we are using our Python SDK</span>
@@ -1376,7 +1378,7 @@ Here you can find the list of all the fields and values you must fill for this e
 <span class="c1"># set your company id</span>
 <span class="n">company_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span>
 
-<span class="c1"># NOTE: this is a complete request, but please customize it!!!</span>
+<span class="c1"># NOTE: this is a complete request, but please customize it!!! </span>
 <span class="c1"># In the next step we'll explain how to perform the request to the API.</span>
 
 <span class="c1"># in this example we are using our Ruby SDK</span>

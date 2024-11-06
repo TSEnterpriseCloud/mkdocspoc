@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#calendar-long-term-usage-limits">
+<a class="md-skip" href="#long-term-usage-limits">
           Skip to content
         </a>
 </div>
@@ -485,30 +485,30 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#calendar-long-term-usage-limits">
+<a class="md-nav__link" href="#long-term-usage-limits">
 <span class="md-ellipsis">
-      :calendar:  Long-term usage limits
+        Long-term usage limits
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#stopwatch-short-term-rate-limits">
+<a class="md-nav__link" href="#short-term-rate-limits">
 <span class="md-ellipsis">
-      :stopwatch:  Short-term rate limits
+        Short-term rate limits
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#bookmark_tabs-http-headers-and-response-codes">
+<a class="md-nav__link" href="#http-headers-and-response-codes">
 <span class="md-ellipsis">
-      :bookmark_tabs:  HTTP Headers and response codes
+        HTTP Headers and response codes
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ocean-is-it-still-not-enough">
+<a class="md-nav__link" href="#is-it-still-not-enough">
 <span class="md-ellipsis">
-      :ocean:  Is it still not enough?
+        Is it still not enough?
     </span>
 </a>
 </li>
@@ -520,9 +520,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#books-additional-resources">
+<a class="md-nav__link" href="#additional-resources">
 <span class="md-ellipsis">
-      :books:  Additional Resources
+        Additional Resources
     </span>
 </a>
 </li>
@@ -772,30 +772,30 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#calendar-long-term-usage-limits">
+<a class="md-nav__link" href="#long-term-usage-limits">
 <span class="md-ellipsis">
-      :calendar:  Long-term usage limits
+        Long-term usage limits
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#stopwatch-short-term-rate-limits">
+<a class="md-nav__link" href="#short-term-rate-limits">
 <span class="md-ellipsis">
-      :stopwatch:  Short-term rate limits
+        Short-term rate limits
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#bookmark_tabs-http-headers-and-response-codes">
+<a class="md-nav__link" href="#http-headers-and-response-codes">
 <span class="md-ellipsis">
-      :bookmark_tabs:  HTTP Headers and response codes
+        HTTP Headers and response codes
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ocean-is-it-still-not-enough">
+<a class="md-nav__link" href="#is-it-still-not-enough">
 <span class="md-ellipsis">
-      :ocean:  Is it still not enough?
+        Is it still not enough?
     </span>
 </a>
 </li>
@@ -807,9 +807,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#books-additional-resources">
+<a class="md-nav__link" href="#additional-resources">
 <span class="md-ellipsis">
-      :books:  Additional Resources
+        Additional Resources
     </span>
 </a>
 </li>
@@ -825,11 +825,11 @@
 import TabItem from "@theme/TabItem";</p>
 <p>To prevent abuse, avoid slowdowns, and ensure that all users make responsible use of our APIs, we enforce <strong>quota limits</strong>. If you perform too many requests you may exceed your quota; in this case, you will receive an <a href="/basics/errors.md">error</a> as a response until when your quota will be restored.</p>
 <p>We enforce two different kinds of limits, based on the time range that they apply to.</p>
-<h2 id="calendar-long-term-usage-limits">:calendar:  Long-term usage limits</h2>
+<h2 id="long-term-usage-limits"><img alt="📆" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4c6.svg" title=":calendar:">  Long-term usage limits</img></h2>
 <p><strong>Long-term usage limits</strong> are meant to avoid improper usage of the APIs, by setting a limit on the maximum amount of requests in a certain period.</p>
-<p>:::note Long-term Usage quotas are different based on the app visibility!</p>
+<p>!!! note Long-term Usage quotas are different based on the app visibility!</p>
 <p>If the app is public every user that has access to a specific company through a specific app shares (and consumes) the same quotas as other users that have access to the same company through the same app, if the app is private the quotas are no more related to the app but only to the company, this means that creating a new private app won't increase your quotas.</p>
-<p>:::</p>
+<p>!!! </p>
 <p>The quota limits are the following:</p>
 <table>
 <thead>
@@ -855,11 +855,11 @@ import TabItem from "@theme/TabItem";</p>
 </table>
 <p>Long-term limits use <strong>fixed time windows</strong>: these quotas are reset at the beginning of a new hour or month.</p>
 <p>If the limit is exceeded, the API returns a <strong>403 Forbidden</strong> HTTP status code; the response also includes a <em>Retry-After</em> header, indicating how long you should wait before retrying the request (in seconds).</p>
-<h2 id="stopwatch-short-term-rate-limits">:stopwatch:  Short-term rate limits</h2>
+<h2 id="short-term-rate-limits"><img alt="⏱️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/23f1.svg" title=":stopwatch:">  Short-term rate limits</img></h2>
 <p><strong>Short-term rate limits</strong> are meant to avoid usage spikes that could affect the system availability, by preventing applications from sending too many requests in a short-time interval.</p>
-<p>:::note Short-term Usage quotas are company-related!!!</p>
+<p>!!! note Short-term Usage quotas are company-related!!! </p>
 <p>This means that every app and user that has access to a specific company shares (and consumes) the same quotas with other apps and users that have access to the same company.</p>
-<p>:::</p>
+<p>!!! </p>
 <p>The quota limit is the following:</p>
 <table>
 <thead>
@@ -877,7 +877,7 @@ import TabItem from "@theme/TabItem";</p>
 </table>
 <p>Short-term usage limits use a <strong>sliding-window algorithm</strong>, check the additional resources for further info.</p>
 <p>If the limit is exceeded, the API returns a <strong>429 Too Many Requests</strong> HTTP status code. The response also includes a <em>Retry-After</em> header, indicating how long you should wait before the request (in seconds).</p>
-<h2 id="bookmark_tabs-http-headers-and-response-codes">:bookmark_tabs:  HTTP Headers and response codes</h2>
+<h2 id="http-headers-and-response-codes"><img alt="📑" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4d1.svg" title=":bookmark_tabs:"/>  HTTP Headers and response codes</h2>
 <p>Every response contains several HTTP headers containing info about long-term usage limits.</p>
 <table>
 <thead>
@@ -914,14 +914,14 @@ import TabItem from "@theme/TabItem";</p>
 <span class="na">RateLimit-MonthlyRemaining</span><span class="o">:</span> <span class="l">1430</span>
 <span class="na">RateLimit-MonthlyLimit</span><span class="o">:</span> <span class="l">20000</span>
 </code></pre></div>
-<h2 id="ocean-is-it-still-not-enough">:ocean:  Is it still not enough?</h2>
+<h2 id="is-it-still-not-enough"><img alt="🌊" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f30a.svg" title=":ocean:"/>  Is it still not enough?</h2>
 <p>We designed our quotas to be able to satisfy the needs of the majority of the use cases. Nevertheless, in some cases, the default quotas could prove to be scarce, and in this situation, the only way is to increment the quota limit.</p>
 <p>If you think that your use case requires a higher quota, you can try to request us additional quota. <strong>It isn't automatic though</strong>, you'll have to explain your use case in detail to our team and demonstrate why our quotas are not sufficient to resolve it.</p>
 <p>We can increment only the <a href="#-long-term-usage-limits">long-term usage limits</a>.</p>
-<p>:::danger Short-term rate quotas can't be incremented!</p>
+<p>!!! danger Short-term rate quotas can't be incremented!</p>
 <p>If you're facing an issue with short-term rate quota, e.g. you're obtaining a <strong>429 Too Many Requests</strong> error response, it means that <em>you're not managing our APIs correctly</em>.
 If that's the case, we'll reject every additional quota request we'll receive, and you should instead read the <a href="#%EF%B8%8F-keep-calm-and-deal-with-quotas">next section</a>.</p>
-<p>:::</p>
+<p>!!! </p>
 <h2 id="massage_man-keep-calm-and-deal-with-quotas">:massage_man:  Keep calm and deal with quotas!</h2>
 <p>As explained above, if the rate limit will be exceeded you'll receive a <em>429 response</em> to your requests. <strong>This is not a fatal error</strong> and we expect you to retry the request after a short interval; if the requests will keep arriving too quickly, your requests will result in another error result, and so on.</p>
 <p>It is then important to gradually <em>increase the delay between requests</em> to overcome this issue, this is usually done by applying <strong>exponential back-off</strong> to your requests.</p>
@@ -1195,7 +1195,7 @@ If that's the case, we'll reject every additional quota request we'll receive, a
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">await</span><span class="w"> </span><span class="nx">getProd</span><span class="p">());</span>
 </code></pre></div>
 <p>Alternatively, you can use the <em>Retry-After</em> header to wait the right amount of time before sending your request again.</p>
-<h2 id="books-additional-resources">:books:  Additional Resources</h2>
+<h2 id="additional-resources"><img alt="📚" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4da.svg" title=":books:"/>  Additional Resources</h2>
 <ul>
 <li><a href="https://dev.to/satrobit/rate-limiting-using-the-fixed-window-algorithm-2hgm">Rate limiting using the Fixed Window algorithm</a></li>
 <li><a href="https://dev.to/satrobit/rate-limiting-using-the-sliding-window-algorithm-5fjn">Rate limiting using the Sliding Window algorithm</a></li>

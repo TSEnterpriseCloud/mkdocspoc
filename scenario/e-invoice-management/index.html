@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#mag-verify-the-e-invoice-xml">
+<a class="md-skip" href="#verify-the-e-invoice-xml">
           Skip to content
         </a>
 </div>
@@ -713,26 +713,26 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mag-verify-the-e-invoice-xml">
+<a class="md-nav__link" href="#verify-the-e-invoice-xml">
 <span class="md-ellipsis">
-      :mag:  Verify the E-Invoice XML
+        Verify the E-Invoice XML
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#arrow_down-download-the-e-invoice-xml">
+<a class="md-nav__link" href="#download-the-e-invoice-xml">
 <span class="md-ellipsis">
-      :arrow_down:  Download the E-Invoice XML
+        Download the E-Invoice XML
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mailbox_with_mail-send-the-e-invoice">
+<a class="md-nav__link" href="#send-the-e-invoice">
 <span class="md-ellipsis">
-      :mailbox_with_mail:  Send the E-Invoice
+        Send the E-Invoice
     </span>
 </a>
-<nav aria-label=":mailbox_with_mail:  Send the E-Invoice" class="md-nav">
+<nav aria-label="  Send the E-Invoice" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#pirate_flag-the-dry-run-flag">
@@ -745,9 +745,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#rotating_light-get-the-e-invoice-rejection-reason">
+<a class="md-nav__link" href="#get-the-e-invoice-rejection-reason">
 <span class="md-ellipsis">
-      :rotating_light:  Get the E-Invoice rejection reason
+        Get the E-Invoice rejection reason
     </span>
 </a>
 </li>
@@ -761,15 +761,15 @@
 <h1>E-Invoice management</h1>
 <p>When you need to deal with an e-invoice, we provide a handful of methods that you can use to fulfill your needs:
 you can verify the XML of your e-invoice, download it, send it to the SDI and eventually obtain the rejection reason.</p>
-<p>:::info Create your e-invoice first!</p>
+<p>!!! info Create your e-invoice first!</p>
 <p>In this guide, we suppose you already created your e-invoice in TSE in Cloud, and you just need to send it to the SDI.
 If this is not the case, please check <a href="/guides/invoice-creation.mdx">this guide</a> to create your first invoice.</p>
-<p>:::</p>
-<p>:::danger I already have an e-invoice XML, can't I just send it to the SDI?</p>
+<p>!!! </p>
+<p>!!! danger I already have an e-invoice XML, can't I just send it to the SDI?</p>
 <p>Unfortunately, no. TSE in Cloud lets you send documents to the SDI only if they were created through the TSE in Cloud functionalities, so if you have an XML you can't just send it to the SDI using our APIs.
 Please, check <a href="/guides/externally-generated-xml.md">this guide</a> for a more detailed explanation.</p>
-<p>:::</p>
-<h2 id="mag-verify-the-e-invoice-xml">:mag:  Verify the E-Invoice XML</h2>
+<p>!!! </p>
+<h2 id="verify-the-e-invoice-xml"><img alt="🔍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f50d.svg" title=":mag:">  Verify the E-Invoice XML</img></h2>
 <p>With the <a href="/api-reference#get-/c/-company_id-/issued_documents/-document_id-/e_invoice/xml_verify">Verify e-invoice XML</a> method, you can verify your e-invoice XML <em>before</em> sending it to the SDI. If your XML contains an error or it is missing some fields, you can patch it by <a href="/api-reference#put-/c/-company_id-/issued_documents/-document_id-">editing the invoice</a>.
 A list of the most common validation errors can be found <a href="https://help.fattureincloud.it/help/sezione/68">here</a>.</p>
 <p>Below you can find an example of a failed XML verification:</p>
@@ -782,7 +782,7 @@ A list of the most common validation errors can be found <a href="https://help.f
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="arrow_down-download-the-e-invoice-xml">:arrow_down:  Download the E-Invoice XML</h2>
+<h2 id="download-the-e-invoice-xml"><img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:">  Download the E-Invoice XML</img></h2>
 <p>With the <a href="/api-reference#get-/c/-company_id-/issued_documents/-document_id-/e_invoice/xml">Get e-invoice XML</a> method you can download your e-invoice XML if you need to.</p>
 <div class="highlight"><pre><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/xml;charset=UTF-8</span>
@@ -797,12 +797,12 @@ A list of the most common validation errors can be found <a href="https://help.f
 <span class="w">  </span><span class="nt">&lt;/FatturaElettronicaBody&gt;</span>
 <span class="nt">&lt;/p:FatturaElettronica&gt;</span>
 </code></pre></div>
-<h2 id="mailbox_with_mail-send-the-e-invoice">:mailbox_with_mail:  Send the E-Invoice</h2>
+<h2 id="send-the-e-invoice"><img alt="📬" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4ec.svg" title=":mailbox_with_mail:"/>  Send the E-Invoice</h2>
 <p>If your e-invoice XML is valid you can now send it to the SDI using the <a href="/api-reference#post-/c/-company_id-/issued_documents/-document_id-/e_invoice/send">Send e-invoice</a> method.</p>
 <p>After the invoice has been sent, you can check its status by making a <a href="/api-reference#get-/c/-company_id-/issued_documents/-document_id-">Get Issued Document</a> request: the <strong>ei_status</strong> field will contain the status of your e-invoice.</p>
-<p>:::info Check your fieldset!</p>
+<p>!!! info Check your fieldset!</p>
 <p>To show the <strong>ei_status</strong> field, you need to <a href="/basics/additional-capabilities/customize-response.mdx">customize the response</a>, selecting the <em>detailed</em> fieldset or including it in the fields list.</p>
-<p>:::</p>
+<p>!!! </p>
 <h3 id="pirate_flag-the-dry-run-flag">:pirate_flag:  The Dry-Run Flag</h3>
 <p>If you are developing an integration and you want to test the <a href="/api-reference#post-/c/-company_id-/issued_documents/-document_id-/e_invoice/send">Send e-invoice</a> method without actually sending the invoice to the SDI we offer a proper field for this purpose, the <strong>options.dry_run</strong> flag.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -815,7 +815,7 @@ A list of the most common validation errors can be found <a href="https://help.f
 <span class="p">}</span>
 </code></pre></div>
 <p>The flag is optional, and the default is <em>false</em>; if you use it and you set it as <em>true</em>, all the e-invoice checks will be run but the actual dispatch.</p>
-<h2 id="rotating_light-get-the-e-invoice-rejection-reason">:rotating_light:  Get the E-Invoice rejection reason</h2>
+<h2 id="get-the-e-invoice-rejection-reason"><img alt="🚨" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6a8.svg" title=":rotating_light:"/>  Get the E-Invoice rejection reason</h2>
 <p>If your e-invoice gets rejected by the SDI, you can check the rejection reason with the <a href="/api-reference#get-/c/-company_id-/issued_documents/-document_id-/e_invoice/error_reason">Get rejection reason</a> method.
 The list of the most common rejection reasons can be found <a href="https://help.fattureincloud.it/help/articolo/291-stato-fattura-elettronica-scartata">here</a>.</p>
 <p>For example, you could get an error like the following one:</p>

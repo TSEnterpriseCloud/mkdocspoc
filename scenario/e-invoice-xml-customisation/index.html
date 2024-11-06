@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#scroll-the-official-xml-structure">
+<a class="md-skip" href="#the-official-xml-structure">
           Skip to content
         </a>
 </div>
@@ -447,37 +447,37 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#scroll-the-official-xml-structure">
+<a class="md-nav__link" href="#the-official-xml-structure">
 <span class="md-ellipsis">
-      :scroll:  The Official XML Structure
+        The Official XML Structure
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#dango-the-ei_raw-flavours">
+<a class="md-nav__link" href="#the-ei_raw-flavours">
 <span class="md-ellipsis">
-      :dango:  The ei_raw flavours
+        The ei_raw flavours
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#page_with_curl-e-invoice-body">
+<a class="md-nav__link" href="#e-invoice-body">
 <span class="md-ellipsis">
-      :page_with_curl:  E-invoice body
+        E-invoice body
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ramen-items-list">
+<a class="md-nav__link" href="#items-list">
 <span class="md-ellipsis">
-      :ramen:  Items list
+        Items list
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#money_with_wings-payments-list">
+<a class="md-nav__link" href="#payments-list">
 <span class="md-ellipsis">
-      :money_with_wings:  Payments list
+        Payments list
     </span>
 </a>
 </li>
@@ -765,37 +765,37 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#scroll-the-official-xml-structure">
+<a class="md-nav__link" href="#the-official-xml-structure">
 <span class="md-ellipsis">
-      :scroll:  The Official XML Structure
+        The Official XML Structure
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#dango-the-ei_raw-flavours">
+<a class="md-nav__link" href="#the-ei_raw-flavours">
 <span class="md-ellipsis">
-      :dango:  The ei_raw flavours
+        The ei_raw flavours
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#page_with_curl-e-invoice-body">
+<a class="md-nav__link" href="#e-invoice-body">
 <span class="md-ellipsis">
-      :page_with_curl:  E-invoice body
+        E-invoice body
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ramen-items-list">
+<a class="md-nav__link" href="#items-list">
 <span class="md-ellipsis">
-      :ramen:  Items list
+        Items list
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#money_with_wings-payments-list">
+<a class="md-nav__link" href="#payments-list">
 <span class="md-ellipsis">
-      :money_with_wings:  Payments list
+        Payments list
     </span>
 </a>
 </li>
@@ -810,10 +810,10 @@
 <p>import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";</p>
 <p>While <a href="/guides/invoice-creation.mdx">creating an e-invoice</a> you could need to have more control over the XML that is generated through our APIs. On this page, we'll explain how to set up the <strong>e-invoice advanced attributes</strong>.</p>
-<h2 id="scroll-the-official-xml-structure">:scroll:  The Official XML Structure</h2>
+<h2 id="the-official-xml-structure"><img alt="📜" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4dc.svg" title=":scroll:">  The Official XML Structure</img></h2>
 <p>The <strong>Official e-invoice XML structure</strong> is directly defined by the Italian Public Administration, and can be found <a href="https://www.fatturapa.gov.it/export/documenti/fatturapa/v1.3/Rappresentazione-tabellare-fattura-ordinaria.pdf">here</a>. This structure is subject to changes over time, and that's why we decided to manage some of these fields in a different way.</p>
 <p>If you want to know which additional attributes we support you can also read this <a href="https://help.fattureincloud.it/help/articolo/181">page</a>. The <em>TSE in Cloud Web App</em> lets you define these fields through dedicated components, so you can also check it to discover which attributes we support; we'll show you how to do it in the following sections.</p>
-<h2 id="dango-the-ei_raw-flavours">:dango:  The ei_raw flavours</h2>
+<h2 id="the-ei_raw-flavours"><img alt="🍡" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f361.svg" title=":dango:">  The ei_raw flavours</img></h2>
 <p>If you already are familiar with creating e-invoices from our Web App, you already know that you can set advanced attributes in three different entities:</p>
 <ul>
 <li>E-invoice body</li>
@@ -821,10 +821,10 @@ import TabItem from "@theme/TabItem";</p>
 <li>Payments list</li>
 </ul>
 <p>While using our <a href="/api-reference#post-/c/-company_id-/issued_documents">Create Issued Document</a> and <a href="/api-reference#put-/c/-company_id-/issued_documents/-document_id-">Modify Issued Document</a> API methods, the fields provided by our model don't let you define all the fields available through our Web App: these advanced fields can instead be managed using the <strong>ei_raw</strong> params.</p>
-<p>:::warning Strings everywhere!</p>
+<p>!!! warning Strings everywhere!</p>
 <p>Keep in mind that every field in ei_raw is always managed as a <strong>String</strong>! This means, for example, that even numbers must be inserted in String format (eg. "NumItem": "5")</p>
-<p>:::</p>
-<h2 id="page_with_curl-e-invoice-body">:page_with_curl:  E-invoice body</h2>
+<p>!!! </p>
+<h2 id="e-invoice-body"><img alt="📃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4c3.svg" title=":page_with_curl:"/>  E-invoice body</h2>
 <p>In our Web Interface, you can add your custom XML fields here:</p>
 <p><img alt="Main body - Add Additional Attributes" src="../assets/einvoice-body-ei-raw.png"/></p>
 <p>In our API, that section corresponds to the <strong>data.ei_raw</strong> field. Let's try to set up one of these attributes.</p>
@@ -1054,7 +1054,7 @@ import TabItem from "@theme/TabItem";</p>
 <span class="w">  </span><span class="p">},</span>
 <span class="p">};</span>
 </code></pre></div>
-<h2 id="ramen-items-list">:ramen:  Items list</h2>
+<h2 id="items-list"><img alt="🍜" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f35c.svg" title=":ramen:"/>  Items list</h2>
 <p>In our web interface, you can define advanced attributes for each of the inserted items:</p>
 <p><img alt="Items list - Add advanced attributes" src="../assets/einvoice-items-list-ei-raw.png"/></p>
 <p>This section is mapped in our API methods in the <strong>data.items_list.ei_raw</strong> field. This field's behavior is similar to what was explained in the previous section, but in this case, the root tag is <strong>DettaglioLinee (2.2.1)</strong>; this means that this is the first tag that we must represent in the item (you must ignore the parent nodes) and that there can be only one root tag per item.</p>
@@ -1309,7 +1309,7 @@ import TabItem from "@theme/TabItem";</p>
 <span class="w">  </span><span class="p">],</span>
 <span class="p">};</span>
 </code></pre></div>
-<h2 id="money_with_wings-payments-list">:money_with_wings:  Payments list</h2>
+<h2 id="payments-list"><img alt="💸" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4b8.svg" title=":money_with_wings:"/>  Payments list</h2>
 <p>In our web interface, you can define advanced attributes for each of the inserted payments:</p>
 <p><img alt="Payments list - Add advanced attributes" src="../assets/einvoice-payments-list-ei-raw.png"/></p>
 <p>This section is mapped in our API methods in the <strong>data.payments_list.ei_raw</strong> field. This field's behavior is similar to what was explained in the previous section, but in this case, the root tag is <strong>DettaglioPagamento (2.4.2)</strong>; this means that this is the first tag that we must represent in the item (you must ignore the parent nodes) and that there can be only one root tag per item.</p>
