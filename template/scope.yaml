@@ -1,0 +1,22 @@
+---
+title: General
+order: 0
+categories:
+  - code: meta
+  - code: process
+  - code: api-concepts
+    title: API Concepts
+  - code: resource-design
+    title: Resource Design
+  - code: operations
+  - code: fields
+  - code: design-patterns
+    title: Design Patterns
+  - code: compatibility
+    title: Compatibility and Versioning
+  - code: polish
+  - code: protobuf
+    title: Protocol buffers
+  - code: misc
+    title: Miscellaneous
+    default: true

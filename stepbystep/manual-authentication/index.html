@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#raised_hand-token-generation">
+<a class="md-skip" href="#token-generation">
           Skip to content
         </a>
 </div>
@@ -301,23 +301,23 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#raised_hand-token-generation">
+<a class="md-nav__link" href="#token-generation">
 <span class="md-ellipsis">
-      :raised_hand:  Token generation
+        Token generation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#briefcase-find-your-company-id">
+<a class="md-nav__link" href="#find-your-company-id">
 <span class="md-ellipsis">
-      :briefcase:  Find your Company ID
+        Find your Company ID
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#white_check_mark-perform-an-api-request">
+<a class="md-nav__link" href="#perform-an-api-request">
 <span class="md-ellipsis">
-      :white_check_mark:  Perform an API request
+        Perform an API request
     </span>
 </a>
 </li>
@@ -758,23 +758,23 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#raised_hand-token-generation">
+<a class="md-nav__link" href="#token-generation">
 <span class="md-ellipsis">
-      :raised_hand:  Token generation
+        Token generation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#briefcase-find-your-company-id">
+<a class="md-nav__link" href="#find-your-company-id">
 <span class="md-ellipsis">
-      :briefcase:  Find your Company ID
+        Find your Company ID
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#white_check_mark-perform-an-api-request">
+<a class="md-nav__link" href="#perform-an-api-request">
 <span class="md-ellipsis">
-      :white_check_mark:  Perform an API request
+        Perform an API request
     </span>
 </a>
 </li>
@@ -795,13 +795,15 @@
 <h1>Authentication mode</h1>
 <p>import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";</p>
-<p>:::note Is this the right authentication method for you?</p>
+<div class="admonition note">
+<p class="admonition-title">Is this the right authentication method for you?</p>
+</div>
 <p>Before starting to read this page, we invite you to check if this is the best authentication method for you. Please check the flowchart you can find on the <a href="/basics/authentication.mdx">Authentication</a> page before proceeding.</p>
-<p>:::</p>
 <p><strong>Manual Authentication</strong> is an authentication method that lets the user retrieve the token "manually", e.g. using the TSE in Cloud WebApp. It requires active user collaboration to be applied: specifically, the user needs to generate correctly the Access Token selecting the correct scopes, and then insert it into the application.</p>
-<p>:::danger Are you sure?</p>
+<div class="admonition danger">
+<p class="admonition-title">Are you sure?</p>
+</div>
 <p>This authentication method is suggested only for very specific use cases. Please think carefully if you want to use it.</p>
-<p>:::</p>
 <p>This implies some <strong>drawbacks</strong>:</p>
 <ul>
 <li>The User Experience is worse than the other authorization methods.</li>
@@ -814,8 +816,8 @@ import TabItem from "@theme/TabItem";</p>
 <li>Simple scripts that will be used by a single TSE in Cloud User (usually the programmer himself) to manage his account (for example for one-time exports or imports of resources).</li>
 <li>When the <a href="/basics/authentication.mdx">other flows</a> are not applicable.</li>
 </ul>
-<h2 id="raised_hand-token-generation">:raised_hand:  Token generation</h2>
-<p>Technically speaking, to implement this method you need to do nothing to create a new Access Token: this responsibility lies entirely on the User's shoulders :tired_face:. Even so, if your app needs to manage different users you will need to:</p>
+<h2 id="token-generation"><img alt="✋" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/270b.svg" title=":raised_hand:">  Token generation</img></h2>
+<p>Technically speaking, to implement this method you need to do nothing to create a new Access Token: this responsibility lies entirely on the User's shoulders <img alt="😫" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f62b.svg" title=":tired_face:">. Even so, if your app needs to manage different users you will need to:</img></p>
 <ul>
 <li>Provide your Client ID to the User (you can find it on your Application page, in the Sviluppatore section).
   <img alt="Client ID" src="../assets/manual-client-id.png"/></li>
@@ -835,13 +837,14 @@ import TabItem from "@theme/TabItem";</p>
    <img alt="Select the permissions" src="../assets/permissions.png"/></li>
 <li>Copy the Access Token and insert it into the application.</li>
 </ol>
-<p>:::warning Forbidden!</p>
+<div class="admonition warning">
+<p class="admonition-title">Forbidden!</p>
+</div>
 <p>Since the User will have the possibility to select the permissions he wants to grant to the application, it is likely that some "Forbidden" error will happen. Also, if a new version of your app needs additional scopes, all your users will need to update the permissions on the Connected Applications page. You should be aware of that and your code should be able to manage this situation correctly.</p>
-<p>:::</p>
-<h2 id="briefcase-find-your-company-id">:briefcase:  Find your Company ID</h2>
+<h2 id="find-your-company-id"><img alt="💼" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4bc.svg" title=":briefcase:"/>  Find your Company ID</h2>
 <p>Even if this step is not strictly part of the Authentication process, it is required to be able to use the Company-scoped Methods.
 Once you obtain the Access Token, you can use the <a href="/api-reference#get-/user/companies">List User Companies</a> method to retrieve the ID of the related Company; please check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for further info.</p>
-<h2 id="white_check_mark-perform-an-api-request">:white_check_mark:  Perform an API request</h2>
+<h2 id="perform-an-api-request"><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2705.svg" title=":white_check_mark:"/>  Perform an API request</h2>
 <p>A valid <strong>Access Token</strong> can be used to authorize requests included in the scopes authorized by the user; to obtain a valid response it is necessary to include the Access Token in your request as an HTTP header.</p>
 <p>In the following example, we'll simulate a <a href="/api-reference#get-/c/-company_id-/entities/suppliers/-supplier_id-">Get Supplier</a> call. We choose this method because it is relatively easy to understand and it requires the <em>entity.suppliers:r</em> scope to be authorized correctly.</p>
 <p>Please, notice that for the purposes of this example we will assume that we already know the parameters required by the request and that we have previously collected a valid Access Token.</p>
@@ -1093,9 +1096,9 @@ Once you obtain the Access Token, you can use the <a href="/api-reference#get-/u
 </code></pre></div>
 <p>If the Access Token is valid and provided correctly in the header, the response will be a 200 OK.
 To check the possible error responses, please check the <a href="/basics/errors.md">dedicated page</a>.</p>
-<p>:::info Easy switch!</p>
+<p>!!! info Easy switch!</p>
 <p>Please, note that this is exactly the same step applied for the OAuth 2.0 flows. If you want to switch from this method to another, you can reuse this code without having to modify it. You "just" need to add the code to retrieve the access token.</p>
-<p>:::</p>
+<p>!!! </p>
 <h2 id="memo-change-token-permissions">:memo:  Change token permissions</h2>
 <p>If you need to change the set of scopes currently associated with your token, you must ask your app users to perform the following simple steps:</p>
 <ol>

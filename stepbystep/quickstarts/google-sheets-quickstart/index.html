@@ -410,16 +410,16 @@
 <nav aria-label=":open_book:  List Example" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#one-step-one-create-the-apps-script-function">
+<a class="md-nav__link" href="#step-one-create-the-apps-script-function">
 <span class="md-ellipsis">
-      :one:  Step one: Create the Apps Script function
+        Step one: Create the Apps Script function
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#two-step-two-try-it">
+<a class="md-nav__link" href="#step-two-try-it">
 <span class="md-ellipsis">
-      :two:  Step Two: Try it!
+        Step Two: Try it!
     </span>
 </a>
 </li>
@@ -435,16 +435,16 @@
 <nav aria-label=":open_book:  Create Example" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#one-step-one-edit-the-apps-script-functions">
+<a class="md-nav__link" href="#step-one-edit-the-apps-script-functions">
 <span class="md-ellipsis">
-      :one:  Step one: Edit the Apps Script functions
+        Step one: Edit the Apps Script functions
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#two-step-two-try-it_1">
+<a class="md-nav__link" href="#step-two-try-it_1">
 <span class="md-ellipsis">
-      :two:  Step Two: Try it!
+        Step Two: Try it!
     </span>
 </a>
 </li>
@@ -452,9 +452,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#books-google-apps-script-documentation">
+<a class="md-nav__link" href="#google-apps-script-documentation">
 <span class="md-ellipsis">
-      :books:  Google Apps Script Documentation
+        Google Apps Script Documentation
     </span>
 </a>
 </li>
@@ -795,16 +795,16 @@
 <nav aria-label=":open_book:  List Example" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#one-step-one-create-the-apps-script-function">
+<a class="md-nav__link" href="#step-one-create-the-apps-script-function">
 <span class="md-ellipsis">
-      :one:  Step one: Create the Apps Script function
+        Step one: Create the Apps Script function
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#two-step-two-try-it">
+<a class="md-nav__link" href="#step-two-try-it">
 <span class="md-ellipsis">
-      :two:  Step Two: Try it!
+        Step Two: Try it!
     </span>
 </a>
 </li>
@@ -820,16 +820,16 @@
 <nav aria-label=":open_book:  Create Example" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#one-step-one-edit-the-apps-script-functions">
+<a class="md-nav__link" href="#step-one-edit-the-apps-script-functions">
 <span class="md-ellipsis">
-      :one:  Step one: Edit the Apps Script functions
+        Step one: Edit the Apps Script functions
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#two-step-two-try-it_1">
+<a class="md-nav__link" href="#step-two-try-it_1">
 <span class="md-ellipsis">
-      :two:  Step Two: Try it!
+        Step Two: Try it!
     </span>
 </a>
 </li>
@@ -837,9 +837,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#books-google-apps-script-documentation">
+<a class="md-nav__link" href="#google-apps-script-documentation">
 <span class="md-ellipsis">
-      :books:  Google Apps Script Documentation
+        Google Apps Script Documentation
     </span>
 </a>
 </li>
@@ -856,11 +856,11 @@ import TabItem from '@theme/TabItem';</p>
 <p>In this guide, we'll explain how to use <em>Apps Script</em> to load and create resources with our APIs into <em>Google Sheets</em>.</p>
 <h2 id="open_book-list-example">:open_book:  List Example</h2>
 <p>In this example, we will load our invoices list using the <a href="/api-reference#get-/c/-company_id-/issued_documents">List Issued Documents</a> method, but you can adapt this guide to using it with the API method you need.</p>
-<h3 id="one-step-one-create-the-apps-script-function">:one:  Step one: Create the Apps Script function</h3>
-<p>:::tip Retrieve your Company ID!</p>
+<h3 id="step-one-create-the-apps-script-function"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:">  Step one: Create the Apps Script function</img></h3>
+<p>!!! tip Retrieve your Company ID!</p>
 <p>In this example, we'll suppose you have to manage just one Company, so we simply inserted its ID directly in the code. If instead, you need to be able to manage multiple companies, you'll need to retrieve the ID of the current company in some way.
 Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
-<p>:::</p>
+<p>!!! </p>
 <p>First, we must select the <strong>extensions -&gt; App Script</strong> to open the editor:</p>
 <p><img alt="Open the editor" src="../assets/sheets/open_editor.png"/></p>
 <p>Then we need to create the <em>listInvoice</em> method and define the menu we'll use to trigger it:
@@ -949,12 +949,12 @@ Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a
 </code></pre></div>
 <p>additionally, it requires defining some parameters as <em>Query String</em> (e.g. the "?type=invoice" part), but you can substitute it with the endpoint of the method you want. Please, make sure to replace the {company_id} placeholder with your company ID.</p>
 <p>Our APIs also require authentication, so we need to set the <em>Authorization header</em>. You just need to replace the "YOUR<em>ACCESS_TOKEN" placeholder with your actual _Access Token</em>; you can obtain a valid one following <a href="/authentication/manual-authentication.mdx">this procedure</a>.</p>
-<h3 id="two-step-two-try-it">:two:  Step Two: Try it!</h3>
+<h3 id="step-two-try-it"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0032-20e3.svg" title=":two:"/>  Step Two: Try it!</h3>
 <p>If you inserted the connection parameters correctly, you can now click on the list invoices button that just appeared in your sheet's menu and see the results:</p>
 <p><img alt="list invoices" src="../assets/sheets/list_invoices.png"/></p>
 <h2 id="open_book-create-example">:open_book:  Create Example</h2>
 <p>In this example, we will create an invoice using the <a href="/api-reference#post-/c/-company_id-/issued_documents">Create Issued Document</a> method.</p>
-<h3 id="one-step-one-edit-the-apps-script-functions">:one:  Step one: Edit the Apps Script functions</h3>
+<h3 id="step-one-edit-the-apps-script-functions"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:"/>  Step one: Edit the Apps Script functions</h3>
 <p>If you followed the <em>list</em> example you can now come back to your editor to implement also the invoice creation.</p>
 <p>First of all, we need to create a simple form for the inputs, so create the <em>Page.html</em> file and paste in the following code:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
@@ -1065,13 +1065,13 @@ The next step is to modify the menu and add some other functions (the <em>showCr
 <p>
 </p>
 <p>Remember to replace the placeholders as explained in the <em>list</em> example.</p>
-<h3 id="two-step-two-try-it_1">:two:  Step Two: Try it!</h3>
+<h3 id="step-two-try-it_1"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0032-20e3.svg" title=":two:"/>  Step Two: Try it!</h3>
 <p>Nou can now click on the create invoice button that just appeared in your sheet's menu:</p>
 <p><img alt="create invoice" src="../assets/sheets/create_invoice.png"/></p>
 <p>This will show you the HTML page we defined:</p>
 <p><img alt="create invoice" src="../assets/sheets/create_invoice2.png"/></p>
 <p>If you click on the "Create" button you'll trigger the invoice creation. You'll be able to see the results using the List Invoices menu one more time.</p>
-<h2 id="books-google-apps-script-documentation">:books:  Google Apps Script Documentation</h2>
+<h2 id="google-apps-script-documentation"><img alt="📚" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4da.svg" title=":books:"/>  Google Apps Script Documentation</h2>
 <p>Here you can find some additional resources:</p>
 <ul>
 <li><a href="https://developers.google.com/apps-script/guides/bound">Container-bound Scripts</a></li>

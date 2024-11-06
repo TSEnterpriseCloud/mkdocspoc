@@ -714,9 +714,11 @@
 <p>The <strong>Principle of Least Privilege</strong> refers to an information security concept where only the minimum necessary rights should be assigned to a subject that requests access to a resource.</p>
 <p>Granting permissions to an access token beyond the scope of the necessary rights of an action can allow an attacker who manages to steal the token to obtain or change information in unwanted ways. Therefore, careful delegation of access rights can limit attackers to manipulate data.</p>
 <p>Our APIs adopt the <a href="/basics/scopes.md">scopes system</a>, the application owner chooses which scopes are needed for the app to run properly and the users will be prompted to allow the requested permissions. Every resource has its own scope that could be either <strong>read-only</strong> or <strong>full write</strong> access, make sure to require the least amount of scopes possible for the correct functioning of your app, selecting as few permissions as possible.</p>
-<p>:::danger DO NOT REQUIRE ALL THE SCOPES
-We know it's easier to just require all the possible scopes in write access and not have to think about what's the lowest configuration of privileges that can be asked to the user, but we kindly ask you not to do that, in most of the cases in fact only 3-4 scopes are actually needed to use an application.
-:::</p>
+<div class="admonition danger do not require all the scopes">
+<p class="admonition-title">Danger</p>
+</div>
+<p>We know it's easier to just require all the possible scopes in write access and not have to think about what's the lowest configuration of privileges that can be asked to the user, but we kindly ask you not to do that, in most of the cases in fact only 3-4 scopes are actually needed to use an application.
+!!! </p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

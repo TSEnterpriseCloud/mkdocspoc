@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#zero-install-postman">
+<a class="md-skip" href="#install-postman">
           Skip to content
         </a>
 </div>
@@ -325,30 +325,30 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#zero-install-postman">
+<a class="md-nav__link" href="#install-postman">
 <span class="md-ellipsis">
-      :zero:  Install Postman
+        Install Postman
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#one-import-the-collection">
+<a class="md-nav__link" href="#import-the-collection">
 <span class="md-ellipsis">
-      :one:  Import the Collection
+        Import the Collection
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#two-authorization">
+<a class="md-nav__link" href="#authorization">
 <span class="md-ellipsis">
-      :two:  Authorization
+        Authorization
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#three-test-our-apis">
+<a class="md-nav__link" href="#test-our-apis">
 <span class="md-ellipsis">
-      :three:  Test our APIs!
+        Test our APIs!
     </span>
 </a>
 </li>
@@ -765,30 +765,30 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#zero-install-postman">
+<a class="md-nav__link" href="#install-postman">
 <span class="md-ellipsis">
-      :zero:  Install Postman
+        Install Postman
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#one-import-the-collection">
+<a class="md-nav__link" href="#import-the-collection">
 <span class="md-ellipsis">
-      :one:  Import the Collection
+        Import the Collection
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#two-authorization">
+<a class="md-nav__link" href="#authorization">
 <span class="md-ellipsis">
-      :two:  Authorization
+        Authorization
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#three-test-our-apis">
+<a class="md-nav__link" href="#test-our-apis">
 <span class="md-ellipsis">
-      :three:  Test our APIs!
+        Test our APIs!
     </span>
 </a>
 </li>
@@ -809,17 +809,18 @@
 <h1>Postaman Collections</h1>
 <p>To test our API without writing a single line of code, we used our <a href="/openapi-specification.md">OpenAPI Specification</a> to generate a dedicated <strong>Postman Collection</strong>.</p>
 <p>Postman is an API Platform for building and using APIs. Postman Collections can describe all the methods exposed by an API, making it possible for the user to modify the different request parameters and perform actual calls towards the API, obtaining the HTTP response as a result.</p>
-<h2 id="zero-install-postman">:zero:  Install Postman</h2>
+<h2 id="install-postman"><img alt="0️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0030-20e3.svg" title=":zero:">  Install Postman</img></h2>
 <p>To use our collection, we suggest <a href="https://www.postman.com/downloads/">downloading Postman on your device</a>; it is available for Windows, Mac, and Linux.</p>
-<p>Next, sign up to Postman: don't worry, to use our collection the <em>Free Plan</em> is enough :wink:</p>
-<h2 id="one-import-the-collection">:one:  Import the Collection</h2>
+<p>Next, sign up to Postman: don't worry, to use our collection the <em>Free Plan</em> is enough <img alt="😉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f609.svg" title=":wink:"/></p>
+<h2 id="import-the-collection"><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:"/>  Import the Collection</h2>
 <p>Our Collection is generated automatically using our <a href="/openapi-specification.md">OpenAPI Specification</a>, and can be downloaded from our <a href="https://github.com/fattureincloud/openapi-fattureincloud">GitHub Repository</a> at the <strong>postman/fic-api.json</strong> position; it is updated every time a new version of the Specification is released, so you can just redownload it to keep in sync.</p>
 <p>Once you downloaded the JSON file of the collection, you can import it following <a href="https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-data-into-postman">this procedure</a>.</p>
 <p>Now you're almost ready to interact with our API!</p>
-<p>:::info Not satisfied by our collection?</p>
+<div class="admonition info">
+<p class="admonition-title">Not satisfied by our collection?</p>
+</div>
 <p>If you prefer, you can instead use our OpenAPI Specification directly, importing the <em>openapi.yaml</em> file using <a href="https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-api-specifications">this procedure</a>. You just need to be sure to download also the files in the <em>models</em> folder, otherwise, the import will fail. Also, you need to select the right parameters to import the collection correctly.</p>
-<p>:::</p>
-<h2 id="two-authorization">:two:  Authorization</h2>
+<h2 id="authorization"><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0032-20e3.svg" title=":two:"/>  Authorization</h2>
 <p>Next, to be able to interact with our API you need to be authorized: see the <a href="/basics/authentication.mdx">Authentication</a> page for further info.</p>
 <p>You have two main options to retrieve a valid token:</p>
 <ol>
@@ -829,8 +830,8 @@
 <p>Once you retrieved a valid token, you can just insert it as a Bearer token following <a href="https://learning.postman.com/docs/sending-requests/authorization/#bearer-token">this procedure</a>.</p>
 <p>If you want, you can also use Postman to <a href="https://learning.postman.com/docs/sending-requests/authorization/#authorization-code">retrieve your Access Token automatically</a> from its interface.
 To set it up, click on the collection and select the <em>Authorization</em> tab, then compile the <strong>Configure New Token</strong> form.</p>
-<p><img alt="Configure New Token Form" src="../assets/postman-1.png#gh-light-mode-only">
-<img alt="Configure New Token Form" src="../assets/dark-postman-1.png#gh-dark-mode-only"/></img></p>
+<p><img alt="Configure New Token Form" src="../assets/postman-1.png#gh-light-mode-only"/>
+<img alt="Configure New Token Form" src="../assets/dark-postman-1.png#gh-dark-mode-only"/></p>
 <p>The parameters are:</p>
 <ol>
 <li><strong>Auth URL</strong>: https://api-v2.fattureincloud.it/oauth/authorize</li>
@@ -838,12 +839,13 @@ To set it up, click on the collection and select the <em>Authorization</em> tab,
 <li><strong>Callback URL</strong>: The redirect URL declared for the OAuth2 Application</li>
 </ol>
 <p>All the other parameters can be found on the <a href="/authentication/code-flow/index.mdx">OAuth 2.0 Authorization Code Flow</a> page.</p>
-<h2 id="three-test-our-apis">:three:  Test our APIs!</h2>
+<h2 id="test-our-apis"><img alt="3️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0033-20e3.svg" title=":three:"/>  Test our APIs!</h2>
 <p>You're finally ready to test our API using Postman. Select the method you want to try, compile the request parameters and click the <strong>Send</strong> button! Have fun!</p>
-<p>:::warning Retrieve your Company ID!</p>
+<div class="admonition warning">
+<p class="admonition-title">Retrieve your Company ID!</p>
+</div>
 <p>Many of our methods are Company-scoped, which means they require to indicate the ID of the Company we're operating on.<br/>
 The good news is that you can use Postman to retrieve it! Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info!</p>
-<p>:::</p>
 <h2 id="additional-resources">Additional resources</h2>
 <ul>
 <li><a href="https://www.postman.com/">Postman API Platform</a></li>

@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#question-join-or-transform">
+<a class="md-skip" href="#join-or-transform">
           Skip to content
         </a>
 </div>
@@ -713,12 +713,12 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#question-join-or-transform">
+<a class="md-nav__link" href="#join-or-transform">
 <span class="md-ellipsis">
-      :question: Join or Transform
+      Join or Transform
     </span>
 </a>
-<nav aria-label=":question: Join or Transform" class="md-nav">
+<nav aria-label="Join or Transform" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#family_man_woman_girl_boy-join">
@@ -728,9 +728,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#twisted_rightwards_arrows-transform">
+<a class="md-nav__link" href="#transform">
 <span class="md-ellipsis">
-      :twisted_rightwards_arrows:  Transform
+        Transform
     </span>
 </a>
 </li>
@@ -738,9 +738,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mailbox_with_mail-send-it">
+<a class="md-nav__link" href="#send-it">
 <span class="md-ellipsis">
-      :mailbox_with_mail:  Send It!
+        Send It!
     </span>
 </a>
 </li>
@@ -756,15 +756,17 @@
 import TabItem from "@theme/TabItem";</p>
 <p>TSE in Cloud makes it possible to transform a document into another type, for example, a proforma into an invoice, or to join two documents together.
 Of course, our APIs provide the same functionality, here we explain how to do it.</p>
-<p>:::tip Retrieve your Company ID!</p>
+<p>!!! tip Retrieve your Company ID!</p>
 <p>In this example, we'll suppose you have to manage just one Company, so we simply inserted its ID directly in the code. If instead, you need to be able to manage multiple companies, you'll need to retrieve the ID of the current company in some way.
 Check the <a href="/basics/company-scoped-methods.mdx">Company-scoped Methods</a> page for more info.</p>
-<p>:::</p>
-<h2 id="question-join-or-transform">:question: Join or Transform</h2>
+<p>!!! </p>
+<h2 id="join-or-transform"><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:"> Join or Transform</img></h2>
 <p>Although the transform and join use cases may seem very different, our APIs similarly treat them.</p>
-<p>:::danger These calls will NOT create the document
-Executing a join or transform call will NOT create the new document but, instead, it will return a body that you will need to pass to the create document method.
-:::</p>
+<div class="admonition danger these calls will not create the document">
+<p class="admonition-title">Danger</p>
+</div>
+<p>Executing a join or transform call will NOT create the new document but, instead, it will return a body that you will need to pass to the create document method.
+!!! </p>
 <p>Before diving into the functionality details it's better to define the two methods:</p>
 <h3 id="family_man_woman_girl_boy-join">:family_man_woman_girl_boy:  Join</h3>
 <p>You can use the <a href="/api-reference#get-/c/-company_id-/issued_documents/join">Join Issued Document</a> method to merge two documents into an invoice. The type of documents that can be joined are <strong>delivery_notes</strong>, <strong>orders</strong>, <strong>quotes</strong>, and <strong>work_reports</strong>.</p>
@@ -1003,7 +1005,7 @@ Executing a join or transform call will NOT create the new document but, instead
 <span class="w">  </span><span class="p">}</span>
 <span class="p">);</span>
 </code></pre></div>
-<h3 id="twisted_rightwards_arrows-transform">:twisted_rightwards_arrows:  Transform</h3>
+<h3 id="transform"><img alt="🔀" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f500.svg" title=":twisted_rightwards_arrows:">  Transform</img></h3>
 <p>The <a href="/api-reference#get-/c/-company_id-/issued_documents/transform">Transform Issued Document</a> method makes it possible to transform a document into another type of document. Here you can find which types can be transformed and what they can become.</p>
 <table>
 <thead>
@@ -1267,12 +1269,14 @@ Executing a join or transform call will NOT create the new document but, instead
 <span class="w">  </span><span class="p">}</span>
 <span class="p">);</span>
 </code></pre></div>
-<h2 id="mailbox_with_mail-send-it">:mailbox_with_mail:  Send It!</h2>
+<h2 id="send-it"><img alt="📬" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4ec.svg" title=":mailbox_with_mail:"/>  Send It!</h2>
 <p>The two methods above won't perform any modification, but they will just return the body that you'll need to use to perform the desired action. This lets you eventually review the final result and modify it if needed.</p>
 <p>The request also includes an <strong>options</strong> section, that makes it possible for our APIs to distinguish a normal document creation from a join or transform request; it is critical that you don't modify this section, but you must send it exactly as it is returned by the API.</p>
-<p>:::warning THE OPTIONS
-Make sure to pass also the <strong>options</strong> field to the creation call, it's the most important part of the process.
-:::</p>
+<div class="admonition warning the options">
+<p class="admonition-title">Warning</p>
+</div>
+<p>Make sure to pass also the <strong>options</strong> field to the creation call, it's the most important part of the process.
+!!! </p>
 <p>The response will look like this:</p>
 <div class="highlight"><pre><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json;charset=UTF-8</span>

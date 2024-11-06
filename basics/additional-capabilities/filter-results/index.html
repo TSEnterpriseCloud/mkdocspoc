@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#wrench-building-a-query">
+<a class="md-skip" href="#building-a-query">
           Skip to content
         </a>
 </div>
@@ -527,23 +527,23 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#wrench-building-a-query">
+<a class="md-nav__link" href="#building-a-query">
 <span class="md-ellipsis">
-      :wrench:  Building a query
+        Building a query
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mag-filterable-fields">
+<a class="md-nav__link" href="#filterable-fields">
 <span class="md-ellipsis">
-      :mag:  Filterable fields
+        Filterable fields
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#books-additional-resources">
+<a class="md-nav__link" href="#additional-resources">
 <span class="md-ellipsis">
-      :books:  Additional Resources
+        Additional Resources
     </span>
 </a>
 </li>
@@ -751,23 +751,23 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#wrench-building-a-query">
+<a class="md-nav__link" href="#building-a-query">
 <span class="md-ellipsis">
-      :wrench:  Building a query
+        Building a query
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mag-filterable-fields">
+<a class="md-nav__link" href="#filterable-fields">
 <span class="md-ellipsis">
-      :mag:  Filterable fields
+        Filterable fields
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#books-additional-resources">
+<a class="md-nav__link" href="#additional-resources">
 <span class="md-ellipsis">
-      :books:  Additional Resources
+        Additional Resources
     </span>
 </a>
 </li>
@@ -782,9 +782,11 @@
 <p>import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";</p>
 <p>Some of our APIs (e.g. the <em>LIST</em> methods) return a set of resources instead of a single one. This means that the returned response could be potentially huge, involving a high number of complex resources, making the response difficult to manage and send to your application. For this reason, you should filter the results to get only the data you need.</p>
-<p>:::info Check the fields</p>
+<div class="admonition info check the fields">
+<p class="admonition-title">Info</p>
+</div>
 <p>Our APIs let you apply a filter only on a certain set of fields. Please check the table below for the available fields for each method.</p>
-<p>:::</p>
+<p>!!! </p>
 <p>To filter the returned resources, all you have to do is to add the "<strong>q</strong>" parameter to the query string, containing the desired query filter.
 This parameter must be provided as an URL-encoded string to avoid issues related to special characters in the string.</p>
 <p>For example, this request will filter all the clients, returning only the client with the specified vat_number.
@@ -847,7 +849,7 @@ The query parameter value is the following:</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it!!!</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// NOTE: this is a complete request, but please customize it!!! </span>
 <span class="c1">// In the next step we'll explain how to perform the request to the API.</span>
 
 <span class="c1">// in this example we are using our Go SDK</span>
@@ -1112,7 +1114,7 @@ The query parameter value is the following:</p>
 <span class="w">  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="wrench-building-a-query">:wrench:  Building a query</h2>
+<h2 id="building-a-query"><img alt="🔧" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f527.svg" title=":wrench:">  Building a query</img></h2>
 <p>Our API uses a <strong>SQL-like query language</strong>, which means that it is a subset of the <em>where</em> clause of the SQL language and can be used in a similar way to build the filter string.</p>
 <p>The string is based on triplets: <strong>field op value</strong></p>
 <p>The <strong>field</strong> is a lowercase string, with dots and underscores, containing the name of the field the filter applies to; all the fields used in a single query must be included in the list of the authorized fields for the specific request type that is going to be performed, otherwise, an error will be returned. Check below for the list of authorized fields.</p>
@@ -1267,7 +1269,7 @@ surname = 'Rossi' and name contains 'Luca'
 city = 'Bergamo' and (age &lt; 30 or (dev = true and (name = 'Giorgio' and surname is not null) or employer starts with 'Fatture'))
 </code></pre></div>
 <p>Once the query is composed, it must be URL-encoded before using it in a query; most HTTP frameworks perform this step automatically while composing the request, otherwise, you can use dedicated libraries to apply the encoding explicitly.</p>
-<h2 id="mag-filterable-fields">:mag:  Filterable fields</h2>
+<h2 id="filterable-fields"><img alt="🔍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f50d.svg" title=":mag:">  Filterable fields</img></h2>
 <p>Here you can find the list of fields that can be used to filter the result for each <em>List method</em>:</p>
 <table>
 <thead>
@@ -1311,7 +1313,7 @@ city = 'Bergamo' and (age &lt; 30 or (dev = true and (name = 'Giorgio' and surna
 </tr>
 </tbody>
 </table>
-<h2 id="books-additional-resources">:books:  Additional Resources</h2>
+<h2 id="additional-resources"><img alt="📚" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4da.svg" title=":books:"/>  Additional Resources</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Percent-encoding">Percent Encoding (also known as URL-encoding)</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_message">HTTP Request</a></li>
